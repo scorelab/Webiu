@@ -1,0 +1,47 @@
+@import '../../styles/variables.sass'
+
+.project-list-component
+  .title
+    padding: 25px 0px 25px 0px
+    font-weight: 300
+  .btn
+    font-size: 11px
+    padding: 5px 25px
+    border: 1px solid $primary
+    color: $primary
+  .project-list-item-component:hover
+    opacity: 0.7
+    border: 1px solid $grey
+  .project-list-item-component
+    @media #{$sm}
+      flex-direction: column
+      text-align: center
+    @media #{$tiny-and-less}
+      flex-direction: column
+      text-align: center
+    background-color: #fff
+    cursor: pointer
+    display: flex
+    align-items: flex-start
+    margin: 1px
+    margin-bottom: 25px
+    border: 1px solid $light-grey
+    padding: 10px
+    padding-right: 15px
+    border-radius: 5px
+    .image
+      @media #{$sm}
+        margin: auto
+      @media #{$tiny-and-less}
+        margin: auto
+      margin-right: 10px
+      width: 90px
+    .item-title
+      color: $secondary
+      font-weight: 600
+      margin-bottom: 2px !important
+    .item-descriptiom
+      font-size: 11px
+      text-align: justify
+      margin-bottom: 0px !important
+      
