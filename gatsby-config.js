@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Webiu`,
     description: `Generalized Site Builder with Gatsby Js`,
-    author: `@ScoreLabs`,
+    author: `@ScoreLab`,
   },
   plugins: [
     `gatsby-plugin-sass`,

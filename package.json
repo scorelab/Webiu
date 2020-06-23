@@ -3,7 +3,7 @@
   "private": true,
   "description": "Generalized Site Builder with Gatsby Js",
   "version": "0.1.0",
-  "author": "@ScoreLabs",
+  "author": "@ScoreLab",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "gatsby": "^2.22.9",
