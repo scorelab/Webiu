@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Site Builder`,
-    description: `Gatsby Site Builder Project`,
-    author: `@wdevon99`,
+    title: `Webiu`,
+    description: `Generalized Site Builder with Gatsby Js`,
+    author: `@ScoreLabs`,
   },
   plugins: [
     `gatsby-plugin-sass`,

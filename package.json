@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-site-builder",
+  "name": "webiu",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Generalized Site Builder with Gatsby Js",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@ScoreLabs",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "gatsby": "^2.22.9",
