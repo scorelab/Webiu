@@ -49,4 +49,46 @@ projectsSection:
       image: /logos/projects/d4d.png
       slug: /projects/d4d
 
+publicationsSection:
+  title: Publications
+  publications:
+    - title: Identifying Mosquito Breeding Sites via Drone Images
+      conference: Proceedings of the 3rd Workshop on Micro Aerial Vehicle Networks, Systems, and Applications - 2017
+      authors:
+        - Chathura Suduwella
+        - Akarshani Amarasinghe
+        - Lasith Niroshan
+        - Charith Elvitigala
+        - Kasun De Zoysa
+        - Chamath Keppetiyagama
+      slug: /publications
+    - title: Train traffic optimization to minimize stochastic delays
+      conference: Advances in ICT for Emerging Regions (ICTer), 2016 Sixteenth International Conference on - 2016
+      authors:
+        - Anura P Kasthoori
+        - JG Varuna Priyanka
+        - Kasun de Zoysa
+      slug: /publications
+    - title: Automated Pothole Detection System
+      conference: International Conference on Advances in ICT for Emerging Regions, Colombo, Sri Lanka - 2013
+      authors:
+        - Girisha D De Silva
+        - Ravin S Perera
+        - Nayanajith M Laxman
+        - Kenneth M Thilakarathna
+        - Chamath I Keppitiyagama
+        - Kasun De Zoysa
+      slug: /publications
+    - title: A Quadcopter Controller to Maintain Radio Link Quality
+      conference: Proceedings of the First Workshop on Micro Aerial Vehicle Networks, Systems, and Applications for Civilian Use - 2015
+      authors:
+        - Mohammed Ayyoob
+        - Ahamed Hamza
+        - Chamath Keppitiyagama
+        - Kasun De Zoysa
+        - Venkatraman Iyer
+        - Kasun Hewage
+        - Thiemo Voigt
+      slug: /publications
+
 ---

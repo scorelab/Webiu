@@ -30,6 +30,15 @@ export const useHomePageData = () => {
                     slug
                   }
                 }
+                publicationsSection {
+                  title
+                  publications {
+                    title
+                    conference
+                    authors
+                    slug
+                  }
+                }
               }
             }
           }
