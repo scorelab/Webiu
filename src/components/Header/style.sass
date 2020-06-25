@@ -8,10 +8,11 @@
     h1
       font-weight: 300
   .right-col
+    text-align: center
     .main-image
       @media #{$xs-and-less}
         display: none
-      width: 100%
+      width: 80%
   .left-col
     .header-content-section
       @media #{$xs-and-less}
@@ -23,9 +24,11 @@
       justify-content: center
       align-items: flex-start
       h1
-        font-weight: 600
+        font-weight: 400
         padding-top: 15px
-        color: $primary
+        .colored
+          font-weight: 600
+          color: $primary
         @media #{$md-and-less}
           font-size: 30px
         @media #{$sm-and-less}

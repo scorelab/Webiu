@@ -4,6 +4,8 @@ import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 import ProjectListItem from './ProjectListItem'
 import {Link} from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectsList = ({title, items=[], limit}) => {
   return (
@@ -22,8 +24,8 @@ const ProjectsList = ({title, items=[], limit}) => {
           ))}
         </Row>
         <Row>
-          <Col>
-            <Link to={'/projects'} className="btn">View All</Link>
+          <Col className="view-all-btn-container">
+            {!limit || <Link to={'/projects'} className="btn">View All <FontAwesomeIcon icon={faArrowRight}/></Link>}
           </Col>
         </Row>
       </Container>
