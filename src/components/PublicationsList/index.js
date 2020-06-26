@@ -17,8 +17,9 @@ const PublicationsList = ({title, items=[], limit}) => {
           </Col>
         </Row>
         <Row>
-          {items.map(item => (
+          {items.map((item, i) => (
             <PublicationListItem
+              key={i}
               {...item}
             />
           ))}

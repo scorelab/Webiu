@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import pages from '../../config/pages'
 import NavBar from '../../components/NavBar'
 import Footer from '../../components/Footer'
 import { useFooterData } from '../../queries/footer'

@@ -28,6 +28,7 @@ const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
       if (index < limit) {
         return (
           <FeedItemSmall 
+            key={item.guid}
             title={item.title}
             publishedDate={item.pubDate}
             image={item.thumbnail}

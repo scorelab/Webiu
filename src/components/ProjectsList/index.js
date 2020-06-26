@@ -17,8 +17,9 @@ const ProjectsList = ({title, items=[], limit}) => {
           </Col>
         </Row>
         <Row>
-          {items.map(item => (
+          {items.map((item, i) => (
             <ProjectListItem
+              key={i}
               {...item}
             />
           ))}

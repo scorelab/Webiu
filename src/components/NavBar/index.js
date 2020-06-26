@@ -7,7 +7,7 @@ import './style.sass'
 const NavBar = ({logo, links = []}) => {
   return (
     <div className="nav-bar-component ">
-      <Navbar className="nav-bar-custom" expand="lg">
+      <Navbar className="nav-bar-custom" expand="md">
       <div className="logo-container">
         <Link to="/">
           <img className="logo" src={logo} alt="logo"/>
@@ -16,9 +16,14 @@ const NavBar = ({logo, links = []}) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggle"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="justify-content-end" style={{width: "100%"}}>
-          {links.map(link => (
-            <Nav.Link>
-              <Link to={link.path} className={link.isSpecial ? "special" : "normal"}>{link.name}</Link>
+          {links.map((link) => (
+            <Nav.Link 
+              key={link.path}
+              as={Link} 
+              to={link.path} 
+              className={link.isSpecial ? "special" : ""}
+            >
+              {link.name}
             </Nav.Link>
           ))}
         </Nav>
@@ -30,7 +35,7 @@ const NavBar = ({logo, links = []}) => {
 
 
 NavBar.propTypes = {
-  logo: PropTypes.object,
+  logo: PropTypes.string,
   links: PropTypes.array
 }
 
