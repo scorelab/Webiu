@@ -91,4 +91,9 @@ publicationsSection:
         - Thiemo Voigt
       slug: /publications
 
+contactSection:
+  contactMessage: "Let us know if you have any queries regarding the organization"
+  subscribeMessage: "Subscribe to our mailing list to stay in touch"
+
+
 ---

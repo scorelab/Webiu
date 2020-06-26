@@ -39,6 +39,10 @@ export const useHomePageData = () => {
                     slug
                   }
                 }
+                contactSection {
+                  contactMessage
+                  subscribeMessage
+                }
               }
             }
           }
