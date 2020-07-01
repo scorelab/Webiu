@@ -1,0 +1,40 @@
+@import '../../styles/variables.sass'
+
+.header-component
+  padding: 25px
+  background-color: $light-grey
+  .small-header-col
+    text-align: center
+    h1
+      font-weight: 300
+  .right-col
+    .main-image
+      @media #{$xs-and-less}
+        display: none
+      width: 100%
+  .left-col
+    .header-content-section
+      @media #{$xs-and-less}
+        align-items: center
+        text-align: center
+      display: flex
+      height: 100%
+      flex-direction: column
+      justify-content: center
+      align-items: flex-start
+      h1
+        font-weight: 600
+        padding-top: 15px
+        color: $primary
+        @media #{$md-and-less}
+          font-size: 30px
+        @media #{$sm-and-less}
+          font-size: 25px
+      p
+        font-size: 14px
+    .btn
+      background-color: $secondary
+      color: #fff
+      font-size: 14px
+      padding: 5px 25px
+
