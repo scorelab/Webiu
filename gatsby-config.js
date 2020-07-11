@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Webiu`,
-    description: `Generalized Site Builder with Gatsby Js`,
+    description: `Building and maintaining a website is an essential task for any business or organization. This project aims to ease the workflow of getting a website up and running by developing a “generalized website builder”, with the help of the Gatsby Js Framework. The individuals would be able to utilize this generalized platform to plug-in required modules and configure the datasource as per requirements to build custom websites for their organizations.`,
     author: `@ScoreLab`,
   },
   plugins: [
