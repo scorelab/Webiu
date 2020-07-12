@@ -7,7 +7,7 @@ import './style.sass'
 const NavBar = ({logo, links = []}) => {
   return (
     <div className="nav-bar-component ">
-      <Navbar className="nav-bar-custom" expand="md">
+      <Navbar className="nav-bar-custom" expand="lg">
       <div className="logo-container">
         <Link to="/">
           <img className="logo" src={logo} alt="logo"/>

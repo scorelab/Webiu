@@ -32,6 +32,7 @@ researchers:
   - name: Akarshani Amarasinghe
     title: BSc in Computer Science
     image: /images/userPlacehoder.jpeg
+    
 alumni:
   - name: Dinuni Fernando
     title: BSc in Computer Science (Graduate Research Assistant, PhD Student)

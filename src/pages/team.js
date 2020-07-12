@@ -8,8 +8,6 @@ import {useTeamData} from '../queries/team'
 const TeamPage = () => {
   const team = useTeamData()
 
-  console.log(team)
-
   return (
     <MainLayout>
       <SEO title="Score Labs Team Page" />
