@@ -22,5 +22,5 @@ export const useNavigationBarData = () => {
       }
     `
   )
-  return allMarkdownRemark.edges[0].node.frontmatter
+  return allMarkdownRemark.edges.length > 0 ? allMarkdownRemark.edges[0].node.frontmatter : null
 }
