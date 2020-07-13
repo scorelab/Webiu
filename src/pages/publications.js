@@ -15,6 +15,7 @@ const PublicationsPage = () => {
         mainText={publications.title}
         small
       />
+      <br />
       <PublicationsList 
         items={publications.publications}
       />

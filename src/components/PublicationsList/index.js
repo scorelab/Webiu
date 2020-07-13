@@ -11,11 +11,13 @@ const PublicationsList = ({title, items=[], limit}) => {
   return (
     <div className="publications-list-component">
       <Container>
-        <Row>
-          <Col>
-            <h1 className="title">{title}</h1>
-          </Col>
-        </Row>
+        {!title || (
+          <Row>
+            <Col>
+              <h1 className="title">{title}</h1>
+            </Col>
+          </Row>
+        )}
         <Row>
           {items.map((item, i) => (
             <PublicationListItem

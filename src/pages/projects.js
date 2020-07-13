@@ -16,6 +16,7 @@ const ProjectsPage = () => {
         mainText="Projects"
         small
       />
+      <br />
       <ProjectsList 
         items={projects}
       />
