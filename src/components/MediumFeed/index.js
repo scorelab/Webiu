@@ -33,6 +33,7 @@ const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
             publishedDate={item.pubDate}
             image={item.thumbnail}
             author={item.author}
+            slug={item.link}
           />
         )
       }
@@ -46,6 +47,7 @@ const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
         publishedDate={item.pubDate}
         image={item.thumbnail}
         author={item.author}
+        slug={item.link}
       />
     ))
   )

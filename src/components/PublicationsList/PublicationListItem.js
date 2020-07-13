@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import {Col} from 'react-bootstrap'
-import {navigate} from "gatsby"
 
 const PublicationListItem = ({title, conference, authors, slug}) => {
   return (

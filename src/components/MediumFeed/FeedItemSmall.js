@@ -5,7 +5,7 @@ import {navigate} from "gatsby"
 
 const FeedItemSmall = ({title, publishedDate, author, image, slug}) => {
   return (
-    <div className="feed-item-small-component" onClick={() => navigate(slug)}>
+    <div className="feed-item-small-component" onClick={() => window.open(slug, "_blank")}>
       <img className= "image" alt="medium" src={image.includes("cdn-images") ? image : '/images/placeholder.png'} />
       <div>
         <p className="post-title">{title}</p>
