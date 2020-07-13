@@ -4,16 +4,17 @@ import SEO from "../components/SEO"
 import Header from '../components/Header'
 import PublicationsList from '../components/PublicationsList'
 import {usePublicationsPageData} from '../queries/publications'
-import { Pagination } from 'antd';
+import ListPagination from "../components/ListPagination"
+
 
 const PublicationsPage = () => {
-  const pageSize = 6
   const publications = usePublicationsPageData()
-  const [currentPage, setCurrentPage] = useState(1)
 
+  const PAGE_SIZE = 6
+  const [currentPage, setCurrentPage] = useState(1)
   const paginatedPublications = publications.publications.slice(
-    currentPage === 1 ? 0 : (currentPage - 1) * pageSize, 
-    (currentPage * pageSize)
+    currentPage === 1 ? 0 : (currentPage - 1) * PAGE_SIZE, 
+    (currentPage * PAGE_SIZE)
   )
   
   return (
@@ -24,18 +25,11 @@ const PublicationsPage = () => {
         small
       />
       <br />
-      <PublicationsList 
-        items={paginatedPublications}
-      />
-      <Pagination 
-        defaultCurrent={1}
-        pageSize={pageSize} 
-        total={publications.publications.length} 
-        onChange={(page) => { 
-          window.scrollTo(0, 0) 
-          setCurrentPage(page)
-        }}
-        hideOnSinglePage
+      <PublicationsList items={paginatedPublications}/>
+      <ListPagination 
+        pageSize={PAGE_SIZE}
+        total={publications.publications.length}
+        onChange={setCurrentPage}
       />
     </MainLayout>
   )
