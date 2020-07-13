@@ -8,5 +8,6 @@ socialLinks:
   twitter: "https://twitter.com/"
   github: "https://github.com/scorelab/"
   linkedin: "https://www.linkedin.com/company/sustainable-computing-research-group-score-/"
+  medium: "https://medium.com/scorelab/"
 
 ---
