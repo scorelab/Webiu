@@ -22,5 +22,6 @@ guidelines:
   - We encourage you to do documentation so that we can keep track of your progress and also help you if things are not going according to plan. Although not compulsory we have a strong belief that this method can cut down your time to code and also the workload of the mentors drastically.
 
 projectListHeading: Project list for GSoC 2020
+projectListButtonText: View Project List
 projectListUrl: /projects
 ---

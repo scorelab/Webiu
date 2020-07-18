@@ -24,7 +24,9 @@ const GuideLines = ({ heading, description, guidelines}) => {
 }
 
 GuideLines.propTypes = {
-  mainText: PropTypes.string,
+  heading: PropTypes.string, 
+  description: PropTypes.string,
+  guidelines: PropTypes.array
 }
 
 export default GuideLines

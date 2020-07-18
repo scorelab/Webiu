@@ -22,6 +22,7 @@ export const useGsocData = () => {
                 guidelines
 
                 projectListHeading
+                projectListButtonText
                 projectListUrl
               }
             }

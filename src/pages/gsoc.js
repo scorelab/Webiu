@@ -3,10 +3,12 @@ import MainLayout from "../layouts/MainLayout"
 import SEO from "../components/SEO"
 import Header from '../components/Header'
 import DescriptionContainer from "../components/DescriptionContainer"
-import {useGsocData} from '../queries/gsoc'
 import LinksList from "../components/LinksList"
-import { Container, Col, Row } from "react-bootstrap"
 import GuideLines from "../components/GuideLines"
+import ButtonWithHeading from "../components/ButtonWithHeading"
+import { Container, Col, Row } from "react-bootstrap"
+import {useGsocData} from '../queries/gsoc'
+import { navigate } from "gatsby"
 
 const GsocPage = () => {
   const gsoc = useGsocData()
@@ -38,10 +40,11 @@ const GsocPage = () => {
         description={gsoc.guidelinesDescription}
         guidelines={gsoc.guidelines}
       />
-
-      
-
-
+      <ButtonWithHeading 
+        heading={gsoc.projectListHeading}
+        buttonText={gsoc.projectListButtonText}
+        onClick={() => navigate(gsoc.projectListUrl)}
+      />
     </MainLayout>
   )
 }

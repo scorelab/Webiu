@@ -1,6 +1,10 @@
 @import '../../styles/variables.sass'
 
 .description-container-component
+  @media #{$xs-and-less}
+    padding: 10px
+  @media #{$tiny-and-less}
+    padding: 0px
   padding: 30px
   padding-bottom: 15px
   background-color: #fff
@@ -13,6 +17,14 @@
   .description-container-image
     width: 200px
     height: 200px
+    @media #{$xs-and-less}
+      margin-top: 10px
+      width: 160px
+      height: 160px
+    @media #{$tiny-and-less}
+      margin-top: 20px
+      width: 120px
+      height: 120px
   .description-container-text
     font-size: 14px
     text-align: justify
