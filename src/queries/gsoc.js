@@ -12,9 +12,10 @@ export const useGsocData = () => {
                 title
                 mainImage
                 description
-                mailingList
-                gitterChannel
-                proposalTemplate
+                links {
+                  name
+                  url 
+                }
 
                 guidelinesHeading
                 guidelinesDescription

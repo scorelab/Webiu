@@ -4,9 +4,13 @@ template: 'gsoc'
 title: 'Gsoc 2020'
 mainImage: /logos/gsocLogo.png
 description: Welcome to the SCoRe Lab Google Summer of Code (GSoC) 2020 project ideas page. We are a dynamic and enthusiastic nonprofit research group pioneering in Internet of Things (IoT), Embedded Systems, Computer Security, Software Tools and ‘Wireless Adhoc and Sensor Networks’ and is one of the best groups in South Asia. This is the 5th time that we are participating in the GSoC, we will use this page to develop possible project ideas that have on the above mentioned areas. Please note that anyone who is interested can participate in this process. You do not have to be a GSoC student or mentor to suggest possible project ideas. You can also talk to us about possible project ideas and we are happy to improve or heip you with them. Please keep in mind that projects need to be realistically something that is able to be functionally completed by a student working full time for about eight weeks. Thanks!
-mailingList: score-community@googlegroups.com
-gitterChannel: https://gitter.im/scorelab/
-proposalTemplate: https://goo.gl/KXcqAL
+links: 
+  - name: Mailing List
+    url: https://groups.google.com/forum/#!forum/score-community
+  - name: Gitter Channel
+    url: https://gitter.im/scorelab/
+  - name: Proposal Template
+    url: https://goo.gl/KXcqAL
 
 guidelinesHeading: Important Guidelines on Submitting Ideas
 guidelinesDescription: There are some important guidelines to submit ideas, please read these carefully before adding your ideas
