@@ -5,6 +5,8 @@ import Header from '../components/Header'
 import DescriptionContainer from "../components/DescriptionContainer"
 import { Row, Container, Col } from "react-bootstrap"
 import {useOpportunitiesData} from '../queries/opportunities'
+import { faPeopleArrows } from "@fortawesome/free-solid-svg-icons"
+
 
 const OpportunitiesPage = () => {
   const opportunities = useOpportunitiesData()
@@ -14,6 +16,8 @@ const OpportunitiesPage = () => {
       <SEO title="Score Labs Opportunities Page" />
       <Header 
         mainText={opportunities.title}
+        icon={faPeopleArrows}
+        backgroundColor={'#edffe2'}
         small
       />
       <Container>

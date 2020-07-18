@@ -3,15 +3,19 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Header = ({mainText, subText, buttonText, buttonLink, image, small=false}) => {
+const Header = ({mainText, subText, icon, buttonText, buttonLink, image, small=false, backgroundColor}) => {
   return (
-    <div className="header-component">
+    <div style={{ backgroundColor }} className="header-component" >
       <Container>
         {small ? (
           <Row>
             <Col className="small-header-col">    
-              <h1>{mainText}</h1>
+              <h1>
+                {!icon || <FontAwesomeIcon icon={icon} className="icon"/>}{" "}
+                {mainText}
+              </h1>
             </Col>
           </Row>
         ) : (

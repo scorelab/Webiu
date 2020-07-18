@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import ProjectsList from '../components/ProjectsList'
 import {useProjectsPageData} from '../queries/projects'
 import ListPagination from "../components/ListPagination"
+import { faCode } from "@fortawesome/free-solid-svg-icons"
 
 const ProjectsPage = () => {
   const edges = useProjectsPageData()
@@ -22,6 +23,8 @@ const ProjectsPage = () => {
       <SEO title="Score Labs Projects Page" />
       <Header 
         mainText="Projects"
+        backgroundColor={'#edffe2'}
+        icon={faCode}
         small
       />
       <br />

@@ -9,6 +9,7 @@ import ButtonWithHeading from "../components/ButtonWithHeading"
 import { Container, Col, Row } from "react-bootstrap"
 import {useGsocData} from '../queries/gsoc'
 import { navigate } from "gatsby"
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 const GsocPage = () => {
   const gsoc = useGsocData()
@@ -18,6 +19,8 @@ const GsocPage = () => {
       <SEO title="Score Labs GSOC Page" />
       <Header 
         mainText={gsoc.title}
+        icon={faSun}
+        backgroundColor={'#fff8e4'}
         small
       />
       <DescriptionContainer

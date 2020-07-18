@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import PublicationsList from '../components/PublicationsList'
 import {usePublicationsPageData} from '../queries/publications'
 import ListPagination from "../components/ListPagination"
-
+import { faBookOpen } from "@fortawesome/free-solid-svg-icons"
 
 const PublicationsPage = () => {
   const publications = usePublicationsPageData()
@@ -22,6 +22,7 @@ const PublicationsPage = () => {
       <SEO title="Score Labs Publications Page" />
       <Header 
         mainText={publications.title}
+        icon={faBookOpen}
         small
       />
       <br />

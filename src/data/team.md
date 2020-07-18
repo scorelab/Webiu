@@ -1,7 +1,7 @@
 ---
 template: 'team'
 
-title: 'Team'
+title: 'Score Lab Team'
 heads:
   - name: Dr. Kasun de Zoysa
     title: BSc(Col), PhLic(Stockholm), PhD(Stockholm)(Senior Lecturer Gr. I)
