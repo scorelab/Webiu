@@ -13,7 +13,7 @@ links:
     url: https://goo.gl/KXcqAL
 
 guidelinesHeading: Important Guidelines on Submitting Ideas
-guidelinesDescription: There are some important guidelines to submit ideas, please read these carefully before adding your ideas
+guidelinesDescription: There are some important guidelines to submit ideas, please read these carefully before adding your ideas!
 guidelines: 
   - There is a fixed time period for implementing and coding your ideas
   - Come up with attainable goals and you will be able to complete what you set out to do. You can always contact   our mentors and community and get an idea about the workload and whether you might be able to complete them.

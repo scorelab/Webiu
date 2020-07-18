@@ -1,0 +1,40 @@
+@import '../../styles/variables.sass'
+
+.guide-lines-component
+  margin: 40px 0px
+  padding: 25px
+  background-color: $light-grey
+  h1
+    margin-top: 15px
+    font-size: 22px
+  h2
+    font-size: 16px
+    font-weight: 400
+    font-style: italic
+  ol
+    padding-inline-start: 0px !important
+    margin-top: 25px
+    font-size: 14px
+    list-style: none
+    text-align: justify
+    line-height: 26px
+    counter-reset: counter
+  li
+    margin-bottom: 20px
+    counter-increment: counter
+  
+  li::before 
+    content: counter(counter)
+    background: $primary
+    font-size: 10px
+    width: 1.2rem
+    height: 1.2rem
+    border-radius: 50%
+    display: inline-block
+    line-height: 1.2rem
+    color: white
+    text-align: center
+    margin-right: 0.5rem
+
+  li::marker
+    color: red !important

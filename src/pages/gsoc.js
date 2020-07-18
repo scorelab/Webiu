@@ -6,6 +6,7 @@ import DescriptionContainer from "../components/DescriptionContainer"
 import {useGsocData} from '../queries/gsoc'
 import LinksList from "../components/LinksList"
 import { Container, Col, Row } from "react-bootstrap"
+import GuideLines from "../components/GuideLines"
 
 const GsocPage = () => {
   const gsoc = useGsocData()
@@ -32,6 +33,15 @@ const GsocPage = () => {
           </Col>
         </Row>
       </Container>
+      <GuideLines 
+        heading={gsoc.guidelinesHeading}
+        description={gsoc.guidelinesDescription}
+        guidelines={gsoc.guidelines}
+      />
+
+      
+
+
     </MainLayout>
   )
 }
