@@ -5,7 +5,11 @@
   background-color: #fff
   text-align: center
   .col-md-6
-    padding: 0px 50px !important
+    @media #{$md-and-less}
+      padding: 0px 20px !important
+    @media #{$xs-and-less}
+      padding: 0px 10px !important
+    padding: 0px 40px !important
   .title
     @media #{$xs-and-less}
       font-size: 30px
