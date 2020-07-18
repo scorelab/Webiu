@@ -12,9 +12,7 @@ import { navigate } from "gatsby"
 
 const GsocPage = () => {
   const gsoc = useGsocData()
-
-  console.log(gsoc)
-
+  
   return (
     <MainLayout>
       <SEO title="Score Labs GSOC Page" />

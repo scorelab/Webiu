@@ -3,12 +3,15 @@
 .description-container-component
   @media #{$xs-and-less}
     padding: 10px
+    text-align: center
   @media #{$tiny-and-less}
     padding: 0px
-  padding: 30px
+  padding-top: 30px
   padding-bottom: 15px
   background-color: #fff
   .title
+    @media #{$xs-and-less}
+      font-size: 30px
     padding: 25px 0px 15px 0px
     font-weight: 300
   .description-container-image-container

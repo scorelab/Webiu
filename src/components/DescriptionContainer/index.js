@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 
-const DescriptionContainer = ({title, image, mainText, sideComponent}) => {
+const DescriptionContainer = ({title, subTitle, image, mainText, sideComponent}) => {
   return (
     <div className="description-container-component">
       <Container>
@@ -11,6 +11,7 @@ const DescriptionContainer = ({title, image, mainText, sideComponent}) => {
           <Row>
             <Col>
               <h1 className="title">{title}</h1>
+              {!subTitle || <h5>{subTitle}</h5>}
             </Col>
           </Row>
         )}
