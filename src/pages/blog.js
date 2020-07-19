@@ -11,6 +11,7 @@ const BlogPage = () => {
       <SEO title="Score Labs Blog Page" />
       <Header 
         mainText="Blog"
+        backgroundColor={'#edffe2'}
         icon={faBlog}
         small
       />

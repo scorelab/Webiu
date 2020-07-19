@@ -15,7 +15,7 @@ const TeamPage = () => {
       <Header 
         mainText={team.title}
         icon={faUsers}
-        backgroundColor={'#fff8e4'}
+        backgroundColor={'#edffe2'}
         small
       />
       <Team 

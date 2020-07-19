@@ -17,7 +17,6 @@ const OpportunitiesPage = () => {
       <Header 
         mainText={opportunities.title}
         icon={faPeopleArrows}
-        backgroundColor={'#edffe2'}
         small
       />
       <Container>
