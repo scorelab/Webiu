@@ -18,7 +18,10 @@ const Header = ({mainText, subText, buttonText, buttonLink, image, small=false})
           <Row>
             <Col md={6} className="left-col">
               <div className="header-content-section">     
-                <h1>{mainText}</h1>
+                <h1>
+                  <span className='colored'>{mainText.split(' ')[0]}</span>
+                  <span>{mainText.split(' ').map((t, i) => i !== 0 ? ' ' + t : null)}</span>
+                </h1>
                 <p>{subText}</p>
                 <Link to={buttonLink} className="btn">{buttonText}</Link>
               </div>

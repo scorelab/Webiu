@@ -1,10 +1,14 @@
 {
   "name": "webiu",
   "private": true,
-  "description": "Generalized Site Builder with Gatsby Js",
+  "description": "Building and maintaining a website is an essential task for any business or organization. This project aims to ease the workflow of getting a website up and running by developing a “generalized website builder”, with the help of the Gatsby Js Framework. The individuals would be able to utilize this generalized platform to plug-in required modules and configure the datasource as per requirements to build custom websites for their organizations.",
   "version": "0.1.0",
   "author": "@ScoreLab",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "bootstrap": "^4.4.1",
     "gatsby": "^2.22.9",
     "gatsby-image": "^2.2.44",
@@ -37,7 +41,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy-s3": "aws s3 --profile jehan-aws-cli sync ./public/ s3://scorelab.org --region ap-south-1"
   },
   "repository": {
     "type": "git",

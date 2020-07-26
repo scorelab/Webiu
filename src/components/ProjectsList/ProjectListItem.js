@@ -8,7 +8,7 @@ const ProjectListItem = ({title, description, image, slug}) => {
   return (
     <Col md={4}>
       <div className="project-list-item-component" onClick={() => navigate(slug)}>
-        <img className= "image" alt="Header" src={image} />
+        <img className= "image" alt="project" src={image} />
         <div>
           <p className= "item-title"> {title}</p>
           <p className= "item-descriptiom">

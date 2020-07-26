@@ -2,14 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
-import ProjectListItem from './ProjectListItem'
+import PublicationListItem from './PublicationListItem'
 import {Link} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const ProjectsList = ({title, items=[], limit}) => {
+const PublicationsList = ({title, items=[], limit}) => {
   return (
-    <div className="project-list-component">
+    <div className="publications-list-component">
       <Container>
         <Row>
           <Col>
@@ -18,7 +18,7 @@ const ProjectsList = ({title, items=[], limit}) => {
         </Row>
         <Row>
           {items.map((item, i) => (
-            <ProjectListItem
+            <PublicationListItem
               key={i}
               {...item}
             />
@@ -26,7 +26,7 @@ const ProjectsList = ({title, items=[], limit}) => {
         </Row>
         <Row>
           <Col className="view-all-btn-container">
-            {!limit || <Link to={'/projects'} className="btn">View All <FontAwesomeIcon icon={faArrowRight}/></Link>}
+            {!limit || <Link to={'/publications'} className="btn">View All <FontAwesomeIcon icon={faArrowRight}/></Link>}
           </Col>
         </Row>
       </Container>
@@ -34,8 +34,10 @@ const ProjectsList = ({title, items=[], limit}) => {
   )
 }
 
-ProjectsList.propTypes = {
+PublicationsList.propTypes = {
+  title: PropTypes.string,
   items: PropTypes.array,
+  limit: PropTypes.number,
 }
 
-export default ProjectsList
+export default PublicationsList

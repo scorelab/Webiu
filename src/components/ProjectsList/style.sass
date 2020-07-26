@@ -4,11 +4,13 @@
   .title
     padding: 25px 0px 25px 0px
     font-weight: 300
-  .btn
-    font-size: 11px
-    padding: 5px 25px
-    border: 1px solid $primary
-    color: $primary
+  .view-all-btn-container
+    text-align: right
+    .btn
+      font-size: 16px
+      padding: 0px 5px
+      font-weight: 600
+      color: $primary
   .project-list-item-component:hover
     opacity: 0.7
     border: 1px solid $grey
@@ -19,6 +21,7 @@
     @media #{$tiny-and-less}
       flex-direction: column
       text-align: center
+    min-height: 150px
     background-color: #fff
     cursor: pointer
     display: flex
@@ -29,6 +32,9 @@
     padding: 10px
     padding-right: 15px
     border-radius: 5px
+    -webkit-box-shadow: 0px 0px 42px -2px rgba(0,0,0,0.05)
+    -moz-box-shadow: 0px 0px 42px -2px rgba(0,0,0,0.05)
+    box-shadow: 0px 0px 42px -2px rgba(0,0,0,0.05)
     .image
       @media #{$sm}
         margin: auto
@@ -44,4 +50,5 @@
       font-size: 11px
       text-align: justify
       margin-bottom: 0px !important
+  
       

@@ -1,0 +1,23 @@
+@import '../../styles/variables.sass'
+
+.page-not-found-component
+  min-height: calc(76vh)
+  .inner-container
+    position: absolute
+    text-align: center
+    left: 50%
+    top: 46%
+    transform: translate(-50%, -50%)
+    img
+      @media #{$xs-and-less}
+        width: 300px
+      @media #{$tiny-and-less}
+        width: 250px
+      width: 400px
+    a
+      font-weight: 400
+    h1
+      @media #{$xs-and-less}
+        font-size: 30px
+      font-weight: 300
+ 

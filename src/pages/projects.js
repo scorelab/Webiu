@@ -5,10 +5,9 @@ import Header from '../components/Header'
 import ProjectsList from '../components/ProjectsList'
 import {useProjectsPageData} from '../queries/projects'
 
-const ProjectsPage = ({ data }) => {
+const ProjectsPage = () => {
   const edges = useProjectsPageData()
   const projects = edges.map(edge => ({ id: edge.node.id, ...edge.node.frontmatter}))
-  console.log(projects)
 
   return (
     <MainLayout>
