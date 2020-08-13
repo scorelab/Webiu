@@ -4,6 +4,7 @@ import SEO from "../components/SEO"
 import Header from '../components/Header'
 import DescriptionContainer from "../components/DescriptionContainer"
 import LinksList from "../components/LinksList"
+import MailingListFeed from "../components/MailingListFeed"
 import GuideLines from "../components/GuideLines"
 import ButtonWithHeading from "../components/ButtonWithHeading"
 import { Container, Col, Row } from "react-bootstrap"
@@ -36,6 +37,12 @@ const GsocPage = () => {
           </Col>
         </Row>
       </Container>
+      <br />
+      <MailingListFeed 
+        title={gsoc.mailingListHeading}
+        feedUrl={gsoc.mailingListFeedUrl}
+      />
+      <br />
       <GuideLines 
         heading={gsoc.guidelinesHeading}
         description={gsoc.guidelinesDescription}

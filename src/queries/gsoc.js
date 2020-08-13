@@ -17,6 +17,9 @@ export const useGsocData = () => {
                   url 
                 }
 
+                mailingListHeading
+                mailingListFeedUrl
+
                 guidelinesHeading
                 guidelinesDescription
                 guidelines

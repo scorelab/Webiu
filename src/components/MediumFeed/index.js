@@ -42,8 +42,6 @@ const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
     })
   }
 
-  console.log(feed)
-
   const renderFeedItemList = () => (
     <Container>
       <Row>
