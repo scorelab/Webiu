@@ -10,7 +10,7 @@ import { faBookOpen } from "@fortawesome/free-solid-svg-icons"
 const PublicationsPage = () => {
   const publications = usePublicationsPageData()
 
-  const PAGE_SIZE = 6
+  const PAGE_SIZE = 8
   const [currentPage, setCurrentPage] = useState(1)
   const paginatedPublications = publications.publications.slice(
     currentPage === 1 ? 0 : (currentPage - 1) * PAGE_SIZE, 
