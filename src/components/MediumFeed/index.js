@@ -46,9 +46,8 @@ const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
     <Container>
       <Row>
         {feed.items.map(item => (
-            <Col md={6}>
+            <Col md={6} key={item.guid}>
               <FeedItem
-                key={item.guid}
                 title={item.title}
                 publishedDate={item.pubDate}
                 image={item.thumbnail}

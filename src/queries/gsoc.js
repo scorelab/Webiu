@@ -20,6 +20,10 @@ export const useGsocData = () => {
                 mailingListHeading
                 mailingListFeedUrl
 
+                gitterRoomsListHeading
+                gitterOrganizationName
+                gitterToken
+
                 guidelinesHeading
                 guidelinesDescription
                 guidelines

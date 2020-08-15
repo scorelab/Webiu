@@ -1,4 +1,7 @@
 import React from "react"
+import { Container, Col, Row } from "react-bootstrap"
+import { navigate } from "gatsby"
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 import MainLayout from "../layouts/MainLayout"
 import SEO from "../components/SEO"
 import Header from '../components/Header'
@@ -7,10 +10,8 @@ import LinksList from "../components/LinksList"
 import MailingListFeed from "../components/MailingListFeed"
 import GuideLines from "../components/GuideLines"
 import ButtonWithHeading from "../components/ButtonWithHeading"
-import { Container, Col, Row } from "react-bootstrap"
-import {useGsocData} from '../queries/gsoc'
-import { navigate } from "gatsby"
-import { faSun } from "@fortawesome/free-solid-svg-icons";
+import GitterRoomsList from "../components/GitterRoomsList"
+import { useGsocData } from '../queries/gsoc'
 
 const GsocPage = () => {
   const gsoc = useGsocData()
@@ -38,21 +39,29 @@ const GsocPage = () => {
         </Row>
       </Container>
       <br />
-      <MailingListFeed 
-        title={gsoc.mailingListHeading}
-        feedUrl={gsoc.mailingListFeedUrl}
-      />
-      <br />
       <GuideLines 
         heading={gsoc.guidelinesHeading}
         description={gsoc.guidelinesDescription}
         guidelines={gsoc.guidelines}
       />
+      <br />
+      <MailingListFeed 
+        title={gsoc.mailingListHeading}
+        feedUrl={gsoc.mailingListFeedUrl}
+      />
+      <br />
+      <GitterRoomsList 
+        title={gsoc.gitterRoomsListHeading}
+        gitterOrganizationName={gsoc.gitterOrganizationName}
+        gitterToken={gsoc.gitterToken}
+      />
+      <br />
       <ButtonWithHeading 
         heading={gsoc.projectListHeading}
         buttonText={gsoc.projectListButtonText}
         onClick={() => navigate(gsoc.projectListUrl)}
       />
+      <br />
     </MainLayout>
   )
 }

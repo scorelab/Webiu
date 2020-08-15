@@ -23,8 +23,6 @@ const MailingListFeed = ({title, feedUrl}) => {
     fetch(feedFetchUrl).then((res) => res.json()).then((data) => {
       setFeed(data)
       setLoading(false)
-
-      console.log(data)
     })
     .catch((err) => { 
       throw err 
@@ -33,9 +31,8 @@ const MailingListFeed = ({title, feedUrl}) => {
 
   const renderFeedItemList = () => (
     feed.items.map(item => (
-      <Col md={12}>
+      <Col md={12} key={item.guid}>
         <FeedItem
-          key={item.guid}
           image={item.thumbnail}
           author={item.author}
           title={item.title}

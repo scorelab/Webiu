@@ -1,0 +1,46 @@
+@import '../../styles/variables.sass'
+
+.gitter-rooms-list-component
+  @media #{$xs-and-less}
+    padding: 10px
+  margin: 40px 0px
+  padding: 50px
+  background: url("/images/dots.png")
+  background-color: $very-light-grey
+  .gitter-rooms-list-title
+    margin: 25px 0px
+    font-size: 22px
+    line-height: 26px
+  .view-all-btn-container
+    text-align: right
+    .btn
+      font-size: 16px
+      padding: 0px 5px
+      font-weight: 600
+      color: $primary
+  .gitter-room-list-item-component
+    background-color: rgba(255,255,255, 0.7)
+    text-align: center
+    border: 1px solid $light-grey
+    padding: 20px
+    margin-bottom: 20px 
+    border-radius: 5px
+    -webkit-box-shadow: 0px 0px 42px -2px rgba(0,0,0,0.04)
+    -moz-box-shadow: 0px 0px 42px -2px rgba(0,0,0,0.04)
+    box-shadow: 0px 0px 42px -2px rgba(0,0,0,0.04)
+    word-break: break-all
+    cursor: pointer
+    .image
+      width: 60px
+      height: 60px
+      border-radius: 100%
+      border: 2px solid $light-grey
+      margin-bottom: 15px 
+      object-fit: cover
+    .gitter-room-name
+      font-weight: 500
+      margin-bottom: 5px !important
+    .gitter-room-members
+      font-weight: 300
+      font-size: 12px
+      margin-bottom: 0px !important

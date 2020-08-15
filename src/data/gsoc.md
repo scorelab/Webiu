@@ -16,6 +16,10 @@ links:
 mailingListHeading: Mailing List Recent Activity
 mailingListFeedUrl: https://groups.google.com/forum/feed/score-community/msgs/rss.xml?num=3
 
+gitterRoomsListHeading: Gitter Rooms
+gitterOrganizationName: scorelab
+gitterToken: <<TOKEN>>
+
 guidelinesHeading: Important Guidelines on Submitting Ideas
 guidelinesDescription: There are some important guidelines to submit ideas, please read these carefully before adding your ideas!
 guidelines: 
