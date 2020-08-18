@@ -2,12 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import {Col} from 'react-bootstrap'
-import {navigate} from "gatsby"
 
 const PublicationListItem = ({title, conference, authors, slug}) => {
   return (
     <Col md={6}>
-      <div className="publications-list-item-component" onClick={() => navigate(slug)}>
+      <div className="publications-list-item-component" onClick={() => window.open(slug, "_blank")}>
         <div>
           <p className="item-title">{title}</p>
           <hr />

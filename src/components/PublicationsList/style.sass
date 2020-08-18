@@ -2,8 +2,11 @@
 
 .publications-list-component
   .title
+    @media #{$xs-and-less}
+      text-align: center
+      font-size: 30px
     padding: 55px 0px 25px 0px
-    font-weight: 300
+    font-weight: 400
   .view-all-btn-container
     text-align: right
     .btn
@@ -12,7 +15,7 @@
       font-weight: 600
       color: $primary
   .publications-list-item-component
-    min-height: 190px
+    min-height: 210px
     padding: 20px
     background-color: #fff
     cursor: pointer

@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
+import { Col, Row, Container } from "react-bootstrap"
 import FeedItemSmall from './FeedItemSmall'
 import FeedItem from './FeedItem'
 import "./style.sass"
+
 
 const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
 
@@ -33,27 +35,38 @@ const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
             publishedDate={item.pubDate}
             image={item.thumbnail}
             author={item.author}
+            slug={item.link}
           />
         )
       }
     })
   }
 
+  console.log(feed)
+
   const renderFeedItemList = () => (
-    feed.items.map(item => (
-      <FeedItem
-        title={item.title}
-        publishedDate={item.pubDate}
-        image={item.thumbnail}
-        author={item.author}
-      />
-    ))
+    <Container>
+      <Row>
+        {feed.items.map(item => (
+            <Col md={6}>
+              <FeedItem
+                key={item.guid}
+                title={item.title}
+                publishedDate={item.pubDate}
+                image={item.thumbnail}
+                author={item.author}
+                slug={item.link}
+              />
+            </Col>
+          ))}
+      </Row>
+    </Container>
   )
 
   return (
     <div className="medium-feed-component">
       <p className="medium-feed-title">{title}</p>
-      {loading || !feed ? (<p>Loading...</p>) : (
+      {loading || !feed ? <span /> : (
         small ? renderSmallFeedItemList() : renderFeedItemList()
       )}
     </div>

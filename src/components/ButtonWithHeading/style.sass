@@ -1,0 +1,23 @@
+@import '../../styles/variables.sass'
+
+.button-with-heading-component
+  padding: 50px 0px
+  text-align: center
+  h1
+    @media #{$xs-and-less}
+      font-size: 30px
+    margin-top: 15px
+    font-size: 35px
+    font-weight: 400
+    margin-bottom: 20px
+  .button-main
+    color: #fff
+    background-color: $primary
+    border: none
+    padding: 8px
+    border-radius: 5px
+    min-width: 400px
+    @media #{$xs-and-less}
+      min-width: 300px
+    @media #{$tiny-and-less}
+      min-width: 100%

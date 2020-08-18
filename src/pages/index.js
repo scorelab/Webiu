@@ -5,7 +5,7 @@ import {useHomePageData} from "../queries/home"
 import MainLayout from "../layouts/MainLayout"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
-import About from "../components/About"
+import DescriptionContainer from "../components/DescriptionContainer"
 import MediumFeed from "../components/MediumFeed"
 import ProjectsList from "../components/ProjectsList"
 import PublicationsList from "../components/PublicationsList"
@@ -30,7 +30,7 @@ const HomePage = () => {
         buttonLink={headerSection.buttonLink}
         image={headerSection.image}
       />
-      <About
+      <DescriptionContainer
         title={aboutSection.title}
         mainText={aboutSection.mainText}
         sideComponent={(

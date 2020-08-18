@@ -5,17 +5,19 @@ import {Container, Row, Col} from 'react-bootstrap'
 import PublicationListItem from './PublicationListItem'
 import {Link} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 const PublicationsList = ({title, items=[], limit}) => {
   return (
     <div className="publications-list-component">
       <Container>
-        <Row>
-          <Col>
-            <h1 className="title">{title}</h1>
-          </Col>
-        </Row>
+        {!title || (
+          <Row>
+            <Col>
+              <h1 className="title">{title}</h1>
+            </Col>
+          </Row>
+        )}
         <Row>
           {items.map((item, i) => (
             <PublicationListItem

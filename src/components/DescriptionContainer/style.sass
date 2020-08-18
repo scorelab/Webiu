@@ -1,0 +1,36 @@
+@import '../../styles/variables.sass'
+
+.description-container-component
+  @media #{$xs-and-less}
+    padding: 10px
+    text-align: center
+  @media #{$tiny-and-less}
+    padding: 0px
+  padding-top: 30px
+  padding-bottom: 15px
+  background-color: #fff
+  .title
+    @media #{$xs-and-less}
+      font-size: 30px
+    padding: 25px 0px 15px 0px
+    font-weight: 400
+  .description-container-image-container
+    text-align: center
+    padding-bottom: 15px
+  .description-container-image
+    width: 200px
+    height: 200px
+    @media #{$xs-and-less}
+      margin-top: 10px
+      width: 160px
+      height: 160px
+    @media #{$tiny-and-less}
+      margin-top: 20px
+      width: 120px
+      height: 120px
+  .description-container-text
+    font-size: 14px
+    text-align: justify
+    line-height: 28px
+    
+

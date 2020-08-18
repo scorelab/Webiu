@@ -5,6 +5,7 @@
   .medium-feed-title
     font-weight: 600
   .feed-item-small-component
+    min-height: 100px
     background-color: #fff
     cursor: pointer
     display: flex
@@ -12,22 +13,47 @@
     margin-bottom: 10px
     .image
       margin-right: 10px
-      width: 90px
+      width: 80px
+      height: 80px
+      object-fit: cover
       border-radius: 5px
-    .post-title
-      color: $secondary
-      font-weight: 600
-      margin-bottom: 2px !important
-    .post-published-date
-      font-size: 12px
-      margin-bottom: 5px !important
-      font-weight: 500
-    .post-published-author
-      font-size: 12px
-      color: $dark-grey
-    .new-span
-      background-color: $red
+
+  .feed-item-component
+    background-color: #fff
+    display: flex
+    align-items: flex-start
+    padding-bottom: 30px
+    margin-bottom: 30px
+    .image
+      margin-right: 10px
+      width: 180px
+      height: 180px
+      border-radius: 5px
+      object-fit: cover
+      border: 1px solid $light-grey
+    .readmore-btn
+      background-color: $secondary
       color: #fff
-      font-size: 9px
-      padding: 2px 10px
-      border-radius: 5px
+      border: none
+      outline: none
+      padding: 5px 15px
+      border-radius: 3px
+      font-size: 12px
+
+  .post-title
+    color: $secondary
+    font-weight: 600
+    margin-bottom: 2px !important
+  .post-published-date
+    font-size: 12px
+    margin-bottom: 5px !important
+    font-weight: 500
+  .post-published-author
+    font-size: 12px
+    color: $dark-grey
+  .new-span
+    background-color: $red
+    color: #fff
+    font-size: 9px
+    padding: 2px 10px
+    border-radius: 5px

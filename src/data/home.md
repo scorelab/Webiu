@@ -7,7 +7,7 @@ headerSecton:
     The SCoRe Lab has conducted research covering various aspects of sensor networks, embeded systems, digital forensic, information security, mobile applications, cloud, blockchain and software tools.
   buttonText: EXPLORE
   buttonLink: /projects
-  image: /images/landing-header-image.png
+  image: /images/community.png
 
 aboutSection:
   title: About Us

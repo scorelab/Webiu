@@ -9,6 +9,10 @@ pages:
     path: /projects
   - name: Publications
     path: /publications
+  - name: Team
+    path: /team
+  - name: Opportunities
+    path: /opportunities
   - name: Blog
     path: /blog
   - name: GSOC 2020
