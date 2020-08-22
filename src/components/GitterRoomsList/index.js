@@ -23,8 +23,6 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
     fetch(fetchUrl).then((res) => res.json()).then((data) => {
       setRooms(data.results)
       setLoading(false)
-
-      console.log(data.results)
     })
     .catch((err) => { 
       throw err 

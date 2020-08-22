@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {Container, Row, Col} from 'react-bootstrap'
-import ImageGrid from "../ImageGrid"
 import "./style.sass"
-import LinksList from "../LinksList"
+import {ImageGrid} from "../ImageGrid"
+import {LinksList} from "../LinksList"
 
 export const ProjectDetail = ({project}) => {
   return (
