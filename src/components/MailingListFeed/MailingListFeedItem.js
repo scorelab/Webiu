@@ -4,7 +4,7 @@ import moment from 'moment'
 import "./style.sass"
 import LetterAvatar from "../LetterAvatar"
 
-const FeedItem = ({image, author, title, description, publishedDate, slug}) => {
+const MailingListFeedItem = ({image, author, title, description, publishedDate, slug}) => {
   return (
     <div className="mailing-list-feed-item-component" onClick={() => window.open(slug, "_blank")}>
       {image && image !== "" ? (
@@ -25,7 +25,7 @@ const FeedItem = ({image, author, title, description, publishedDate, slug}) => {
   )
 }
 
-FeedItem.propTypes = {
+MailingListFeedItem.propTypes = {
   image: PropTypes.string,
   author: PropTypes.string,
   title: PropTypes.string,
@@ -34,4 +34,4 @@ FeedItem.propTypes = {
   slug: PropTypes.string,
 }
 
-export default FeedItem
+export default MailingListFeedItem

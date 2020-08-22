@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
 import { Col, Row, Container } from "react-bootstrap"
-import FeedItem from './FeedItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import MailingListFeedItem from './MailingListFeedItem'
 import "./style.sass"
-import { Link } from "gatsby"
-
 
 export const MailingListFeed = ({title, feedUrl}) => {
 
@@ -32,7 +30,7 @@ export const MailingListFeed = ({title, feedUrl}) => {
   const renderFeedItemList = () => (
     feed.items.map(item => (
       <Col md={12} key={item.guid}>
-        <FeedItem
+        <MailingListFeedItem
           image={item.thumbnail}
           author={item.author}
           title={item.title}
