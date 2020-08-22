@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 
-const LetterAvatar = ({name}) => {
+export const LetterAvatar = ({name}) => {
   return (
     <div className="letter-avatar-component">
       <div className="letter-avatar-container">
@@ -17,5 +17,3 @@ const LetterAvatar = ({name}) => {
 LetterAvatar.propTypes = {
   name: PropTypes.string,
 }
-
-export default LetterAvatar

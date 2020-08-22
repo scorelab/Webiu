@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import { Pagination } from "antd"
 
-const ListPagination = ({pageSize, total, onChange}) => {
+export const ListPagination = ({pageSize, total, onChange}) => {
   return (
     <div className='list-pagination-component'>
       <Pagination 
@@ -25,5 +25,3 @@ ListPagination.propTypes = {
   total: PropTypes.number,
   onChange: PropTypes.func,
 }
-
-export default ListPagination

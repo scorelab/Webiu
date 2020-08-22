@@ -7,7 +7,7 @@ import {Link} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const ProjectsList = ({title, items=[], limit}) => {
+export const ProjectsList = ({title, items=[], limit}) => {
   return (
     <div className="project-list-component">
       <Container>
@@ -39,5 +39,3 @@ const ProjectsList = ({title, items=[], limit}) => {
 ProjectsList.propTypes = {
   items: PropTypes.array,
 }
-
-export default ProjectsList

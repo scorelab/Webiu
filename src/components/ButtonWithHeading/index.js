@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 
-const ButtonWithHeading = ({ heading, buttonText, onClick = () => {}}) => {
+export const ButtonWithHeading = ({ heading, buttonText, onClick = () => {}}) => {
   return (
     <div className="button-with-heading-component">
       <Container>
@@ -25,5 +25,3 @@ ButtonWithHeading.propTypes = {
   buttonText: PropTypes.string,
   onClick: PropTypes.func
 }
-
-export default ButtonWithHeading

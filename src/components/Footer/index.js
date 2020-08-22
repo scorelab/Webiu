@@ -5,7 +5,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faTwitter, faFacebook, faLinkedin, faGithub, faGitter, faMedium } from "@fortawesome/free-brands-svg-icons";
 
-const Footer = ({mainText, socialLinks = {} }) => {
+export const Footer = ({mainText, socialLinks = {} }) => {
   const { 
     facebook,
     gitter,
@@ -41,5 +41,3 @@ Footer.propTypes = {
   mainText: PropTypes.string,
   socialLinks: PropTypes.object,
 }
-
-export default Footer

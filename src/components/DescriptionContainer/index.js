@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 
-const DescriptionContainer = ({title, subTitle, image, mainText, sideComponent}) => {
+export const DescriptionContainer = ({title, subTitle, image, mainText, sideComponent}) => {
   return (
     <div className="description-container-component">
       <Container>
@@ -43,5 +43,3 @@ DescriptionContainer.propTypes = {
   mainText: PropTypes.string,
   sideComponent: PropTypes.object
 }
-
-export default DescriptionContainer

@@ -6,7 +6,7 @@ import FeedItem from './FeedItem'
 import "./style.sass"
 
 
-const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
+export const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
 
   const [loading, setLoading] = useState(true)
   const [feed, setFeed] = useState(null)
@@ -76,5 +76,3 @@ MediumFeed.propTypes = {
   small: PropTypes.bool,
   limit: PropTypes.number
 }
-
-export default MediumFeed

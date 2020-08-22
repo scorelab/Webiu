@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col, Form} from 'react-bootstrap'
 
-const Contact = ({contactMessage, subscribeMessage}) => {
+export const Contact = ({contactMessage, subscribeMessage}) => {
   return (
     <div className="contact-component">
       <Container>
@@ -43,5 +43,3 @@ Contact.propTypes = {
   contactMessage: PropTypes.string,
   subscribeMessage: PropTypes.string,
 }
-
-export default Contact

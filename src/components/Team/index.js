@@ -4,7 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import TeamListItem from './TeamListItem'
 import "./style.sass"
 
-const Team = ({ heads, researchers, alumni }) => {
+export const Team = ({ heads, researchers, alumni }) => {
   return (
     <div className="team-component">
       <Container>
@@ -63,5 +63,3 @@ Team.propTypes = {
   researchers: PropTypes.array,
   alumni: PropTypes.array,
 }
-
-export default Team

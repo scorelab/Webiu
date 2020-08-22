@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 
-const GuideLines = ({ heading, description, guidelines}) => {
+export const GuideLines = ({ heading, description, guidelines}) => {
   return (
     <div className="guide-lines-component">
       <Container>
@@ -28,5 +28,3 @@ GuideLines.propTypes = {
   description: PropTypes.string,
   guidelines: PropTypes.array
 }
-
-export default GuideLines

@@ -7,7 +7,7 @@ import {Link} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
-const PublicationsList = ({title, items=[], limit}) => {
+export const PublicationsList = ({title, items=[], limit}) => {
   return (
     <div className="publications-list-component">
       <Container>
@@ -41,5 +41,3 @@ PublicationsList.propTypes = {
   items: PropTypes.array,
   limit: PropTypes.number,
 }
-
-export default PublicationsList

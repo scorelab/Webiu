@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import { Link } from "gatsby"
 
-const PageNotFound = ({ image, mainText, subText }) => {
+export const PageNotFound = ({ image, mainText, subText }) => {
   return (
     <div className="page-not-found-component">
       <div className="inner-container">
@@ -22,5 +22,3 @@ PageNotFound.propTypes = {
   mainText: PropTypes.string,
   subText: PropTypes.string,
 }
-
-export default PageNotFound

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 
-const LinksList = ({links}) => {
+export const LinksList = ({links}) => {
   return (
     <div className="links-list-component">
       {links ? (
@@ -21,5 +21,3 @@ const LinksList = ({links}) => {
 LinksList.propTypes = {
   links: PropTypes.array,
 }
-
-export default LinksList

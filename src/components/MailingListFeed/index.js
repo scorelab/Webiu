@@ -8,7 +8,7 @@ import "./style.sass"
 import { Link } from "gatsby"
 
 
-const MailingListFeed = ({title, feedUrl}) => {
+export const MailingListFeed = ({title, feedUrl}) => {
 
   const [loading, setLoading] = useState(true)
   const [feed, setFeed] = useState(null)
@@ -67,5 +67,3 @@ MailingListFeed.propTypes = {
   title: PropTypes.string,
   feedUrl: PropTypes.string,
 }
-
-export default MailingListFeed

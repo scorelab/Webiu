@@ -4,7 +4,7 @@ import {Navbar, Nav} from 'react-bootstrap'
 import {Link} from "gatsby"
 import './style.sass'
 
-const NavBar = ({logo, links = []}) => {
+export const NavBar = ({logo, links = []}) => {
   return (
     <div className="nav-bar-component ">
       <Navbar className="nav-bar-custom" expand="lg">
@@ -38,6 +38,3 @@ NavBar.propTypes = {
   logo: PropTypes.string,
   links: PropTypes.array
 }
-
-
-export default NavBar

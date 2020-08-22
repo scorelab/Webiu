@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 
-const ImageGrid = ({images}) => {
+export const ImageGrid = ({images}) => {
 
   const renderImages = () => {
     return (
@@ -28,5 +28,3 @@ const ImageGrid = ({images}) => {
 ImageGrid.propTypes = {
   images: PropTypes.array
 }
-
-export default ImageGrid

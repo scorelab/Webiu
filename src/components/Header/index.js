@@ -5,7 +5,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Header = ({mainText, subText, icon, buttonText, buttonLink, image, small=false, backgroundColor}) => {
+export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, small=false, backgroundColor}) => {
   return (
     <div style={{ backgroundColor }} className="header-component" >
       <Container>
@@ -49,5 +49,3 @@ Header.propTypes = {
   image: PropTypes.string,
   small: PropTypes.bool
 }
-
-export default Header

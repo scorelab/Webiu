@@ -5,7 +5,7 @@ import ImageGrid from "../ImageGrid"
 import "./style.sass"
 import LinksList from "../LinksList"
 
-const ProjectDetail = ({project}) => {
+export const ProjectDetail = ({project}) => {
   return (
     <div className="project-detail-component">
       <div className="project-detail-header-container" >
@@ -34,5 +34,3 @@ const ProjectDetail = ({project}) => {
 ProjectDetail.propTypes = {
   project: PropTypes.object
 }
-
-export default ProjectDetail
