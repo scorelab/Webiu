@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import moment from 'moment'
 import "./style.sass"
-import LetterAvatar from "../LetterAvatar"
+import {LetterAvatar} from "../LetterAvatar"
 
 const MailingListFeedItem = ({image, author, title, description, publishedDate, slug}) => {
   return (
