@@ -5,6 +5,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import favIcon from '../../../static/icons/icon-144x144.png'
 
 export const SEO = ({ description, lang, meta, title }) => {
+
+
+  return null; // @TODO! Remove this line
+
+
   const { site } = useStaticQuery(
     graphql`
       query {

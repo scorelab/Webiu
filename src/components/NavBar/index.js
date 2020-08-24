@@ -4,11 +4,11 @@ import {Navbar, Nav} from 'react-bootstrap'
 import {Link} from "gatsby"
 import './style.sass'
 
-export const NavBar = ({logo, links = []}) => {
+export const NavBar = ({logo, links = [], logoStyle}) => {
   return (
     <div className="nav-bar-component ">
       <Navbar className="nav-bar-custom" expand="lg">
-      <div className="logo-container">
+      <div className="logo-container" style={logoStyle}>
         <Link to="/">
           <img className="logo" src={logo} alt="logo"/>
         </Link>
@@ -36,5 +36,6 @@ export const NavBar = ({logo, links = []}) => {
 
 NavBar.propTypes = {
   logo: PropTypes.string,
-  links: PropTypes.array
+  links: PropTypes.array,
+  logoStyle: PropTypes.object
 }
