@@ -1,3 +1,6 @@
+# Custom
+src/styles/variable.sass
+
 # Logs
 logs
 *.log
