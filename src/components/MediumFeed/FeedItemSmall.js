@@ -6,7 +6,7 @@ import "./style.sass"
 const FeedItemSmall = ({title, publishedDate, author, image, slug}) => {
   return (
     <div className="medium-feed-item-small-component" onClick={() => window.open(slug, "_blank")}>
-      <img className= "image" alt="medium" src={image.includes("cdn-images") ? image : '/images/mediumPlaceholder.png'} />
+      <img className= "image" alt="medium" src={image.includes("cdn-images") ? image : './images/mediumPlaceholder.png'} />
       <div>
         <p className="post-title">{title}</p>
         <p className="post-published-date">

@@ -6,7 +6,7 @@ import "./style.sass"
 const FeedItem = ({title, publishedDate, author, image, slug}) => {
   return (
     <div className="medium-feed-item-component">
-      <img className="image" alt="medium" src={image.includes("cdn-images") ? image : '/images/mediumPlaceholder.png'} />
+      <img className="image" alt="medium" src={image.includes("cdn-images") ? image : './images/mediumPlaceholder.png'} />
       <div>
         <p className="post-title">{title}</p>
         <p className="post-published-date">
