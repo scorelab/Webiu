@@ -7,12 +7,12 @@ export const LinksList = ({links}) => {
     <div className="links-list-component">
       {links ? (
         <ul>
-        {links.map((link, i) => (
-          <li key={`${link.url}-${i}`}>
-            <span>{link.name}</span>: <a href={link.url}>{link.url}</a>
-          </li>
-        ))}
-      </ul>
+          {links.map((link, i) => (
+            <li key={`${link.url}-${i}`}>
+              <span>{link.name}</span>: <a href={link.url}>{link.url}</a>
+            </li>
+          ))}
+        </ul>
       ) : <p>No links found!</p>}
     </div>
   )

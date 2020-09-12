@@ -7,7 +7,9 @@ import {Link} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export const ProjectsList = ({title, items=[], limit}) => {
+export const ProjectsList = ({title, items=[], limit, suffle = false}) => {
+  const suffledItems = suffle ? items.sort(() => Math.random() - 0.5) : items
+
   return (
     <div className="project-list-component">
       <Container>
@@ -19,12 +21,12 @@ export const ProjectsList = ({title, items=[], limit}) => {
           </Row>
         )}
         <Row>
-          {items.map((item, i) => (
+          {suffledItems.map((item, i) => !limit || i < limit ? (
             <ProjectListItem
               key={i}
               {...item}
             />
-          ))}
+          ) : null)}
         </Row>
         <Row>
           <Col className="view-all-btn-container">
@@ -37,5 +39,8 @@ export const ProjectsList = ({title, items=[], limit}) => {
 }
 
 ProjectsList.propTypes = {
+  title: PropTypes.string,
   items: PropTypes.array,
+  limit: PropTypes.number,
+  suffle: PropTypes.bool,
 }

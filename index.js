@@ -7,6 +7,7 @@ export {GitterRoomsList} from './src/components/GitterRoomsList';
 export {GuideLines} from './src/components/GuideLines';
 export {Header} from './src/components/Header';
 export {ImageGrid} from './src/components/ImageGrid';
+export {JobOpenings} from './src/components/JobOpenings';
 export {LetterAvatar} from './src/components/LetterAvatar';
 export {LinksList} from './src/components/LinksList';
 export {ListPagination} from './src/components/ListPagination';

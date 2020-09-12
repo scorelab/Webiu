@@ -17,7 +17,6 @@ export const Team = ({ heads, researchers, alumni }) => {
                   <TeamListItem 
                     name={item.name}
                     title={item.title}
-                    image={item.image}
                   />
                 </Col>
               ))}
@@ -32,7 +31,6 @@ export const Team = ({ heads, researchers, alumni }) => {
               <TeamListItem 
                 name={item.name}
                 title={item.title}
-                image={item.image}
                 horizontal
               />
             </Col>
@@ -46,7 +44,6 @@ export const Team = ({ heads, researchers, alumni }) => {
               <TeamListItem 
                 name={item.name}
                 title={item.title}
-                image={item.image}
                 horizontal
               />
             </Col>
