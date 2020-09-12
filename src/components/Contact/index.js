@@ -5,7 +5,7 @@ import {Container, Row, Col, Form} from 'react-bootstrap'
 
 export const Contact = ({contactMessage, subscribeMessage}) => {
   return (
-    <div className="contact-component">
+    <div className="contact-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
       <Container>
         <Row>
           <Col md={6}>

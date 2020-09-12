@@ -12,7 +12,7 @@ const ProjectListItem = ({title, description, image, slug}) => {
         <div>
           <p className= "item-title"> {title}</p>
           <p className= "item-descriptiom">
-            {description.slice(0, 220)}
+            {description.slice(0, 220).trim()}
             {description.length > 220 ? "..." : ""}
           </p>
         </div>

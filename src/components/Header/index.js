@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, small=false, backgroundColor}) => {
   return (
-    <div style={{ backgroundColor }} className="header-component" >
+    <div style={{ backgroundColor, backgroundImage: 'url(./images/dots.png)' }} className="header-component" >
       <Container>
         {small ? (
           <Row>

@@ -7,7 +7,7 @@ import {LinksList} from "../LinksList"
 
 export const ProjectDetail = ({project}) => {
   return (
-    <div className="project-detail-component">
+    <div className="project-detail-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
       <div className="project-detail-header-container" >
         <img alt="Logo" src={project.image} />
         <h1>{project.title}</h1>

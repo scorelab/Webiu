@@ -22,37 +22,36 @@ export const Team = ({ heads, researchers, alumni }) => {
                 </Col>
               ))}
             </Row>
-            <br />
-            <h3>Researchers</h3>
-            <Row>
-              {researchers.map((item, i) => (
-                <Col md={4} sm={6} key={i}>
-                  <TeamListItem 
-                    name={item.name}
-                    title={item.title}
-                    image={item.image}
-                    horizontal
-                  />
-                </Col>
-              ))}
-            </Row>
-            <br />
-            <h3>Alumni</h3>
-            <Row>
-            {alumni.map((item, i) => (
-              <Col md={4} sm={6} key={i}>
-                <TeamListItem 
-                  name={item.name}
-                  title={item.title}
-                  image={item.image}
-                  horizontal
-                />
-              </Col>
-            ))}
-          </Row>
-
           </div>
         )}
+        <br />
+        <h3>Researchers</h3>
+        <Row>
+          {researchers.map((item, i) => (
+            <Col md={4} sm={6} key={i}>
+              <TeamListItem 
+                name={item.name}
+                title={item.title}
+                image={item.image}
+                horizontal
+              />
+            </Col>
+          ))}
+        </Row>
+        <br />
+        <h3>Alumni</h3>
+        <Row>
+          {alumni.map((item, i) => (
+            <Col md={4} sm={6} key={i}>
+              <TeamListItem 
+                name={item.name}
+                title={item.title}
+                image={item.image}
+                horizontal
+              />
+            </Col>
+          ))}
+        </Row>
       </Container>
     </div>
   )

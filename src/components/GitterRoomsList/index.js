@@ -48,7 +48,7 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
   )
 
   return (
-    <div className="gitter-rooms-list-component">
+    <div className="gitter-rooms-list-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
       <Container>
         <Row>
           <Col md={12}>

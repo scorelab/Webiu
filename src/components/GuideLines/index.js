@@ -5,7 +5,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 
 export const GuideLines = ({ heading, description, guidelines}) => {
   return (
-    <div className="guide-lines-component">
+    <div className="guide-lines-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
       <Container>
         <Row>
           <Col> 
