@@ -7,7 +7,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./style.sass"
 
 
-export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, limit = 9}) => {
+export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, limit = 9, small}) => {
 
   const [loading, setLoading] = useState(true)
   const [rooms, setRooms] = useState(null)
@@ -52,7 +52,7 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
       <Container>
         <Row>
           <Col md={12}>
-            <h1 className="gitter-rooms-list-title">{title}</h1>
+            <h1 className={small ? "gitter-rooms-list-title-small" : "gitter-rooms-list-title"}>{title}</h1>
           </Col>
           {loading || !rooms ? <Col md={12}><p>Loading...</p></Col> : renderRoomList()}
         </Row>

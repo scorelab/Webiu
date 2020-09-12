@@ -6,7 +6,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import MailingListFeedItem from './MailingListFeedItem'
 import "./style.sass"
 
-export const MailingListFeed = ({title, feedUrl}) => {
+export const MailingListFeed = ({title, feedUrl, small}) => {
 
   const [loading, setLoading] = useState(true)
   const [feed, setFeed] = useState(null)
@@ -47,7 +47,7 @@ export const MailingListFeed = ({title, feedUrl}) => {
       <Container>
         <Row>
           <Col md={12}>
-            <h1 className="mailing-list-feed-title">{title}</h1>
+            <h1 className={small ? "mailing-list-feed-title-small" : "mailing-list-feed-title"}>{title}</h1>
           </Col>
           {loading || !feed ? <Col md={12}><p>Loading...</p></Col>: renderFeedItemList()}
         </Row>
