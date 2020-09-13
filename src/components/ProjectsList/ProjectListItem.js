@@ -2,13 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import {Col} from 'react-bootstrap'
-import {navigate} from "gatsby"
+import {navigate, withPrefix} from "gatsby"
 
 const ProjectListItem = ({title, description, image, slug}) => {
   return (
     <Col md={4}>
       <div className="project-list-item-component" onClick={() => navigate(slug)}>
-        <img className= "image" alt="project" src={image} />
+        <img className= "image" alt="project" src={withPrefix(image)} />
         <div>
           <p className= "item-title"> {title}</p>
           <p className= "item-descriptiom">

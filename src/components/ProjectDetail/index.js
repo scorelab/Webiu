@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {withPrefix} from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
 import "./style.sass"
 import {ImageGrid} from "../ImageGrid"
@@ -9,7 +10,7 @@ export const ProjectDetail = ({project}) => {
   return (
     <div className="project-detail-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
       <div className="project-detail-header-container" >
-        <img alt="Logo" src={project.image} />
+        <img alt="Logo" src={withPrefix(project.image)} />
         <h1>{project.title}</h1>
       </div>
       <Container>

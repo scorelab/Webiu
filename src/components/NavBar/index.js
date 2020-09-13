@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {Navbar, Nav} from 'react-bootstrap'
-import {Link} from "gatsby"
+import {Link, withPrefix} from "gatsby"
 import './style.sass'
 
 export const NavBar = ({logo, links = [], logoStyle}) => {
@@ -10,7 +10,7 @@ export const NavBar = ({logo, links = [], logoStyle}) => {
       <Navbar className="nav-bar-custom" expand="lg">
       <div className="logo-container" style={logoStyle}>
         <Link to="/">
-          <img className="logo" src={logo} alt="logo"/>
+          <img className="logo" src={withPrefix(logo)} alt="logo"/>
         </Link>
       </div>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggle"/>

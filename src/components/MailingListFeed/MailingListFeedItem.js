@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {withPrefix} from 'gatsby'
 import moment from 'moment'
 import "./style.sass"
 import {LetterAvatar} from "../LetterAvatar"
@@ -8,7 +9,7 @@ const MailingListFeedItem = ({image, author, title, description, publishedDate, 
   return (
     <div className="mailing-list-feed-item-component" onClick={() => window.open(slug, "_blank")}>
       {image && image !== "" ? (
-        <img className= "image" alt="medium" src={image} />
+        <img className= "image" alt="medium" src={withPrefix(image)} />
       ) : (
         <LetterAvatar name={author} />
       )}

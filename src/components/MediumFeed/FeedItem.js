@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import moment from 'moment'
+import {withPrefix} from 'gatsby'
 import "./style.sass"
 
 const FeedItem = ({title, publishedDate, author, image, slug}) => {

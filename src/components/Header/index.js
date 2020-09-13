@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, small=false, backgroundColor}) => {
@@ -31,7 +31,7 @@ export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, 
               </div>
             </Col>
             <Col md={6} className="right-col">
-              <img className= "main-image" alt="Header" src={image} />
+              <img className= "main-image" alt="Header" src={withPrefix(image)} />
             </Col>
           </Row>
         )}

@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
-import {Container, Row, Col} from 'react-bootstrap'
+import {Row, Col} from 'react-bootstrap'
+import {withPrefix} from 'gatsby'
 
 export const ImageGrid = ({images}) => {
 
@@ -10,7 +11,7 @@ export const ImageGrid = ({images}) => {
       <Row>
         {images.map(i => (
           <Col md={6} key={i}>
-            <img alt="Logo" src={i} />
+            <img alt="Logo" src={withPrefix(i)} />
           </Col>
         ))}
       </Row>

@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {withPrefix} from 'gatsby'
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 
@@ -18,7 +19,7 @@ export const DescriptionContainer = ({title, subTitle, image, mainText, sideComp
         {!image || (
           <Row>
             <Col className="description-container-image-container">
-              <img className="description-container-image" alt="Header" src={image} />
+              <img className="description-container-image" alt="Header" src={withPrefix(image)} />
             </Col>
           </Row>
         )}

@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {withPrefix} from 'gatsby'
 import "./style.sass"
 import {Container, Row, Col, Form} from 'react-bootstrap'
 
@@ -25,7 +26,7 @@ export const Contact = ({contactMessage, subscribeMessage}) => {
           <Col md={6}>
             <h1 className="title">Stay In Touch</h1>
             <p className="main-text">{subscribeMessage}</p>
-            <img className="subscribe-image" alt="subscribe" src={'./icons/email-icon.png'} />
+            <img className="subscribe-image" alt="subscribe" src={withPrefix('./icons/email-icon.png')} />
             <Form.Group controlId="subscribe-form">
               <Form.Control type="email" placeholder="E-Mail" />
             </Form.Group>
