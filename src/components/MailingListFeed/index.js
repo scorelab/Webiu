@@ -28,7 +28,7 @@ export const MailingListFeed = ({title, feedUrl, small}) => {
   }
 
   const renderFeedItemList = () => (
-    feed.items.map(item => (
+    feed && feed.items ? feed.items.map(item => (
       <Col md={12} key={item.guid}>
         <MailingListFeedItem
           image={item.thumbnail}
@@ -39,7 +39,7 @@ export const MailingListFeed = ({title, feedUrl, small}) => {
           slug={item.link}
         />
       </Col>
-    ))
+    )): null
   )
 
   return (
@@ -49,11 +49,11 @@ export const MailingListFeed = ({title, feedUrl, small}) => {
           <Col md={12}>
             <h1 className={small ? "mailing-list-feed-title-small" : "mailing-list-feed-title"}>{title}</h1>
           </Col>
-          {loading || !feed ? <Col md={12}><p>Loading...</p></Col>: renderFeedItemList()}
+          {loading || !feed || !feed.items ? <Col md={12}><p>Loading...</p></Col>: renderFeedItemList()}
         </Row>
         <Row>
         <Col className="view-all-btn-container">
-          {loading || !feed ? null : <a href={feed.feed.link} className="btn" target="_blank">View All <FontAwesomeIcon icon={faArrowRight}/></a>}
+          {loading || !feed || !feed.items  ? null : <a href={feed.feed.link} className="btn" target="_blank">View All <FontAwesomeIcon icon={faArrowRight}/></a>}
         </Col>
       </Row>
       </Container>

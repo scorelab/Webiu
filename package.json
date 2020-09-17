@@ -44,7 +44,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy-s3": "aws s3 --profile jehan-aws-cli sync ./public/ s3://scorelab.org --region ap-south-1"
   },
   "repository": {
     "type": "git",
