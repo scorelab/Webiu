@@ -8,8 +8,8 @@ import {LinksList} from "../LinksList"
 
 export const ProjectDetail = ({project}) => {
   return (
-    <div className="project-detail-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
-      <div className="project-detail-header-container" >
+    <div className="project-detail-component">
+      <div className="project-detail-header-container" style={{ backgroundImage: `url(${withPrefix('/images/dots.png')})` }}>
         <img alt="Logo" src={withPrefix(project.image)} />
         <h1>{project.title}</h1>
       </div>
