@@ -27,6 +27,7 @@ export const ProjectDetail = ({project}) => {
             </Col>
           </Row>
       </Container>
+      <br />
     </div>
   )
 }
