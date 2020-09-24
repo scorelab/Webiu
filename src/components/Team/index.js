@@ -4,7 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import TeamListItem from './TeamListItem'
 import "./style.sass"
 
-export const Team = ({ heads, researchers, alumni }) => {
+export const Team = ({ heads, contributors, researchers, alumni }) => {
   return (
     <div className="team-component">
       <Container>
@@ -23,6 +23,19 @@ export const Team = ({ heads, researchers, alumni }) => {
             </Row>
           </div>
         )}
+        <br />
+        <h3>Contributors</h3>
+        <Row>
+          {contributors.map((item, i) => (
+            <Col md={3} sm={4} key={i}>
+              <TeamListItem 
+                name={item.name}
+                title={item.title}
+                horizontal
+              />
+            </Col>
+          ))}
+        </Row>
         <br />
         <h3>Researchers</h3>
         <Row>

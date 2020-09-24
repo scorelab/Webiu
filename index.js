@@ -18,7 +18,6 @@ export {PageNotFound} from './src/components/PageNotFound';
 export {ProjectDetail} from './src/components/ProjectDetail';
 export {ProjectsList} from './src/components/ProjectsList';
 export {PublicationsList} from './src/components/PublicationsList';
-export {SEO} from './src/components/SEO';
 export {Team} from './src/components/Team';
 
 
