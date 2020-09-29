@@ -58,7 +58,7 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
         </Row>
         <Row>
         <Col className="view-all-btn-container">
-          {loading || !rooms ? null : <a href={`https://gitter.im/${gitterOrganizationName}`} className="btn" target="_blank">View All <FontAwesomeIcon icon={faArrowRight}/></a>}
+          {loading || !rooms ? null : <a href={`https://gitter.im/${gitterOrganizationName}`} className="btn" target="_blank">Many More <FontAwesomeIcon icon={faArrowRight}/></a>}
         </Col>
       </Row>
       </Container>

@@ -53,7 +53,7 @@ export const MailingListFeed = ({title, feedUrl, small}) => {
         </Row>
         <Row>
         <Col className="view-all-btn-container">
-          {loading || !feed || !feed.items  ? null : <a href={feed.feed.link} className="btn" target="_blank">View All <FontAwesomeIcon icon={faArrowRight}/></a>}
+          {loading || !feed || !feed.items  ? null : <a href={feed.feed.link} className="btn" target="_blank">Many More <FontAwesomeIcon icon={faArrowRight}/></a>}
         </Col>
       </Row>
       </Container>

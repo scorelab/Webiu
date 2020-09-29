@@ -30,7 +30,7 @@ export const ProjectsList = ({title, items=[], limit, suffle = false}) => {
         </Row>
         <Row>
           <Col className="view-all-btn-container">
-            {!limit || <Link to={'/projects'} className="btn">View All <FontAwesomeIcon icon={faArrowRight}/></Link>}
+            {!limit || <Link to={'/projects'} className="btn">Many More <FontAwesomeIcon icon={faArrowRight}/></Link>}
           </Col>
         </Row>
       </Container>
