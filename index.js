@@ -19,6 +19,6 @@ export {ProjectDetail} from './src/components/ProjectDetail';
 export {ProjectsList} from './src/components/ProjectsList';
 export {PublicationsList} from './src/components/PublicationsList';
 export {Team} from './src/components/Team';
-
+export {GsocIdeaList} from './src/components/GsocIdeaList';
 
 
