@@ -1,0 +1,46 @@
+@import "../../../styles/variables"
+
+
+.roundSpinner-container
+    padding-top: 100px
+    width: 150px
+    height: 100px
+    display: flex
+    justify-content: center
+    align-items: center
+    .roundSpinner-wrapper
+        width: 150px
+        height: 100px
+        div
+            width: 100px
+            height: 100px
+            border-radius: 50%
+            border: 8px solid $grey
+            border-top-color: $secondary
+            animation-name: spinnerLoader
+            animation-duration: .8s
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+        @media #{$md-and-less}
+            width: 80px
+            height: 80px
+            div
+                width: 80px
+                height: 80px       
+        @media #{$xs-and-less}
+            width: 50px
+            heigth: 50px
+            div
+                width: 50px
+                height: 50px
+
+
+//Keyframes for animation
+@keyframes  spinnerLoader
+    0%
+        transform: rotate(0deg)
+    50%
+        transform: rotate(180deg)
+    100%
+        transform: rotate(360deg)
+        
