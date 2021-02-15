@@ -11,7 +11,7 @@ export const Contact = ({contactMessage, subscribeMessage}) => {
         <Row>
           <Col md={6}>
             <h1 className="title">Contact Us</h1>
-            <p className="main-text">{contactMessage}</p>
+            {!contactMessage || (<p className="main-text">{contactMessage}</p>)}
             <Form>
               <Form.Group controlId="contact-form">
                 <Form.Control type="text" placeholder="Name" />
@@ -25,7 +25,7 @@ export const Contact = ({contactMessage, subscribeMessage}) => {
           </Col>
           <Col md={6}>
             <h1 className="title">Stay In Touch</h1>
-            <p className="main-text">{subscribeMessage}</p>
+            {!subscribeMessage || (<p className="main-text">{subscribeMessage}</p>)}
             <img className="subscribe-image" alt="subscribe" src={withPrefix('./icons/email-icon.png')} />
             <Form.Group controlId="subscribe-form">
               <Form.Control type="email" placeholder="E-Mail" />
