@@ -9,7 +9,7 @@ export const ButtonWithHeading = ({ heading, buttonText, onClick = () => {}}) =>
       <Container>
         <Row>
           <Col> 
-            <h1>{!heading || (heading)}</h1>
+            <h1>{ heading && (heading)}</h1>
             <button className="button-main" onClick={onClick}>
               {!buttonText || (buttonText)}
             </button>
