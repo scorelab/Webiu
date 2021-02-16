@@ -25,6 +25,13 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         display: `minimal-ui`,
+        icons: [
+          {
+            src: `/static/icons/icon-144x144.png`,
+            sizes: `144x144`,
+            type: `image/png`,
+          }
+        ],
       },
     }
   ],
