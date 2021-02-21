@@ -1,34 +1,46 @@
-@import '../../styles/variables-example.sass';
+@import '../../styles/variables.sass'
 
-.header-component {
-  background-image: url("../../../static/images/dots.png");
-  padding: 35px;
-  background-color: #f3faff;
-  text-align: center;
-  margin-bottom: 40px;
-}
-.icon {
-  color: green;
-  font-size: 30px;
-  margin-right: 10px;
-}
-.faq-row-wrapper {
-
-    .faq-title {
-      display: none;
-    }
-
-    .faq-body {
-        .faq-row {
-            .row-title {
-              color: green;
-            }
-            .row-content {
-                .row-content-text {
-                  color: black;
-                  font-size: 15px;
-                }
-            }
-        }
-    }
-}
+.accordion__section
+  display: flex
+  flex-direction: column
+.accordion
+  background-color: #eee
+  color: #444
+  cursor: pointer
+  padding: 18px
+  display: flex
+  align-items: center
+  border: none
+  outline: none
+  transition: background-color 0.6s ease
+.accordion:hover,
+.active
+  background-color: #ccc
+.accordion__title
+  font-family: "Open Sans", sans-serif
+  font-weight: 600
+  font-size: 14px
+  text-align: left
+.accordion__icon
+  margin-left: auto
+  transition: transform 0.6s ease
+.rotate
+  transform: rotate(90deg)
+.accordion__content
+  background-color: white
+  overflow: auto
+  transition: max-height 0.6s ease
+.accordion__text
+  font-family: "Open Sans", sans-serif
+  font-weight: 400
+  font-size: 14px
+  padding: 18px
+.header-component
+  background-image: url("../../../static/images/dots.png")
+  padding: 35px
+  background-color: #f3faff
+  text-align: center
+.icon
+  color: green
+.faq-container
+  margin: 5rem auto
