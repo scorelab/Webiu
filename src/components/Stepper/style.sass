@@ -1,0 +1,99 @@
+@import '../../styles/variables.sass'
+
+.stepper-container-horizontal
+  background-image: url("./dots.png")
+  border: 1px solid lightsalmon
+  box-shadow: 0 0 13px $primary
+  border-radius: 3px
+  margin: 40px auto
+  padding: 30px
+  width: 60%
+  .stepper-wrapper-horizontal
+    display: flex
+    justify-content: space-between
+
+  .step-wrapper
+    width: 23%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+
+  .step-number
+    border-radius: 50%
+    border: 1px solid grey
+    width: 20px
+    height: 20px
+    padding: 3px
+    text-align: center
+    margin-bottom: 1.2rem
+
+  .divider-line
+    height: 1px
+    background-color: $dark-grey
+    position: absolute
+    top: 20%
+    left: 70%
+
+  &-2
+    width: 296%
+
+  &-3
+    width: 125%
+
+  &-4
+    width: 70%
+
+  &-5
+    width: 60%
+.stepper-container-vertical
+  background-image: url("./dots.png")
+  border: 1px solid lightsalmon
+  box-shadow: 0 0 13px $primary
+  border-radius: 3px
+  margin: 40px auto
+  padding: 30px
+  width: 15%
+  height: auto
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.stepper-wrapper-vertical
+  .step-wrapper
+    display: flex
+    align-items: center
+    margin-bottom: 1.2rem
+    position: relative
+
+  .step-number
+    border-radius: 50%
+    width: 18px
+    height: 18px
+    padding: 4.5px 4px 4px
+    text-align: center
+    font-size: 95%
+
+  .step-description
+    margin-left: 1.2rem
+    padding-bottom: 3px
+
+  .divider-line
+    height: 17px
+    width: 1px
+    background-color: $dark-grey
+    position: absolute
+    top: 100%
+    left: 6.4%
+
+.step-number-selected
+  background: $primary
+  border: 1px solid #bdbdbd
+  color: $light-grey
+
+.step-number-disabled
+  border: 1px solid $dark-grey
+
+.step-description-active
+  font-weight: bold
