@@ -1,0 +1,31 @@
+@import '../../styles/variables.sass'
+
+.signup-component
+  padding: 30px
+  background-color: #fff
+  text-align: center
+  padding-bottom: 120px
+  max-width: 40%
+  .col-md-6
+    @media #{$md-and-less}
+      padding: 0px 20px !important
+    @media #{$xs-and-less}
+      padding: 0px 10px !important
+    padding: 0px 40px !important
+  .title
+    @media #{$xs-and-less}
+      font-size: 30px
+    padding: 55px 0px 0px 0px
+    font-weight: 400
+  .main-text
+    font-size: 13px
+    line-height: 28px
+  .form-control
+    margin-top: 15px !important
+  .signup-button
+    color: #fff
+    background-color: $primary
+    border: none
+    padding: 8px
+    border-radius: 5px
+    width: 100%
