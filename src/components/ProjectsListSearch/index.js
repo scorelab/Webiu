@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
-import "./styles.sass"
+import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 import {Link} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import {navigate, withPrefix} from "gatsby"
+import {SearchBarComponent} from '../SearchBarComponent'
 
 export const ProjectsListSearch = ({title, items=[], limit, suffle = false}) => {
   const suffledItems = suffle ? items.sort(() => Math.random() - 0.5) : items
@@ -16,8 +17,8 @@ export const ProjectsListSearch = ({title, items=[], limit, suffle = false}) => 
   const [searchItem, setSearchItem] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
-  const handleChange = (event) => {
-    setSearchItem(event.target.value);
+  const handleSearch = (item) => {
+    setSearchItem(item);
   }
 
   useEffect(() => {
@@ -36,12 +37,7 @@ export const ProjectsListSearch = ({title, items=[], limit, suffle = false}) => 
           <h1 className="title">{title}</h1>
         </Col>
         <Col md={6}>
-        <input
-         className="search-input"
-         type="text"
-         placeholder="Search Projects"
-         value={searchItem}
-         onChange={handleChange} /> <FontAwesomeIcon className="icon" icon={faSearch} />
+          <SearchBarComponent placeHolder="Search Items" handleSearch={handleSearch} />
         </Col>
       </Row>
       </div>

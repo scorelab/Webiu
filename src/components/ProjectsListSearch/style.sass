@@ -1,0 +1,72 @@
+@import '../../styles/variables-example.sass';
+
+.project-list-component
+  .title
+    @media #{$xs-and-less}
+      text-align: center
+      font-size: 30px
+    padding: 0px 0px 25px 0px
+    font-weight: 400
+  .view-all-btn-container
+    text-align: right
+    .btn
+      font-size: 16px
+      padding: 0px 5px
+      font-weight: 600
+      color: $primary
+  .project-list-item-component:hover
+    opacity: 0.7
+    border: 1px solid $grey
+  .project-list-item-component
+    @media #{$sm}
+      flex-direction: column
+      text-align: center
+    @media #{$tiny-and-less}
+      flex-direction: column
+      text-align: center
+
+    min-height: 150px
+    background-color: #fff
+    cursor: pointer
+    display: flex
+    align-items: flex-start
+    margin: 1px
+    margin-bottom: 25px
+    padding: 10px
+    padding-right: 15px
+    border: 1px solid $light-grey
+    border-radius: 5px
+    -webkit-box-shadow: 0px 0px 42px -2px rgba(0,0,0,0.05)
+    -moz-box-shadow: 0px 0px 42px -2px rgba(0,0,0,0.05)
+    box-shadow: 0px 0px 42px -2px rgba(0,0,0,0.05)
+    .image
+      @media #{$sm}
+        margin: auto
+      @media #{$tiny-and-less}
+        margin: auto
+      margin-right: 10px
+      width: 90px
+
+    .item-title
+      color: $secondary
+      font-weight: 600
+      margin-bottom: 2px !important
+    .item-descriptiom
+      font-size: 11px
+      text-align: justify
+      margin-bottom: 0px !important
+    .not-found
+      color: green
+      margin: auto
+      padding-left: 220px
+    .icon
+      color: green
+      font-size: 30px
+      margin-left: 10px
+      padding-top: 10px
+    .header-component
+      background-image: url("../../../static/images/dots.png")
+      padding: 35px
+      background-color: #f3faff
+      text-align: center
+      margin-bottom: 40px
