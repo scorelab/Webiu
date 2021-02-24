@@ -1,0 +1,36 @@
+@import '../../styles/variables.sass'
+
+$theme-blue: #14B6D4
+
+.carousel
+	height:100%
+	margin: auto
+	width: 100%
+  text-align: center
+.image-slide
+	height: 100%
+	width: 100%
+	transition: background-image .3s ease-in-out
+  max-width: 600px
+  margin: auto
+  background-image: url("../../../static/images/dots.png")
+  padding-top: 2rem
+  padding-bottom: 2rem
+  padding-left: 1rem
+  padding-right: 1rem
+.slide-arrow
+	color: $theme-blue
+	cursor: pointer
+	font-size: 2rem
+	position: absolute
+  top: 50%
+.slide-arrow.right
+  right: 10rem
+.slide-arrow.left
+	left: 10rem
+.header-component
+  background-image: url("../../../static/images/dots.png")
+  padding: 35px
+  background-color: #f3faff
+  text-align: center
+  margin-bottom: 40px
