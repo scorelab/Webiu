@@ -1,18 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
-import { Container, Row, Col } from "react-bootstrap"
+import {Container, Row, Col} from 'react-bootstrap'
 
-export const ButtonWithHeading = ({
-  heading,
-  buttonText,
-  onClick = () => {},
-}) => {
+export const ButtonWithHeading = ({ heading, buttonText, onClick = () => {}}) => {
   return (
     <div className="button-with-heading-component">
       <Container>
         <Row>
-          <Col>
+          <Col> 
             <h1>{heading}</h1>
             <button className="button-main" onClick={onClick}>
               {buttonText}
@@ -23,11 +19,9 @@ export const ButtonWithHeading = ({
     </div>
   )
 }
-
 ButtonWithHeading.propTypes = {
   heading: PropTypes.string,
   buttonText: PropTypes.string,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 }
-
 export default ButtonWithHeading

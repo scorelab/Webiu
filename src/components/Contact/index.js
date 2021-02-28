@@ -1,15 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { withPrefix } from "gatsby"
+import {withPrefix} from 'gatsby'
 import "./style.sass"
-import { Container, Row, Col, Form } from "react-bootstrap"
+import {Container, Row, Col, Form} from 'react-bootstrap'
 
-export const Contact = ({ contactMessage, subscribeMessage }) => {
+export const Contact = ({contactMessage, subscribeMessage}) => {
   return (
-    <div
-      className="contact-component"
-      style={{ backgroundImage: "url(./images/dots.png)" }}
-    >
+    <div className="contact-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
       <Container>
         <Row>
           <Col md={6}>
@@ -19,12 +16,7 @@ export const Contact = ({ contactMessage, subscribeMessage }) => {
               <Form.Group controlId="contact-form">
                 <Form.Control type="text" placeholder="Name" />
                 <Form.Control type="email" placeholder="E-Mail" />
-                <Form.Control
-                  as="textarea"
-                  rows="3"
-                  placeholder="Your Message"
-                  className="custom-text-area"
-                />
+                <Form.Control as="textarea" rows="3" placeholder="Your Message" className="custom-text-area" />
               </Form.Group>
               <button type="submit" className="send-button">
                 SEND
@@ -34,11 +26,7 @@ export const Contact = ({ contactMessage, subscribeMessage }) => {
           <Col md={6}>
             <h1 className="title">Stay In Touch</h1>
             <p className="main-text">{subscribeMessage}</p>
-            <img
-              className="subscribe-image"
-              alt="subscribe"
-              src={withPrefix("./icons/email-icon.png")}
-            />
+            <img className="subscribe-image" alt="subscribe" src={withPrefix('./icons/email-icon.png')} />
             <Form.Group controlId="subscribe-form">
               <Form.Control type="email" placeholder="E-Mail" />
             </Form.Group>
