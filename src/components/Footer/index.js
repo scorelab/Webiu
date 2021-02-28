@@ -35,12 +35,8 @@ export const Footer = ({mainText, socialLinks = {} }) => {
     </div>
   )
 }
-
-
 Footer.propTypes = {
   mainText: PropTypes.string,
   socialLinks: PropTypes.object,
 }
-
-
 export default Footer

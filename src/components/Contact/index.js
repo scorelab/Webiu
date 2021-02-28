@@ -39,10 +39,8 @@ export const Contact = ({contactMessage, subscribeMessage}) => {
     </div>
   )
 }
-
 Contact.propTypes = {
   contactMessage: PropTypes.string,
   subscribeMessage: PropTypes.string,
 }
-
 export default Contact
