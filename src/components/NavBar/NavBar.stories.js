@@ -25,6 +25,36 @@ export const navbar = () => (
        name: "Projects",
        isSpecial: false
      },
+     {
+       isExternal: false,
+       path: "https://www.google.com/",
+       name: "Publications",
+       isSpecial: false
+     },
+     {
+       isExternal: false,
+       path: "https://www.google.com/",
+       name: "Team",
+       isSpecial: false
+     },
+     {
+       isExternal: false,
+       path: "https://www.google.com/",
+       name: "Opportunties",
+       isSpecial: false
+     },
+     {
+       isExternal: true,
+       path: "https://www.google.com/",
+       name: "GitHub",
+       isSpecial: false
+     },
+     {
+       isExternal: false,
+       path: "https://www.google.com/",
+       name: "GSOC 2021",
+       isSpecial: true
+     },
      ]}
      logoStyle={{}}
   />

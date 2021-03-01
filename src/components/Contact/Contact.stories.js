@@ -1,5 +1,6 @@
 import React from "react"
 import {Contact} from "./index"
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
   title: "Contact",
