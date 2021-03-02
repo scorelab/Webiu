@@ -22,3 +22,4 @@ PageNotFound.propTypes = {
   mainText: PropTypes.string,
   subText: PropTypes.string,
 }
+export default PageNotFound;

@@ -36,3 +36,4 @@ export const ProjectDetail = ({project}) => {
 ProjectDetail.propTypes = {
   project: PropTypes.object
 }
+export default ProjectDetail;

@@ -65,3 +65,5 @@ MailingListFeed.propTypes = {
   title: PropTypes.string,
   feedUrl: PropTypes.string,
 }
+
+export default MailingListFeed;

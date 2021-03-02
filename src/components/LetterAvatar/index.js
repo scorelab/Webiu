@@ -17,3 +17,5 @@ export const LetterAvatar = ({name}) => {
 LetterAvatar.propTypes = {
   name: PropTypes.string,
 }
+
+export default LetterAvatar

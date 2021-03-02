@@ -72,4 +72,8 @@ Team.propTypes = {
   heads: PropTypes.array,
   researchers: PropTypes.array,
   alumni: PropTypes.array,
+  contributors:PropTypes.array
+
 }
+
+export default Team;

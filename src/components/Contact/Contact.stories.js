@@ -1,14 +1,17 @@
 import React from "react"
 import Contact from "./index"
+import './style.sass';
 
 export default {
-  title: "Contact",
+  title: " Contact",
   component: Contact,
+  argTypes: {
+    contactMessage: { control: 'text' },
+    subscribeMessage: { control: 'text' },
+  }
 }
-
-export const contact = () => (
-  <Contact
-    contactMessage="contactMessage"
-    subscribeMessage="subscribeMessage"
-  />
-)
+export const contact = (args) => < Contact {...args} />;
+contact.args = {
+  contactMessage:"contactMessage",
+  subscribeMessage:"subscribeMessage"
+}

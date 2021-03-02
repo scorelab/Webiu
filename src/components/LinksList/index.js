@@ -21,3 +21,5 @@ export const LinksList = ({links}) => {
 LinksList.propTypes = {
   links: PropTypes.array,
 }
+
+export default LinksList

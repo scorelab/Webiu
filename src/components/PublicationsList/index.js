@@ -44,3 +44,4 @@ PublicationsList.propTypes = {
   limit: PropTypes.number,
   suffle: PropTypes.bool,
 }
+export default PublicationsList

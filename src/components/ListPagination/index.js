@@ -25,3 +25,5 @@ ListPagination.propTypes = {
   total: PropTypes.number,
   onChange: PropTypes.func,
 }
+
+export default ListPagination;

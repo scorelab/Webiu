@@ -28,3 +28,5 @@ GuideLines.propTypes = {
   description: PropTypes.string,
   guidelines: PropTypes.array
 }
+
+export default GuideLines;

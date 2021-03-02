@@ -44,3 +44,4 @@ ProjectsList.propTypes = {
   limit: PropTypes.number,
   suffle: PropTypes.bool,
 }
+export default ProjectsList;

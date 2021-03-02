@@ -50,3 +50,5 @@ NavBar.propTypes = {
   links: PropTypes.array,
   logoStyle: PropTypes.object
 }
+
+export default NavBar;

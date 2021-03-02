@@ -71,3 +71,5 @@ GitterRoomsList.propTypes = {
   gitterOrganizationName: PropTypes.string,
   gitterToken: PropTypes.string,
 }
+
+export default GitterRoomsList;

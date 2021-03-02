@@ -25,7 +25,8 @@ export const ImageGrid = ({images}) => {
   )
 }
 
-
 ImageGrid.propTypes = {
   images: PropTypes.array
 }
+
+export default ImageGrid;
