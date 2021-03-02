@@ -42,7 +42,8 @@ export const GsocIdeaList = ({ heading, description, listItems}) => {
 GsocIdeaList.propTypes = {
   heading: PropTypes.string, 
   description: PropTypes.string,
-  listItems: PropTypes.array
+  listItems: PropTypes.array,
+  defaultActiveKeys: PropTypes.array,
 }
 
 export  default GsocIdeaList;
