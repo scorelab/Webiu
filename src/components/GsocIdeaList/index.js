@@ -6,7 +6,7 @@ import { Collapse } from 'antd';
 
 const { Panel } = Collapse;
 
-export const GsocIdeaList = ({ heading, description, listItems}) => {
+export const GsocIdeaList = ({ heading, description, listItems, defaultActiveKeys = []}) => {
   return (
     <div className="gsoc-idea-list-component">
       <Container>
@@ -15,7 +15,7 @@ export const GsocIdeaList = ({ heading, description, listItems}) => {
             {!heading || <h1>{heading}</h1>}
             {!description || <h2>{description}</h2>}
 
-            <Collapse>
+            <Collapse defaultActiveKey={defaultActiveKeys}>
               {!listItems || listItems.map((item, i) => (
                 <Panel header={item.title} key={`${i}`}>
                   <h4>Description</h4>
@@ -47,3 +47,4 @@ GsocIdeaList.propTypes = {
 }
 
 export  default GsocIdeaList;
+
