@@ -5,11 +5,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 export default {
   title: "Contact",
   component: Contact,
+  argTypes: {
+    contactMessage: { control: 'text' },
+    subscribeMessage: { control: 'text' }
+  }
 }
 
-export const contact = () => (
+export const contact = (args) => (
   <Contact
-    contactMessage="ContactMessage"
-    subscribeMessage="SubscribeMessage"
+    {...args}
   />
 )
+
+contact.args = {
+  contactMessage: "Message to be displayed",
+  subscribeMessage: "Message to be displayed"
+}

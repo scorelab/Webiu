@@ -2,9 +2,20 @@ import React from 'react';
 
 import { ButtonWithHeading } from './index';
 
+import { action } from "@storybook/addon-actions";
+
 export default {
   title: 'ButtonWithHeading',
   component: ButtonWithHeading,
+  argTypes: {
+    heading: { control: 'text' },
+    buttonText: { control: 'text' },
+  }
 };
 
-export const buttonwithheading = () => <ButtonWithHeading buttonText="Button" />
+export const buttonwithheading = (args) => <ButtonWithHeading {...args} onClick={action("Button Clicked")} />
+
+buttonwithheading.args = {
+  heading: "Custom Heading",
+  buttonText: "Button",
+}
