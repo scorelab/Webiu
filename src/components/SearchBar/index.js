@@ -1,8 +1,13 @@
 
-import React from "react"
+import React ,  {useState} from "react"
+import PropTypes from "prop-types"
 import "./SearchBar.css"
+import { propTypes } from "react-bootstrap/esm/Image"
 
-export const App = ({ onChange = null, styles = {} }) => {
+
+export const SearchBar = ({ handleSearch , styles = {} , placeholder='Search'}) => {
+   const [searchField , setSearchField] = ('')
+   
   return (
     <>
       <style>{styles}</style>
@@ -12,13 +17,14 @@ export const App = ({ onChange = null, styles = {} }) => {
             <div className="td">
               <input
                 type="text"
-                placeholder="Search"
+                placeholder={placeholder}
                 required
-                onChange={onChange}
+                value = {searchField}
+                onChange={(e)=>setSearchField(e.target.value)}
               />
             </div>
             <div className="td" id="s-cover">
-              <button type="submit">
+              <button onClick={handleSearch} type="submit">
                 <div id="s-circle"></div>
                 <span></span>
               </button>
@@ -29,3 +35,10 @@ export const App = ({ onChange = null, styles = {} }) => {
     </>
   )
 }
+
+SearchBarComponent.propTypes = {
+  handleSearch: PropTypes.func,
+  placeholder:propTypes.string,
+}
+
+
