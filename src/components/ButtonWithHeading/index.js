@@ -8,11 +8,11 @@ export const ButtonWithHeading = ({ heading, buttonText, onClick = () => {}}) =>
     <div className="button-with-heading-component">
       <Container>
         <Row>
-          <Col> 
-            <h1>{heading}</h1>
-            <button className="button-main" onClick={onClick}>
+          <Col>
+            {heading ? <h1>{heading}</h1> : null}
+            {buttonText ? <button className="button-main" onClick={onClick}>
               {buttonText}
-            </button>
+            </button> : null}
           </Col>
         </Row>
       </Container>
