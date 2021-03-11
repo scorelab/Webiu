@@ -6,12 +6,12 @@ import { Collapse } from 'antd';
 
 const { Panel } = Collapse;
 
-export const GsocIdeaList = ({ heading, description, listItems, defaultActiveKeys = []}) => {
+export const GsocIdeaList = ({ heading, description, listItems, previousProjects, defaultActiveKeys = []}) => {
   return (
     <div className="gsoc-idea-list-component">
       <Container>
         <Row>
-          <Col> 
+          <Col>
             {!heading || <h1>{heading}</h1>}
             {!description || <h2>{description}</h2>}
 
@@ -34,14 +34,23 @@ export const GsocIdeaList = ({ heading, description, listItems, defaultActiveKey
 
           </Col>
         </Row>
+        <Row className="button-row">
+           <Col lg={12}><div><h1>Past Years GSoC Projects</h1></div><hr /></Col>
+            {previousProjects ? previousProjects.map(project => (
+             <Col lg={3} md={6} sm={12}>
+              <a href={project.link}><button className="gsoc-button">{project.year}</button></a>
+             </Col>
+            )) : null}
+        </Row>
       </Container>
     </div>
   )
 }
 
 GsocIdeaList.propTypes = {
-  heading: PropTypes.string, 
+  heading: PropTypes.string,
   description: PropTypes.string,
   listItems: PropTypes.array,
+  previousProjects: PropTypes.array,
   defaultActiveKeys: PropTypes.array,
 }
