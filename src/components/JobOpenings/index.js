@@ -16,7 +16,7 @@ export const JobOpenings = ({title, openings}) => {
         )}
         {!openings || (
           <Row>
-            {openings.map((opening, i) => (
+            {openings ? openings.map((opening, i) => (
               <Col key={i}>
                 <h5>{opening.title}</h5>
                 <p>{opening.description}</p>
@@ -26,7 +26,7 @@ export const JobOpenings = ({title, openings}) => {
                   ))}
                 </ul>
               </Col>
-            ))}
+            )) : null}
           </Row>
         )}
       </Container>
