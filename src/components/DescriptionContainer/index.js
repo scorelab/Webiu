@@ -40,6 +40,7 @@ export const DescriptionContainer = ({title, subTitle, image, mainText, sideComp
 
 DescriptionContainer.propTypes = {
   title: PropTypes.string,
+  subTitle: PropTypes.string,
   image: PropTypes.string,
   mainText: PropTypes.string,
   sideComponent: PropTypes.object
