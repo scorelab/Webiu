@@ -15,7 +15,7 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
   useEffect(() => {
     getRooms()
   }, [])
-  
+
   const getRooms = () => {
     const fetchUrl = `https://api.gitter.im/v1/rooms?access_token=${gitterToken}&q=${gitterOrganizationName}`
 
@@ -24,8 +24,8 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
       setRooms(data.results)
       setLoading(false)
     })
-    .catch((err) => { 
-      throw err 
+    .catch((err) => {
+      throw err
     });
   }
 
@@ -42,7 +42,7 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
             />
           </Col>
         )
-      } 
+      }
       return null
     })
   )
@@ -52,7 +52,7 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
       <Container>
         <Row>
           <Col md={12}>
-            <h1 className={small ? "gitter-rooms-list-title-small" : "gitter-rooms-list-title"}>{title}</h1>
+            {title ? <h1 className={small ? "gitter-rooms-list-title-small" : "gitter-rooms-list-title"}>{title}</h1> : null}
           </Col>
           {loading || !rooms ? <Col md={12}><p>Loading...</p></Col> : renderRoomList()}
         </Row>
@@ -70,4 +70,6 @@ GitterRoomsList.propTypes = {
   title: PropTypes.string,
   gitterOrganizationName: PropTypes.string,
   gitterToken: PropTypes.string,
+  small: PropTypes.bool,
+  limit: PropTypes.number
 }
