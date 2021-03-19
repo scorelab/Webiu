@@ -8,13 +8,13 @@ export const GuideLines = ({ heading, description, guidelines}) => {
     <div className="guide-lines-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
       <Container>
         <Row>
-          <Col> 
-            <h1>{heading}</h1>
-            <h2>{description}</h2>
+          <Col>
+            {heading ? <h1>{heading}</h1> : null}
+            {description ? <h2>{description}</h2> : null}
             <ol>
-              {!guidelines || guidelines.map((guideline, i) => (
+              {guidelines ? guidelines.map((guideline, i) => (
                 <li key={`${guideline}-${i}`}>{guideline}</li>
-              ))}
+              )) : null}
             </ol>
           </Col>
         </Row>
@@ -24,7 +24,7 @@ export const GuideLines = ({ heading, description, guidelines}) => {
 }
 
 GuideLines.propTypes = {
-  heading: PropTypes.string, 
+  heading: PropTypes.string,
   description: PropTypes.string,
   guidelines: PropTypes.array
 }
