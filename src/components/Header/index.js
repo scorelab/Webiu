@@ -11,7 +11,7 @@ export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, 
       <Container>
         {small ? (
           <Row>
-            <Col className="small-header-col">    
+            <Col className="small-header-col">
               <h1>
                 {!icon || <FontAwesomeIcon icon={icon} className="icon"/>}{" "}
                 {mainText}
@@ -21,13 +21,13 @@ export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, 
         ) : (
           <Row>
             <Col md={6} className="left-col">
-              <div className="header-content-section">     
-                <h1>
+              <div className="header-content-section">
+                { mainText ? <h1>
                   <span className='colored'>{mainText.split(' ')[0]}</span>
                   <span>{mainText.split(' ').map((t, i) => i !== 0 ? ' ' + t : null)}</span>
-                </h1>
+                </h1> : null }
                 <p>{subText}</p>
-                <Link to={buttonLink} className="btn">{buttonText}</Link>
+                {buttonText ? <Link to={buttonLink} className="btn">{buttonText}</Link> : null}
               </div>
             </Col>
             <Col md={6} className="right-col">
@@ -47,5 +47,7 @@ Header.propTypes = {
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
   image: PropTypes.string,
-  small: PropTypes.bool
+  small: PropTypes.bool,
+  icon: PropTypes.string,
+  backgroundColor: PropTypes.string
 }
