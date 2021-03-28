@@ -7,7 +7,7 @@ export const LetterAvatar = ({name}) => {
     <div className="letter-avatar-component">
       <div className="letter-avatar-container">
         {!name || (
-          <span className="letter-avatar-text">{name.slice(0,1)}</span>
+          <span className="letter-avatar-text">{name.slice(0,1).toUpperCase()}</span>
         )}
       </div>
     </div>
