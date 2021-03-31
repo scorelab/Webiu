@@ -14,7 +14,7 @@ export const MailingListFeed = ({title, feedUrl, small}) => {
   useEffect(() => {
     getFeed()
   }, [])
-  
+
   const getFeed = () => {
     const feedFetchUrl = `https://api.rss2json.com/v1/api.json?rss_url=${feedUrl}`
     setLoading(true)
@@ -22,8 +22,8 @@ export const MailingListFeed = ({title, feedUrl, small}) => {
       setFeed(data)
       setLoading(false)
     })
-    .catch((err) => { 
-      throw err 
+    .catch((err) => {
+      throw err
     });
   }
 
@@ -64,4 +64,5 @@ export const MailingListFeed = ({title, feedUrl, small}) => {
 MailingListFeed.propTypes = {
   title: PropTypes.string,
   feedUrl: PropTypes.string,
+  small: PropTypes.bool
 }
