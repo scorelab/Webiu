@@ -30,6 +30,8 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.1",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -40,6 +42,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lint": "eslint --fix \"**/*.{js,jsx}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
