@@ -9,8 +9,8 @@ export const GuideLines = ({ heading, description, guidelines}) => {
       <Container>
         <Row>
           <Col> 
-            <h1>{heading}</h1>
-            <h2>{description}</h2>
+            {!heading || (<h1>{heading}</h1>)}
+            {!description || (<h2>{description}</h2>)}
             <ol>
               {!guidelines || guidelines.map((guideline, i) => (
                 <li key={`${guideline}-${i}`}>{guideline}</li>

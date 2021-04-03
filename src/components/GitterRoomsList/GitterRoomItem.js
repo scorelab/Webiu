@@ -8,10 +8,10 @@ const GitterRoomItem = ({name, avatarUrl, roomUrl, userCount}) => {
     <div className="gitter-room-list-item-component" onClick={() => window.open(roomUrl, "_blank")}>
       <img className="image" alt="Avatar" src={avatarUrl && avatarUrl !== ""  ? avatarUrl : withPrefix('/images/gitterPlaceholder.png')} />
       <div>
-        <p className="gitter-room-name">{name}</p>
-        <p className="gitter-room-members">
+        {!name || (<p className="gitter-room-name">{name}</p>)}
+        {!userCount || (<p className="gitter-room-members">
           {userCount} Members
-        </p>
+        </p>)}
       </div>
     </div>
   )
