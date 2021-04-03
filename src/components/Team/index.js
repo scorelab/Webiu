@@ -14,7 +14,7 @@ export const Team = ({ heads, contributors, researchers, alumni }) => {
             <Row>
               {heads.map((item, i) => (
                 <Col md={6} key={i}>
-                  <TeamListItem 
+                  <TeamListItem
                     name={item.name}
                     title={item.title}
                   />
@@ -25,13 +25,13 @@ export const Team = ({ heads, contributors, researchers, alumni }) => {
         )}
         <br />
 
-        {!researchers || 
+        {!researchers ||
           <div>
             <h3>Researchers</h3>
             <Row>
               {researchers.map((item, i) => (
                 <Col md={4} sm={6} key={i}>
-                  <TeamListItem 
+                  <TeamListItem
                     name={item.name}
                     title={item.title}
                     horizontal
@@ -43,13 +43,13 @@ export const Team = ({ heads, contributors, researchers, alumni }) => {
           </div>
         }
 
-        {!alumni || 
+        {!alumni ||
           <div>
             <h3>Alumni</h3>
             <Row>
               {alumni.map((item, i) => (
                 <Col md={4} sm={6} key={i}>
-                  <TeamListItem 
+                  <TeamListItem
                     name={item.name}
                     title={item.title}
                     horizontal
@@ -67,7 +67,7 @@ export const Team = ({ heads, contributors, researchers, alumni }) => {
             <Row>
               {contributors.map((item, i) => (
                 <Col md={3} sm={4} key={i}>
-                  <TeamListItem 
+                  <TeamListItem
                     name={item.name}
                     title={item.title}
                     horizontal
@@ -87,4 +87,5 @@ Team.propTypes = {
   heads: PropTypes.array,
   researchers: PropTypes.array,
   alumni: PropTypes.array,
+  contributors: PropTypes.array
 }

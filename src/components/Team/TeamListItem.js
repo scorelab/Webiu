@@ -17,6 +17,7 @@ TeamMemberItem.propTypes = {
   name: PropTypes.string,
   title: PropTypes.string,
   image: PropTypes.string,
+  horizontal: PropTypes.bool
 }
 
 export default TeamMemberItem
