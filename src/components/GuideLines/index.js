@@ -1,20 +1,25 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
-import {Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col } from "react-bootstrap"
+import { withPrefix } from "gatsby"
 
-export const GuideLines = ({ heading, description, guidelines}) => {
+export const GuideLines = ({ heading, description, guidelines }) => {
   return (
-    <div className="guide-lines-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
+    <div
+      className="guide-lines-component"
+      style={{ backgroundImage: `url(${withPrefix("/images/dots.png")})` }}
+    >
       <Container>
         <Row>
-          <Col> 
+          <Col>
             <h1>{heading}</h1>
             <h2>{description}</h2>
             <ol>
-              {!guidelines || guidelines.map((guideline, i) => (
-                <li key={`${guideline}-${i}`}>{guideline}</li>
-              ))}
+              {!guidelines ||
+                guidelines.map((guideline, i) => (
+                  <li key={`${guideline}-${i}`}>{guideline}</li>
+                ))}
             </ol>
           </Col>
         </Row>
@@ -24,7 +29,7 @@ export const GuideLines = ({ heading, description, guidelines}) => {
 }
 
 GuideLines.propTypes = {
-  heading: PropTypes.string, 
+  heading: PropTypes.string,
   description: PropTypes.string,
-  guidelines: PropTypes.array
+  guidelines: PropTypes.array,
 }
