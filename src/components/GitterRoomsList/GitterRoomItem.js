@@ -9,9 +9,9 @@ const GitterRoomItem = ({name, avatarUrl, roomUrl, userCount}) => {
       <img className="image" alt="Avatar" src={avatarUrl && avatarUrl !== ""  ? avatarUrl : withPrefix('/images/gitterPlaceholder.png')} />
       <div>
         <p className="gitter-room-name">{name}</p>
-        <p className="gitter-room-members">
+        {userCount ? <p className="gitter-room-members">
           {userCount} Members
-        </p>
+        </p> : null}
       </div>
     </div>
   )
