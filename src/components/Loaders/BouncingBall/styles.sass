@@ -1,0 +1,59 @@
+@import "../../../styles/variables.sass"
+
+
+// variables
+$bouncing: cubic-bezier(.19, .57, .3, .98)
+
+.bouncingBall-component
+    display: flex
+    padding-top: 50px
+    justify-content: center
+    align-items: center
+    .bouncingBall-wrapper
+        width: 100px
+        height: 40px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center      
+        div
+            width: 20px
+            height: 20px
+            background-color: $primary
+            border-radius: 50%
+            animation-name: bouncingBall
+            animation-duration: .5s
+            animation-direction: alternate
+            animation-iteration-count: infinite
+            animation-timing-function: $bouncing
+            &:nth-child(1)
+                animation-delay: 0s
+            &:nth-child(2)
+                animation-delay: .1s
+                opacity: .9
+            &:nth-child(3)
+                animation-delay: .2s
+                opacity: .7
+            &:nth-child(4)
+                animation-delay: .3s
+                opacity: .5
+        @media #{$xs-and-less}
+            width: 80px
+            div
+                width: 15px
+                height: 15px
+                
+
+//keyframes
+@keyframes bouncingBall
+    0%
+        transform: translateY(100px)
+    100%
+        transform: translateY(0px)
+
+        
+
+
+
+        
+

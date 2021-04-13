@@ -1,0 +1,38 @@
+@import "../../../styles/variables"
+
+
+.squareSpinner-container
+    padding-top: 100px
+    width: 150px
+    height: 100px
+    display: flex
+    justify-content: center
+    align-items: center
+    .squareSpinner-wrapper
+        width: 100px
+        height: 100px
+        border: 8px solid $secondary
+        animation-name: spinnerLoader
+        animation-duration: .8s
+        animation-iteration-count: infinite
+        animation-timing-function: linear
+        @media #{$md-and-less}
+            width: 80px
+            height: 80px
+        @media #{$xs-and-less}
+            width: 50px
+            height: 50px
+
+
+//Keyframes for animation
+@keyframes  spinnerLoader
+    0%
+        transform: rotate(0deg)
+        border-width: 8px
+    75%
+        transform: rotate(180deg)
+        border-width: 5px
+    100%
+        transform: rotate(360deg)
+        border-width: 5px
+        
