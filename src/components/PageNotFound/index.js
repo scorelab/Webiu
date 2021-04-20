@@ -10,7 +10,7 @@ export const PageNotFound = ({ image, mainText, subText }) => {
         <img src={withPrefix(image)} alt='404'/>
           <h1>{mainText}</h1>
           <p>
-            {subText} | Return to <Link to='/'>Home</Link> page
+            {subText ? {subText} + '|' : null} Return to <Link to='/'>Home</Link> page
           </p>
       </div>
     </div>
@@ -22,4 +22,6 @@ PageNotFound.propTypes = {
   mainText: PropTypes.string,
   subText: PropTypes.string,
 }
+
 export default PageNotFound;
+
