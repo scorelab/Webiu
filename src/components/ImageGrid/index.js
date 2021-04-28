@@ -4,13 +4,13 @@ import "./style.sass"
 import {Row, Col} from 'react-bootstrap'
 import {withPrefix} from 'gatsby'
 
-export const ImageGrid = ({images}) => {
+export const ImageGrid = ({size, images}) => {
 
   const renderImages = () => {
     return (
       <Row>
         {images.map(i => (
-          <Col md={6} key={i}>
+          <Col md={size === 'medium' ? 6 : 4} key={i}>
             <img alt="Logo" src={withPrefix(i)} />
           </Col>
         ))}
