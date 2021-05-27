@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data`,
+        path: `${__dirname}/src/pages`,
         name: `data`,
       },
     },
@@ -25,6 +25,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         display: `minimal-ui`,
+        icon: `${__dirname}/static/icons/icon-144x144.png`
       },
     }
   ],
