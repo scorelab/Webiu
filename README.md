@@ -3,7 +3,7 @@ Building and maintaining a website is an essential task for any business or orga
 
 Website built with Webiu: https://www.scorelab.org/
 
-# Installation
+## Installation
 The project is based on ReactJs, JavaScript and GatsbyJs. You need to make sure that you have compatible versions of node/yarn, npm installed. SASS as the stylesheet is used in this project.
 
 ## Initial Setup
@@ -36,4 +36,4 @@ Your site must be visible at
 
 ## Contributing to the Project
 We value our contributers a lot and would appreciate contributions to our project. Please make sure to follow our contributing guidelines.
-Please clearly explain any bugs, issues or feature requests (use screenshots wherever applicable) before opening any issue or pull request
+Please clearly explain any bugs, issues or feature requests (use screenshots wherever applicable) before opening any issue or pull request.
