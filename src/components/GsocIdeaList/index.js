@@ -45,3 +45,6 @@ GsocIdeaList.propTypes = {
   listItems: PropTypes.array,
   defaultActiveKeys: PropTypes.array,
 }
+
+export  default GsocIdeaList;
+

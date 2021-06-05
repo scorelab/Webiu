@@ -70,6 +70,12 @@ GitterRoomsList.propTypes = {
   title: PropTypes.string,
   gitterOrganizationName: PropTypes.string,
   gitterToken: PropTypes.string,
-  small: PropTypes.bool,
+    small: PropTypes.bool,
   limit: PropTypes.number
 }
+
+export default GitterRoomsList;
+
+
+
+

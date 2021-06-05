@@ -44,3 +44,5 @@ DescriptionContainer.propTypes = {
   mainText: PropTypes.string,
   sideComponent: PropTypes.object
 }
+
+export default DescriptionContainer;

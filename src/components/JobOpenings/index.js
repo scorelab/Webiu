@@ -38,3 +38,4 @@ JobOpenings.propTypes = {
   title: PropTypes.string,
   openings: PropTypes.array,
 }
+export default JobOpenings;

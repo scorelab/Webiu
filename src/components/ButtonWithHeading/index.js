@@ -19,9 +19,9 @@ export const ButtonWithHeading = ({ heading, buttonText, onClick = () => {}}) =>
     </div>
   )
 }
-
 ButtonWithHeading.propTypes = {
   heading: PropTypes.string,
   buttonText: PropTypes.string,
   onClick: PropTypes.func
 }
+export default ButtonWithHeading

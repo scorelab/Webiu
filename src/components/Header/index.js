@@ -49,3 +49,4 @@ Header.propTypes = {
   image: PropTypes.string,
   small: PropTypes.bool
 }
+export default Header;

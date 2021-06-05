@@ -76,3 +76,5 @@ MediumFeed.propTypes = {
   small: PropTypes.bool,
   limit: PropTypes.number
 }
+
+export default MediumFeed;
