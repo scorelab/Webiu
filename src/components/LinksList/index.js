@@ -11,7 +11,7 @@ export const LinksList = ({links, isIcon, iconName}) => {
         <ul>
           {links.map((link, i) => (
             <li key={`${link.url}-${i}`}>
-              <span>{link.name}</span>: <a href={link.url} target="_blank"> {link.url} {isIcon ? <FontAwesomeIcon icon={faExternalLinkAlt} /> : null}</a>
+              <span>{link.name}</span>: <a href={link.url} target="_blank" rel="noreferrer"> {link.url} {isIcon ? <FontAwesomeIcon icon={faExternalLinkAlt} /> : null}</a>
             </li>
           ))}
         </ul>
