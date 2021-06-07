@@ -14,6 +14,5 @@ Import the component to `pages/index.js`
                             linkedin:"your_link", medium:"your_link"}} mainText="Copyright © SCoRe Lab" />
 ```
 
-
 `socialLinks` prop is the array of social media links you want to show in the footer
 `mainText` prop is a string which is for any copyrigt text that you want to display, it dynamically shows the current year

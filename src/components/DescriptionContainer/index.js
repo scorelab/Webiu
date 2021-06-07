@@ -29,7 +29,7 @@ export const DescriptionContainer = ({title, subTitle, image, mainText, sideComp
           </Col>
           {!sideComponent || (
             <Col lg={5}>
-              {sideComponent}
+              <p>{sideComponent.content}</p>
             </Col>
           )}
         </Row>
@@ -42,5 +42,6 @@ DescriptionContainer.propTypes = {
   title: PropTypes.string,
   image: PropTypes.string,
   mainText: PropTypes.string,
+  subTitle: PropTypes.string,
   sideComponent: PropTypes.object
 }
