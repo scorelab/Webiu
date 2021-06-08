@@ -8,12 +8,12 @@ export const GuideLines = ({ heading, description, guidelines}) => {
     <div className="guide-lines-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
       <Container>
         <Row>
-          <Col> 
+          <Col>
             <h1>{heading}</h1>
             <h2>{description}</h2>
             <ol>
               {!guidelines || guidelines.map((guideline, i) => (
-                <li key={`${guideline}-${i}`}>{guideline}</li>
+                <li key={i}>{guideline}</li>
               ))}
             </ol>
           </Col>
@@ -24,7 +24,7 @@ export const GuideLines = ({ heading, description, guidelines}) => {
 }
 
 GuideLines.propTypes = {
-  heading: PropTypes.string, 
+  heading: PropTypes.string,
   description: PropTypes.string,
   guidelines: PropTypes.array
 }
