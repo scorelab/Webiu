@@ -16,10 +16,9 @@ export const GuideLines = ({ heading, description, guidelines }) => {
             <h1>{heading}</h1>
             <h2>{description}</h2>
             <ol>
-              {!guidelines ||
-                guidelines.map((guideline, i) => (
-                  <li key={`${guideline}-${i}`}>{guideline}</li>
-                ))}
+              {!guidelines || guidelines.map((guideline, i) => (
+                <li key={i}>{guideline}</li>
+              ))}
             </ol>
           </Col>
         </Row>
@@ -31,5 +30,5 @@ export const GuideLines = ({ heading, description, guidelines }) => {
 GuideLines.propTypes = {
   heading: PropTypes.string,
   description: PropTypes.string,
-  guidelines: PropTypes.array,
+  guidelines: PropTypes.array
 }
