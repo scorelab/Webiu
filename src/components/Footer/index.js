@@ -28,7 +28,7 @@ export const Footer = ({mainText, socialLinks = {} }) => {
                 {!github || <a href={github}><FontAwesomeIcon icon={faGithub} className="icon" /></a>}
                 {!linkedin || <a href={linkedin}><FontAwesomeIcon icon={faLinkedin} className="icon" /></a>}
               </div>
-              <p className="main-text">{mainText}</p>
+              <p className="main-text">{mainText} {(new Date().getFullYear())}</p>
             </Col>
           </Row>
       </Container>

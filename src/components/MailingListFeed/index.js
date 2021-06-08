@@ -42,10 +42,12 @@ export const MailingListFeed = ({title, feedUrl, small}) => {
     )): null
   )
 
+  const width = small ? "50%" : "100%";
+
   return (
     <div className="mailing-list-feed-component">
       <Container>
-        <Row>
+        <Row style={{width: width}}>
           <Col md={12}>
             <h1 className={small ? "mailing-list-feed-title-small" : "mailing-list-feed-title"}>{title}</h1>
           </Col>
@@ -64,4 +66,5 @@ export const MailingListFeed = ({title, feedUrl, small}) => {
 MailingListFeed.propTypes = {
   title: PropTypes.string,
   feedUrl: PropTypes.string,
+  small: PropTypes.bool
 }
