@@ -7,7 +7,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./style.sass"
 
 
-export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, limit = 9, small}) => {
+export const GitterRoomsList = ({title, groupId, gitterOrganizationName, gitterToken, limit, small}) => {
 
   const [loading, setLoading] = useState(true)
   const [rooms, setRooms] = useState(null)
@@ -17,11 +17,11 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
   }, [])
 
   const getRooms = () => {
-    const fetchUrl = `https://api.gitter.im/v1/rooms?access_token=${gitterToken}&q=${gitterOrganizationName}`
+    const fetchUrl = `https://api.gitter.im/v1/groups/${groupId}/rooms?access_token=${gitterToken}`
 
     setLoading(true)
     fetch(fetchUrl).then((res) => res.json()).then((data) => {
-      setRooms(data.results)
+      setRooms(data)
       setLoading(false)
     })
     .catch((err) => {
@@ -39,6 +39,7 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
               avatarUrl={item.avatarUrl}
               roomUrl={`https://gitter.im/${item.url}`}
               userCount={item.userCount}
+              visible={item.public}
             />
           </Col>
         )
@@ -58,7 +59,7 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
         </Row>
         <Row>
         <Col className="view-all-btn-container">
-          {loading || !rooms ? null : <a href={`https://gitter.im/${gitterOrganizationName}`} className="btn" target="_blank">Many More <FontAwesomeIcon icon={faArrowRight}/></a>}
+          {loading || !rooms ? null : <a href={`https://gitter.im/${gitterOrganizationName}`} className="btn" target="_blank" rel="noreferrer">Many More <FontAwesomeIcon icon={faArrowRight}/></a>}
         </Col>
       </Row>
       </Container>
@@ -68,6 +69,7 @@ export const GitterRoomsList = ({title, gitterOrganizationName, gitterToken, lim
 
 GitterRoomsList.propTypes = {
   title: PropTypes.string,
+  groupId: PropTypes.string,
   gitterOrganizationName: PropTypes.string,
   gitterToken: PropTypes.string,
   small: PropTypes.bool,
