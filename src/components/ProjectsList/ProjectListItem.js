@@ -25,6 +25,7 @@ ProjectListItem.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
+  slug: PropTypes.string,
 }
 
 export default ProjectListItem
