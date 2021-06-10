@@ -20,7 +20,7 @@ const MailingListFeedItem = ({image, author, title, description, publishedDate, 
           {moment().diff(moment(publishedDate), "days") <= 7 ? <span className="new-span">NEW</span> : null}
         </p> 
         <p className="post-title">{title}</p>
-        <p className="post-description">"{description}"</p>
+        <p className="post-description">"{description.substring(0, 300) + "..."}"</p>
       </div>
     </div>
   )
