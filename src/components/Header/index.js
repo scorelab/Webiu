@@ -5,7 +5,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import { Link, withPrefix } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, small=false, backgroundColor}) => {
+export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, small, backgroundColor}) => {
   return (
     <div style={{ backgroundImage: `url(${withPrefix('/images/dots.png')})` }} className="header-component" >
       <Container>
@@ -22,17 +22,17 @@ export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, 
           <Row>
             <Col md={6} className="left-col">
               <div className="header-content-section">     
-                <h1>
+                { mainText ? <h1>
                   <span className='colored'>{mainText.split(' ')[0]}</span>
                   <span>{mainText.split(' ').map((t, i) => i !== 0 ? ' ' + t : null)}</span>
-                </h1>
+                </h1> : null }
                 <p>{subText}</p>
                 <Link to={buttonLink} className="btn">{buttonText}</Link>
               </div>
             </Col>
-            <Col md={6} className="right-col">
+            { image ? <Col md={6} className="right-col">
               <img className= "main-image" alt="Header" src={withPrefix(image)} />
-            </Col>
+            </Col> : null }
           </Row>
         )}
       </Container>
@@ -47,5 +47,7 @@ Header.propTypes = {
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
   image: PropTypes.string,
-  small: PropTypes.bool
+  small: PropTypes.bool,
+  icon: PropTypes.string,
+  backgroundColor: PropTypes.string
 }
