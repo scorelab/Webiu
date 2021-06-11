@@ -14,11 +14,13 @@ export const JobOpenings = ({title, openings}) => {
             </Col>
           </Row>
         )}
-        {!openings || (
+        {openings && openings.length >=1 ? (
           <Row>
-            {openings ? openings.map((opening, i) => (
+            {openings.map((opening, i) => (
               <Col key={i}>
-                <h5>{opening.title}</h5>
+                <h5>
+                  {opening.title} <a style={{position: "absolute", right: "20px"}} href={opening.applyLink} target="_blank" rel="noreferrer">Apply here</a> 
+                </h5>
                 <p>{opening.description}</p>
                 <ul>
                   {opening.skillRequirements.map((skill, i) => (
@@ -26,9 +28,11 @@ export const JobOpenings = ({title, openings}) => {
                   ))}
                 </ul>
               </Col>
-            )) : null}
+            ))}
           </Row>
-        )}
+        ) : <Col>
+              <p>Thanks for showing interest in working with us! Stay tuned for more opportunity updates</p>
+            </Col>} 
       </Container>
     </div>
   )
