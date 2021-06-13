@@ -1,14 +1,28 @@
 @import '../../styles/variables.sass'
 
 .project-list-component
+  .header-component
+    background-image: url("../../../static/images/dots.png")
+    padding: 20px
+    background-color: #f3faff
+    text-align: center
+    margin-bottom: 40px
+    color: $primary
+    .icon
+     color: $primary
+     font-size: 40px
+  .projects-search
+    text-align: center
+    margin-bottom: 3rem
   .title
     @media #{$xs-and-less}
       text-align: center
       font-size: 30px
     padding: 25px 0px 25px 0px
-    font-weight: 400
+    font-weight: 500
   .view-all-btn-container
     text-align: right
+    margin-bottom: 10px
     .btn
       font-size: 16px
       padding: 0px 5px
