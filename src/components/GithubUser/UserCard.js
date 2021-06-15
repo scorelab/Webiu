@@ -52,7 +52,7 @@ UserCard.propTypes = {
     blog: PropTypes.string,
     twitter: PropTypes.string,
     url: PropTypes.string,
-    since: PropTypes.string,
+    from: PropTypes.string,
     location: PropTypes.string,
     repo: PropTypes.string
 }

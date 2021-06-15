@@ -6,8 +6,7 @@ import "./style.sass"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-
-export const GithubUser = ({username}) => {
+export const GithubUser = ({username, title}) => {
 
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState(null)
@@ -23,10 +22,10 @@ export const GithubUser = ({username}) => {
   }, [username])
 
   return (
-    <div className="medium-feed-component">
-      <div className="header-component">
+    <div className="github-user-component">
+      {title ? <div className="header-component">
         <h2><FontAwesomeIcon className="icon" icon={faGithub} /> GitHub Profile</h2>
-      </div> 
+      </div> : null} 
       <Container>
         {loading && <p>Fetching the profile</p>}
         {user ? 
@@ -42,5 +41,6 @@ export const GithubUser = ({username}) => {
 }
 
 GithubUser.propTypes = {
-  username: PropTypes.string
+  username: PropTypes.string,
+  title: PropTypes.string
 }

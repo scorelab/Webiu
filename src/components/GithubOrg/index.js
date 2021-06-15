@@ -36,7 +36,7 @@ export const GithubOrg = ({orgname, limit}) => {
   }, [orgname])
 
   return (
-    <div className="medium-feed-component">
+    <div className="github-org-component">
       <div className="header-component">
         <h2><FontAwesomeIcon className="icon" icon={faGithub} /> GitHub Profile of {orgname}</h2>
       </div> 
