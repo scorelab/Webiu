@@ -1,23 +1,36 @@
 import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import OrgCard from "./OrgCard"
 import "./style.sass"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faExclamation, faCodeBranch } from "@fortawesome/free-solid-svg-icons"
+import {Link} from "gatsby"
 
 
-export const GithubOrg = ({orgname}) => {
+export const GithubOrg = ({orgname, limit}) => {
 
-  const [loading, setLoading] = useState(true)
+  const [orgLoading, setOrgLoading] = useState(true)
+  const [reposLoading, setReposLoading] = useState(true)
   const [org, setOrg] = useState(null)
+  const [repos, setRepos] = useState([]);
 
   useEffect(() => {
     const orgFetchUrl = `https://api.github.com/orgs/${orgname}`
-    setLoading(true)
+    setOrgLoading(true)
     fetch(orgFetchUrl).then((res) => res.json()).then((data) => {
       setOrg(data)
-      setLoading(false)
+      setOrgLoading(false)
+    })
+    .catch((err) => { throw err });
+
+    const repoFetchUrl = `https://api.github.com/orgs/${orgname}/repos`
+    setReposLoading(true)
+    fetch(repoFetchUrl).then((res) => res.json()).then((data) => {
+      setRepos(data)
+      console.log(data);
+      setReposLoading(false)
     })
     .catch((err) => { throw err });
   }, [orgname])
@@ -28,7 +41,7 @@ export const GithubOrg = ({orgname}) => {
         <h2><FontAwesomeIcon className="icon" icon={faGithub} /> GitHub Profile of {orgname}</h2>
       </div> 
       <Container>
-        {loading && <p>Fetching the profile</p>}
+        {orgLoading && <p>Fetching the profile</p>}
         {org ? 
           <OrgCard name={org.name} description={org.description} 
                     email={org.email} image={org.avatar_url}
@@ -36,11 +49,42 @@ export const GithubOrg = ({orgname}) => {
                     location={org.location} repo={org.public_repos}
                     from={org.created_at} blog={org.blog} /> 
         : null}
+        <div style={{textAlign: "center"}}><h4>Repositories of {orgname}</h4></div>
+        <hr />
+        <div style={{textAlign: "center"}}>
+            {reposLoading && <p>Fetching the Repos</p>}
+            {repos.length > 1 ?
+                <Row>
+                    {repos.map((item, index) => {
+                    if(index < limit) {
+                        return (
+                        <Col lg={3} key={index}>
+                           <div className="repo-card">
+                             <p className="repo-title">{item.name}</p>
+                             {item.description ? <p className="card-para">
+                               {item.description.length > 30 ? item.description.substring(0,29) + ".." : item.description}
+                             </p> : null}
+                             <p className="card-para">
+                               <FontAwesomeIcon icon={faExclamation} style={{color:'#51ad28'}} /> {item.open_issues} Open Issues
+                             </p>
+                             <p className="card-para">
+                               <FontAwesomeIcon icon={faCodeBranch} style={{color:'#51ad28'}} /> {item.forks} Forks
+                             </p>
+                             <Link to={item.html_url} className="btn">GitHub</Link>
+                           </div> 
+                        </Col>
+                        )
+                    }           
+                    })}
+                </Row> 
+            : null}
+        </div>
       </Container>     
     </div>
   )
 }
 
 GithubOrg.propTypes = {
-  orgname: PropTypes.string
+  orgname: PropTypes.string,
+  limit: PropTypes.number
 }

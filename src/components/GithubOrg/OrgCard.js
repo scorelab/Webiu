@@ -2,12 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
+import { faMapMarkerAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 import moment from "moment";
 
-const OrgCard = ({ name, username, description, twitter, image, url, blog, location, from, repo }) => {
+const OrgCard = ({ name, username, description, email, image, url, blog, location, from, repo }) => {
   return (
     <div>
       <div className="card">
@@ -36,8 +35,8 @@ const OrgCard = ({ name, username, description, twitter, image, url, blog, locat
         {from ? <p className="card-para">
           Active since <span className="active-since">{moment(from).format("MMMM Do YYYY")}</span>
         </p> : null}
-        {twitter ? <div style={{ margin: "5px 0 0 10px" }}>
-            <a className="anchor" href={`https://twitter.com/${twitter}`}><FontAwesomeIcon icon={faTwitter} style={{color:'#377293'}} /></a>
+        {email ? <div style={{ margin: "5px 0 0 15px" }}>
+            <a className="anchor" href={`mailto:${email}`}><FontAwesomeIcon icon={faEnvelope} style={{color:'#377293'}} /></a>
         </div> : null}
       </div>
     </div>
