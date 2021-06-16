@@ -99,5 +99,6 @@ export const GithubRepo = ({ reponame, title }) => {
 }
 
 GithubRepo.propTypes = {
-  reponame: PropTypes.string
+  reponame: PropTypes.string,
+  title: PropTypes.string
 }
