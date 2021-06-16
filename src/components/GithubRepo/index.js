@@ -30,6 +30,7 @@ export const GithubRepo = ({ reponame, title }) => {
       {title ? <div className="header-component">
         <h2><FontAwesomeIcon className="icon" icon={faGithub} /> {title}</h2>
       </div> : null}
+      {repo && !repo.message ?
       <Container>
         {loading && <p>Fetching the details</p>}
         {repo ? 
@@ -93,7 +94,9 @@ export const GithubRepo = ({ reponame, title }) => {
                 </Row> 
             : null}
         </div>
-      </Container>     
+        
+      </Container>    
+      : <div style={{textAlign: "center"}}><h2>Repo Not Found, Please check the repo name</h2></div>} 
     </div>
   )
 }

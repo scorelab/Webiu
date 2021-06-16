@@ -25,7 +25,8 @@ export const GithubUser = ({username, title}) => {
     <div className="github-user-component">
       {title ? <div className="header-component">
         <h2><FontAwesomeIcon className="icon" icon={faGithub} /> GitHub Profile</h2>
-      </div> : null} 
+      </div> : null}
+      {user && !user.message ? 
       <Container>
         {loading && <p>Fetching the profile</p>}
         {user ? 
@@ -35,7 +36,8 @@ export const GithubUser = ({username, title}) => {
                       location={user.location} repo={user.public_repos}
                       from={user.created_at} blog={user.blog} /> 
         : null}
-      </Container>     
+      </Container>  
+      : <div style={{textAlign: "center"}}><h2>User Not Found, Please Check the Username</h2></div>}   
     </div>
   )
 }

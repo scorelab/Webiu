@@ -9,7 +9,7 @@ import { faExclamation, faCodeBranch } from "@fortawesome/free-solid-svg-icons"
 import {Link} from "gatsby"
 
 
-export const GithubOrg = ({orgname, limit}) => {
+export const GithubOrg = ({orgname, limit, title}) => {
 
   const [orgLoading, setOrgLoading] = useState(true)
   const [reposLoading, setReposLoading] = useState(true)
@@ -37,9 +37,10 @@ export const GithubOrg = ({orgname, limit}) => {
 
   return (
     <div className="github-org-component">
-      <div className="header-component">
-        <h2><FontAwesomeIcon className="icon" icon={faGithub} /> GitHub Profile of {orgname}</h2>
-      </div> 
+      {title ? <div className="header-component">
+        <h2><FontAwesomeIcon className="icon" icon={faGithub} /> {title} {orgname}</h2>
+      </div> : null}
+      {org && !org.message ? 
       <Container>
         {orgLoading && <p>Fetching the profile</p>}
         {org ? 
@@ -79,12 +80,14 @@ export const GithubOrg = ({orgname, limit}) => {
                 </Row> 
             : null}
         </div>
-      </Container>     
+      </Container>
+      :<div style={{textAlign: "center"}}><h2>Organization Not Found, Please Check the Org Name</h2></div>}     
     </div>
   )
 }
 
 GithubOrg.propTypes = {
   orgname: PropTypes.string,
-  limit: PropTypes.number
+  limit: PropTypes.number,
+  title: PropTypes.string
 }
