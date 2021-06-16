@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
 import { Container, Row, Col } from "react-bootstrap"
-import OrgCard from "./OrgCard"
+import { GithubCard } from "../GithubCard"
 import "./style.sass"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -43,11 +43,11 @@ export const GithubOrg = ({orgname, limit}) => {
       <Container>
         {orgLoading && <p>Fetching the profile</p>}
         {org ? 
-          <OrgCard name={org.name} description={org.description} 
-                    email={org.email} image={org.avatar_url}
-                    username={org.login} url={org.html_url}
-                    location={org.location} repo={org.public_repos}
-                    from={org.created_at} blog={org.blog} /> 
+          <GithubCard name={org.name} description={org.description} 
+                      email={org.email} image={org.avatar_url}
+                      username={org.login} url={org.html_url}
+                      location={org.location} repo={org.public_repos}
+                      from={org.created_at} blog={org.blog} /> 
         : null}
         <div style={{textAlign: "center"}}><h4>Repositories of {orgname}</h4></div>
         <hr />

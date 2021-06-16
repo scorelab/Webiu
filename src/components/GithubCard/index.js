@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
+import { faMapMarkerAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 import moment from "moment";
 
-const UserCard = ({ name, username, description, twitter, image, url, blog, location, from, repo }) => {
+export const GithubCard = ({ name, username, description, twitter, email, image, url, blog, location, from, repo }) => {
   return (
     <div>
       <div className="card">
@@ -39,12 +39,15 @@ const UserCard = ({ name, username, description, twitter, image, url, blog, loca
         {twitter ? <div style={{ margin: "5px 0 0 10px" }}>
             <a className="anchor" href={`https://twitter.com/${twitter}`}><FontAwesomeIcon icon={faTwitter} style={{color:'#377293'}} /></a>
         </div> : null}
+        {email ? <div style={{ margin: "5px 0 0 15px" }}>
+            <a className="anchor" href={`mailto:${email}`}><FontAwesomeIcon icon={faEnvelope} style={{color:'#377293'}} /></a>
+        </div> : null}
       </div>
     </div>
     )
 }
 
-UserCard.propTypes = {
+GithubCard.propTypes = {
     name: PropTypes.string,
     username: PropTypes.string,
     description: PropTypes.string,
@@ -54,7 +57,6 @@ UserCard.propTypes = {
     url: PropTypes.string,
     from: PropTypes.string,
     location: PropTypes.string,
-    repo: PropTypes.string
+    repo: PropTypes.string,
+    email: PropTypes.string
 }
-
-export default UserCard
