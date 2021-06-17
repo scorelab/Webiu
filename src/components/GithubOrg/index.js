@@ -17,21 +17,30 @@ export const GithubOrg = ({orgname, limit, title, auth_token}) => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    const orgFetchUrl = `https://api.github.com/orgs/${orgname}`
+    const orgFetchUrl = `https://api.github.com/orgs/${orgname}?access_token=${auth_token}`
     setOrgLoading(true)
-    fetch(orgFetchUrl, {headers: {'Authorization' : auth_token}})
+    fetch(orgFetchUrl, { 
+      method: 'GET', 
+      headers: new Headers({
+        'Authorization': auth_token, 
+        'Content-Type': 'application/json'
+    })})
     .then((res) => res.json()).then((data) => {
       setOrg(data)
       setOrgLoading(false)
     })
     .catch((err) => { throw err });
 
-    const repoFetchUrl = `https://api.github.com/orgs/${orgname}/repos`
+    const repoFetchUrl = `https://api.github.com/orgs/${orgname}/repos?access_token=${auth_token}`
     setReposLoading(true)
-    fetch(repoFetchUrl, {headers: {'Authorization' : auth_token}})
+    fetch(repoFetchUrl, { 
+      method: 'GET', 
+      headers: new Headers({
+        'Authorization': auth_token, 
+        'Content-Type': 'application/json'
+    })})
     .then((res) => res.json()).then((data) => {
       setRepos(data)
-      console.log(data);
       setReposLoading(false)
     })
     .catch((err) => { throw err });
@@ -83,7 +92,7 @@ export const GithubOrg = ({orgname, limit, title, auth_token}) => {
             : null}
         </div>
       </Container>
-      :<div style={{textAlign: "center"}}><h2>Organization Not Found, Please Check the Org Name</h2></div>}     
+      :<div style={{textAlign: "center"}}><h2>Organization Not Found, Please Check the Org Name or the Auth Token</h2></div>}     
     </div>
   )
 }

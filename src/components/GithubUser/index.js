@@ -12,9 +12,14 @@ export const GithubUser = ({username, title, auth_token}) => {
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-    const userFetchUrl = `https://api.github.com/users/${username}`
+    const userFetchUrl = `https://api.github.com/users/${username}?access_token=${auth_token}`
     setLoading(true)
-    fetch(userFetchUrl, {headers: {'Authorization' : auth_token}})
+    fetch(userFetchUrl, { 
+      method: 'GET', 
+      headers: new Headers({
+        'Authorization': auth_token, 
+        'Content-Type': 'application/json'
+    })})
     .then((res) => res.json()).then((data) => {
       setUser(data)
       setLoading(false)
@@ -25,7 +30,7 @@ export const GithubUser = ({username, title, auth_token}) => {
   return (
     <div className="github-user-component">
       {title ? <div className="header-component">
-        <h2><FontAwesomeIcon className="icon" icon={faGithub} /> GitHub Profile</h2>
+        <h2><FontAwesomeIcon className="icon" icon={faGithub} /> {title}</h2>
       </div> : null}
       {user && !user.message ? 
       <Container>
@@ -38,7 +43,7 @@ export const GithubUser = ({username, title, auth_token}) => {
                       from={user.created_at} blog={user.blog} /> 
         : null}
       </Container>  
-      : <div style={{textAlign: "center"}}><h2>User Not Found, Please Check the Username</h2></div>}   
+      : <div style={{textAlign: "center"}}><h2>User Not Found, Please Check the Username or the Auth Token</h2></div>}   
     </div>
   )
 }

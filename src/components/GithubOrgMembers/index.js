@@ -12,9 +12,14 @@ export const GithubOrgMembers = ({orgname, title, auth_token, limit}) => {
   const [members, setMembers] = useState(null)
 
   useEffect(() => {
-    const membersFetchUrl = `https://api.github.com/orgs/${orgname}/members`
+    const membersFetchUrl = `https://api.github.com/orgs/${orgname}/members?access_token=${auth_token}`
     setLoading(true)
-    fetch(membersFetchUrl, {headers: {'Authorization' : auth_token}})
+    fetch(membersFetchUrl, { 
+      method: 'GET', 
+      headers: new Headers({
+        'Authorization': auth_token, 
+        'Content-Type': 'application/json'
+    })})
     .then((res) => res.json()).then((data) => {
       setMembers(data)
       setLoading(false)
@@ -46,7 +51,7 @@ export const GithubOrgMembers = ({orgname, title, auth_token, limit}) => {
             })}
         </Row>
       </Container>  
-      : <div style={{textAlign: "center"}}><h2>Organization Not Found, Please Check the orgname</h2></div>}   
+      : <div style={{textAlign: "center"}}><h2>Organization Not Found, Please Check the orgname or the Auth-Token</h2></div>}   
     </div>
   )
 }

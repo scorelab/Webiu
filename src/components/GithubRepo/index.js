@@ -15,11 +15,15 @@ export const GithubRepo = ({ reponame, title, auth_token }) => {
   const [repo, setRepo] = useState(null)
 
   useEffect(() => {
-    const repoFetchUrl = `https://api.github.com/repos/${reponame}`
+    const repoFetchUrl = `https://api.github.com/repos/${reponame}?access_token=${auth_token}`
     setLoading(true)
-    fetch(repoFetchUrl, {headers: {'Authorization' : auth_token}})
+    fetch(repoFetchUrl, { 
+      method: 'GET', 
+      headers: new Headers({
+        'Authorization': auth_token, 
+        'Content-Type': 'application/json'
+    })})
     .then((res) => res.json()).then((data) => {
-      console.log(data);
       setRepo(data)
       setLoading(false)
     })
@@ -97,7 +101,7 @@ export const GithubRepo = ({ reponame, title, auth_token }) => {
         </div>
         
       </Container>    
-      : <div style={{textAlign: "center"}}><h2>Repo Not Found, Please check the repo name</h2></div>} 
+      : <div style={{textAlign: "center"}}><h2>Repo Not Found, Please check the repo name or the Auth Token</h2></div>} 
     </div>
   )
 }
