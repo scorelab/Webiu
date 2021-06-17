@@ -19,3 +19,4 @@ Import the component to `pages/index.js`
 
 `reponame` prop is the name of the repository whose info we wish to display
 `title` prop is the title of the section
+`auth_token` is the authorization token

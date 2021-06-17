@@ -19,3 +19,4 @@ Import the component to `pages/index.js`
 
 `orgname` prop is the name of the organization whose data we wish to fetch
 `limit` prop is a limit to the number of repositories we wish to display
+`auth_token` is the authorization token

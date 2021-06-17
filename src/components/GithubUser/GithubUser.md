@@ -19,3 +19,4 @@ Import the component to `pages/index.js`
 
 `username` prop is the username of the person whose detail we wish to fetch
 `title` prop is the title of the section we want to display
+`auth_token` is the authorization token
