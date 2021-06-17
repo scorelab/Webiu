@@ -14,7 +14,7 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<GithubUser username="sample-username" title="Github Profile" />
+<GithubUser username="sample-username" title="Github Profile" auth_token="sample-token" />
 ```
 
 `username` prop is the username of the person whose detail we wish to fetch

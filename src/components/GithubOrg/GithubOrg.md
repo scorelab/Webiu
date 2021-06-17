@@ -14,7 +14,7 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<GithubOrg orgname="scorelab" limit={12} />
+<GithubOrg orgname="scorelab" limit={12} auth_token="sample-token" />
 ```
 
 `orgname` prop is the name of the organization whose data we wish to fetch

@@ -6,7 +6,7 @@ import "./style.sass"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-export const GithubUser = ({username, title}) => {
+export const GithubUser = ({username, title, auth_token}) => {
 
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState(null)
@@ -14,7 +14,8 @@ export const GithubUser = ({username, title}) => {
   useEffect(() => {
     const userFetchUrl = `https://api.github.com/users/${username}`
     setLoading(true)
-    fetch(userFetchUrl).then((res) => res.json()).then((data) => {
+    fetch(userFetchUrl, {headers: {'Authorization' : auth_token}})
+    .then((res) => res.json()).then((data) => {
       setUser(data)
       setLoading(false)
     })
@@ -44,5 +45,6 @@ export const GithubUser = ({username, title}) => {
 
 GithubUser.propTypes = {
   username: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
+  auth_token: PropTypes.string
 }

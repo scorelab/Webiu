@@ -14,7 +14,7 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<GithubRepo reponame="scorelab/webiu" title="GitHub Repository" />
+<GithubRepo reponame="scorelab/webiu" title="GitHub Repository" auth_token="sample-token" />
 ```
 
 `reponame` prop is the name of the repository whose info we wish to display

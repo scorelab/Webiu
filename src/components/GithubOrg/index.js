@@ -9,7 +9,7 @@ import { faExclamation, faCodeBranch } from "@fortawesome/free-solid-svg-icons"
 import {Link} from "gatsby"
 
 
-export const GithubOrg = ({orgname, limit, title}) => {
+export const GithubOrg = ({orgname, limit, title, auth_token}) => {
 
   const [orgLoading, setOrgLoading] = useState(true)
   const [reposLoading, setReposLoading] = useState(true)
@@ -19,7 +19,8 @@ export const GithubOrg = ({orgname, limit, title}) => {
   useEffect(() => {
     const orgFetchUrl = `https://api.github.com/orgs/${orgname}`
     setOrgLoading(true)
-    fetch(orgFetchUrl).then((res) => res.json()).then((data) => {
+    fetch(orgFetchUrl, {headers: {'Authorization' : auth_token}})
+    .then((res) => res.json()).then((data) => {
       setOrg(data)
       setOrgLoading(false)
     })
@@ -27,13 +28,14 @@ export const GithubOrg = ({orgname, limit, title}) => {
 
     const repoFetchUrl = `https://api.github.com/orgs/${orgname}/repos`
     setReposLoading(true)
-    fetch(repoFetchUrl).then((res) => res.json()).then((data) => {
+    fetch(repoFetchUrl, {headers: {'Authorization' : auth_token}})
+    .then((res) => res.json()).then((data) => {
       setRepos(data)
       console.log(data);
       setReposLoading(false)
     })
     .catch((err) => { throw err });
-  }, [orgname])
+  }, [orgname, auth_token])
 
   return (
     <div className="github-org-component">
@@ -89,5 +91,6 @@ export const GithubOrg = ({orgname, limit, title}) => {
 GithubOrg.propTypes = {
   orgname: PropTypes.string,
   limit: PropTypes.number,
-  title: PropTypes.string
+  title: PropTypes.string,
+  auth_token: PropTypes.string
 }

@@ -9,7 +9,7 @@ import { faAsterisk, faCode, faHistory, faCodeBranch, faExclamation, faUser, faI
 import moment from "moment"
 
 
-export const GithubRepo = ({ reponame, title }) => {
+export const GithubRepo = ({ reponame, title, auth_token }) => {
 
   const [loading, setLoading] = useState(true)
   const [repo, setRepo] = useState(null)
@@ -17,13 +17,14 @@ export const GithubRepo = ({ reponame, title }) => {
   useEffect(() => {
     const repoFetchUrl = `https://api.github.com/repos/${reponame}`
     setLoading(true)
-    fetch(repoFetchUrl).then((res) => res.json()).then((data) => {
+    fetch(repoFetchUrl, {headers: {'Authorization' : auth_token}})
+    .then((res) => res.json()).then((data) => {
       console.log(data);
       setRepo(data)
       setLoading(false)
     })
     .catch((err) => { throw err });
-  }, [reponame])
+  }, [reponame, auth_token])
 
   return (
     <div className="github-repo-component">
@@ -103,5 +104,6 @@ export const GithubRepo = ({ reponame, title }) => {
 
 GithubRepo.propTypes = {
   reponame: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
+  auth_token: PropTypes.string
 }
