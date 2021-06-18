@@ -14,9 +14,10 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<SearchBar handleSearch={() => console.log("Hello")} placeHolder="Search Items" header="Search Bar" />
+<SearchBar input={bound-input} handleSearch={() => console.log("Hello")} placeHolder="Search Items" header="Search Bar" />
 ```
 
+`input` prop is used to bind the input value to what the user types in
 `handleSearch` prop is the function which defines what the search bar does
 `placeHolder` prop is the placeholder string which is written on input box
 `header` prop is optional, it displays the name of the section

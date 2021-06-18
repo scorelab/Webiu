@@ -4,9 +4,11 @@ import { Col, Row, Container } from "react-bootstrap"
 import FeedItemSmall from './FeedItemSmall'
 import FeedItem from './FeedItem'
 import "./style.sass"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBlog, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
-export const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
+export const MediumFeed = ({title, mediumUrl, small, limit}) => {
 
   const [loading, setLoading] = useState(true)
   const [feed, setFeed] = useState(null)
@@ -45,24 +47,42 @@ export const MediumFeed = ({title, mediumUrl, small, limit=100}) => {
   const renderFeedItemList = () => (
     <Container>
       <Row>
-        {feed.items.map(item => (
-            <Col md={6} key={item.guid}>
-              <FeedItem
-                title={item.title}
-                publishedDate={item.pubDate}
-                image={item.thumbnail}
-                author={item.author}
-                slug={item.link}
-              />
-            </Col>
-          ))}
+        {feed.items.map((item, index) => {
+          if(index < limit) {
+            return (
+              <Col md={6} key={item.guid}>
+                <FeedItem
+                  title={item.title}
+                  publishedDate={item.pubDate}
+                  image={item.thumbnail}
+                  author={item.author}
+                  slug={item.link}
+                />
+              </Col>
+            )
+          }           
+        })}
+      </Row>
+      <Row>
+        <Col className="view-all-btn-container">
+          {loading || !feed || !feed.items  ? null : 
+            <a href={feed.feed.link} className="btn" target="_blank" rel="noreferrer">
+              Many More <FontAwesomeIcon icon={faArrowRight}/>
+            </a>}
+        </Col>
       </Row>
     </Container>
   )
 
   return (
     <div className="medium-feed-component">
-      <p className="medium-feed-title">{title}</p>
+      {!small ? 
+           <div className="header-component">
+              <h2><FontAwesomeIcon className="icon" icon={faBlog} /> {title}</h2>
+            </div> 
+              : 
+            <p className="medium-feed-title">{title}</p>}
+
       {loading || !feed ? <span /> : (
         small ? renderSmallFeedItemList() : renderFeedItemList()
       )}

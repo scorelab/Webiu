@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import PropTypes from "prop-types"
 import {Container, Row, Col} from 'react-bootstrap'
 import TeamListItem from './TeamListItem'
@@ -7,18 +7,15 @@ import {SearchBar} from "../SearchBar"
 
 export const Team = ({ title, showSearchBar, heads, contributors, researchers, alumni }) => {
   const [searchItem, setSearchItem] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState(contributors);
 
-  const handleSearch = (item) => {
-    setSearchItem(item);
-  }
-
-  useEffect(() => {
+  const handleSearch = async (searchItem) => {
     const results = contributors.filter(contributor =>
       contributor.name.toLowerCase().includes(searchItem)
     );
+    setSearchItem(searchItem);
     setSearchResults(results);
-  }, [searchItem, contributors]);
+  }
 
   return (
     <div className="team-component">
@@ -81,7 +78,7 @@ export const Team = ({ title, showSearchBar, heads, contributors, researchers, a
           <div>
             <div className="team-search-div">
               <h3>Contributors</h3> 
-              <div className="contributors-search">{showSearchBar ? <SearchBar handleSearch={handleSearch} placeHolder="Search Contributors" />: null}</div>
+              <div className="contributors-search">{showSearchBar ? <SearchBar input={searchItem} handleSearch={handleSearch} placeHolder="Search Contributors" />: null}</div>
             </div>
             <Row>
               {searchResults.map((item, i) => (
