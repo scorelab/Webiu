@@ -15,7 +15,7 @@ Import the component to `pages/index.js`
 
 ```
 <GithubContributors projectname="scorelab/webiu" title="Contributors of" limit={10}
-                    auth_token="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" showSearchBar={true} />
+                    auth_token="sample-token" showSearchBar={true} />
 ```
 
 `projectname` prop is the name of the project you wish to enquire
