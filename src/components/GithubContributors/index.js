@@ -42,7 +42,7 @@ export const GithubContributors = ({projectname, title, auth_token, limit, showS
   return (
     <div className="github-contributors-component">
       {title ? <div className="header-component">
-        <h2><FontAwesomeIcon className="icon" icon={faGithub} /> {title} {projectname}</h2>
+        <h2><FontAwesomeIcon className="icon-h2" icon={faGithub} /> {title} {projectname}</h2>
       </div> : null}
       {contributors && !contributors.message ? 
       <Container>

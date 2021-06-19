@@ -14,10 +14,12 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<GithubOrgMembers orgname="scorelab" title="sample-title" limit={10} auth_token="sample-token" />
+<GithubOrgMembers orgname="scorelab" title="sample-title" limit={10}
+                  auth_token="sample-token" showSearchBar={true} />
 ```
 
 `orgname` prop is the name of the organization whose members we wish to display
 `title` prop is the title of th section
 `limit` prop is the limit to number of members per page
 `auth_token` is the authorization token to be used to access data
+`showSearchBar` prop is the boolean which decides whether to show the search bar or not

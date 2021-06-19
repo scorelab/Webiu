@@ -25,7 +25,7 @@ export const GithubUser = ({username, title, auth_token}) => {
       setLoading(false)
     })
     .catch((err) => { throw err });
-  }, [username])
+  }, [username, auth_token])
 
   return (
     <div className="github-user-component">
