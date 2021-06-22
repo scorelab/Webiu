@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoad } from '@fortawesome/free-solid-svg-icons';
 
 export const Timeline = ({data, header, height}) =>  {
-
   const TimelineItem = ({ data }) => (
     <div className="timeline-item">
         <div className="timeline-item-content">
@@ -28,6 +27,7 @@ export const Timeline = ({data, header, height}) =>  {
         </div>
     </div>
   );
+  
   return (
     <div className="timeline-container"  style={{maxHeight: height}}>
             {header ? <div className="header-component">
