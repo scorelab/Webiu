@@ -4,7 +4,7 @@ Hope you have successfully set up the project in your local system and install a
 
 ## About the Card Component
 
-This is a resuasble component for the card built from scratch. It could be used to display important information seperated fro each other This Component is highly reusable and customizable via props
+This is a resuasble component for the card built from scratch. It could be used to display important information seperated from each other This Component is highly reusable and customizable via props
 
 ## How to use the component
 
