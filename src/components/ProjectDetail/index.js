@@ -18,12 +18,12 @@ export const ProjectDetail = ({project}) => {
             <Col className="project-detail-section-container" >
               <h3>Description</h3>
               <p>{project.description}</p>
-              <h3>Screen Shots</h3>
-              <ImageGrid images={project.screenshots} />
-              <h3>Contribute</h3>
-              <LinksList 
+              {project.screenshots ? <h3>Screen Shots</h3> : null}
+              {project.screenshots ? <ImageGrid images={project.screenshots} /> : null}
+              {project.links ? <h3>Contribute</h3> : null}
+              {project.links ? <LinksList 
                 links={project.links}
-              />
+              /> : null}
             </Col>
           </Row>
       </Container>

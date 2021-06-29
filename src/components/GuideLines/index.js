@@ -2,9 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { withPrefix } from "gatsby"
 import "./style.sass"
-import { Container, Row, Col } from "react-bootstrap"
+import {Container, Row, Col} from 'react-bootstrap'
+import {withPrefix} from "gatsby"
 
-export const GuideLines = ({ heading, description, guidelines }) => {
+export const GuideLines = ({ heading, description, guidelines, image}) => {
   return (
     <div
       className="guide-lines-component"
@@ -21,6 +22,9 @@ export const GuideLines = ({ heading, description, guidelines }) => {
               ))}
             </ol>
           </Col>
+          {image ? <Col>
+            <img alt="logo" src={withPrefix(image)} style={{maxWidth: "400px"}} />
+          </Col> : null}
         </Row>
       </Container>
     </div>
