@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import PropTypes from "prop-types"
-import {Container, Row, Col} from 'react-bootstrap'
+import {Container, Row, Col, Modal } from 'react-bootstrap'
 import TeamListItem from './TeamListItem'
 import "./style.sass"
 import {SearchBar} from "../SearchBar"
@@ -8,6 +8,17 @@ import {SearchBar} from "../SearchBar"
 export const Team = ({ title, showSearchBar, heads, contributors, researchers, alumni }) => {
   const [searchItem, setSearchItem] = useState("");
   const [searchResults, setSearchResults] = useState(contributors);
+  const [name, setName] = useState(null);
+  const [position, setPosition] = useState(null);
+  const [show, setShow] = useState(false);
+  const [image, setImage] = useState(null);
+
+  const handleClick = (name, position, image) => {
+    setName(name);
+    setPosition(position);
+    setImage(image)
+    setShow(true);
+  }
 
   const handleSearch = async (searchItem) => {
     const results = contributors.filter(contributor =>
@@ -19,14 +30,29 @@ export const Team = ({ title, showSearchBar, heads, contributors, researchers, a
 
   return (
     <div className="team-component">
-      {title ? <div className="header-component"><h2>{title}</h2></div> : null}
+
+      <Modal show={show} onHide={() => setShow(false)}>
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>
+           <div style={{textAlign: "center"}}>
+             <img src={image} alt="profile" className="team-img" />
+             <div><h4 className="team-title">{name}</h4></div>
+             <div><p className="team-position">{position}</p></div>
+           </div>
+        </Modal.Body>
+      </Modal>
+
+      {title ? 
+        <div className="header-component"><h2>{title}</h2></div> 
+      : null}
       <Container>
         {!heads || (
           <div>
             <h3>Heads</h3>
             <Row>
               {heads.map((item, i) => (
-                <Col md={6} key={i} className="team-column">
+                <Col md={6} key={i} className="team-column" 
+                     onClick={() => handleClick(item.name, item.title, item.image)}>
                   <TeamListItem 
                     name={item.name}
                     title={item.title}
@@ -43,7 +69,8 @@ export const Team = ({ title, showSearchBar, heads, contributors, researchers, a
             <h3>Researchers</h3>
             <Row>
               {researchers.map((item, i) => (
-                <Col md={4} sm={6} key={i} className="team-column">
+                <Col md={4} sm={6} key={i} className="team-column" 
+                     onClick={() => handleClick(item.name, item.title, item.image)}>
                   <TeamListItem 
                     name={item.name}
                     title={item.title}
@@ -61,7 +88,8 @@ export const Team = ({ title, showSearchBar, heads, contributors, researchers, a
             <h3>Alumni</h3>
             <Row>
               {alumni.map((item, i) => (
-                <Col md={4} sm={6} key={i} className="team-column">
+                <Col md={4} sm={6} key={i} className="team-column" 
+                     onClick={() => handleClick(item.name, item.title, item.image)}>
                   <TeamListItem 
                     name={item.name}
                     title={item.title}
@@ -78,11 +106,16 @@ export const Team = ({ title, showSearchBar, heads, contributors, researchers, a
           <div>
             <div className="team-search-div">
               <h3>Contributors</h3> 
-              <div className="contributors-search">{showSearchBar ? <SearchBar input={searchItem} handleSearch={handleSearch} placeHolder="Search Contributors" />: null}</div>
+              <div className="contributors-search">
+                {showSearchBar ? 
+                  <SearchBar input={searchItem} handleSearch={handleSearch} placeHolder="Search Contributors" />
+                : null}
+              </div>
             </div>
             <Row>
               {searchResults.map((item, i) => (
-                <Col md={3} sm={4} key={i} className="team-column">
+                <Col md={3} sm={4} key={i} className="team-column" 
+                     onClick={() => handleClick(item.name, item.title, item.image)}>
                   <TeamListItem 
                     name={item.name}
                     title={item.title}
@@ -104,5 +137,7 @@ Team.propTypes = {
   heads: PropTypes.array,
   researchers: PropTypes.array,
   alumni: PropTypes.array,
-  contributors: PropTypes.array
+  contributors: PropTypes.array,
+  title: PropTypes.string,
+  showSearchBar: PropTypes.bool
 }

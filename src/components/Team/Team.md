@@ -16,10 +16,10 @@ Import the component to `pages/index.js`
 ```
 <Team
     title="Team Component" showSearchBar={true}
-    contributors={[{name: "", title: ""}, {name: "", title: ""}]}
-    alumni={[{name: "", title: ""}, {name: "", title: ""}]}
-    heads={[{name: "", title: ""}, {name: "", title: ""}]}
-    researchers={[{name: "", title: ""}, {name: "", title: ""}]}
+    contributors={[{name: "", title: "", image: ""}, {name: "", title: "", image: ""}]}
+    alumni={[{name: "", title: "", image: ""}, {name: "", title: "", image: ""}]}
+    heads={[{name: "", title: "", image: ""}, {name: "", title: "", image: ""}]}
+    researchers={[{name: "", title: "", image: ""}, {name: "", title: "", image: ""}]}
 />
 ```
 
