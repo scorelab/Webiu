@@ -23,5 +23,6 @@ export const ButtonWithHeading = ({ heading, buttonText, buttonWidth, onClick = 
 ButtonWithHeading.propTypes = {
   heading: PropTypes.string,
   buttonText: PropTypes.string,
+  buttonWidth: PropTypes.string,
   onClick: PropTypes.func
 }
