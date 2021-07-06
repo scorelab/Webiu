@@ -63,7 +63,7 @@ export const Typewriter = ({words=[], header, wait, color, staticText}) => {
       </div> : null}
       <Container>
           <div className="text">
-              <h3 style={{color: color}}>
+              <h3 className="typewriter-text" style={{color: color}}>
                 {staticText} {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
               </h3>
           </div>
