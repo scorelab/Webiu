@@ -1,0 +1,96 @@
+@import '../../styles/variables.sass'
+
+.stepper-container-horizontal
+  background-image: url("../../../static/images/dots.png")
+  border: 1px solid lightsalmon
+  box-shadow: 0 0 13px $primary
+  border-radius: 3px
+  margin: 40px auto
+  padding: 30px
+  width: 70%
+  .stepper-wrapper-horizontal
+    display: flex
+    justify-content: space-between
+  .step-wrapper
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+  .step-number
+    border-radius: 50%
+    border: 1px solid grey
+    width: 25px
+    height: 25px
+    text-align: center
+    margin-bottom: 1.2rem
+  .step-description
+    max-width: 100px
+    margin: auto
+    text-align: center
+    color: $secondary
+  .divider-line
+    height: 2px
+    background-color: $dark-grey
+    position: absolute
+    top: 13%
+    left: 65%
+  .divider-line-2
+    width: 296%
+  .divider-line-3
+    width: 125%
+  .divider-line-4
+    width: 70%
+  .divider-line-5
+    width: 70%
+  .divider-line-6
+    width: 70%
+  .divider-line-7
+    width: 70%
+
+.stepper-container-vertical
+  background-image: url("../../../static/images/dots.png")
+  border: 1px solid lightsalmon
+  box-shadow: 0 0 13px $primary
+  border-radius: 3px
+  margin: 40px auto
+  padding: 30px
+  width: 300px
+  height: auto
+  display: flex
+  flex-direction: column
+  justify-content: center
+.stepper-wrapper-vertical
+  .step-wrapper
+    display: flex
+    align-items: center
+    margin-bottom: 1.2rem
+    position: relative
+  .step-number
+    border-radius: 50%
+    width: 25px
+    height: 25px
+    text-align: center
+    font-size: 95%
+  .step-description
+    margin-left: 1.2rem
+    padding-bottom: 3px
+    color: $secondary
+  .divider-line
+    height: 22px
+    width: 1px
+    background-color: $dark-grey
+    position: absolute
+    top: 95%
+    left: 5%
+
+.step-number-selected
+  background: $primary
+  border: 1px solid #bdbdbd
+  color: $light-grey
+.step-number-disabled
+  border: 1px solid $dark-grey
+.step-description-active
+  font-weight: bold
+  color: $secondary
