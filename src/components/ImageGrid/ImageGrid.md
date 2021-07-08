@@ -14,11 +14,11 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<ImageGrid size={4} images={[{imageUrl: "image_url", imageText: "image_text"}]} header="sample-header"
-           categories={false} categoryData={[{text: "text", color: "#e52165", route: "/"}}]} />
+<ImageGrid size={4} images={[{imageUrl: "image_url", imageText: "image_text"}]} header="sample-header" row={false}
+           categories={false} categoryData={[{text: "text", color: "#e52165", route: "/", image: "sample-path"}}]} />
 ```
 
 `size` prop is used to decide how many images should render per row e.g size = 3 means 4 images per row
 `images` prop is an array of images and corresponding text you want to display
 `header` prop is the title of the section
-`categories` prop is the bool to determine if it is image-grid or categories component
+`categories` and `row` props are the bool to determine if it is image-grid or categories or row-category component
