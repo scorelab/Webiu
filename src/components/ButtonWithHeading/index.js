@@ -26,5 +26,6 @@ export const ButtonWithHeading = ({ heading, color, buttonText, buttonWidth, onC
 ButtonWithHeading.propTypes = {
   heading: PropTypes.string,
   buttonText: PropTypes.string,
+  buttonWidth: PropTypes.string,
   onClick: PropTypes.func
 }
