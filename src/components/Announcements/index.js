@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
+import {Container} from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBullhorn } from '@fortawesome/free-solid-svg-icons';
 
-export const Announcements = ({data, header, direction, speed}) =>  { 
+export const Announcements = ({data, header, direction, speed, horizontal, title}) =>  { 
   
   const [scrollAmount, setScrollAmount] = useState(speed);
 
@@ -15,10 +16,10 @@ export const Announcements = ({data, header, direction, speed}) =>  {
               <FontAwesomeIcon className="icon" icon={faBullhorn} /> {header}
             </h2>
         </div> : null} 
-        <div className="marquee-div">
-          <div className="marquee-heading">
-            <p className="marquee-para">Annoucements</p>
-          </div>
+        {!horizontal ? <div className="marquee-div">
+          {title ? <div className="marquee-heading">
+            <p className="marquee-para">{title}</p>
+          </div> : null}
           <div className="marquee-main">
             <marquee direction={direction} scrollAmount={scrollAmount}>
                 {data ? data.map((item, index) => (
@@ -30,7 +31,22 @@ export const Announcements = ({data, header, direction, speed}) =>  {
                 )) : null}
             </marquee>
           </div>           
-        </div>
+        </div> : null}
+        {horizontal ? 
+          <Container>
+           <div className="horizontal-marquee">
+             <marquee direction={direction} scrollAmount={scrollAmount}>
+                {data ? data.map((item, id) => (
+                  <div key={id}>
+                    <a href={item.link} className="marquee-anchor">
+                      <p>{item.text}</p>
+                    </a>
+                  </div>
+                )) : null}
+             </marquee>
+           </div>
+           </Container>
+        : null}
     </div>
   );
 }
@@ -39,5 +55,7 @@ Announcements.propTypes = {
   header: PropTypes.string,
   data: PropTypes.array,
   direction: PropTypes.string,
-  speed: PropTypes.string
+  speed: PropTypes.string,
+  horizontal: PropTypes.bool,
+  title: PropTypes.string
 }
