@@ -1,0 +1,32 @@
+@import '../../styles/variables.sass'
+
+.spinner-component 
+  text-align: center
+.preloader
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  width: 300px
+  animation: pulse 0.4s ease 0.3s infinite alternate
+.bootstrap-spinner 
+  margin: auto
+.loader
+  margin: auto 
+  item-align: center
+  text-align: center
+.center
+  margin: auto
+  font-size: 50px
+  font-weight: bold
+  animation: spin 2s linear infinite
+  @keyframes spin
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+@keyframes pulse
+	from
+	  width: 300px
+	  filter: opacity(50%)
+	to
+	  width: 310px
+	  filter: opacity(100%)

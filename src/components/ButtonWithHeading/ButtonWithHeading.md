@@ -12,7 +12,10 @@ Import the component to `pages/index.js`
 `import {ButtonWithHeading} from "../components/ButtonWithHeading";`
 
 How to handle props to the component
-`<ButtonWithHeading heading="Button With Heading" buttonWidth="200px" buttonText="Button" />;`
+
+```
+<ButtonWithHeading heading="Button With Heading" color="sample-color" buttonWidth="200px" buttonText="Button" />
+```
 
 `heading` and `buttonText` are the two props using which you can render customized buttons
 `buttonWidth` prop is the dynamic width of button to specify size
