@@ -46,7 +46,15 @@ run `npm develop` or `gatsby develop`
 Your site must be visible at
 `http://localhost:8000`
 
+## About The NPM Package
+
+The webiu components now have a seperate dedicated npm-package which increases its reach to the developers. It has all the components exported and can be easily plugged into your next project. It is highly recommended to install and use the package:
+
+https://www.npmjs.com/package/webiu-npm
+
 ## Contributing to the Project
 
 We value our contributers a lot and would appreciate contributions to our project. Please make sure to follow our contributing guidelines.
 Please clearly explain any bugs, issues or feature requests (use screenshots wherever applicable) before opening any issue or pull request.
+
+May the source be with you!
