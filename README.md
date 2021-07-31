@@ -52,6 +52,12 @@ The webiu components now have a seperate dedicated npm-package which increases i
 
 https://www.npmjs.com/package/webiu-npm
 
+## Usage of the NPM package
+
+The npm package of webiu can be used in your next proejct. A sample project demonstrating he use-cases of the package is developed and is visible at:
+
+https://grumpyyash.github.io/webiu-npm-test/
+
 ## Contributing to the Project
 
 We value our contributers a lot and would appreciate contributions to our project. Please make sure to follow our contributing guidelines.
