@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import {withPrefix} from 'gatsby'
 import "./style.sass"
+import icon from "../../../static/icons/email-icon.png"
 import {Container, Row, Col, Form} from 'react-bootstrap'
 
 export const Contact = ({contactMessage, subscribeMessage, contactTitle, subscribeTitle, handleContactSubmit, handleSubscribeSubmit}) => {
@@ -14,7 +15,7 @@ export const Contact = ({contactMessage, subscribeMessage, contactTitle, subscri
   const handleMessage = (e) => setMessage(e.target.value);
 
   return (
-    <div className="contact-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
+    <div className="contact-component">
       <Container>
         <Row>
           <Col md={6}>
@@ -34,7 +35,7 @@ export const Contact = ({contactMessage, subscribeMessage, contactTitle, subscri
           <Col md={6}>
             <h1 className="title">{subscribeTitle}</h1>
             <p className="main-text">{subscribeMessage}</p>
-            <img className="subscribe-image" alt="subscribe" src={withPrefix('./icons/email-icon.png')} />
+            <img className="subscribe-image" alt="subscribe" src={withPrefix(icon)} />
             <Form onSubmit={handleSubscribeSubmit(email)}>
             <Form.Group controlId="subscribe-form">
               <Form.Control type="email" placeholder="E-Mail" onChange={handleEmail} required />
