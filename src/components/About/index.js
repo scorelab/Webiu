@@ -22,7 +22,7 @@ export const About = ({header, mainText, subText, buttonText, buttonLink, image,
                   <span>{mainText.split(' ').map((t, i) => i !== 0 ? ' ' + t : null)}</span>
                 </h1> : null}
                 <p>{subText}</p>
-                {buttonText ? <Link to={buttonLink} className="btn">
+                {buttonText ? <Link to={buttonLink} className="button">
                     {buttonText}
                 </Link> : null}
               </div>
