@@ -49,7 +49,7 @@ export const GitterRoomsList = ({title, groupId, gitterOrganizationName, gitterT
   )
 
   return (
-    <div className="gitter-rooms-list-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
+    <div className="gitter-rooms-list-component">
       <Container>
         <Row>
           <Col md={12}>
@@ -59,7 +59,7 @@ export const GitterRoomsList = ({title, groupId, gitterOrganizationName, gitterT
         </Row>
         <Row>
         <Col className="view-all-btn-container">
-          {loading || !rooms ? null : <a href={`https://gitter.im/${gitterOrganizationName}`} className="btn" target="_blank" rel="noreferrer">Many More <FontAwesomeIcon icon={faArrowRight}/></a>}
+          {loading || !rooms ? null : <a href={`https://gitter.im/${gitterOrganizationName}`} className="gitter-btn" target="_blank" rel="noreferrer">Many More <FontAwesomeIcon icon={faArrowRight}/></a>}
         </Col>
       </Row>
       </Container>

@@ -8,7 +8,7 @@ export const GoogleMap = ({ mapId, header, width, height }) => {
     return (
        <div>
            {header ? <div className="header-component">
-                <h2 className="title"><FontAwesomeIcon className="icon" icon={faMapMarkerAlt} /> {header}</h2>
+                <h2><FontAwesomeIcon className="icon-h2" icon={faMapMarkerAlt} /> <span className="h2-title">{header}</span></h2>
            </div> : null}
            <div className="map-component" style={{width: width, height: height}}>
             <iframe
