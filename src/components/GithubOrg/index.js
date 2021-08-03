@@ -49,7 +49,7 @@ export const GithubOrg = ({orgname, limit, title, auth_token}) => {
   return (
     <div className="github-org-component">
       {title ? <div className="header-component">
-        <h2><FontAwesomeIcon className="icon" icon={faGithub} /> {title} {orgname}</h2>
+        <h2><FontAwesomeIcon className="icon-h2" icon={faGithub} /> <span className="h2-title">{title} {orgname}</span></h2>
       </div> : null}
       {org && !org.message ? 
       <Container>

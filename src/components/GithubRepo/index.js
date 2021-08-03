@@ -33,7 +33,7 @@ export const GithubRepo = ({ reponame, title, auth_token }) => {
   return (
     <div className="github-repo-component">
       {title ? <div className="header-component">
-        <h2><FontAwesomeIcon className="icon" icon={faGithub} /> {title}</h2>
+        <h2><FontAwesomeIcon className="icon-h2" icon={faGithub} /> <span className="h2-title">{title}</span></h2>
       </div> : null}
       {repo && !repo.message ?
       <Container>
@@ -49,49 +49,49 @@ export const GithubRepo = ({ reponame, title, auth_token }) => {
             {repo ?
                 <Row>   
                   <Col lg={3}>
-                    <div className="repo-card">
+                    <div className="repo-card-github">
                       <p className="repo-title"><FontAwesomeIcon icon={faAsterisk} /> Owner</p>
                       <p className="card-para">{repo.owner.login}</p>
                     </div> 
                   </Col>
                   <Col lg={3}>
-                    <div className="repo-card">
+                    <div className="repo-card-github">
                       <p className="repo-title"><FontAwesomeIcon icon={faCode} /> Languages</p>
                       <p className="card-para">{repo.language}</p>
                     </div> 
                   </Col>
                   <Col lg={3}>
-                    <div className="repo-card">
+                    <div className="repo-card-github">
                       <p className="repo-title"><FontAwesomeIcon icon={faCodeBranch} /> No. of Forks</p>
                       <p className="card-para">{repo.forks}</p>
                     </div> 
                   </Col>
                   <Col lg={3}>
-                    <div className="repo-card">
+                    <div className="repo-card-github">
                       <p className="repo-title"><FontAwesomeIcon icon={faHistory} /> Last Updated</p>
                       <p className="card-para">{moment(repo.upadted_at).format("MMMM Do YYYY")}</p>
                     </div> 
                   </Col>
                   <Col lg={3}>
-                    <div className="repo-card">
+                    <div className="repo-card-github">
                       <p className="repo-title"><FontAwesomeIcon icon={faExclamation} /> Open Issues</p>
                       <p className="card-para">{repo.open_issues_count} Issues Opened</p>
                     </div> 
                   </Col>
                   <Col lg={3}>
-                    <div className="repo-card">
+                    <div className="repo-card-github">
                       <p className="repo-title"><FontAwesomeIcon icon={faUser} /> No. of Contributors</p>
                       <p className="card-para">{repo.subscribers_count}</p>
                     </div> 
                   </Col>
                   <Col lg={3}>
-                    <div className="repo-card">
+                    <div className="repo-card-github">
                       <p className="repo-title"><FontAwesomeIcon icon={faGithubAlt} /> default Branch</p>
                       <p className="card-para">{repo.default_branch}</p>
                     </div> 
                   </Col>
                   <Col lg={3}>
-                    <div className="repo-card">
+                    <div className="repo-card-github">
                       <p className="repo-title"><FontAwesomeIcon icon={faIdBadge} /> License</p>
                       <p className="card-para">{repo.license.name}</p>
                     </div> 

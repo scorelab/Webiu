@@ -30,7 +30,7 @@ export const GithubUser = ({username, title, auth_token}) => {
   return (
     <div className="github-user-component">
       {title ? <div className="header-component">
-        <h2><FontAwesomeIcon className="icon" icon={faGithub} /> {title}</h2>
+        <h2><FontAwesomeIcon className="icon-h2" icon={faGithub} /> <span className="h2-title">{title}</span></h2>
       </div> : null}
       {user && !user.message ? 
       <Container>
