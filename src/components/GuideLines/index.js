@@ -1,12 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { withPrefix } from "gatsby"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 import {withPrefix} from "gatsby"
 
 export const GuideLines = ({ heading, description, guidelines, image}) => {
   return (
-    <div className="guide-lines-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
+    <div
+      className="guide-lines-component"
+      style={{ backgroundImage: `url(${withPrefix("/images/dots.png")})` }}
+    >
       <Container>
         <Row>
           <Col>
