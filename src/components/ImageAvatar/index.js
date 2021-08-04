@@ -5,8 +5,8 @@ import "./style.sass"
 export const ImageAvatar = ({ image }) => {
   return (
     <div className="image-avatar-component">
-      <div className="image-avatar-container"
-           style={{backgroundImage: `url(${image})`}}>
+      <div className="image-avatar-container">
+          <img className="image" src={image} />
       </div>
     </div>
   )
