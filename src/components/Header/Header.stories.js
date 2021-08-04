@@ -5,7 +5,7 @@ import { Header } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'Header',
+  title: 'Home/Header',
   component: Header,
   argTypes: {
      mainText: {control: 'text'},

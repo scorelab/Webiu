@@ -5,7 +5,7 @@ import { Card } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'Card',
+  title: 'General/Card',
   component: Card,
   argTypes: {
      header: { control: 'text' },

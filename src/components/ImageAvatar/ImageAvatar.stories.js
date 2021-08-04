@@ -5,7 +5,7 @@ import { ImageAvatar } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'ImagaAvatar',
+  title: 'Images/ImagaAvatar',
   component: ImageAvatar,
   argTypes: {
      image: {control: 'text'}

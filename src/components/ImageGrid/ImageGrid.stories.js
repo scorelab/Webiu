@@ -5,7 +5,7 @@ import { ImageGrid } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'ImageGrid',
+  title: 'Images/ImageGrid',
   component: ImageGrid,
   argTypes: {
      header: {control: 'text'},

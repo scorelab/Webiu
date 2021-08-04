@@ -5,7 +5,7 @@ import { JobOpenings } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'JobOpenings',
+  title: 'Opportunity/JobOpenings',
   component: JobOpenings,
   argTypes: {
      title: {control: 'text'},

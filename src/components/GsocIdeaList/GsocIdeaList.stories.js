@@ -5,7 +5,7 @@ import { GsocIdeaList } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'GsocIdeaList',
+  title: 'opportunity/GsocIdeaList',
   component: GsocIdeaList,
   argTypes: {
      heading: {control: 'text'},

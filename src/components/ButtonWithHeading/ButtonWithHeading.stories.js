@@ -7,7 +7,7 @@ import { action } from "@storybook/addon-actions";
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'ButtonWithHeading',
+  title: 'General/ButtonWithHeading',
   component: ButtonWithHeading,
   argTypes: {
     heading: { control: 'text' },

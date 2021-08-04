@@ -5,7 +5,7 @@ import { GitterRoomsList } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'GitterRoomList',
+  title: 'Home/GitterRoomList',
   component: GitterRoomsList,
   argTypes: {
      title: {control: 'text'},

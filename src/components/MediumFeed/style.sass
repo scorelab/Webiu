@@ -2,6 +2,7 @@
 
 .medium-feed-component
   background-color: #fff
+  margin-bottom: 20px
   .medium-feed-title
     font-weight: 600
   .header-component
@@ -37,9 +38,10 @@
     background-color: #fff
     display: flex
     align-items: flex-start
-    padding-bottom: 30px
     margin-bottom: 30px
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+    .feed-text-div
+      padding: 20px
     .image
       margin-right: 10px
       width: 180px
@@ -75,9 +77,12 @@
 
 .view-all-btn-container
   text-align: right
-.btn
+.medium-btn
   font-size: 16px
   padding: 0px 5px
   font-weight: 600
   color: $primary
-  margin-bottom: 10px
+  padding-bottom: 20px
+.medium-btn:hover
+  text-decoration: none
+  color: $primary

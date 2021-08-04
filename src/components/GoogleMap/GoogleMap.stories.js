@@ -5,7 +5,7 @@ import { GoogleMap } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'GoogleMap',
+  title: 'Opportunity/GoogleMap',
   component: GoogleMap,
   argTypes: {
      mapId: {control: 'text'},

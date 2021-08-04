@@ -5,7 +5,7 @@ import { ComingSoon } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'ComingSoon',
+  title: 'General/ComingSoon',
   component: ComingSoon,
   argTypes: {
      header: {control: 'text'},

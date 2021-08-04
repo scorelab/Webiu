@@ -7,7 +7,7 @@ const FeedItem = ({title, publishedDate, author, image, slug}) => {
   return (
     <div className="medium-feed-item-component">
       <img className="image" alt="medium" src={image.includes("cdn-images") ? image : './images/mediumPlaceholder.png'} />
-      <div>
+      <div className="feed-text-div">
         <p className="post-title">{title}</p>
         <p className="post-published-date">
           <b>Published on</b> {moment(publishedDate).format("MMMM Do YYYY, h:mm A")}{' '}

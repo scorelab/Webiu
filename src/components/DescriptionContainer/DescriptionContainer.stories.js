@@ -5,7 +5,7 @@ import { DescriptionContainer } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'DescriptionContainer',
+  title: 'General/DescriptionContainer',
   component: DescriptionContainer,
   argTypes: {
     title: {control: 'text'},

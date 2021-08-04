@@ -5,7 +5,7 @@ import { Contact } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'Contact',
+  title: 'Home/Contact',
   component: Contact,
   argTypes: {
      contactTitle: {control: 'text'},

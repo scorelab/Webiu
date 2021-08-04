@@ -34,7 +34,7 @@ export const NavBar = ({logo, links = [], logoStyle}) => {
               target="_blank" 
               className={link.isSpecial ? "special" : ""}
             >
-              {link.name} <FontAwesomeIcon icon={faExternalLinkAlt} className="icon"/>
+              {link.name} <FontAwesomeIcon icon={faExternalLinkAlt} className="nav-icon"/>
             </Nav.Link>
           ))}
         </Nav>

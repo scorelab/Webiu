@@ -5,7 +5,7 @@ import { Faq } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'Faq',
+  title: 'General/Faq',
   component: Faq,
   argTypes: {
      header: {control: 'text'},

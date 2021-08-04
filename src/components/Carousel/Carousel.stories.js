@@ -5,7 +5,7 @@ import { Carousel } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'Carousel',
+  title: 'General/Carousel',
   component: Carousel,
   argTypes: {
     header: {control: 'text'},

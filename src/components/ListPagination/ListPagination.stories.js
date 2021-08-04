@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { action } from "@storybook/addon-actions";
 
 export default {
-  title: 'ListPagination',
+  title: 'General/ListPagination',
   component: ListPagination,
   argTypes: {
      pageSize: {control: 'number'},

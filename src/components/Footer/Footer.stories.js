@@ -5,7 +5,7 @@ import { Footer } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'Footer',
+  title: 'Home/Footer',
   component: Footer,
   argTypes: {
      mainText: {control: 'text'}, 

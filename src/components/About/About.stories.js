@@ -5,7 +5,7 @@ import { About } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'About',
+  title: 'Home/About',
   component: About,
   argTypes: {
     header: { control: 'text' },

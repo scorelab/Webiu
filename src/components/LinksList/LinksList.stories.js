@@ -5,7 +5,7 @@ import { LinksList } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'LinksList',
+  title: 'General/LinksList',
   component: LinksList,
   argTypes: {
      links: {control: 'array'},

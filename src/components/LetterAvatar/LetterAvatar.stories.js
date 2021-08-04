@@ -5,7 +5,7 @@ import { LetterAvatar } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'LetterAvatar',
+  title: 'Images/LetterAvatar',
   component: LetterAvatar,
   argTypes: {
      name: {control: 'text'},

@@ -5,7 +5,7 @@ import { GuideLines } from './index';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default {
-  title: 'GuideLines',
+  title: 'General/GuideLines',
   component: GuideLines,
   argTypes: {
      heading: {control: 'text'},
