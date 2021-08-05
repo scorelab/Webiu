@@ -49,7 +49,7 @@ export const ProjectsList = ({title, showSearchBar, searchPlaceHolder, items=[],
         </Row>
         <Row>
           <Col className="view-all-btn-container">
-            {!limit || <Link to={'/projects'} className="btn">Many More <FontAwesomeIcon icon={faArrowRight}/></Link>}
+            {!limit || <Link to={'/projects'} className="btn-projects">Many More <FontAwesomeIcon icon={faArrowRight}/></Link>}
           </Col>
         </Row>
       </Container>

@@ -7,7 +7,9 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 export const SearchBar = ({handleSearch, input, placeHolder, header}) => {
   return (
        <div>
-          {header ? <div className="header-component"><h2>{header}</h2></div> : null}
+          {header ? <div className="header-component">
+                      <h2><FontAwesomeIcon icon={faSearch} className="icon-h2" /> {header}</h2></div> 
+          : null}
           <div className="search-box">
           <input
               className="search-input"
