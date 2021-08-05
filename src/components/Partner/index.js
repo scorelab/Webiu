@@ -10,7 +10,7 @@ export const Partner = ({header, mainText, subText, buttonText, buttonLink, imag
   return (
     <div className="partner-component">
     {header ? <div className="header-component">
-        <h2><FontAwesomeIcon className="icon" icon={faHandshake} /> {header}</h2>
+        <h2><FontAwesomeIcon className="icon-h2" icon={faHandshake} /> {header}</h2>
     </div> : null}
     <div className="partner-with-us" style={{backgroundColor: backgroundColor}}>
       <Container>

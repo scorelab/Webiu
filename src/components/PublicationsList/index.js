@@ -39,7 +39,7 @@ export const PublicationsList = ({title, items=[], limit, suffle, publications, 
         </Row> : null}
         <Row>
           <Col className="view-all-btn-container">
-            {!limit || <Link to={'/publications'} className="btn">Many More <FontAwesomeIcon icon={faArrowRight}/></Link>}
+            {!limit || <Link to={'/publications'} className="btn-publications">Many More <FontAwesomeIcon icon={faArrowRight}/></Link>}
           </Col>
         </Row>
       </Container>
