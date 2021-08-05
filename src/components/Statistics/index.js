@@ -10,7 +10,7 @@ export const Statistics = ({ header, title, description, data, image }) => {
   return (
     <div className="statistics-component">
         {header ? <div className="header-component">
-            <h1><FontAwesomeIcon className="icon" icon={faSignal} /> {header}</h1>
+            <h2><FontAwesomeIcon className="icon-h2" icon={faSignal} /> {header}</h2>
         </div> : null}
         <Container>
            <Row>

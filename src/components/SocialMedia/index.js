@@ -17,7 +17,7 @@ export const SocialMedia = ({facebookProfile, twitterProfile, header, width, hei
     <div className="embed-component">
       { header ? 
         <div className="header-component">
-         <h3><FontAwesomeIcon className="icon" icon={faFacebook} /> {header}</h3>
+         <h3><FontAwesomeIcon className="icon-h2" icon={faFacebook} /> {header}</h3>
         </div>
        : null }
       <div>
