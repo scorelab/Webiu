@@ -13,7 +13,7 @@ export const Announcements = ({data, header, direction, speed, horizontal, title
     <div className="announcements-section">
        {header ? <div className="header-component">
             <h2 className="title">
-              <FontAwesomeIcon className="icon" icon={faBullhorn} /> {header}
+              <FontAwesomeIcon className="icon-h2" icon={faBullhorn} /> {header}
             </h2>
         </div> : null} 
         {!horizontal ? <div className="marquee-div">
