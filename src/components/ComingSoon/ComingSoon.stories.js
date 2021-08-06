@@ -23,7 +23,7 @@ export const comingsoon = (args) => <ComingSoon {...args} />
 comingsoon.args = {
    header: "Countdown Component",
    image: "https://scorelab.org/images/joinTeam.png",
-   buttonLink: "/",
+   buttonLink: "#",
    buttonText: "Explore",
    countdownText: "Coming soon!",
    deployDate: "1 Jan, 2022 00:00:00",

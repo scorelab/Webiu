@@ -4,6 +4,8 @@ import { Contact } from './index';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
+import { action } from '@storybook/addon-actions';
+
 export default {
   title: 'Home/Contact',
   component: Contact,
@@ -12,12 +14,12 @@ export default {
      subscribeTitle: {control: 'text'},
      contactMessage: {control: 'text'},
      subscribeMessage: {control: 'text'},
-     handleContactSubmit: {action: 'Contact Clicked'},
-     handleSubscribeSubmit: {action: 'Subscribe Clicked'}
+     handleContactSubmit: {control: 'function'},
+     handleSubscribeSubmit: {control: 'function'}
   }
 };
 
-export const contact = (args) => <Contact {...args} />
+export const contact = (args) => <Contact {...args} handleContactSubmit={action("contact submit")} handleSubscribeSubmit={action("subscribe submit")} />
 
 contact.args = {
    contactTitle: "Contact US",

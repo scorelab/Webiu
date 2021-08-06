@@ -26,9 +26,9 @@ partner.args = {
    header: "Partner With Us",
    mainText: "Collaborate with us",
    contactText: "Contact us",
-   contactLink: "/",
+   contactLink: "#",
    buttonText: "Form",
-   buttonLink: "/",
+   buttonLink: "#",
    image: "https://scorelab.org/images/joinTeam.png",
    subText: "The SCoRe Lab has conducted research covering various aspects of sensor networks, embeded systems, digital forensic, information security, mobile applications, cloud, blockchain and software tools."
 }

@@ -26,8 +26,8 @@ imagegrid.args = {
             {imageUrl: "https://scorelab.org/images/joinTeam.png", imageText: "OUR TEAM"}],
    categories: false,
    header: "Image Grid",
-   categoryData: [{text: "Web Development", color: "#e52165", route: "/", image: "https://uxwing.com/wp-content/themes/uxwing/download/07-web-app-development/web-code.svg"},
-                  {text: "Blockchain Tech", color: "#e52165", route: "/", image: "https://uxwing.com/wp-content/themes/uxwing/download/17-internet-network-technology/blockchain.svg"},
-                  {text: "Machine Learning", color: "#e52165", route: "/", image: "https://uxwing.com/wp-content/themes/uxwing/download/17-internet-network-technology/neuromorphic-computing.svg"},
-                  {text: "App Development", color: "#e52165", route: "/", image: "https://uxwing.com/wp-content/themes/uxwing/download/07-web-app-development/addon-extension.svg"}]
+   categoryData: [{text: "Web Development", color: "#e52165", route: "#", image: "https://uxwing.com/wp-content/themes/uxwing/download/07-web-app-development/web-code.svg"},
+                  {text: "Blockchain Tech", color: "#e52165", route: "#", image: "https://uxwing.com/wp-content/themes/uxwing/download/17-internet-network-technology/blockchain.svg"},
+                  {text: "Machine Learning", color: "#e52165", route: "#", image: "https://uxwing.com/wp-content/themes/uxwing/download/17-internet-network-technology/neuromorphic-computing.svg"},
+                  {text: "App Development", color: "#e52165", route: "#", image: "https://uxwing.com/wp-content/themes/uxwing/download/07-web-app-development/addon-extension.svg"}]
 }

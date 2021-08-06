@@ -9,11 +9,7 @@ export default {
   component: Carousel,
   argTypes: {
     header: {control: 'text'},
-    data: {control: {
-        title: {control: 'text'},
-        content: {control: 'text'},
-        image: {control: 'text'}
-    }}
+    data: {control: 'array'}
   }
 };
 

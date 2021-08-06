@@ -44,7 +44,7 @@ export const Carousel = ({data, header}) =>  {
     return (
         <div>
         {header ? <div className="header-component">
-            <h1><FontAwesomeIcon className="icon" icon={faSlidersH} /> {header}</h1>
+            <h2><FontAwesomeIcon className="icon-h2" icon={faSlidersH} /> {header}</h2>
         </div> : null}
         <Container>
             {data ? <div className="carousel">

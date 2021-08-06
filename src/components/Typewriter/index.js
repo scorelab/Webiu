@@ -58,7 +58,7 @@ export const Typewriter = ({words=[], header, wait, color, staticText}) => {
     <div className="typewriter-component">
       {header ? <div className="header-component">
           <h2 className="title">
-            <FontAwesomeIcon className="icon" icon={faSuperscript} /> {header}
+            <FontAwesomeIcon className="icon-h2" icon={faSuperscript} /> {header}
           </h2>
       </div> : null}
       <Container>
@@ -76,5 +76,6 @@ Typewriter.propTypes = {
     words: PropTypes.array,
     header: PropTypes.string,
     wait: PropTypes.number,
-    color: PropTypes.string
+    color: PropTypes.string,
+    staticText: PropTypes.string
 }

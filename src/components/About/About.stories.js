@@ -25,6 +25,6 @@ about.args = {
    mainText: "Welcome To SCoRe Lab",
    subText: "The SCoRe Lab has conducted research covering various aspects of sensor networks, embeded systems, digital forensic, information security, mobile applications, cloud, blockchain and software tools.",
    buttonText: "Explore",
-   buttonLink: "/",
+   buttonLink: "#",
    image: "https://scorelab.org/images/community.png",
 }

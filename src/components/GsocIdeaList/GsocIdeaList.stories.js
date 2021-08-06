@@ -11,18 +11,8 @@ export default {
      heading: {control: 'text'},
      description: {control: 'text'},
      defaultActiveKeys: {control: 'array'},
-     listItems: {control: {
-         title: {control: 'text'},
-         description: {control: 'text'},
-         expectedresults: {control: 'text'},
-         possiblementors: {control: 'text'},
-         requiredknowledge: {control: 'text'},
-         githuburl: {control: 'text'}
-     }},
-     previousProjects: {control: {
-         year: {control: 'text'},
-         link: {control: 'text'}
-     }}
+     listItems: {control: 'array'},
+     previousProjects: {control: 'array'}
   }
 };
 
@@ -34,8 +24,8 @@ gsocidealist.args = {
    description: "Lorem ipsum sample description fot the idea list of the organization for google summer of code participation",
    listItems: [{title: "sample", description: "sample", expectedresults: "sample", possiblementors: "sample", requiredknowledge: "sample", githuburl: "sample"},
                {title: "sample", description: "sample", expectedresults: "sample", possiblementors: "sample", requiredknowledge: "sample", githuburl: "sample"}],
-   previousProjects: [{year: "2020", link: "/"},
-                      {year: "2019", link: "/"},
-                      {year: "2018", link: "/"},
-                      {year: "2017", link: "/"}]
+   previousProjects: [{year: "2020", link: "#"},
+                      {year: "2019", link: "#"},
+                      {year: "2018", link: "#"},
+                      {year: "2017", link: "#"}]
 }

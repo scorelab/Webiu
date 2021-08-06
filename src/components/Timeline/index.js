@@ -31,7 +31,7 @@ export const Timeline = ({data, header, height}) =>  {
   return (
     <div className="timeline-container"  style={{maxHeight: height}}>
             {header ? <div className="header-component">
-                <h2 className="title"><FontAwesomeIcon className="icon" icon={faRoad} /> {header}</h2>
+                <h2 className="title"><FontAwesomeIcon className="icon-h2" icon={faRoad} /> {header}</h2>
             </div> : null}
             {data && data.map((data, idx) => (
                 <TimelineItem data={data} key={idx} />

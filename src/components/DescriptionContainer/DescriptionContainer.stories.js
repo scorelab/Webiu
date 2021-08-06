@@ -12,9 +12,7 @@ export default {
     subTitle: {control: 'text'},
     image: {control: 'text'},
     mainText: {control: 'text'},
-    sideComponent: {control: {
-        content: {control: 'text'}
-    }}
+    sideComponent: {control: 'object'}
   }
 };
 

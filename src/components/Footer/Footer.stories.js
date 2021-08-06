@@ -9,14 +9,7 @@ export default {
   component: Footer,
   argTypes: {
      mainText: {control: 'text'}, 
-     socialLinks: {control: {
-         facebook: {control: 'text'},
-         gitter: {control: 'text'},
-         twitter: {control: 'text'},
-         github: {control: 'text'},
-         linkedin: {control: 'text'},
-         medium: {control: 'text'}
-     }}
+     socialLinks: {control: 'object'}
   }
 };
 
@@ -24,5 +17,5 @@ export const footer = (args) => <Footer {...args} />
 
 footer.args = {
    mainText: "Copyright © SCoRe Lab",
-   socialLinks: {facebook: "/", gitter: "/", twitter: "/", github: "/", linkedin:"/", medium:"/"}
+   socialLinks: {facebook: "#", gitter: "#", twitter: "#", github: "#", linkedin:"#", medium:"#"}
 }

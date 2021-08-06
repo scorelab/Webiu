@@ -12,10 +12,7 @@ export default {
      bgColor: {control: 'text'},
      toggleColor: {control: 'text'},
      titleColor: {control: 'text'},
-     data: {control: {
-         title: {control: 'text'},
-         content: {control: 'text'}
-     }}
+     data: {control: 'array'}
   }
 };
 

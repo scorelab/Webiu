@@ -22,6 +22,5 @@ export const buttonwithheading = (args) => <ButtonWithHeading {...args} onClick=
 buttonwithheading.args = {
   heading: "Button Component",
   buttonText: "Button",
-  buttonWidth: "400px",
-  color: ""
+  buttonWidth: "400px"
 }
