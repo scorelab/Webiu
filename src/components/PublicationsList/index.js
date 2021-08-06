@@ -4,7 +4,6 @@ import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 import PublicationListItem from './PublicationListItem'
 import AchievementListItem from "./AchievementListItem"
-import {Link} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
@@ -39,7 +38,7 @@ export const PublicationsList = ({title, items=[], limit, suffle, publications, 
         </Row> : null}
         <Row>
           <Col className="view-all-btn-container">
-            {!limit || <Link to={'/publications'} className="btn-publications">Many More <FontAwesomeIcon icon={faArrowRight}/></Link>}
+            {!limit || <a href='/publications' className="btn-publications">Many More <FontAwesomeIcon icon={faArrowRight}/></a>}
           </Col>
         </Row>
       </Container>
