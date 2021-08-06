@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
-import { Link, withPrefix } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -22,13 +21,13 @@ export const About = ({header, mainText, subText, buttonText, buttonLink, image,
                   <span>{mainText.split(' ').map((t, i) => i !== 0 ? ' ' + t : null)}</span>
                 </h1> : null}
                 <p>{subText}</p>
-                {buttonText ? <Link to={buttonLink} className="button">
+                {buttonText ? <a href={buttonLink} className="button">
                     {buttonText}
-                </Link> : null}
+                </a> : null}
               </div>
             </Col>
             <Col md={6} className="right-col">
-              <img className= "about-image" alt="About" src={withPrefix(image)} />
+              <img className= "about-image" alt="About" src={image} />
             </Col>
           </Row>
       </Container>

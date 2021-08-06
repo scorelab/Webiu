@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
-import { Link, withPrefix } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, small, backgroundColor}) => {
@@ -27,11 +26,11 @@ export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, 
                   <span>{mainText.split(' ').map((t, i) => i !== 0 ? ' ' + t : null)}</span>
                 </h1> : null }
                 <p className="header-para">{subText}</p>
-                <Link to={buttonLink} className="btn">{buttonText}</Link>
+                <a href={buttonLink} className="btn">{buttonText}</a>
               </div>
             </Col>
             { image ? <Col md={6} className="right-col">
-              <img className= "main-image" alt="Header" src={withPrefix(image)} />
+              <img className= "main-image" alt="Header" src={image} />
             </Col> : null }
           </Row>
         )}

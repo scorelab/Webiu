@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
-import {navigate, withPrefix} from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,7 +12,7 @@ export const ImageGrid = ({header, images, size, categories, categoryData, row})
       <Row className="image-row">
         {images.map(i => (
           <Col md={size} key={i} className="image-col">
-            <img className="image-grid" alt="Logo" src={withPrefix(i.imageUrl)} />
+            <img className="image-grid" alt="Logo" src={i.imageUrl} />
             {i.imageText ? <p>{i.imageText}</p> : null}
           </Col>
         ))}
@@ -37,7 +36,7 @@ export const ImageGrid = ({header, images, size, categories, categoryData, row})
               <Col md={size} className="category-col" key={id}>
                 <div className="category-div" 
                      style={{backgroundColor: category.color}}  
-                     onClick={() => navigate(category.route)}>
+                     onClick={() => {}}>
                   <h3 className="category-text">{category.text}</h3>
                 </div>
               </Col>
@@ -49,7 +48,7 @@ export const ImageGrid = ({header, images, size, categories, categoryData, row})
         <Row className="category-row">
             {categoryData.map((category, index) => (
               <Col md={2} xs={6} key={index} className="data-col">
-                <div onClick={() => navigate(category.route)}>
+                <div onClick={() => {}}>
                   <img src={category.image} alt="logo" className="data-img" />
                   <p className="category-text-row">{category.text}</p>
                 </div>
