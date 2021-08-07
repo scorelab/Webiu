@@ -58,9 +58,17 @@ The npm package of webiu can be used in your next proejct. A sample project demo
 
 https://grumpyyash.github.io/webiu-npm-test/
 
+## StoryBook Visualization of the Components
+
+All the webiu components are well-documented using StoryBook, a powerful visualization tool for reviewing UI. The storybook for webiu is deployed live on:
+
+https://grumpyyash.github.io/Webiu
+
+And, it is also deployed on chromatic - https://610d0e8b03a01e003b2f5070-rllntdhgdq.chromatic.com/
+
 ## Contributing to the Project
 
 We value our contributers a lot and would appreciate contributions to our project. Please make sure to follow our contributing guidelines.
 Please clearly explain any bugs, issues or feature requests (use screenshots wherever applicable) before opening any issue or pull request.
 
-May the source be with you!
+### May the source be with you!
