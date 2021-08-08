@@ -12,7 +12,7 @@ export const Faq = ({data, header, bgColor, toggleColor, titleColor}) => {
     {header ?
       <div className="header-component">
        <h3>
-         {header} <FontAwesomeIcon className="icon" icon={faQuestionCircle} />
+         <FontAwesomeIcon className="icon-h2" icon={faQuestionCircle} /> {header}
         </h3>
       </div>
      : null}

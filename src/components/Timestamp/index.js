@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import { Link, withPrefix } from "gatsby"
 import {Container, Row, Col} from 'react-bootstrap'
 import "./style.sass"
 
@@ -25,7 +24,7 @@ export const Timestamp = ({ image, firstName, buttonText, buttonLink, message })
   const time = today.toLocaleTimeString(locale, { hour: 'numeric', hour12: true, minute: 'numeric', second: 'numeric' });
 
   return (
-    <div style={{ backgroundImage: `url(${withPrefix('/images/dots.png')})` }} className="timestamp-component" >
+    <div style={{ backgroundImage: `url(${'/images/dots.png'})` }} className="timestamp-component" >
       <Container>
           <Row>
             <Col md={6} className="left-timestamp-col">
@@ -35,11 +34,11 @@ export const Timestamp = ({ image, firstName, buttonText, buttonLink, message })
                 <h4 className="heading-secondary">{ time }</h4>
                 <br />
                 <span className='colored-text'>{message}</span>
-                {buttonText ? <Link to={buttonLink} className="timestamp-button">{buttonText}</Link> : null}
+                {buttonText ? <a href={buttonLink} className="timestamp-button">{buttonText}</a> : null}
               </div>
             </Col>
             <Col md={6} className="right-col">
-              <img className="about-image" alt="About" src={withPrefix(image)} />
+              <img className="about-image" alt="About" src={image} />
             </Col>
           </Row>
       </Container>

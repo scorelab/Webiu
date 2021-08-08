@@ -27,7 +27,7 @@ export const Stepper = ({ steps, direction, currentStep = 1 }) => {
                   selected ? "selected" : "disabled"
                 }`}
               >
-                {completed ? "✔" : idx + 1}
+                {completed ? "🗸" : idx + 1}
               </div>
               <div
                 className={`step-description ${

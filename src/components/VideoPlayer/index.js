@@ -10,7 +10,7 @@ export const VideoPlayer = ({ videoSrcURL, title, header, width, height }) => {
     <div>
       {header ? <div className="header-component">
             <h2 className="title">
-              <FontAwesomeIcon className="icon" icon={faVideo} /> {header}
+              <FontAwesomeIcon className="icon-h2" icon={faVideo} /> {header}
             </h2>
       </div> : null}
       <div className="videoplayer-component">

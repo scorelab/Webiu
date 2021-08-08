@@ -66,7 +66,7 @@ export const MediumFeed = ({title, mediumUrl, small, limit}) => {
       <Row>
         <Col className="view-all-btn-container">
           {loading || !feed || !feed.items  ? null : 
-            <a href={feed.feed.link} className="btn" target="_blank" rel="noreferrer">
+            <a href={feed.feed.link} className="medium-btn" target="_blank" rel="noreferrer">
               Many More <FontAwesomeIcon icon={faArrowRight}/>
             </a>}
         </Col>
@@ -78,7 +78,7 @@ export const MediumFeed = ({title, mediumUrl, small, limit}) => {
     <div className="medium-feed-component">
       {!small ? 
            <div className="header-component">
-              <h2><FontAwesomeIcon className="icon" icon={faBlog} /> {title}</h2>
+              <h2><FontAwesomeIcon className="icon-h2" icon={faBlog} /> {title}</h2>
             </div> 
               : 
             <p className="medium-feed-title">{title}</p>}

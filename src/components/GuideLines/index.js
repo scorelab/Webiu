@@ -6,7 +6,7 @@ import {withPrefix} from "gatsby"
 
 export const GuideLines = ({ heading, description, guidelines, image}) => {
   return (
-    <div className="guide-lines-component" style={{ backgroundImage: 'url(./images/dots.png)' }}>
+    <div className="guide-lines-component">
       <Container>
         <Row>
           <Col>
@@ -30,5 +30,6 @@ export const GuideLines = ({ heading, description, guidelines, image}) => {
 GuideLines.propTypes = {
   heading: PropTypes.string,
   description: PropTypes.string,
-  guidelines: PropTypes.array
+  guidelines: PropTypes.array, 
+  image: PropTypes.string
 }

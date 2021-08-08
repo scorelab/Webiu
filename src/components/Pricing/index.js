@@ -11,13 +11,13 @@ export const Pricing = ({ header, title, description, plans }) => {
   return (
     <div className="pricing-list-component">
         {header ? <div className="header-component">
-            <h1><FontAwesomeIcon className="icon" icon={faDollarSign} /> {header}</h1>
+            <h2><FontAwesomeIcon className="icon-h2" icon={faDollarSign} /> {header}</h2>
         </div> : null}
         <Container>
             {!title || (
                 <Row>
                     <Col className="title-div">
-                    <h1 className="title">{title}</h1>
+                      <h3 className="title">{title}</h3>
                     </Col>
                 </Row>
             )}
@@ -25,11 +25,11 @@ export const Pricing = ({ header, title, description, plans }) => {
               {description ? <p>{description}</p> : null}
             </div>
             {plans ? <Row>
-            {plans.map((item, i) => (
-                <ItemPrice
-                data={item}
-                />
-            ))}
+              {plans.map((item, i) => (
+                  <ItemPrice
+                    data={item}
+                  />
+              ))}
             </Row> : null}
         </Container>
     </div>

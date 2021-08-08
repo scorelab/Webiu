@@ -17,4 +17,5 @@ export const LetterAvatar = ({name, bgColor}) => {
 
 LetterAvatar.propTypes = {
   name: PropTypes.string,
+  bgColor: PropTypes.string
 }

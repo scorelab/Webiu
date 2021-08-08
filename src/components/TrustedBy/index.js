@@ -26,5 +26,5 @@ TrustedBy.propTypes = {
   data: PropTypes.array,
   title: PropTypes.string,
   description: PropTypes.string,
-  coloumn: PropTypes.string
+  column: PropTypes.string
 }

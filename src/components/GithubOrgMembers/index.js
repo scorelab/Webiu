@@ -43,7 +43,7 @@ export const GithubOrgMembers = ({orgname, title, auth_token, limit, showSearchB
     <div className="github-members-component">
       {title ? <div className="header-component">
         <h2>
-          <FontAwesomeIcon className="icon-h2" icon={faGithub} /> {title} {orgname}
+          <FontAwesomeIcon className="icon-h2" icon={faGithub} /> <span className="h2-title">{title} {orgname}</span>
         </h2>
       </div> : null}
       {members && !members.message ? 

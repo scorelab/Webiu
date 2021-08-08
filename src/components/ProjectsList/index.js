@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
 import ProjectListItem from './ProjectListItem'
-import {Link} from "gatsby"
 import {SearchBar} from "../SearchBar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faCode } from "@fortawesome/free-solid-svg-icons";
@@ -49,7 +48,7 @@ export const ProjectsList = ({title, showSearchBar, searchPlaceHolder, items=[],
         </Row>
         <Row>
           <Col className="view-all-btn-container">
-            {!limit || <Link to={'/projects'} className="btn">Many More <FontAwesomeIcon icon={faArrowRight}/></Link>}
+            {!limit || <a href='/projects' className="btn-projects">Many More <FontAwesomeIcon icon={faArrowRight}/></a>}
           </Col>
         </Row>
       </Container>

@@ -2,12 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import {Container, Row, Col} from 'react-bootstrap'
-import { Link, withPrefix } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, small, backgroundColor}) => {
   return (
-    <div style={{ backgroundImage: `url(${withPrefix('/images/dots.png')})` }} className="header-component" >
+    <div className="header-component" >
       <Container>
         {small ? (
           <Row>
@@ -26,12 +25,12 @@ export const Header = ({mainText, subText, icon, buttonText, buttonLink, image, 
                   <span className='colored'>{mainText.split(' ')[0]}</span>
                   <span>{mainText.split(' ').map((t, i) => i !== 0 ? ' ' + t : null)}</span>
                 </h1> : null }
-                <p>{subText}</p>
-                <Link to={buttonLink} className="btn">{buttonText}</Link>
+                <p className="header-para">{subText}</p>
+                <a href={buttonLink} className="btn">{buttonText}</a>
               </div>
             </Col>
             { image ? <Col md={6} className="right-col">
-              <img className= "main-image" alt="Header" src={withPrefix(image)} />
+              <img className= "main-image" alt="Header" src={image} />
             </Col> : null }
           </Row>
         )}

@@ -4,6 +4,8 @@ import {Container, Row, Col, Modal } from 'react-bootstrap'
 import TeamListItem from './TeamListItem'
 import "./style.sass"
 import {SearchBar} from "../SearchBar"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
 
 export const Team = ({ title, showSearchBar, heads, contributors, researchers, alumni }) => {
   const [searchItem, setSearchItem] = useState("");
@@ -43,7 +45,9 @@ export const Team = ({ title, showSearchBar, heads, contributors, researchers, a
       </Modal>
 
       {title ? 
-        <div className="header-component"><h2>{title}</h2></div> 
+        <div className="header-component">
+          <h2><FontAwesomeIcon icon={faUsers} className="icon-h2" /> {title}</h2>
+        </div> 
       : null}
       <Container>
         {!heads || (

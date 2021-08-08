@@ -12,7 +12,7 @@ export const Card = ({ header, data, card, services, buttonLink, buttonText }) =
     <div className="card-component">
         {header ? <div className="header-component">
             <h2>
-              <FontAwesomeIcon className="icon" icon={card ? faFile : faInfoCircle} /> {header}
+              <FontAwesomeIcon className="icon-h2" icon={card ? faFile : faInfoCircle} /> {header}
             </h2>
         </div> : null}
         <Container>

@@ -41,7 +41,7 @@ export const ComingSoon = ({ countdownText, header, buttonText, buttonLink, depl
         <div className="countdown-div">
             {header ? <div className="header-component">
                 <h2 className="title">
-                    <FontAwesomeIcon className="icon" icon={faHourglassHalf} /> {header}
+                    <FontAwesomeIcon className="icon-h2" icon={faHourglassHalf} /> {header}
                 </h2>
             </div> : null}
             <Container>
