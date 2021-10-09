@@ -1,25 +1,51 @@
 // Exporting Webiu Components
-export {ButtonWithHeading} from './src/components/ButtonWithHeading';
-export {Contact} from './src/components/Contact';
-export {DescriptionContainer} from './src/components/DescriptionContainer';
-export {Footer} from './src/components/Footer';
-export {GitterRoomsList} from './src/components/GitterRoomsList';
-export {GuideLines} from './src/components/GuideLines';
-export {Header} from './src/components/Header';
-export {ImageGrid} from './src/components/ImageGrid';
-export {JobOpenings} from './src/components/JobOpenings';
-export {LetterAvatar} from './src/components/LetterAvatar';
-export {LinksList} from './src/components/LinksList';
-export {ListPagination} from './src/components/ListPagination';
-export {MailingListFeed} from './src/components/MailingListFeed';
-export {MediumFeed} from './src/components/MediumFeed';
-export {NavBar} from './src/components/NavBar';
-export {PageNotFound} from './src/components/PageNotFound';
-export {ProjectDetail} from './src/components/ProjectDetail';
-export {ProjectsList} from './src/components/ProjectsList';
-export {PublicationsList} from './src/components/PublicationsList';
-export {Team} from './src/components/Team';
-export {GsocIdeaList} from './src/components/GsocIdeaList';
-export {ImageAvatar} from "./src/components/ImageAvatar";
-
-
+export { ButtonWithHeading } from "./src/components/ButtonWithHeading"
+export { Contact } from "./src/components/Contact"
+export { DescriptionContainer } from "./src/components/DescriptionContainer"
+export { Footer } from "./src/components/Footer"
+export { GitterRoomsList } from "./src/components/GitterRoomsList"
+export { GuideLines } from "./src/components/GuideLines"
+export { Header } from "./src/components/Header"
+export { ImageGrid } from "./src/components/ImageGrid"
+export { JobOpenings } from "./src/components/JobOpenings"
+export { LetterAvatar } from "./src/components/LetterAvatar"
+export { LinksList } from "./src/components/LinksList"
+export { ListPagination } from "./src/components/ListPagination"
+export { MailingListFeed } from "./src/components/MailingListFeed"
+export { MediumFeed } from "./src/components/MediumFeed"
+export { NavBar } from "./src/components/NavBar"
+export { PageNotFound } from "./src/components/PageNotFound"
+export { ProjectDetail } from "./src/components/ProjectDetail"
+export { ProjectsList } from "./src/components/ProjectsList"
+export { PublicationsList } from "./src/components/PublicationsList"
+export { Team } from "./src/components/Team"
+export { GsocIdeaList } from "./src/components/GsocIdeaList"
+export { ImageAvatar } from "./src/components/ImageAvatar"
+export { About } from "./src/components/About"
+export { Announcements } from "./src/components/Announcements"
+export { Card } from "./src/components/Card"
+export { Carousel } from "./src/components/Carousel"
+export { ComingSoon } from "./src/components/ComingSoon"
+export { Faq } from "./src/components/Faq"
+export { GithubCard } from "./src/components/GithubCard"
+export { GithubContributors } from "./src/components/GithubContributors"
+export { GithubOrg } from "./src/components/GithubOrg"
+export { GithubOrgMembers } from "./src/components/GithubOrgMembers"
+export { GithubRepo } from "./src/components/GithubRepo"
+export { GithubUser } from "./src/components/GithubUser"
+export { Partner } from "./src/components/Partner"
+export { Pricing } from "./src/components/Pricing"
+export { ProgressBar } from "./src/components/ProgressBar"
+export { SearchBar } from "./src/components/SearchBar"
+export { GoogleMap } from "./src/components/GoogleMap"
+export { SignupAndLogin } from "./src/components/SignupAndLogin"
+export { SocialMedia } from "./src/components/SocialMedia"
+export { Spinners } from "./src/components/Spinners"
+export { Statistics } from "./src/components/Statistics"
+export { Stepper } from "./src/components/Stepper"
+export { Testimonial } from "./src/components/Testimonial"
+export { Timeline } from "./src/components/Timeline"
+export { Timestamp } from "./src/components/Timestamp"
+export { TrustedBy } from "./src/components/TrustedBy"
+export { Typewriter } from "./src/components/Typewriter"
+export { VideoPlayer } from "./src/components/VideoPlayer"
