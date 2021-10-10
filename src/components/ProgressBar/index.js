@@ -1,26 +1,33 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 import Progress from "./Bar"
 import "./style.sass"
 
 export const ProgressBar = ({ data, colWidth, colHeight }) => {
   return (
-      <div>
-            {data.map((item, idx) => (
-                <Progress 
-                   key={idx} 
-                   bgcolor={item.bgcolor} 
-                   completed={item.completed} 
-                   colWidth={colWidth} 
-                   colHeight={colHeight}
-                   text={item.text} />
-            ))}
-      </div>
-  );
-};
+    <div>
+      {data.map((item, idx) => (
+        <Progress
+          key={idx}
+          bgcolor={item.bgcolor}
+          completed={item.completed}
+          colWidth={colWidth}
+          colHeight={colHeight}
+          text={item.text}
+        />
+      ))}
+    </div>
+  )
+}
+
+ProgressBar.defaultProps = {
+  data: [],
+  colWidth: "",
+  colHeight: "",
+}
 
 ProgressBar.propTypes = {
-    data: PropTypes.array,
-    colWidth: PropTypes.string,
-    colHeight: PropTypes.string
+  data: PropTypes.array,
+  colWidth: PropTypes.string,
+  colHeight: PropTypes.string,
 }
