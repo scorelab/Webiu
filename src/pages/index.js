@@ -2,10 +2,18 @@ import React from "react"
 
 const ExamplePage = () => {
   return (
-    <div>
-      <div style={{position: "absolute", top: "40%", left: "20%"}}>
-        <h3>Start editing the 'pages/index.js' file to import and show component</h3>
-      </div>
+    <div
+      style={{
+        position: "absolute",
+        textAlign: "center",
+        left: "50%",
+        top: "50%",
+        transform: "translate(-50%, -50%)",
+      }}
+    >
+      <h3 style={{ lineHeight: "45px" }}>
+        Start editing the 'pages/index.js' file to import and show component
+      </h3>
     </div>
   )
 }
