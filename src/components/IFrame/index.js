@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Container } from "react-bootstrap"
 import "./style.sass"
 
-export const IFrame = ({ src, title }) => {
+export const Iframe = ({ src, title }) => {
   return (
     <div>
       <Container>
@@ -19,7 +19,7 @@ export const IFrame = ({ src, title }) => {
   )
 }
 
-IFrame.propTypes = {
+Iframe.propTypes = {
   src: PropTypes.string,
   title: PropTypes.string,
 }
