@@ -3,21 +3,26 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import { Pagination } from "antd"
 
-export const ListPagination = ({pageSize, total, onChange}) => {
+export const ListPagination = ({ pageSize, total, onChange }) => {
   return (
-    <div className='list-pagination-component'>
-      <Pagination 
+    <div className="list-pagination-component">
+      <Pagination
         defaultCurrent={1}
-        pageSize={pageSize} 
-        total={total} 
-        onChange={(page) => { 
-          window.scrollTo(0, 0) 
+        pageSize={pageSize}
+        total={total}
+        onChange={page => {
+          window.scrollTo(0, 0)
           onChange(page)
         }}
         hideOnSinglePage
       />
     </div>
   )
+}
+
+ListPagination.defaultProps = {
+  pageSize: 0,
+  total: 0,
 }
 
 ListPagination.propTypes = {

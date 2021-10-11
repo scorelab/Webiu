@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react"
+import PropTypes from "prop-types"
 import "./style.sass"
 
 export const Stepper = ({ steps, direction, currentStep = 1 }) => {
-  const [stepState, setStepState] = useState([]);
+  const [stepState, setStepState] = useState([])
 
   useEffect(() => {
     let createSteps = steps.map((step, idx) => ({
@@ -11,10 +11,10 @@ export const Stepper = ({ steps, direction, currentStep = 1 }) => {
       completed: idx < currentStep - 1,
       selected: idx <= currentStep - 1,
       highlighted: idx === currentStep - 1,
-    }));
+    }))
 
-    setStepState(createSteps);
-  }, [steps, currentStep]);
+    setStepState(createSteps)
+  }, [steps, currentStep])
 
   return (
     <div className={`stepper-container-${direction}`}>
@@ -46,10 +46,15 @@ export const Stepper = ({ steps, direction, currentStep = 1 }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
+
+Stepper.defaultProps = {
+  steps: [],
+  direction: "",
+}
 
 Stepper.propTypes = {
   direction: PropTypes.string.isRequired,
   steps: PropTypes.array.isRequired,
-};
+}

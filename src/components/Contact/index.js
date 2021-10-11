@@ -2,16 +2,23 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
 import icon from "../../../static/icons/email-icon.png"
-import {Container, Row, Col, Form} from 'react-bootstrap'
+import { Container, Row, Col, Form } from "react-bootstrap"
 
-export const Contact = ({contactMessage, subscribeMessage, contactTitle, subscribeTitle, handleContactSubmit, handleSubscribeSubmit}) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+export const Contact = ({
+  contactMessage,
+  subscribeMessage,
+  contactTitle,
+  subscribeTitle,
+  handleContactSubmit,
+  handleSubscribeSubmit,
+}) => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
 
-  const handleName = (e) => setName(e.target.value);
-  const handleEmail = (e) => setEmail(e.target.value);
-  const handleMessage = (e) => setMessage(e.target.value);
+  const handleName = e => setName(e.target.value)
+  const handleEmail = e => setEmail(e.target.value)
+  const handleMessage = e => setMessage(e.target.value)
 
   return (
     <div className="contact-component">
@@ -22,9 +29,26 @@ export const Contact = ({contactMessage, subscribeMessage, contactTitle, subscri
             <p className="main-text">{contactMessage}</p>
             <Form onSubmit={handleContactSubmit(name, email, message)}>
               <Form.Group controlId="contact-form">
-                <Form.Control type="text" placeholder="Name" onChange={handleName} required />
-                <Form.Control type="email" placeholder="E-Mail" onChange={handleEmail} required />
-                <Form.Control as="textarea" rows="3" placeholder="Your Message" className="custom-text-area" onChange={handleMessage} required />
+                <Form.Control
+                  type="text"
+                  placeholder="Name"
+                  onChange={handleName}
+                  required
+                />
+                <Form.Control
+                  type="email"
+                  placeholder="E-Mail"
+                  onChange={handleEmail}
+                  required
+                />
+                <Form.Control
+                  as="textarea"
+                  rows="3"
+                  placeholder="Your Message"
+                  className="custom-text-area"
+                  onChange={handleMessage}
+                  required
+                />
               </Form.Group>
               <button type="submit" className="send-button">
                 SEND
@@ -36,12 +60,17 @@ export const Contact = ({contactMessage, subscribeMessage, contactTitle, subscri
             <p className="main-text">{subscribeMessage}</p>
             <img className="subscribe-image" alt="subscribe" src={icon} />
             <Form onSubmit={handleSubscribeSubmit(email)}>
-            <Form.Group controlId="subscribe-form">
-              <Form.Control type="email" placeholder="E-Mail" onChange={handleEmail} required />
-            </Form.Group>
-            <button type="submit" className="send-button subscribe">
-              SUBSCRIBE
-            </button>
+              <Form.Group controlId="subscribe-form">
+                <Form.Control
+                  type="email"
+                  placeholder="E-Mail"
+                  onChange={handleEmail}
+                  required
+                />
+              </Form.Group>
+              <button type="submit" className="send-button subscribe">
+                SUBSCRIBE
+              </button>
             </Form>
           </Col>
         </Row>
@@ -50,11 +79,20 @@ export const Contact = ({contactMessage, subscribeMessage, contactTitle, subscri
   )
 }
 
+Contact.defaultProps = {
+  contactMessage: "",
+  subscribeMessage: "",
+  contactTitle: "",
+  subscribeTitle: "",
+  handleContactSubmit: function() {},
+  handleSubscribeSubmit: function() {},
+}
+
 Contact.propTypes = {
   contactMessage: PropTypes.string,
   subscribeMessage: PropTypes.string,
   contactTitle: PropTypes.string,
   subscribeTitle: PropTypes.string,
   handleSubscribeSubmit: PropTypes.func,
-  handleContactSubmit: PropTypes.func
+  handleContactSubmit: PropTypes.func,
 }
