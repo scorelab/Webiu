@@ -19,8 +19,8 @@ export const Faq = ({ data, header, bgColor, toggleColor, titleColor }) => {
       ) : null}
       <Container className="faq-container">
         {data.length >= 1
-          ? data.map(faq => (
-              <div>
+          ? data.map((faq, index) => (
+              <div key={index}>
                 <Accordion
                   title={faq.title}
                   content={faq.content}
