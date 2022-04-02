@@ -21,10 +21,10 @@ export const Statistics = ({ header, title, description, data, image }) => {
             <h2>{title}</h2>
             <p>{description}</p>
             <Row className="stats-row">
-              {data.map((data, index) => (
+              {data.map((item, index) => (
                 <Col md={4} xs={6}>
-                  <h2 className="stats-name">{data.stat}</h2>
-                  <p className="stats-para">{data.name}</p>
+                  <h2 className="stats-name">{item.stat}</h2>
+                  <p className="stats-para">{item.name}</p>
                 </Col>
               ))}
             </Row>

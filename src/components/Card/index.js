@@ -17,34 +17,34 @@ export const Card = ({ header, data, card, services, buttonLink, buttonText }) =
         </div> : null}
         <Container>
            <Row>
-           {card && data.map((data, index) => (
+           {card && data.map((item, index) => (
                <Col lg={4} key={index} className="card-col">
                    <div className="card-div">
-                       <img src={data.image} className="card-img" alt="logo" />
+                       <img src={item.image} className="card-img" alt="logo" />
                        <hr />
                        <div className="item-title">
-                          <h4 className="title-text">{data.title}</h4>
+                          <h4 className="title-text">{item.title}</h4>
                        </div>
                        <div className="item-description">
-                          <p>{data.description}</p>
+                          <p>{item.description}</p>
                        </div>
                        <div className="btn-center">                           
-                            <Link to={data.buttonLink} className="btn">
-                              {data.buttonText}
+                            <Link to={item.buttonLink} className="btn">
+                              {item.buttonText}
                             </Link>                            
                         </div>
                    </div>
                </Col>
            ))}
-           {services && data.map((data, index) => (
+           {services && data.map((item, index) => (
                <Col lg={4} key={index} className="services-col">
                    <div className="services-div">
-                       <img src={data.image} className="services-img" alt="logo" />
+                       <img src={item.image} className="services-img" alt="logo" />
                        <div className="services-title">
-                          <h5 className="services-text">{data.title}</h5>
+                          <h5 className="services-text">{item.title}</h5>
                        </div>
                        <div className="services-description">
-                          <p>{data.description}</p>
+                          <p>{item.description}</p>
                        </div>
                    </div>
                </Col>
