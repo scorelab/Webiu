@@ -10,10 +10,10 @@ export const TrustedBy = ({ data, title, description, column }) => {
       <p className="description">{description}</p>
       <div className="logo-div">
           <Row className="trusted-div">
-              {data && data.map((data, index) => (
+              {data && data.map((item, index) => (
                   <Col md={column} key={index} className="org-logo">
-                    <img src={data.img} alt="logo" className="trust-logo" />
-                    <p className="description">{data.text}</p>
+                    <img src={item.img} alt="logo" className="trust-logo" />
+                    <p className="description">{item.text}</p>
                   </Col>
               ))}
           </Row>

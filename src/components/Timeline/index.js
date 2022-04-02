@@ -33,8 +33,8 @@ export const Timeline = ({data, header, height}) =>  {
             {header ? <div className="header-component">
                 <h2 className="title"><FontAwesomeIcon className="icon-h2" icon={faRoad} /> {header}</h2>
             </div> : null}
-            {data && data.map((data, idx) => (
-                <TimelineItem data={data} key={idx} />
+            {data && data.map((item, idx) => (
+                <TimelineItem data={item} key={idx} />
             ))}
     </div>
   );
