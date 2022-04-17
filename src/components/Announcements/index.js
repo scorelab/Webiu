@@ -45,8 +45,7 @@ export const Announcements = ({
             </marquee>
           </div>
         </div>
-      ) : null}
-      {horizontal ? (
+      ) : (
         <Container>
           <div className="horizontal-marquee">
             <marquee direction={direction} scrollamount={scrollAmount}>
@@ -62,7 +61,7 @@ export const Announcements = ({
             </marquee>
           </div>
         </Container>
-      ) : null}
+      )}
     </div>
   )
 }
