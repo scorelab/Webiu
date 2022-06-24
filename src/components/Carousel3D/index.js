@@ -24,7 +24,7 @@ const CarouselAnimation = ({ promoList }) => {
                 }),
               }}
             >
-              <img src={item.image} style={{ width: 250, height: 250 }} />
+              <img src={item.image} style={classes.imageStyle} />
             </IconButton>
           </Grid>
         </Grid>

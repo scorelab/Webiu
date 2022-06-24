@@ -9,12 +9,16 @@ const Styles = makeStyles(theme => ({
     height: "300px",
     width: "300px",
     borderRadius: 10,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#fff",
     boxShadow: theme.shadows[5],
     "&:hover": { backgroundColor: "#fff" },
   },
   space: {
-    margin: "0 200px 0px 200px" /* top | right | bottom | left */,
+    margin: "0 200px 0px 200px",
+  },
+  imageStyle: {
+    width: 250,
+    height: 250,
   },
 }))
 
