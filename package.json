@@ -62,7 +62,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook -s static",
     "deploy-storybook": "storybook-to-ghpages",
     "chromatic": "npx chromatic --project-token=61d71049ed33"
   },
