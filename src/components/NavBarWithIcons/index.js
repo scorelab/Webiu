@@ -16,19 +16,19 @@ import ListItemText from "@material-ui/core/ListItemText"
 import { Link, navigate } from "gatsby"
 import Styles from "./styles"
 
-const NavBarWithIcons = ({
-  firstName,
-  secondName,
-  categories,
-  iconList,
-  activeIndex,
-}) => {
+const NavBarWithIcons = ({ firstName, secondName, categories, iconList }) => {
   const [drawerOpen, setDrawerOpen] = useState(false)
   const classes = Styles()
   const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
-
+  const activeIndex = () => {
+    const filter = categories.filter(
+      category => category.route === window.location.pathname
+    )
+    const index = categories.indexOf(filter[0])
+    return index
+  }
   const tabs = (
-    <Tabs value={activeIndex} classes={{ root: classes.tabsStyle }}>
+    <Tabs value={activeIndex()} classes={{ root: classes.tabsStyle }}>
       {categories.map(category => (
         <Tab
           component={Link}
@@ -61,7 +61,7 @@ const NavBarWithIcons = ({
       <List disablePadding>
         {categories.map((category, i) => (
           <ListItem
-            selected={activeIndex === i}
+            selected={activeIndex() === i}
             component={Link}
             to={category.route}
             divider

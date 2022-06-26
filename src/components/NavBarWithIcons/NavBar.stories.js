@@ -11,11 +11,10 @@ export default {
   title: "Home/NavBarWithIcons",
   component: NavBarWithIcons,
   argTypes: {
-    firstName: { control: "string" },
-    secondName: { control: "string" },
+    firstName: { control: "text" },
+    secondName: { control: "text" },
     categories: { control: "array" },
     iconList: { control: "array" },
-    activeIndex: { control: "number" },
   },
 }
 
@@ -56,5 +55,4 @@ navbar.args = {
     { icon: faShoppingCart, link: "/cart", alt: "cart" },
     { icon: faUser, link: "/user", alt: "user" },
   ],
-  activeIndex: 0,
 }
