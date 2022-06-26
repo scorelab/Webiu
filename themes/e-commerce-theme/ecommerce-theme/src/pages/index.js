@@ -1,10 +1,12 @@
 import React from "react"
 import Layout from "../ui/layout"
-import HomePageContent from "../component/homePage/homePageContent"
+import HeaderBanner from "../component/home/headerBanner"
+import HomePageContent from "../component/home/content/homePageContent"
 
 const HomePage = () => {
   return (
     <Layout>
+      <HeaderBanner />
       <HomePageContent />
     </Layout>
   )

@@ -14,7 +14,7 @@
   maincategory: Accessories
   subcategory: Cap
   image: https://images.unsplash.com/photo-1589831377283-33cb1cc6bd5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIyODM2MDg2&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
-  promo: true
+  promo: false
 
 - name: Hoodies
   price: 6
@@ -23,7 +23,7 @@
   maincategory: Men
   subcategory: Men's hoodies
   image: https://images.unsplash.com/photo-1579572331145-5e53b299c64e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0MzM3MDM0MA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
-  promo: true
+  promo: false
 
 - name: Lehanga
   price: 6
@@ -122,7 +122,7 @@
   maincategory: Accessories
   subcategory: Accessories sunglass
   image: https://images.unsplash.com/photo-1508296695146-257a814070b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzNDcxMzU3MQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
-  promo: false
+  promo: true
 
 - name: Necklace
   price: 6
@@ -176,7 +176,7 @@
   maincategory: Kids
   subcategory: Kids trousers
   image: https://images.unsplash.com/photo-1604176354204-9268737828e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIzMTYxMjIy&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
-  promo: false
+  promo: true
 
 - name: Baby frocks
   price: 6

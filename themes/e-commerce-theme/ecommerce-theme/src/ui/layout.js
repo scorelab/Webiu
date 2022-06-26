@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
       />
       {children}
       <Footer
-        contactNumber="0767135866"
+        contactNumber="0765432763"
         email="dressfit@xyz.io"
         facebookLink="https://www.facebook.com"
         twitterLink="https://www.twitter.com"

@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@material-ui/core"
 import Button from "@material-ui/core/Button"
 import React from "react"
-import TouchableCard from "../../ui/touchableCard/index"
+import TouchableCard from "../../../ui/touchableCard/index"
 import { graphql, useStaticQuery } from "gatsby"
 import Styles from "./styles"
 
