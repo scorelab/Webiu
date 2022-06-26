@@ -15,7 +15,6 @@ export default {
     secondName: { control: "text" },
     categories: { control: "array" },
     iconList: { control: "array" },
-    activeIndex: { control: "number" },
   },
 }
 
@@ -56,5 +55,4 @@ navbarWithIcon.args = {
     { icon: faShoppingCart, link: "/cart", alt: "cart" },
     { icon: faUser, link: "/user", alt: "user" },
   ],
-  activeIndex: 0,
 }
