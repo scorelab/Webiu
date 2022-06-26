@@ -11,17 +11,17 @@ export default {
   title: "Home/NavBarWithIcons",
   component: NavBarWithIcons,
   argTypes: {
-    firstName: { control: "string" },
-    secondName: { control: "string" },
+    firstName: { control: "text" },
+    secondName: { control: "text" },
     categories: { control: "array" },
     iconList: { control: "array" },
     activeIndex: { control: "number" },
   },
 }
 
-export const navbar = args => <NavBarWithIcons {...args} />
+export const navbarWithIcon = args => <NavBarWithIcons {...args} />
 
-navbar.args = {
+navbarWithIcon.args = {
   firstName: "Dress",
   secondName: "Fit",
   categories: [

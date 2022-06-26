@@ -1,0 +1,188 @@
+- name: Kids top
+  price: 5
+  details: Normal dress 1
+  quantity: 10
+  maincategory: Kids
+  subcategory: Kid's top
+  image: https://images.unsplash.com/photo-1499887142886-791eca5918cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: true
+
+- name: Caps
+  price: 6
+  details: Normal dress 2
+  quantity: 10
+  maincategory: Accessories
+  subcategory: Cap
+  image: https://images.unsplash.com/photo-1589831377283-33cb1cc6bd5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIyODM2MDg2&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: true
+
+- name: Hoodies
+  price: 6
+  details: Normal dress 3
+  quantity: 10
+  maincategory: Men
+  subcategory: Men's hoodies
+  image: https://images.unsplash.com/photo-1579572331145-5e53b299c64e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0MzM3MDM0MA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: true
+
+- name: Lehanga
+  price: 6
+  details: Normal dress 4
+  quantity: 10
+  maincategory: Women
+  subcategory: Women's lehanga
+  image: https://images.unsplash.com/photo-1642956369651-ccc858c72de7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjEwMzEzNA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
+
+- name: Frocks
+  price: 6
+  details: Normal dress 5
+  quantity: 10
+  maincategory: Women
+  subcategory: Women's frock
+  image: https://images.unsplash.com/photo-1579328064848-53fe6c665058?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0NzQ3MjM0OA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
+
+- name: Casual Dress
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Women
+  subcategory: Women's casual
+  image: https://images.unsplash.com/photo-1622079400125-5b6679552976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjE3MzkwNg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
+
+- name: Shorts
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Women
+  subcategory: Women's short
+  image: https://images.unsplash.com/photo-1585145197502-8f36802f0a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIzNjA4Mjgx&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: false
+
+- name: Short Gowns
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Women
+  subcategory: Women's gown
+  image: https://images.unsplash.com/photo-1503104834685-7205e8607eb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: false
+
+- name: Blezers
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Men
+  subcategory: Mens blezer
+  image: https://images.unsplash.com/photo-1480429370139-e0132c086e2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: false
+
+- name: Casual Shirts
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Men
+  subcategory: Mens casualShirt
+  image: https://images.unsplash.com/photo-1653055645302-d88b0abd4e99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1Mzg4MDU4Nw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
+
+- name: Short Sleev
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Men
+  subcategory: Mens shortSleev
+  image: https://images.unsplash.com/photo-1615899486509-84e2c782b0da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjE3NDI1Mw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
+
+- name: Long Sleev
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Men
+  subcategory: Mens longSleev
+  image: https://images.unsplash.com/photo-1640677808856-0ed9992a236e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjE3NDMwMA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
+
+- name: Trousers
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Men
+  subcategory: Mens trouser
+  image: https://images.unsplash.com/photo-1473966968600-fa801b869a1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: false
+
+- name: Sun glasses
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Accessories
+  subcategory: Accessories sunglass
+  image: https://images.unsplash.com/photo-1508296695146-257a814070b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzNDcxMzU3MQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
+
+- name: Necklace
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Accessories
+  subcategory: Accessories necklace
+  image: https://images.unsplash.com/photo-1635767798638-3e25273a8236?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0MTEzODY3Mg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
+
+- name: Watch
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Accessories
+  subcategory: Accessories watch
+  image: https://images.unsplash.com/photo-1524805444758-089113d48a6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: false
+
+- name: Yearings
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Accessories
+  subcategory: Accessories yearings
+  image: https://images.unsplash.com/photo-1616413552922-aa3906103397?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIxNzIwMTc2&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: false
+
+- name: T-shirts
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Kids
+  subcategory: Kids tshirt
+  image: https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: false
+
+- name: Sweaters
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Kids
+  subcategory: Kids sweaters
+  image: https://images.unsplash.com/photo-1458223277009-775f9995fa31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjE3NDU3MQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
+
+- name: Trousers
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Kids
+  subcategory: Kids trousers
+  image: https://images.unsplash.com/photo-1604176354204-9268737828e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIzMTYxMjIy&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit
+  promo: false
+
+- name: Baby frocks
+  price: 6
+  details: Normal dress 6
+  quantity: 10
+  maincategory: Kids
+  subcategory: Kids frocks
+  image: https://images.unsplash.com/photo-1464967569081-adaf461b4ea5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NjE3NDY1OA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+  promo: false
