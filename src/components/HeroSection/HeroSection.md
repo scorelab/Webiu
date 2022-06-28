@@ -4,7 +4,7 @@ Hope you have successfully set up the project in your local system and install a
 
 ## About the Hero section Component
 
-This is a resuasble component for the header of a webiste. It can be used to display the Hero Section information of a particular section. This Component is highly reusable and customizable via props
+This is a resuasble component for the Hero section of a webiste. It can be used to display the Hero Section information of a particular section. This Component is highly reusable and customizable via props
 
 ## How to use the component
 
