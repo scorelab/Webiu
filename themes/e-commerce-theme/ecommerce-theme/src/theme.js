@@ -1,6 +1,7 @@
 import { createTheme } from "@material-ui/core/styles"
 
 const verdigris = "#47b3a3"
+const lightvariant = "#24b7a1"
 const lightText = "#ffffff"
 const darkText = "#000000"
 const lightVerdigris = "#5cc4b4"
@@ -11,6 +12,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: verdigris,
+      lightvariant: lightvariant,
       light: lightText,
       dark: darkText,
     },
