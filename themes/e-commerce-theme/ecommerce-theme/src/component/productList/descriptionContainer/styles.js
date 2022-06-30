@@ -26,6 +26,13 @@ const Styles = makeStyles(theme => ({
       backgroundColor: theme.palette.primary.lightvariant,
     },
   },
+  buttonGroupStyle: {
+    position: "absolute",
+    right: 0,
+    bottom: 0,
+    marginRight: "100px",
+    marginBottom: "600px",
+  },
 }))
 
 export default Styles

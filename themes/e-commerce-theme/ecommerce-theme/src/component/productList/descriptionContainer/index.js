@@ -27,7 +27,7 @@ const DescriptionContainer = ({ categoryName }) => {
           All in one place
         </Typography>
       </Grid>
-      <Grid item>
+      <Grid item classes={{ root: classes.buttonGroupStyle }}>
         <ButtonGroup>
           <Button
             onClick={() => {
