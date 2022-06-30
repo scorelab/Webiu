@@ -5,6 +5,7 @@ module.exports = {
     author: `@ScoreLab`,
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -25,8 +26,8 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         display: `minimal-ui`,
-        icon: `${__dirname}/static/icons/icon-144x144.png`
+        icon: `${__dirname}/static/icons/icon-144x144.png`,
       },
-    }
+    },
   ],
 }
