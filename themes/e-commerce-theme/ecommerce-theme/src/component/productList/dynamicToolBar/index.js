@@ -13,21 +13,6 @@ const DynamicToolBar = ({
 }) => {
   const [option, setOption] = useState(null)
   const classes = Styles()
-  const sortOptionsList = [
-    { label: "A-Z", active: true },
-    { label: "Z-A", active: false },
-    { label: "NEWEST", active: false },
-    { label: "OLDEST", active: false },
-    { label: "PRICE ↑", active: false },
-    { label: "PRICE ↓", active: false },
-  ]
-  const filterOptionList = [
-    { label: "Women's casual", checked: true },
-    { label: "Women's frock", checked: false },
-    { label: "Women's gown", checked: false },
-    { label: "Women's lehanga", checked: false },
-    { label: "Women's short", checked: false },
-  ]
   return (
     <Grid container direction="column" alignItems="center">
       <Grid
@@ -39,10 +24,10 @@ const DynamicToolBar = ({
         <FunctionalComponent
           option={option}
           setOption={setOption}
-          sortOptions={sortOptionsList}
-          filterOptions={filterOptionList}
+          sortOptions={sortOptions}
+          filterOptions={filterOptions}
         />
-        <DescriptionContainer categoryName="Women" />
+        <DescriptionContainer categoryName={name} />
       </Grid>
     </Grid>
   )

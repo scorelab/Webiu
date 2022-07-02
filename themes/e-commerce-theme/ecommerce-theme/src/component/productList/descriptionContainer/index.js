@@ -12,7 +12,13 @@ const DescriptionContainer = ({ categoryName }) => {
   const classes = Styles()
   const [layout, setLayout] = useState("grid")
   return (
-    <Grid item container justifyContent="center" alignItems="center">
+    <Grid
+      item
+      container
+      justifyContent="center"
+      alignItems="center"
+      classes={{ root: classes.main }}
+    >
       <Grid item classes={{ root: classes.descriptionContainer }}>
         <Typography
           align="center"

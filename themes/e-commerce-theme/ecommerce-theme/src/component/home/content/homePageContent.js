@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@material-ui/core"
 import Button from "@material-ui/core/Button"
 import React from "react"
-import TouchableCard from "../../../ui/touchableCard/index"
+import ClickableCard from "../../../ui/clickableCard"
 import { graphql, useStaticQuery } from "gatsby"
 import Styles from "./styles"
 
@@ -51,15 +51,12 @@ const HomePageContent = () => {
             {ele.edges.map((item, j) => {
               return (
                 <Grid item key={j}>
-                  <TouchableCard
+                  <ClickableCard
                     img={item.node.image}
                     name={item.node.name}
-                    textChild={
-                      <>
-                        <Typography>{item.node.name}</Typography>
-                        <Typography>$ {item.node.price}</Typography>
-                      </>
-                    }
+                    title={item.node.name}
+                    description={`$${item.node.price}`}
+                    link="/gosomewhere"
                   />
                 </Grid>
               )

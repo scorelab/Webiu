@@ -2,6 +2,9 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
 const Styles = makeStyles(theme => ({
+  main: {
+    position: "relative",
+  },
   descriptionContainer: {
     backgroundColor: theme.palette.primary.main,
     height: "150px",
@@ -30,8 +33,8 @@ const Styles = makeStyles(theme => ({
     position: "absolute",
     right: 0,
     bottom: 0,
-    marginRight: "100px",
-    marginBottom: "600px",
+    marginRight: "50px",
+    marginBottom: "25px",
   },
 }))
 

@@ -2,15 +2,18 @@ import React from "react"
 import Grid from "@material-ui/core/Grid"
 import { Link } from "gatsby"
 import Styles from "./styles"
+import Typography from "@material-ui/core/Typography"
 
-const TouchableCard = ({
+const ClickableCard = ({
   name,
   img,
+  link,
+  title,
+  description,
   containerStyle,
   innerContainerStyle,
   imageContainerStyle,
   imageStyle,
-  textChild,
 }) => {
   const classes = Styles()
   return (
@@ -18,9 +21,9 @@ const TouchableCard = ({
       container
       direction="column"
       component={Link}
-      to="/page"
-      style={{ textDecoration: "none" }}
-      classes={{ root: containerStyle || classes.containerStyle }}
+      to={link}
+      style={{ textDecoration: "none" } || containerStyle}
+      classes={{ root: classes.containerStyle }}
     >
       <Grid item>
         <Grid
@@ -28,30 +31,36 @@ const TouchableCard = ({
           direction="column"
           alignItems="center"
           justifyContent="space-between"
-          classes={{ root: innerContainerStyle || classes.innerContainerStyle }}
+          classes={{ root: classes.innerContainerStyle }}
+          style={innerContainerStyle}
         >
           <Grid item>
             <Grid
               container
               direction="column"
-              classes={{
-                root: imageContainerStyle || classes.imageContainerStyle,
-              }}
+              classes={{ root: classes.imageContainerStyle }}
+              style={imageContainerStyle}
             >
               <Grid item>
                 <img
                   src={img}
-                  className={imageStyle || classes.imageStyle}
+                  className={classes.imageStyle}
                   alt={name}
+                  style={imageStyle}
                 />
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>{textChild}</Grid>
+          <Grid item>
+            {title && <Typography align="center">{title}</Typography>}
+            {description && (
+              <Typography align="center">{description}</Typography>
+            )}
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
   )
 }
 
-export default TouchableCard
+export default ClickableCard
