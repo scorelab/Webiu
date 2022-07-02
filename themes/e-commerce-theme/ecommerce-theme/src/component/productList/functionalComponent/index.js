@@ -19,7 +19,13 @@ const FunctionalComponent = ({
   const content = () => {
     switch (option) {
       case "sort":
-        return <Sort sortOptions={sortOptions} setOption={setOption} />
+        return (
+          <Sort
+            sortOptions={sortOptions}
+            setOption={setOption}
+            setSortOptions={setSortOptions}
+          />
+        )
       case "filter":
         return (
           <Filter

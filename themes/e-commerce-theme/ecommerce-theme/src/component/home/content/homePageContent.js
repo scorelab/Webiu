@@ -1,6 +1,7 @@
+import React from "react"
+import { navigate } from "gatsby"
 import { Grid, Typography } from "@material-ui/core"
 import Button from "@material-ui/core/Button"
-import React from "react"
 import ClickableCard from "../../../ui/clickableCard"
 import { graphql, useStaticQuery } from "gatsby"
 import Styles from "./styles"
@@ -40,7 +41,9 @@ const HomePageContent = () => {
               <Typography variant="h3">{ele.fieldValue} Items</Typography>
             </Grid>
             <Grid item>
-              <Button>
+              <Button
+                onClick={() => navigate(`/${ele.fieldValue.toLowerCase()}`)}
+              >
                 <Typography variant="h5">View All</Typography>
               </Button>
             </Grid>

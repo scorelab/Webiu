@@ -12,6 +12,12 @@ import Styles from "./styles"
 
 const Sort = ({ sortOptions, setSortOptions, setOption }) => {
   const classes = Styles()
+  const sortHandle = i => {
+    const newOptions = [...sortOptions]
+    newOptions.map(option => (option.active = false))
+    newOptions[i].active = true
+    setSortOptions(newOptions)
+  }
   return (
     <Grid item container justifyContent="space-between" alignItems="center">
       <Grid item>
@@ -29,7 +35,8 @@ const Sort = ({ sortOptions, setSortOptions, setOption }) => {
             >
               <Chip
                 label={option.label}
-                onClick={() => {}}
+                style={{ color: "#fff" }}
+                onClick={() => sortHandle(i)}
                 color={option.active !== true ? "primary" : "secondary"}
                 classes={{
                   root: clsx({

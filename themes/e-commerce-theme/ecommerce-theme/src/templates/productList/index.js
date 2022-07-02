@@ -3,6 +3,10 @@ import { graphql } from "gatsby"
 import Layout from "../../ui/layout"
 import DynamicToolBar from "../../component/productList/dynamicToolBar"
 import ProductsArray from "../../component/productList/listOfProducts"
+import {
+  alphabetic,
+  price,
+} from "../../component/productList/sort/sortFunction"
 
 const ProductList = ({ pageContext, data }) => {
   const filterOptionList = []
@@ -11,18 +15,17 @@ const ProductList = ({ pageContext, data }) => {
   )
   const [filterOptions, setFilterOptions] = useState(filterOptionList)
   const [sortOptions, setSortOptions] = useState([
-    { label: "A-Z", active: true },
-    { label: "Z-A", active: false },
-    { label: "NEWEST", active: false },
-    { label: "OLDEST", active: false },
-    { label: "PRICE ↑", active: false },
-    { label: "PRICE ↓", active: false },
+    { label: "A-Z", active: true, function: data => alphabetic(data, "asc") },
+    { label: "Z-A", active: false, function: data => alphabetic(data, "des") },
+    { label: "PRICE ↑", active: false, function: data => price(data, "asc") },
+    { label: "PRICE ↓", active: false, function: data => price(data, "des") },
   ])
 
   return (
     <Layout>
       <DynamicToolBar
         sortOptions={sortOptions}
+        setSortOptions={setSortOptions}
         filterOptions={filterOptions}
         setFilterOptions={setFilterOptions}
         name={pageContext.name}
@@ -30,6 +33,7 @@ const ProductList = ({ pageContext, data }) => {
       <ProductsArray
         productList={data.products.edges}
         filterOptions={filterOptions}
+        sortOptions={sortOptions}
       />
     </Layout>
   )
