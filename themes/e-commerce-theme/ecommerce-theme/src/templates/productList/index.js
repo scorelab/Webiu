@@ -6,7 +6,6 @@ import ProductsArray from "../../component/productList/listOfProducts"
 
 const ProductList = ({ pageContext, data }) => {
   const filterOptionList = []
-  console.log(pageContext)
   pageContext.filterValues.map(option =>
     filterOptionList.push({ label: option, checked: false })
   )
@@ -19,16 +18,19 @@ const ProductList = ({ pageContext, data }) => {
     { label: "PRICE ↑", active: false },
     { label: "PRICE ↓", active: false },
   ])
-  console.log(filterOptions)
-  console.log(data)
+
   return (
     <Layout>
       <DynamicToolBar
         sortOptions={sortOptions}
         filterOptions={filterOptions}
+        setFilterOptions={setFilterOptions}
         name={pageContext.name}
       />
-      <ProductsArray productList={data.products.edges} />
+      <ProductsArray
+        productList={data.products.edges}
+        filterOptions={filterOptions}
+      />
     </Layout>
   )
 }

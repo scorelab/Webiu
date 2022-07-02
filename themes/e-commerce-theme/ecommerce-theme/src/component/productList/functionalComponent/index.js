@@ -21,7 +21,13 @@ const FunctionalComponent = ({
       case "sort":
         return <Sort sortOptions={sortOptions} setOption={setOption} />
       case "filter":
-        return <Filter filterOptions={filterOptions} setOption={setOption} />
+        return (
+          <Filter
+            filterOptions={filterOptions}
+            setOption={setOption}
+            setFilterOptions={setFilterOptions}
+          />
+        )
       default:
         const items = [
           { icon: faFilter, alt: "filter" },

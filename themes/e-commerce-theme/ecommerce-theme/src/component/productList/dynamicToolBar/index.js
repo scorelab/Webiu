@@ -26,6 +26,7 @@ const DynamicToolBar = ({
           setOption={setOption}
           sortOptions={sortOptions}
           filterOptions={filterOptions}
+          setFilterOptions={setFilterOptions}
         />
         <DescriptionContainer categoryName={name} />
       </Grid>

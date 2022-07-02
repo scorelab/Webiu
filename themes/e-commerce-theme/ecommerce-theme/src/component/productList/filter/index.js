@@ -9,6 +9,12 @@ import { Checkbox, FormControlLabel } from "@material-ui/core"
 
 const Filter = ({ filterOptions, setFilterOptions, setOption }) => {
   const classes = Styles()
+
+  const handleFilter = option => {
+    const newFilterOptions = [...filterOptions]
+    newFilterOptions[option].checked = !newFilterOptions[option].checked
+    setFilterOptions(newFilterOptions)
+  }
   return (
     <Grid
       item
@@ -40,7 +46,7 @@ const Filter = ({ filterOptions, setFilterOptions, setOption }) => {
                       style={{ color: "#fff" }}
                       checked={option.checked}
                       name={option.label}
-                      onChange={() => {}}
+                      onChange={() => handleFilter(i)}
                     />
                   }
                 />
