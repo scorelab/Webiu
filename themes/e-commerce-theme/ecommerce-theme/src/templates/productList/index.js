@@ -20,6 +20,7 @@ const ProductList = ({ pageContext, data }) => {
     { label: "PRICE ↑", active: false, function: data => price(data, "asc") },
     { label: "PRICE ↓", active: false, function: data => price(data, "des") },
   ])
+  const [layout, setLayout] = useState("grid")
 
   return (
     <Layout>
@@ -29,9 +30,12 @@ const ProductList = ({ pageContext, data }) => {
         filterOptions={filterOptions}
         setFilterOptions={setFilterOptions}
         name={pageContext.name}
+        layout={layout}
+        setLayout={setLayout}
       />
       <ProductsArray
         productList={data.products.edges}
+        layout={layout}
         filterOptions={filterOptions}
         sortOptions={sortOptions}
       />

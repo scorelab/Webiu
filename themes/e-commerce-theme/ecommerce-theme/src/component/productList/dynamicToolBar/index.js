@@ -8,6 +8,8 @@ const DynamicToolBar = ({
   filterOptions,
   setFilterOptions,
   name,
+  layout,
+  setLayout,
   sortOptions,
   setSortOptions,
 }) => {
@@ -29,7 +31,11 @@ const DynamicToolBar = ({
           setFilterOptions={setFilterOptions}
           setSortOptions={setSortOptions}
         />
-        <DescriptionContainer categoryName={name} />
+        <DescriptionContainer
+          categoryName={name}
+          layout={layout}
+          setLayout={setLayout}
+        />
       </Grid>
     </Grid>
   )

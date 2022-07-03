@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faList, faBorderAll } from "@fortawesome/free-solid-svg-icons"
 import clsx from "clsx"
 
-const DescriptionContainer = ({ categoryName }) => {
+const DescriptionContainer = ({ categoryName, layout, setLayout }) => {
   const classes = Styles()
-  const [layout, setLayout] = useState("grid")
+
   return (
     <Grid
       item

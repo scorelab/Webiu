@@ -1,8 +1,9 @@
 import React from "react"
 import Grid from "@material-ui/core/Grid"
 import ClickableCard from "../../../ui/clickableCard"
+import HorizontalCard from "../../../ui/horizontalCard"
 
-const ProductsArray = ({ productList, filterOptions, sortOptions }) => {
+const ProductsArray = ({ productList, filterOptions, sortOptions, layout }) => {
   const filteredProducts = []
   let isFilter = false
   const selectedSort = sortOptions.filter(option => option.active)[0]
@@ -18,8 +19,36 @@ const ProductsArray = ({ productList, filterOptions, sortOptions }) => {
     }
   })
 
-  return (
-    <Grid item container>
+  console.log(sortedProducts)
+
+  const ListView = () => (
+    <>
+      {isFilter
+        ? filteredProducts.map((product, i) => (
+            <HorizontalCard
+              key={i}
+              name={product.node.name}
+              image={product.node.image}
+              title={product.node.name}
+              price={`$${product.node.price}`}
+              description={product.node.details}
+            />
+          ))
+        : sortedProducts.map((product, i) => (
+            <HorizontalCard
+              key={i}
+              name={product.node.name}
+              image={product.node.image}
+              title={product.node.name}
+              price={`$${product.node.price}`}
+              description={product.node.details}
+            />
+          ))}
+    </>
+  )
+
+  const GridView = () => (
+    <>
       {isFilter
         ? filteredProducts.map((product, i) => (
             <ClickableCard
@@ -41,6 +70,12 @@ const ProductsArray = ({ productList, filterOptions, sortOptions }) => {
               link="/go"
             />
           ))}
+    </>
+  )
+
+  return (
+    <Grid item container>
+      {layout === "grid" ? <GridView /> : <ListView />}
     </Grid>
   )
 }
