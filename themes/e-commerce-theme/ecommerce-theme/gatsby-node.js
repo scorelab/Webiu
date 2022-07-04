@@ -36,12 +36,17 @@ exports.createPages = async ({ graphql, actions }) => {
 
   products.forEach(product => {
     createPage({
-      path: `/${product.node.maincategory.toLowerCase()}/${product.node.name.toLowerCase()}`,
+      path: `/${product.node.maincategory.toLowerCase()}/${product.node.id}`,
       component: require.resolve("./src/templates/productDetail/index.js"),
       context: {
-        name: product.name,
-        id: product.id,
-        image: product.image,
+        name: product.node.name,
+        id: product.node.id,
+        image: product.node.image,
+        details: product.node.details,
+        maincategory: product.node.maincategory,
+        price: product.node.price,
+        quantity: product.node.quantity,
+        subcategory: product.node.subcategory,
       },
     })
   })

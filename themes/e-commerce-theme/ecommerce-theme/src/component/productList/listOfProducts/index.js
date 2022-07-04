@@ -57,7 +57,9 @@ const ProductsArray = ({ productList, filterOptions, sortOptions, layout }) => {
               img={product.node.image}
               title={product.node.name}
               description={`$${product.node.price}`}
-              link="/go"
+              link={`/${product.node.maincategory.toLowerCase()}/${
+                product.node.id
+              }`}
             />
           ))
         : sortedProducts.map((product, i) => (
@@ -67,7 +69,9 @@ const ProductsArray = ({ productList, filterOptions, sortOptions, layout }) => {
               img={product.node.image}
               title={product.node.name}
               description={`$${product.node.price}`}
-              link="/go"
+              link={`/${product.node.maincategory.toLowerCase()}/${
+                product.node.id
+              }`}
             />
           ))}
     </>

@@ -14,6 +14,7 @@ const HomePageContent = () => {
           edges {
             node {
               name
+              id
               price
               image
             }
@@ -59,7 +60,7 @@ const HomePageContent = () => {
                     name={item.node.name}
                     title={item.node.name}
                     description={`$${item.node.price}`}
-                    link="/gosomewhere"
+                    link={`/${ele.fieldValue.toLowerCase()}/${item.node.id}`}
                   />
                 </Grid>
               )

@@ -20,9 +20,11 @@ const NavBarWithIcons = ({ firstName, secondName, categories, iconList }) => {
   const [drawerOpen, setDrawerOpen] = useState(false)
   const classes = Styles()
   const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
+  console.log(window.location.pathname)
   const activeIndex = () => {
     const filter = categories.filter(
-      category => category.route === window.location.pathname
+      category =>
+        category.route === "/" + window.location.pathname.split("/", 2)[1]
     )
     const index = categories.indexOf(filter[0])
     return index
