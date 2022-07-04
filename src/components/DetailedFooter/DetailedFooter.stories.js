@@ -15,9 +15,9 @@ export default {
   },
 }
 
-export const descriptioncontainer = args => <Footer {...args} />
+export const detailedFooter = args => <Footer {...args} />
 
-descriptioncontainer.args = {
+detailedFooter.args = {
   contactNumber: "+94915555555",
   email: "guest@scorelab.io",
   privacyPolicyLink: "#",
