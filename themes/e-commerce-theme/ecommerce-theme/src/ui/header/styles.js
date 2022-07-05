@@ -29,6 +29,12 @@ const Styles = makeStyles(theme => ({
   listItemTextStyle: {
     color: theme.palette.primary.light,
   },
+  badge: {
+    fontSize: "1rem",
+    color: "#fff",
+    backgroundColor: theme.palette.secondary.main,
+    marginTop: "-5px",
+  },
 }))
 
 export default Styles

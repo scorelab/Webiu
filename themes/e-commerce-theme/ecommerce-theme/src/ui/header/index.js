@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import Typography from "@material-ui/core/Typography"
@@ -13,11 +13,14 @@ import SwipeableDrawer from "@material-ui/core/SwipeableDrawer"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
+import Badge from "@material-ui/core/Badge"
 import { Link, navigate } from "gatsby"
 import Styles from "./styles"
+import { CartContext } from "../../contexts"
 
 const NavBarWithIcons = ({ firstName, secondName, categories, iconList }) => {
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const { cart } = useContext(CartContext)
   const classes = Styles()
   const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
   console.log(window.location.pathname)
@@ -50,7 +53,17 @@ const NavBarWithIcons = ({ firstName, secondName, categories, iconList }) => {
       to={iconObject.link}
       classes={{ root: classes.iconStyle }}
     >
-      <FontAwesomeIcon icon={iconObject.icon} size="1x" />
+      {iconObject.alt === "cart" ? (
+        <Badge
+          overlap="circle"
+          badgeContent={cart.length}
+          classes={{ badge: classes.badge }}
+        >
+          <FontAwesomeIcon icon={iconObject.icon} size="1x" />
+        </Badge>
+      ) : (
+        <FontAwesomeIcon icon={iconObject.icon} size="1x" />
+      )}
     </IconButton>
   ))
   const drawer = (
