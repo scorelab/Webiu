@@ -10,7 +10,7 @@ const HorizontalCard = ({ image, price, name, title, description }) => {
     <Grid
       container
       classes={{ root: styles.containerStyle }}
-      justifyContent="flex-start"
+      justifyContent="space-between"
       alignItems="center"
     >
       <Grid item>
@@ -21,11 +21,7 @@ const HorizontalCard = ({ image, price, name, title, description }) => {
         </Grid>
       </Grid>
       <Grid item>
-        <Grid
-          container
-          direction="column"
-          classes={{ root: styles.textContainer }}
-        >
+        <Grid container direction="column">
           <Typography>{title}</Typography>
           <Typography>{price}</Typography>
           <Typography>{description}</Typography>

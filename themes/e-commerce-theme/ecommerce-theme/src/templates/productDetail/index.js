@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import Grid from "@material-ui/core/Grid"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSquarePlus, faSquareMinus } from "@fortawesome/free-solid-svg-icons"
@@ -7,9 +7,12 @@ import ClickableCard from "../../ui/clickableCard"
 import Typography from "@material-ui/core/Typography"
 import Styles from "./styles"
 import Button from "@material-ui/core/Button"
+import { CartContext } from "../../contexts"
+import { addToCart } from "../../contexts/actions/cart-actions"
 
 const ProductDetail = ({ pageContext }) => {
   const [quantity, setQuantity] = useState(1)
+  const { cart, dispatchCart } = useContext(CartContext)
   const classes = Styles({ quantity, amount: pageContext.quantity })
   const additionHandler = () => {
     if (quantity < pageContext.quantity) {
@@ -20,6 +23,18 @@ const ProductDetail = ({ pageContext }) => {
     if (quantity > 1) {
       setQuantity(quantity - 1)
     }
+  }
+  console.log(pageContext)
+  const handleCart = () => {
+    dispatchCart(
+      addToCart(
+        pageContext.id,
+        pageContext.image,
+        quantity,
+        pageContext.name,
+        pageContext.price
+      )
+    )
   }
   return (
     <Layout>
@@ -105,7 +120,10 @@ const ProductDetail = ({ pageContext }) => {
                         justifyContent="space-around"
                       >
                         <Grid item>
-                          <Button classes={{ root: classes.btnStyle }}>
+                          <Button
+                            classes={{ root: classes.btnStyle }}
+                            onClick={handleCart}
+                          >
                             Add To Cart
                           </Button>
                         </Grid>

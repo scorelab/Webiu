@@ -1,13 +1,13 @@
 import { ADD_TO_CART, REMOVE_FROM_CART, CLEAR_CART } from "./action-types"
 
-export const addToCart = (variant, qty, name) => ({
+export const addToCart = (id, img, qty, name, price) => ({
   type: ADD_TO_CART,
-  payload: { variant, qty, name },
+  payload: { id, img, qty, name, price },
 })
 
-export const removeFromCart = (variant, qty) => ({
+export const removeFromCart = (id, img, qty, name, price) => ({
   type: REMOVE_FROM_CART,
-  payload: { variant, qty },
+  payload: { id, img, qty, name, price },
 })
 
 export const clearCart = () => ({

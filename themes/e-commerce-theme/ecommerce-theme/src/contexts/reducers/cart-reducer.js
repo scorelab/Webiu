@@ -9,9 +9,7 @@ const CartReducer = (state, action) => {
 
   let existingIndex
   if (action.payload) {
-    existingIndex = state.findIndex(
-      item => item.variant === action.payload.variant
-    )
+    existingIndex = state.findIndex(item => item.id === action.payload.id)
   }
 
   const saveData = cart => {
