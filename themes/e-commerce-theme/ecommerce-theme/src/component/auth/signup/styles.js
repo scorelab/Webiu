@@ -31,7 +31,9 @@ const Styles = makeStyles(theme => ({
     padding: "10px",
   },
   bottomText: {
-    marginTop: "100px",
+    marginTop: "50px",
+    marginLeft: "15px",
+    marginRight: "15px",
   },
   EmailAdornment: {},
   input: {},
