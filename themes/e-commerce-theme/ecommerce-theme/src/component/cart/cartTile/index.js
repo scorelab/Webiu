@@ -4,6 +4,7 @@ import { faSquarePlus, faSquareMinus } from "@fortawesome/free-solid-svg-icons"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Styles from "./styles"
+import { IconButton } from "@material-ui/core"
 
 const CartTile = ({
   image,
@@ -46,21 +47,21 @@ const CartTile = ({
               classes={{ root: classes.iconContainer }}
             >
               <Grid item>
-                <FontAwesomeIcon
-                  icon={faSquareMinus}
-                  size="2x"
-                  onClick={subtractionHandler}
-                />
+                <IconButton onClick={subtractionHandler}>
+                  <FontAwesomeIcon
+                    icon={faSquareMinus}
+                    size="1x"
+                    color="#000"
+                  />
+                </IconButton>
               </Grid>
               <Grid item>
                 <Typography>{qty}</Typography>
               </Grid>
               <Grid item>
-                <FontAwesomeIcon
-                  icon={faSquarePlus}
-                  size="2x"
-                  onClick={additionHandler}
-                />
+                <IconButton onClick={additionHandler}>
+                  <FontAwesomeIcon icon={faSquarePlus} size="1x" color="#000" />
+                </IconButton>
               </Grid>
             </Grid>
           </Grid>

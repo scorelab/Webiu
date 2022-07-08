@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react"
 import Grid from "@material-ui/core/Grid"
+import IconButton from "@material-ui/core/IconButton"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSquarePlus, faSquareMinus } from "@fortawesome/free-solid-svg-icons"
+import { faMinusSquare, faPlusSquare } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../../ui/layout"
 import ClickableCard from "../../ui/clickableCard"
 import Typography from "@material-ui/core/Typography"
@@ -91,24 +92,29 @@ const ProductDetail = ({ pageContext }) => {
                         container
                         direction="row"
                         justifyContent="space-around"
+                        alignItems="center"
                         classes={{ root: classes.cartAdditionStyle }}
                       >
                         <Grid item>
-                          <FontAwesomeIcon
-                            icon={faSquarePlus}
-                            size="2x"
-                            onClick={additionHandler}
-                          />
+                          <IconButton onClick={additionHandler}>
+                            <FontAwesomeIcon
+                              icon={faPlusSquare}
+                              size="1x"
+                              color="#000"
+                            />
+                          </IconButton>
                         </Grid>
                         <Grid item>
                           <Typography>{quantity}</Typography>
                         </Grid>
                         <Grid item>
-                          <FontAwesomeIcon
-                            icon={faSquareMinus}
-                            size="2x"
-                            onClick={subtractionHandler}
-                          />
+                          <IconButton onClick={subtractionHandler}>
+                            <FontAwesomeIcon
+                              icon={faMinusSquare}
+                              size="1x"
+                              color="#000"
+                            />
+                          </IconButton>
                         </Grid>
                       </Grid>
                     </Grid>

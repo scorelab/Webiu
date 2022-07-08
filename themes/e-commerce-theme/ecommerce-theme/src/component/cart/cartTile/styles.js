@@ -19,7 +19,7 @@ const Styles = makeStyles(theme => ({
     width: "200px",
   },
   iconContainer: {
-    width: "100px",
+    width: "150px",
   },
 }))
 

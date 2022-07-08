@@ -38,7 +38,7 @@ const categories = [
 const iconList = [
   { icon: faSearch, link: "/search", alt: "search" },
   { icon: faShoppingCart, link: "/cart", alt: "cart" },
-  { icon: faUser, link: "/user", alt: "user" },
+  { icon: faUser, link: "/signin", alt: "user" },
 ]
 
 const Layout = ({ children }) => {
