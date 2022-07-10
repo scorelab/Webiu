@@ -18,6 +18,7 @@ Import the component to `pages/index.js`
 ```
 
 `initialState` prop is the initial state of the ShipmentDetail component
+
 eg:-
 {
 Name: "",
@@ -26,7 +27,9 @@ PostalId: "",
 MobileNumber: "",
 Email: "",
 },
+
 `attributes` prop is the list of attributes in the Shipment Detail comonent
+
 eg:-
 attributes: [
 { name: "Name", value: "Name" },
