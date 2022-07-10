@@ -1,10 +1,11 @@
 import React from "react"
+import { Link } from "gatsby"
 import Grid from "@material-ui/core/Grid"
 import Styles from "./styles"
 import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 
-const HorizontalCard = ({ image, price, name, title, description }) => {
+const HorizontalCard = ({ image, price, name, title, description, link }) => {
   const styles = Styles()
   return (
     <Grid
@@ -28,7 +29,9 @@ const HorizontalCard = ({ image, price, name, title, description }) => {
         </Grid>
       </Grid>
       <Grid item>
-        <Button classes={{ root: styles.btnStyle }}>Shop Now</Button>
+        <Button component={Link} to={link} classes={{ root: styles.btnStyle }}>
+          Shop Now
+        </Button>
       </Grid>
     </Grid>
   )

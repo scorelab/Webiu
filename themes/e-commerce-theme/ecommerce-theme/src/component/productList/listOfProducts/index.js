@@ -32,6 +32,9 @@ const ProductsArray = ({ productList, filterOptions, sortOptions, layout }) => {
               title={product.node.name}
               price={`$${product.node.price}`}
               description={product.node.details}
+              link={`/${product.node.maincategory.toLowerCase()}/${
+                product.node.id
+              }`}
             />
           ))
         : sortedProducts.map((product, i) => (
@@ -42,6 +45,9 @@ const ProductsArray = ({ productList, filterOptions, sortOptions, layout }) => {
               title={product.node.name}
               price={`$${product.node.price}`}
               description={product.node.details}
+              link={`/${product.node.maincategory.toLowerCase()}/${
+                product.node.id
+              }`}
             />
           ))}
     </>

@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react"
+import { Link } from "gatsby"
 import Grid from "@material-ui/core/Grid"
 import IconButton from "@material-ui/core/IconButton"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -33,7 +34,8 @@ const ProductDetail = ({ pageContext }) => {
         pageContext.image,
         quantity,
         pageContext.name,
-        pageContext.price
+        pageContext.price,
+        pageContext.quantity
       )
     )
   }
@@ -127,6 +129,8 @@ const ProductDetail = ({ pageContext }) => {
                       >
                         <Grid item>
                           <Button
+                            component={Link}
+                            to="/cart"
                             classes={{ root: classes.btnStyle }}
                             onClick={handleCart}
                           >

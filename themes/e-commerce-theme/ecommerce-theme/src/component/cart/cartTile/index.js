@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSquarePlus, faSquareMinus } from "@fortawesome/free-solid-svg-icons"
 import Grid from "@material-ui/core/Grid"
@@ -15,6 +15,7 @@ const CartTile = ({
   additionHandler,
 }) => {
   const classes = Styles()
+  // const [quantity, setQuantity] = useState(qty)
   return (
     <Grid
       container

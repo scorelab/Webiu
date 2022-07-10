@@ -14,7 +14,7 @@ import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import Badge from "@material-ui/core/Badge"
-import { Link, navigate } from "gatsby"
+import { Link } from "gatsby"
 import Styles from "./styles"
 import { CartContext } from "../../contexts"
 
@@ -96,7 +96,11 @@ const NavBarWithIcons = ({ firstName, secondName, categories, iconList }) => {
   return (
     <AppBar color="transparent" position="static">
       <Toolbar>
-        <Button classes={{ root: classes.logoContainer }}>
+        <Button
+          classes={{ root: classes.logoContainer }}
+          component={Link}
+          to="/"
+        >
           {firstName && (
             <Typography variant="h1">
               {firstName}
