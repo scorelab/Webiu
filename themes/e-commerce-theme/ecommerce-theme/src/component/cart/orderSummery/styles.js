@@ -2,24 +2,25 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
 const Styles = makeStyles(theme => ({
-  container: {
-    display: "flex",
-    height: "200px",
-    [theme.breakpoints.down("md")]: {
-      height: "300px",
-    },
+  orderContainer: {
     width: "100%",
-    margin: "10px 10%",
     padding: "25px 25px",
+    margin: "2% 20%",
     borderRadius: 10,
     backgroundColor: "#FBF3EA",
     boxShadow: theme.shadows[5],
   },
-  quantityWrapper: {
-    width: "200px",
+  headerStyle: {
+    marginBottom: "20px",
   },
-  iconContainer: {
-    width: "150px",
+  btnContainer: {
+    marginTop: "30px",
+  },
+  btnStyle: {
+    backgroundColor: theme.palette.primary.main,
+    padding: "10px",
+    textTransform: "none",
+    "&:hover": { backgroundColor: "#24b7a1" },
   },
 }))
 

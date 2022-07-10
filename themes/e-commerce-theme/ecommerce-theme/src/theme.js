@@ -60,6 +60,11 @@ const theme = createTheme({
       fontFamily: "Inter",
       color: darkText,
     },
+    body2: {
+      fontSize: 15,
+      fontFamily: "Inter",
+      color: greyText,
+    },
   },
   overrides: {},
 })

@@ -1,10 +1,25 @@
 import React, { useContext } from "react"
+import Grid from "@material-ui/core/Grid"
+import { makeStyles } from "@material-ui/core/styles"
 import { CartContext } from "../contexts"
 import CartTile from "../component/cart/cartTile"
+import OrderSummery from "../component/cart/orderSummery"
 import Layout from "../ui/layout"
 import { addToCart, removeFromCart } from "../contexts/actions/cart-actions"
 
+const Styles = makeStyles(theme => ({
+  container: {
+    width: "50%",
+  },
+  container2: {
+    width: "25%",
+  },
+}))
+
 const Cart = () => {
+  const classes = Styles()
+  let items = 0
+  let total = 0
   const { cart, dispatchCart } = useContext(CartContext)
   const subHandler = (id, img, qty, name, price) => {
     if (qty > 1) {
@@ -39,14 +54,22 @@ const Cart = () => {
       }
     />
   ))
-  return <Layout>{cartList}</Layout>
+  cart.forEach(item => {
+    items = items + item.qty
+    total = total + item.qty * item.price
+  })
+  return (
+    <Layout>
+      <Grid container justifyContent="space-around">
+        <Grid item classes={{ root: classes.container }}>
+          {cartList}
+        </Grid>
+        <Grid item classes={{ root: classes.container2 }}>
+          <OrderSummery items={items} total={total} />
+        </Grid>
+      </Grid>
+    </Layout>
+  )
 }
 
 export default Cart
-
-// id: "0d22a4c1-8b07-5b3a-9501-ac7c0e7bf8c5"
-// img: "https://images.unsplash.com/photo-1589831377283-33cb1cc6bd5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIyODM2MDg2&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit"
-// name: "Caps"
-// price: 6
-// qty: 4
-// stock: 10
