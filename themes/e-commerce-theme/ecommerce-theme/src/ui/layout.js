@@ -4,6 +4,8 @@ import {
   faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons"
+import Grid from "@material-ui/core/Grid"
+import { makeStyles } from "@material-ui/core/styles"
 import Header from "./header/index"
 import Footer from "./footer/index"
 
@@ -41,25 +43,47 @@ const iconList = [
   { icon: faUser, link: "/signin", alt: "user" },
 ]
 
+const Styles = makeStyles(theme => ({
+  cotainer: {
+    minHeight: "100vh",
+  },
+  footerWrapper: {
+    height: "100%",
+  },
+}))
 const Layout = ({ children }) => {
+  const classes = Styles()
   return (
-    <>
-      <Header
-        firstName="Dress"
-        secondName="Fit"
-        iconList={iconList}
-        categories={categories}
-      />
-      {children}
-      <Footer
-        contactNumber="0765432763"
-        email="dressfit@xyz.io"
-        facebookLink="https://www.facebook.com"
-        twitterLink="https://www.twitter.com"
-        instragramLink="https://www.instragram.com"
-        privacyPolicyLink="/privacy"
-      />
-    </>
+    <Grid container direction="column" classes={{ root: classes.cotainer }}>
+      <Grid item>
+        <Header
+          firstName="Dress"
+          secondName="Fit"
+          iconList={iconList}
+          categories={categories}
+        />
+      </Grid>
+      <Grid item>{children}</Grid>
+      <Grid item xs>
+        <Grid
+          container
+          direction="column"
+          justifyContent="flex-end"
+          classes={{ root: classes.footerWrapper }}
+        >
+          <Grid item>
+            <Footer
+              contactNumber="0765432763"
+              email="dressfit@xyz.io"
+              facebookLink="https://www.facebook.com"
+              twitterLink="https://www.twitter.com"
+              instragramLink="https://www.instragram.com"
+              privacyPolicyLink="/privacy"
+            />
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   )
 }
 

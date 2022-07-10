@@ -5,7 +5,11 @@ import { CartContext } from "../contexts"
 import CartTile from "../component/cart/cartTile"
 import OrderSummery from "../component/cart/orderSummery"
 import Layout from "../ui/layout"
-import { addToCart, removeFromCart } from "../contexts/actions/cart-actions"
+import {
+  addToCart,
+  clearCart,
+  removeFromCart,
+} from "../contexts/actions/cart-actions"
 
 const Styles = makeStyles(theme => ({
   container: {
@@ -52,6 +56,7 @@ const Cart = () => {
           item.stock
         )
       }
+      removeHandler={() => dispatchCart(clearCart())}
     />
   ))
   cart.forEach(item => {

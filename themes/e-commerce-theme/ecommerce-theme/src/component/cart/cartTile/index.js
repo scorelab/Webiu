@@ -1,6 +1,10 @@
 import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSquarePlus, faSquareMinus } from "@fortawesome/free-solid-svg-icons"
+import {
+  faSquarePlus,
+  faSquareMinus,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Styles from "./styles"
@@ -13,6 +17,7 @@ const CartTile = ({
   qty,
   subtractionHandler,
   additionHandler,
+  removeHandler,
 }) => {
   const classes = Styles()
   // const [quantity, setQuantity] = useState(qty)
@@ -62,6 +67,11 @@ const CartTile = ({
               <Grid item>
                 <IconButton onClick={additionHandler}>
                   <FontAwesomeIcon icon={faSquarePlus} size="1x" color="#000" />
+                </IconButton>
+              </Grid>
+              <Grid item>
+                <IconButton onClick={removeHandler}>
+                  <FontAwesomeIcon icon={faTrash} size="1X" color="#ff0000" />
                 </IconButton>
               </Grid>
             </Grid>

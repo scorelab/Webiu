@@ -138,7 +138,11 @@ const ProductDetail = ({ pageContext }) => {
                           </Button>
                         </Grid>
                         <Grid item>
-                          <Button classes={{ root: classes.buyBtnStyle }}>
+                          <Button
+                            component={Link}
+                            to="/shipping"
+                            classes={{ root: classes.buyBtnStyle }}
+                          >
                             Buy Now
                           </Button>
                         </Grid>
@@ -150,9 +154,9 @@ const ProductDetail = ({ pageContext }) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <Typography variant="h3">Reviews</Typography>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Layout>
   )

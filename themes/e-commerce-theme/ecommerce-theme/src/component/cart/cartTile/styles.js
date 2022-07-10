@@ -16,7 +16,7 @@ const Styles = makeStyles(theme => ({
     boxShadow: theme.shadows[5],
   },
   quantityWrapper: {
-    width: "200px",
+    width: "350px",
   },
   iconContainer: {
     width: "150px",
