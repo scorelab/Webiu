@@ -22,7 +22,7 @@ const ClickableCard = ({
       direction="column"
       component={Link}
       to={link}
-      style={{ textDecoration: "none" } || containerStyle}
+      style={{ ...containerStyle, textDecoration: "none" }}
       classes={{ root: classes.containerStyle }}
     >
       <Grid item>

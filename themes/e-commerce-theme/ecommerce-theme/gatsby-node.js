@@ -1,3 +1,14 @@
+const fs = require("fs")
+
+exports.onPreBootstrap = ({ reporter }) => {
+  const contentPath = `${__dirname}/assets/data/`
+
+  if (!fs.existsSync(contentPath)) {
+    reporter.info(`creating the ${contentPath} directory`)
+    fs.mkdirSync(contentPath)
+  }
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 

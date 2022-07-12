@@ -11,10 +11,12 @@ import Styles from "./styles"
 import Button from "@material-ui/core/Button"
 import { CartContext } from "../../contexts"
 import { addToCart } from "../../contexts/actions/cart-actions"
+import { useMediaQuery } from "@material-ui/core"
 
 const ProductDetail = ({ pageContext }) => {
   const [quantity, setQuantity] = useState(1)
   const { cart, dispatchCart } = useContext(CartContext)
+  const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
   const classes = Styles({ quantity, amount: pageContext.quantity })
   const additionHandler = () => {
     if (quantity < pageContext.quantity) {
@@ -41,26 +43,40 @@ const ProductDetail = ({ pageContext }) => {
   }
   return (
     <Layout>
-      <Grid
-        container
-        direction="column"
-        classes={{ root: classes.masterContainer }}
-      >
+      <Grid container direction="column">
         <Grid item>
           <Grid
             container
             direction="row"
             alignItems="center"
             classes={{ root: classes.mainContainer }}
-            justifyContent="space-around"
+            justifyContent={matchesMD ? "flex-start" : "space-around"}
           >
-            <Grid item>
-              <ClickableCard
-                img={pageContext.image}
-                imageContainerStyle={{ width: 260, height: 380 }}
-                imageStyle={{ width: 260, height: 380 }}
-              />
-            </Grid>
+            {matchesMD ? (
+              <Grid item>
+                <ClickableCard
+                  img={pageContext.image}
+                  containerStyle={{
+                    height: "420px",
+                    width: "300px",
+                    margin: "0px 0px 50px 0px",
+                    borderRadius: 10,
+                    backgroundColor: "#fff",
+                    boxShadow: 5,
+                  }}
+                  imageContainerStyle={{ width: 260, height: 380 }}
+                  imageStyle={{ width: 260, height: 380 }}
+                />
+              </Grid>
+            ) : (
+              <Grid item>
+                <ClickableCard
+                  img={pageContext.image}
+                  imageContainerStyle={{ width: 260, height: 380 }}
+                  imageStyle={{ width: 260, height: 380 }}
+                />
+              </Grid>
+            )}
             <Grid item>
               <Grid
                 container

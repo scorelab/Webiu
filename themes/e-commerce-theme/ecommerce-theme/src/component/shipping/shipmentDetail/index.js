@@ -4,9 +4,11 @@ import Typography from "@material-ui/core/Typography"
 import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
 import Styles from "./styles"
+import { useMediaQuery } from "@material-ui/core"
 
 const ShipmentDetail = () => {
   const classes = Styles()
+  const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
   const [inputValues, setInputValues] = useState({
     Name: "",
     Address: "",
@@ -27,6 +29,7 @@ const ShipmentDetail = () => {
         item
         container
         classes={{ root: classes.inputContainer }}
+        direction={matchesMD ? "column" : "row"}
         justifyContent="space-between"
         alignItems="center"
         key={attribute.name}
@@ -51,12 +54,6 @@ const ShipmentDetail = () => {
                 [attribute.name]: e.target.value,
               })
             }}
-            // onChange={e => {
-            //   if (errors[field]) {
-            //     validateHelper(e)
-            //   }
-            //   setValues({ ...values, [field]: e.target.value })
-            // }}
           />
         </Grid>
       </Grid>

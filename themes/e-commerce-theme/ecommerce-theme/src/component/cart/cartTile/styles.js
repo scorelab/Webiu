@@ -7,9 +7,12 @@ const Styles = makeStyles(theme => ({
     height: "200px",
     [theme.breakpoints.down("md")]: {
       height: "300px",
+      width: "100%",
+      padding: "5px 5px",
+      margin: "20px 5px",
     },
     width: "100%",
-    margin: "10px 10%",
+    margin: "10px 10px 10px 10px",
     padding: "25px 25px",
     borderRadius: 10,
     backgroundColor: "#FBF3EA",
@@ -17,8 +20,14 @@ const Styles = makeStyles(theme => ({
   },
   quantityWrapper: {
     width: "350px",
+    [theme.breakpoints.down("md")]: {
+      width: "200px",
+    },
   },
   iconContainer: {
+    [theme.breakpoints.down("md")]: {
+      width: "150px",
+    },
     width: "150px",
   },
 }))

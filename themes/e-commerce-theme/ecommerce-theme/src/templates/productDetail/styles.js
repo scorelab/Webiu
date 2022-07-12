@@ -2,11 +2,11 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 
 const Styles = makeStyles(theme => ({
-  masterContainer: {
-    minHeight: "80vh",
-  },
   mainContainer: {
     width: "90%",
+    [theme.breakpoints.down("sm")]: {
+      margin: "50px 5px",
+    },
     margin: "50px 50px",
   },
   detailContainer: {
@@ -17,6 +17,9 @@ const Styles = makeStyles(theme => ({
   },
   container: {
     width: "350px",
+    [theme.breakpoints.down("sm")]: {
+      width: "310px",
+    },
   },
   cartAdditionStyle: {
     width: "150px",

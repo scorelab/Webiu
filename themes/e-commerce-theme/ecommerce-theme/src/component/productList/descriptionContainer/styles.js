@@ -30,6 +30,13 @@ const Styles = makeStyles(theme => ({
     },
   },
   buttonGroupStyle: {
+    [theme.breakpoints.down("md")]: {
+      position: "absolute",
+      right: 0,
+      bottom: 0,
+      marginRight: "0px",
+      marginBottom: "10px",
+    },
     position: "absolute",
     right: 0,
     bottom: 0,

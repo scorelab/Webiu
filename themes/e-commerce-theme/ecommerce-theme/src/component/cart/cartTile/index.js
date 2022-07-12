@@ -8,7 +8,7 @@ import {
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Styles from "./styles"
-import { IconButton } from "@material-ui/core"
+import { IconButton, useMediaQuery } from "@material-ui/core"
 
 const CartTile = ({
   image,
@@ -20,12 +20,12 @@ const CartTile = ({
   removeHandler,
 }) => {
   const classes = Styles()
-  // const [quantity, setQuantity] = useState(qty)
+  const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
   return (
     <Grid
       container
       classes={{ root: classes.container }}
-      justifyContent="space-between"
+      justifyContent={matchesMD ? "flex-start" : "space-between"}
       alignItems="center"
     >
       <Grid item>
@@ -39,7 +39,7 @@ const CartTile = ({
         <Grid
           container
           alignItems="center"
-          justifyContent="space-around"
+          justifyContent={matchesMD ? "flex-start" : "space-around"}
           classes={{ root: classes.quantityWrapper }}
         >
           <Grid item>
@@ -49,8 +49,9 @@ const CartTile = ({
             <Grid
               container
               alignItems="center"
-              justifyContent="space-around"
+              justifyContent={matchesMD ? "flex-start" : "space-around"}
               classes={{ root: classes.iconContainer }}
+              // direction={matchesMD ? "column" : "row"}
             >
               <Grid item>
                 <IconButton onClick={subtractionHandler}>

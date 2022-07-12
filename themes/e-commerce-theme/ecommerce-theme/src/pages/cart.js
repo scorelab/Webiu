@@ -10,18 +10,23 @@ import {
   clearCart,
   removeFromCart,
 } from "../contexts/actions/cart-actions"
+import { useMediaQuery } from "@material-ui/core"
 
 const Styles = makeStyles(theme => ({
   container: {
     width: "50%",
   },
   container2: {
+    [theme.breakpoints.down("sm")]: {
+      width: "40%",
+    },
     width: "25%",
   },
 }))
 
 const Cart = () => {
   const classes = Styles()
+  const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
   let items = 0
   let total = 0
   const { cart, dispatchCart } = useContext(CartContext)
@@ -35,7 +40,6 @@ const Cart = () => {
       dispatchCart(addToCart(id, img, 1, name, price, stock))
     }
   }
-  console.log(cart)
   const cartList = cart.map((item, i) => (
     <CartTile
       key={i}
@@ -65,7 +69,10 @@ const Cart = () => {
   })
   return (
     <Layout>
-      <Grid container justifyContent="space-around">
+      <Grid
+        container
+        justifyContent={matchesMD ? "flex-start" : "space-around"}
+      >
         <Grid item classes={{ root: classes.container }}>
           {cartList}
         </Grid>
