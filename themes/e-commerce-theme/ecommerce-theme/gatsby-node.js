@@ -1,7 +1,7 @@
 const fs = require("fs")
 
-exports.onPreBootstrap = ({ reporter }) => {
-  const contentPath = `${__dirname}/assets/data/`
+exports.onPreBootstrap = ({ reporter }, options) => {
+  const contentPath = options.contentPath || `${__dirname}/assets/data/`
 
   if (!fs.existsSync(contentPath)) {
     reporter.info(`creating the ${contentPath} directory`)
@@ -9,8 +9,9 @@ exports.onPreBootstrap = ({ reporter }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }, options) => {
   const { createPage } = actions
+  const basePath = options.basePath || "/"
 
   const result = await graphql(`
     {
@@ -47,7 +48,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
   products.forEach(product => {
     createPage({
-      path: `/${product.node.maincategory.toLowerCase()}/${product.node.id}`,
+      path: `${basePath}${product.node.maincategory.toLowerCase()}/${
+        product.node.id
+      }`,
       component: require.resolve("./src/templates/productDetail/index.js"),
       context: {
         name: product.node.name,
@@ -64,7 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   categories.forEach(category => {
     createPage({
-      path: `/${category.fieldValue.toLowerCase()}`,
+      path: `${basePath}${category.fieldValue.toLowerCase()}`,
       component: require.resolve("./src/templates/productList/index.js"),
       context: {
         name: category.fieldValue,

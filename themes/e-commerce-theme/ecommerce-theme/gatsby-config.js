@@ -1,4 +1,7 @@
-module.exports = ({ contentPath = `${__dirname}/assets/data/` }) => ({
+module.exports = ({
+  contentPath = `${__dirname}/assets/data/`,
+  basePath = "/",
+}) => ({
   plugins: [
     "gatsby-plugin-material-ui",
     "gatsby-plugin-fontawesome-css",
