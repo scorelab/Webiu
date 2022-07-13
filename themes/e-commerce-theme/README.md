@@ -97,7 +97,7 @@ The following are the defined blog post fields based on the node interface in th
 ```yml
 - name: Kids top
   price: 5
-  details: Normal dress 1
+  details: details about the item
   quantity: 10
   maincategory: Kids
   subcategory: Tops
