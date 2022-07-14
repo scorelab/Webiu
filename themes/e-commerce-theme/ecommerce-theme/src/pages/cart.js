@@ -5,11 +5,7 @@ import { CartContext } from "../contexts"
 import CartTile from "../component/cart/cartTile"
 import OrderSummery from "../component/cart/orderSummery"
 import Layout from "../ui/layout"
-import {
-  addToCart,
-  clearCart,
-  removeFromCart,
-} from "../contexts/actions/cart-actions"
+import { addToCart, removeFromCart } from "../contexts/actions/cart-actions"
 import { useMediaQuery } from "@material-ui/core"
 
 const Styles = makeStyles(theme => ({
@@ -60,7 +56,11 @@ const Cart = () => {
           item.stock
         )
       }
-      removeHandler={() => dispatchCart(clearCart())}
+      removeHandler={() =>
+        dispatchCart(
+          removeFromCart(item.id, item.img, item.qty, item.name, item.price)
+        )
+      }
     />
   ))
   cart.forEach(item => {

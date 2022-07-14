@@ -23,7 +23,6 @@ const NavBarWithIcons = ({ firstName, secondName, categories, iconList }) => {
   const { cart } = useContext(CartContext)
   const classes = Styles()
   const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
-  console.log(window.location.pathname)
   const activeIndex = () => {
     const filter = categories.filter(
       category =>

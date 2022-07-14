@@ -29,9 +29,7 @@ const CartReducer = (state, action) => {
     case REMOVE_FROM_CART:
       const newQty = newCart[existingIndex].qty - action.payload.qty
       if (newQty <= 0) {
-        newCart = newCart.filter(
-          item => item.variant !== action.payload.variant
-        )
+        newCart = newCart.filter(item => item.id !== action.payload.id)
       } else {
         newCart[existingIndex] = { ...newCart[existingIndex], qty: newQty }
       }

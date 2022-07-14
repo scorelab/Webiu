@@ -28,7 +28,6 @@ const ProductDetail = ({ pageContext }) => {
       setQuantity(quantity - 1)
     }
   }
-  console.log(pageContext)
   const handleCart = () => {
     dispatchCart(
       addToCart(

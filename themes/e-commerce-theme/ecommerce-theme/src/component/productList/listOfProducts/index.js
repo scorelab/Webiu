@@ -19,8 +19,6 @@ const ProductsArray = ({ productList, filterOptions, sortOptions, layout }) => {
     }
   })
 
-  console.log(sortedProducts)
-
   const ListView = () => (
     <>
       {isFilter
