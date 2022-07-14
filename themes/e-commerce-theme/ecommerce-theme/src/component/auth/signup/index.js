@@ -63,7 +63,7 @@ const SignUp = () => {
     confirmPwd: {
       helperText: "Password is not strong enough",
       placeholder: "Confirm Password",
-      type: visible ? "text" : "password",
+      type: confirmVisible ? "text" : "password",
       startAdornment: (
         <span className={classes.EmailAdornment}>
           <FontAwesomeIcon icon={faLock} size="1x" color="#9e9e9e" />
@@ -72,7 +72,7 @@ const SignUp = () => {
       endAdornment: (
         <span className={classes.PasswordAdornment}>
           <IconButton onClick={() => setConfirmVisible(!confirmVisible)}>
-            {visible ? (
+            {confirmVisible ? (
               <FontAwesomeIcon icon={faEye} size="1x" color="#9e9e9e" />
             ) : (
               <FontAwesomeIcon icon={faEyeSlash} size="1x" color="#9e9e9e" />

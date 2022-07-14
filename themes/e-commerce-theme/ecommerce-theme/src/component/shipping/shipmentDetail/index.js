@@ -1,14 +1,17 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
+import { CartContext } from "../../../contexts"
+import { clearCart } from "../../../contexts/actions/cart-actions"
 import Styles from "./styles"
 import { useMediaQuery } from "@material-ui/core"
 
 const ShipmentDetail = () => {
   const classes = Styles()
   const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
+  const { cart, dispatchCart } = useContext(CartContext)
   const [inputValues, setInputValues] = useState({
     Name: "",
     Address: "",
@@ -72,7 +75,10 @@ const ShipmentDetail = () => {
       {inputs}
       <Grid item container justifyContent="center">
         <Button
-          onClick={() => console.log(inputValues)}
+          onClick={
+            () => dispatchCart(clearCart())
+            // continue the payment procedure
+          }
           classes={{ root: classes.btnStyle }}
         >
           <Typography variant="h4">Confirm & Pay</Typography>
