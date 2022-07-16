@@ -7,6 +7,7 @@ const darkText = "#000000"
 const lightGreen = "#58C78E"
 const greyText = "#9e9e9e"
 const cardOldLace = "#fbf3ea"
+const alphaDark = "#00000099"
 
 const theme = createTheme({
   palette: {
@@ -15,6 +16,7 @@ const theme = createTheme({
       lightvariant: lightvariant,
       light: lightText,
       dark: darkText,
+      alphaDark: alphaDark,
     },
     secondary: {
       main: lightGreen,
@@ -61,9 +63,9 @@ const theme = createTheme({
       color: darkText,
     },
     body2: {
-      fontSize: 15,
+      fontSize: 20,
       fontFamily: "Inter",
-      color: greyText,
+      color: iris,
     },
   },
   overrides: {
