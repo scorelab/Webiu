@@ -20,6 +20,7 @@ const theme = createTheme({
     },
     secondary: {
       main: lightGreen,
+      light: lightText,
     },
     common: {
       grey: greyText,
