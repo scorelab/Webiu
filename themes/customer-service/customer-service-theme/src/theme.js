@@ -53,9 +53,9 @@ const theme = createTheme({
       color: lightText,
     },
     h5: {
-      fontSize: 15,
+      fontSize: 24,
       fontFamily: "Inter",
-      color: darkText,
+      color: lightText,
       fontWeight: "bold",
     },
     body1: {
