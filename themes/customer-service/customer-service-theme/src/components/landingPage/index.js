@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Icon from "@material-ui/core/Icon"
 import Styles from "./styles"
-import workImage from "../../../data/images/undraw_work.svg"
+import workImage from "../../../assets/images/undraw_work.svg"
 
 const HomeContent = () => {
   const classes = Styles()

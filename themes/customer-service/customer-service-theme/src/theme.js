@@ -59,7 +59,7 @@ const theme = createTheme({
       fontWeight: "bold",
     },
     body1: {
-      fontSize: 20,
+      fontSize: 18,
       fontFamily: "Inter",
       color: darkText,
     },

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Styles from "./styles"
@@ -45,7 +46,7 @@ const SolutionSet = () => {
   ]
 
   const solutions = solutionCardList.map(ele => (
-    <Grid item key={ele.id}>
+    <Grid item key={ele.id} component={Link} to={ele.name.toLowerCase()}>
       <SolutionCard imgURL={ele.imageURL} name={ele.name} />
     </Grid>
   ))

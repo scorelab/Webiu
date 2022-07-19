@@ -5,17 +5,17 @@ module.exports = ({
   plugins: [
     "gatsby-plugin-material-ui",
     "gatsby-plugin-fontawesome-css",
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     path: contentPath,
-    //   },
-    // },
-    // {
-    //   resolve: "gatsby-transformer-yaml",
-    //   options: {
-    //     typeName: "Item",
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: contentPath,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-yaml",
+      options: {
+        typeName: "Items",
+      },
+    },
   ],
 })
