@@ -1,0 +1,42 @@
+@import '../../styles/variables.sass'
+
+.navbar-wrapper
+    z-index: 1
+    top: 0
+    width: 100%
+    padding: 0px 20px
+    background-color: #24598B
+    .isActive
+        border-bottom: 1px solid white
+    .logoContainer
+        width: 90px
+        .Mainlogo
+            width: 100%
+    .MobileToggle
+        background-color: $primary
+    a
+        text-decoration: none
+        color: white !important
+        margin: 0px 20px
+        font-weight: 400
+        text-align: center
+    a:hover
+        color: $primary !important
+    .buttonCustom
+        background-color: $primary
+        color: #fff !important
+        border-radius: 5px
+        border: none
+        display: flex
+        justify-content: center !important
+        align-items: center !important
+        text-align: center !important
+        margin: 0px auto 0px
+
+@media (min-width: 481px) and (max-width: 767px)
+    .isActive
+        border-bottom: none !important
+
+@media (min-width: 320px) and (max-width: 480px)
+    .isActive
+        border-bottom: none !important
