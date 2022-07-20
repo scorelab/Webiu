@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../ui/layout"
-import FindServiceTemplate from "../components/findService"
+import Layout from "../../ui/layout"
+import FindServiceTemplate from "../../components/findService"
 
 const FindServicePage = () => {
   return (

@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "gatsby"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
@@ -8,6 +9,9 @@ import Styles from "./styles"
 
 const ExploreServiceCard = ({ name, userName, description, location }) => {
   const classes = Styles()
+  const hireBtnHandler = () => {
+    navigate("/findService/createRequest")
+  }
   return (
     <Grid
       container
@@ -47,7 +51,7 @@ const ExploreServiceCard = ({ name, userName, description, location }) => {
           <Button classes={{ root: classes.viewProfileBtn }}>
             <Typography variant="h4">View Profile</Typography>
           </Button>
-          <Button classes={{ root: classes.hireBtn }}>
+          <Button classes={{ root: classes.hireBtn }} onClick={hireBtnHandler}>
             <Typography variant="h4">Hire Now!</Typography>
           </Button>
         </Grid>
