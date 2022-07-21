@@ -47,8 +47,13 @@ const NavBarWithIcons = ({ firstName, tabList, btnList }) => {
     </Tabs>
   )
 
-  const iconSet = btnList.map(iconObject => (
-    <Button key={iconObject.id} classes={{ root: classes.btnStyle }}>
+  const btnGroup = btnList.map(iconObject => (
+    <Button
+      component={Link}
+      to={iconObject.route}
+      key={iconObject.id}
+      classes={{ root: classes.btnStyle }}
+    >
       <Typography variant="h4">{iconObject.name}</Typography>
     </Button>
   ))
@@ -98,7 +103,7 @@ const NavBarWithIcons = ({ firstName, tabList, btnList }) => {
             <FontAwesomeIcon icon={faBars} size="1x" />
           </IconButton>
         ) : (
-          iconSet
+          btnGroup
         )}
       </Toolbar>
     </AppBar>

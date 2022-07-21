@@ -36,6 +36,7 @@ const Styles = makeStyles(theme => ({
     width: 100,
     textTransform: "none",
     borderRadius: 5,
+    "&:hover": { backgroundColor: theme.palette.primary.main },
   },
 }))
 

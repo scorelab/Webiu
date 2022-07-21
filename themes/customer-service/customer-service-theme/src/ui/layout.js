@@ -20,8 +20,8 @@ const tabList = [
 ]
 
 const btnList = [
-  { id: 1, name: "Sign In" },
-  { id: 2, name: "Sign Up" },
+  { id: 1, name: "Sign In", route: "/signIn" },
+  { id: 2, name: "Sign Up", route: "/signUp" },
 ]
 
 const Layout = ({ children }) => {

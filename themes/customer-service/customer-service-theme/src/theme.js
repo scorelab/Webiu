@@ -16,6 +16,7 @@ const theme = createTheme({
       lightvariant: lightvariant,
       light: lightText,
       dark: darkText,
+      contrastText: greyText,
       alphaDark: alphaDark,
     },
     secondary: {
@@ -57,6 +58,12 @@ const theme = createTheme({
       fontFamily: "Inter",
       color: lightText,
       fontWeight: "bold",
+    },
+    h6: {
+      fontSize: 18,
+      fontFamily: "Inter",
+      color: "Inter",
+      color: greyText,
     },
     body1: {
       fontSize: 18,
