@@ -18,14 +18,15 @@ const ServiceList = ({ pageContext, data }) => {
   const handleRatings = event => {
     setRatings(event.target.value)
   }
-  const serviceCards = data.services.edges.map(ele => {
+  const serviceCards = data.services.edges.map((ele, i) => {
     return (
-      <Grid container classes={{ root: classes.container }}>
+      <Grid container classes={{ root: classes.container }} key={i}>
         <ExploreServiceCard
           name={ele.node.name}
           userName={ele.node.userName}
           description={ele.node.description}
           location={ele.node.location}
+          id={ele.node.id}
         />
       </Grid>
     )

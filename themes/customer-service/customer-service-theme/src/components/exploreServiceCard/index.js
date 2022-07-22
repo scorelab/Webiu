@@ -7,10 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faLocationDot } from "@fortawesome/free-solid-svg-icons"
 import Styles from "./styles"
 
-const ExploreServiceCard = ({ name, userName, description, location }) => {
+const ExploreServiceCard = ({ name, userName, description, location, id }) => {
   const classes = Styles()
   const hireBtnHandler = () => {
     navigate("/findService/createRequest")
+  }
+  const profileBtnHandler = () => {
+    navigate("/profile", { state: { id: { id } } })
   }
   return (
     <Grid
@@ -48,7 +51,10 @@ const ExploreServiceCard = ({ name, userName, description, location }) => {
       </Grid>
       <Grid item>
         <Grid container direction="column">
-          <Button classes={{ root: classes.viewProfileBtn }}>
+          <Button
+            classes={{ root: classes.viewProfileBtn }}
+            onClick={profileBtnHandler}
+          >
             <Typography variant="h4">View Profile</Typography>
           </Button>
           <Button classes={{ root: classes.hireBtn }} onClick={hireBtnHandler}>

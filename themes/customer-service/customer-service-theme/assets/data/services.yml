@@ -5,6 +5,13 @@
   contactNumber: +94765432199
   email: johndoe@gmail.com
   category: electrical
+  reviews:
+    - date: 23/07/2022
+      issue: There is a electrical work need to be done
+      customerReview: Great Service. 100%
+    - date: 22/07/2022
+      issue: There is a wiring need to be done
+      customerReview: Great Service. 100%
 
 - name: Ravindu Wishwa
   userName: Shan1998
@@ -13,6 +20,13 @@
   contactNumber: +94765432199
   email: ravinduh@gmail.com
   category: painting
+  reviews:
+    - date: 23/07/2022
+      issue: There is a house painting need to be done
+      customerReview: Great Service. 100%
+    - date: 22/07/2022
+      issue: There is a floor painting to be done
+      customerReview: Great Service. 100%
 
 - name: Sameera Shan
   userName: HSM123
@@ -21,6 +35,13 @@
   contactNumber: +94765432199
   email: hsm@gmail.com
   category: handiwork
+  reviews:
+    - date: 23/07/2022
+      issue: There is a roof work need to be done
+      customerReview: Great Service. 100%
+    - date: 22/07/2022
+      issue: There is a make furnitures need to be done
+      customerReview: Great Service. 100%
 
 - name: Nuwan Thushara
   userName: NTushara99
