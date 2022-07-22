@@ -2,9 +2,9 @@
 
 Hope you have successfully set up the project in your local system and install all dependencies
 
-## About the StyledSelect Component
+## About the StyledTextField Component
 
-This is a resuasble component for the show drop down list and select an item. This Component is highly reusable and customizable via props.
+This is a resuasble component for textFields in the forms. This Component is highly reusable and customizable via props.
 
 ## How to use the component
 
