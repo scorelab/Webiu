@@ -9,7 +9,7 @@ This is a resuasble component for the feature and services built from scratch. I
 ## How to use the component
 
 Import the component to `pages/index.js`
-`import {IndividualCard} from "../components/ImageGrid";`
+`import {IndividualCard} from "../components/IndividualCard";`
 
 ## How to handle props to the component
 

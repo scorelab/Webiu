@@ -9,5 +9,5 @@ This is a resuasble component that contain three individual cards arrange in a p
 ## How to use the component
 
 Import the component to `pages/index.js`
-`import {IndividualCardGrid} from "../components/GuideLines";`
+`import {IndividualCardGrid} from "../components/IndividualCardGrid";`
 
