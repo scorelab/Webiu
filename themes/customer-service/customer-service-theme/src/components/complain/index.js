@@ -28,7 +28,12 @@ const Complain = () => {
         classes={{ root: classes.wrapper }}
       >
         <Grid item>
-          <Grid container direction="column" alignItems="center">
+          <Grid
+            container
+            direction="column"
+            alignItems="center"
+            classes={{ root: classes.space }}
+          >
             <Grid item>
               <Typography variant="h4">What is about?</Typography>
             </Grid>

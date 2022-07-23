@@ -7,8 +7,15 @@ const Styles = makeStyles(theme => ({
     background: "linear-gradient(#8165EA 70%,#FFFFFF)",
     boxShadow: theme.shadows[5],
     borderRadius: 10,
-    margin: "30px 125px",
-    padding: "20px 100px",
+    [theme.breakpoints.up("md")]: {
+      margin: "30px 125px",
+      padding: "20px 100px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "30px 0px",
+      padding: "20px 5px",
+      width: "100%",
+    },
   },
   datePicker: {
     color: theme.palette.primary.light,
@@ -17,8 +24,8 @@ const Styles = makeStyles(theme => ({
     color: theme.palette.primary.main,
   },
   wrapper: {
-    marginLeft: "50px",
-    marginTop: "30px",
+    paddingLeft: "50px",
+    paddingTop: "30px",
   },
   space: {
     marginBottom: "20px",

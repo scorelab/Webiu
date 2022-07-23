@@ -8,8 +8,15 @@ const Styles = makeStyles(theme => ({
     background: "linear-gradient(#8165EA 70%,#FFFFFF)",
     boxShadow: theme.shadows[5],
     borderRadius: 10,
-    margin: "30px 125px",
-    padding: "20px 100px",
+    [theme.breakpoints.up("md")]: {
+      margin: "30px 125px",
+      padding: "20px 100px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "30px 0px",
+      padding: "20px 5px",
+      width: "100%",
+    },
   },
   wrapper: {
     padding: "50px 0px",
@@ -19,6 +26,9 @@ const Styles = makeStyles(theme => ({
   },
   textField: {
     width: "350px",
+  },
+  space: {
+    paddingBottom: "5px",
   },
   inputStyle: {
     "&::placeholder": {

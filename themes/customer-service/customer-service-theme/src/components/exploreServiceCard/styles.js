@@ -6,6 +6,9 @@ const Styles = makeStyles(theme => ({
     width: "80%",
     backgroundColor: "#EDF2F7",
     padding: "25px",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   viewProfileBtn: {
     backgroundColor: "#3388CE",
