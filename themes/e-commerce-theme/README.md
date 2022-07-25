@@ -50,10 +50,10 @@ module.exports = {
 
 ### Theme options
 
-| Key           | Default value | Description                 |
-| ------------- | ------------- | --------------------------- |
-| `basePath`    | `/`           | Root url for the site posts |
-| `contentPath` | `assets/data` | Location of items posts     |
+| Key           | Default value | Description           |
+| ------------- | ------------- | --------------------- |
+| `basePath`    | `/`           | Root url for the site |
+| `contentPath` | `assets/data` | Location of items     |
 
 #### Example configuration
 
@@ -62,7 +62,7 @@ module.exports = {
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-theme-blog`,
+      resolve: `ecommerce-theme`,
       options: {
         // basePath defaults to `/`
         basePath: `/site/`,
