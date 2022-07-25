@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  The Gatsby E-Commerce theme
+  The Gatsby Customer Service theme
 </h1>
 
 A Gatsby theme for Customer Service web aplication.
@@ -62,11 +62,11 @@ module.exports = {
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-theme-blog`,
+      resolve: `customer-service-theme`,
       options: {
         // basePath defaults to `/`
         basePath: `/site/`,
-        contentPath: "content/data",
+        contentPath: `content/data`,
       },
     },
   ],
