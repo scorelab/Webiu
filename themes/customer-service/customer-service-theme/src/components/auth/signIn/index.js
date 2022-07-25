@@ -24,9 +24,7 @@ const SignIn = () => {
   }
   const submitHandler = () => {
     console.log(email)
-    console.log(name)
     console.log(password)
-    console.log(confirmPassword)
   }
   return (
     <Grid
