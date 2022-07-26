@@ -10,9 +10,9 @@ export const WhyChooseUs = ({ mainText, subText, image, description }) => {
         <Row>
           <Col md={6} className="left-col">
             <div>
-              <h1 className="MainText">{mainText}</h1>
-              <p className="SubText">{subText}</p>
-              <p className="description">{description}</p>
+              <h1 className="wcu-MainText">{mainText}</h1>
+              <p className="wcu-SubText">{subText}</p>
+              <p className="wcu-description">{description}</p>
             </div>
           </Col>
           <Col md={6} className="right-col">

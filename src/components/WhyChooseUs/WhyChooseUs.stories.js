@@ -19,7 +19,7 @@ export const whychooseus = args => <WhyChooseUs {...args} />
 
 whychooseus.args = {
   mainText: "Why Choose Us ?",
-  subText: "And appear great open bearing evening dominion vodi.",
+  subText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
   image:
