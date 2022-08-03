@@ -8,6 +8,7 @@ const greenText = "#65cd2a"
 const tomatoText = "#ff5f49"
 const amazon = "#3b8754"
 const citron = "#9eb929"
+const blueText = "#3865B0"
 
 const theme = createTheme({
   palette: {
@@ -25,17 +26,21 @@ const theme = createTheme({
     common: {
       grey: greyText,
       tomato: tomatoText,
+      blue: blueText,
     },
   },
   typography: {
     h1: {
       fontSize: 32,
       fontFamily: "Inter",
-      fontStyle: "italic",
       fontWeight: "bold",
       color: darkText,
     },
-    h2: {},
+    h2: {
+      fontSize: 24,
+      fontFamily: "Inter",
+      color: blueText,
+    },
     h3: {},
     h4: {},
     h5: {},
