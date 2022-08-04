@@ -9,7 +9,7 @@ This is a resuasble component for the "Our Mission" section can also be use to s
 ## How to use the component
 
 Import the component to `pages/index.js`
-`import Mission from "../components/Mission";`
+`import { Mission } from "../components/OurMission";`
 
 ## How to handle props to the component
 
