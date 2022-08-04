@@ -1,0 +1,116 @@
+- name: John Doe
+  userName: JDoe123
+  location: Colombo
+  description: I am a fully qualified person with experience in electrical working
+  contactNumber: +94765432199
+  email: johndoe@gmail.com
+  category: electrical
+  reviews:
+    - date: 23/07/2022
+      issue: There is a electrical work need to be done
+      customerReview: Great Service. 100%
+    - date: 22/07/2022
+      issue: There is a wiring need to be done
+      customerReview: Great Service. 100%
+
+- name: Ravindu Wishwa
+  userName: Shan1998
+  location: Galle
+  description: I am a fully qualified person with experience in painting working
+  contactNumber: +94765432199
+  email: ravinduh@gmail.com
+  category: painting
+  reviews:
+    - date: 23/07/2022
+      issue: There is a house painting need to be done
+      customerReview: Great Service. 100%
+    - date: 22/07/2022
+      issue: There is a floor painting to be done
+      customerReview: Great Service. 100%
+
+- name: Sameera Shan
+  userName: HSM123
+  location: Peradeniya
+  description: I am a fully qualified person with experience in handiworking
+  contactNumber: +94765432199
+  email: hsm@gmail.com
+  category: handiwork
+  reviews:
+    - date: 23/07/2022
+      issue: There is a roof work need to be done
+      customerReview: Great Service. 100%
+    - date: 22/07/2022
+      issue: There is a make furnitures need to be done
+      customerReview: Great Service. 100%
+
+- name: Nuwan Thushara
+  userName: NTushara99
+  location: Colombo
+  description: I am a fully qualified person with experience in driving
+  contactNumber: +94765432199
+  email: ntushara@gmail.com
+  category: driving
+
+- name: Dev Kapil
+  userName: DK1234
+  location: Mumbai
+  description: I am a fully qualified person with experience in landscaping
+  contactNumber: +94765432199
+  email: dk1234@gmail.com
+  category: landscaping
+
+- name: Osandi Praba
+  userName: OPH2002
+  location: Kandy
+  description: I am a fully qualified person with experience in plumbing
+  contactNumber: +94765432199
+  email: opd@gmail.com
+  category: plumbing
+
+- name: Eorn Morgan
+  userName: EM123
+  location: Colombo
+  description: I am a fully qualified person with experience in electrical working
+  contactNumber: +94765432199
+  email: em.18@gmail.com
+  category: electrical
+
+- name: Ben Stock
+  userName: Ben1998
+  location: Galle
+  description: I am a fully qualified person with experience in painting working
+  contactNumber: +94765432199
+  email: bens@gmail.com
+  category: painting
+
+- name: Sunil Shantha
+  userName: SS123
+  location: Peradeniya
+  description: I am a fully qualified person with experience in handiworking
+  contactNumber: +94765432199
+  email: ss.19@gmail.com
+  category: handiwork
+
+- name: Prabath Jayasuriya
+  userName: Pappa123
+  location: Colombo
+  description: I am a fully qualified person with experience in driving
+  contactNumber: +94765432199
+  email: pappa@gmail.com
+  category: driving
+
+- name: Ruzz Arnold
+  userName: Ruzz1234
+  location: Mumbai
+  description: I am a fully qualified person with experience in landscaping
+  contactNumber: +94765432199
+  email: ruzzzz@gmail.com
+  category: landscaping
+
+- name: Charith Akalanka
+  userName: CK2002
+  location: Kandy
+  description: I am a fully qualified person with experience in plumbing
+  contactNumber: +94765432199
+  email: ck-14@gmail.com
+  category: plumbing
