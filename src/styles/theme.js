@@ -7,6 +7,7 @@ const lightVerdigris = "#5cc4b4"
 const greyText = "#9e9e9e"
 const cardOldLace = "#fbf3ea"
 const iris = "#5A56CD"
+const blueText = "#3865B0"
 
 const theme = createTheme({
   palette: {
@@ -53,6 +54,11 @@ const theme = createTheme({
       fontFamily: "Inter",
       color: darkText,
       fontWeight: "bold",
+    },
+    h6: {
+      fontSize: 20,
+      fontFamily: "Inter",
+      color: blueText,
     },
     body1: {
       fontSize: 20,
