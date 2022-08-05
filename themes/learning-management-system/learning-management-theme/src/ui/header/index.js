@@ -13,7 +13,7 @@ import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import { Link, navigate } from "gatsby"
 import Styles from "./styles"
-import logo from "../../../assets/logo.png"
+import logo from "../../../assets/images/logo.png"
 
 const Header = ({ tabList, iconNavigator }) => {
   const [drawerOpen, setDrawerOpen] = useState(false)

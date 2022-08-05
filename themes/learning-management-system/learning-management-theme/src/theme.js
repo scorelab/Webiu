@@ -41,7 +41,11 @@ const theme = createTheme({
       fontFamily: "Inter",
       color: blueText,
     },
-    h3: {},
+    h3: {
+      fontSize: 20,
+      fontFamily: "Inter",
+      color: darkText,
+    },
     h4: {},
     h5: {},
     body1: {},

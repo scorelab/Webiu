@@ -3,13 +3,8 @@ import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Styles from "./styles"
 
-const StatisticsSection = () => {
+const StatisticsSection = ({ statistics }) => {
   const classes = Styles()
-  const statistics = [
-    { name: "Groups", value: "30" },
-    { name: "Teachers", value: "40+" },
-    { name: "Students", value: "1k+" },
-  ]
 
   const statisticsList = statistics.map((item, i) => {
     return (
