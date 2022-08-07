@@ -9,6 +9,7 @@ const tomatoText = "#ff5f49"
 const amazon = "#3b8754"
 const citron = "#9eb929"
 const blueText = "#3865B0"
+const lightWhite = "#F5F5F5"
 
 const theme = createTheme({
   palette: {
@@ -19,7 +20,7 @@ const theme = createTheme({
       dark: darkText,
     },
     secondary: {
-      main: lightText,
+      main: lightWhite,
       dark: amazon,
       light: citron,
     },
@@ -46,8 +47,18 @@ const theme = createTheme({
       fontFamily: "Inter",
       color: darkText,
     },
-    h4: {},
-    h5: {},
+    h4: {
+      fontSize: 20,
+      fontFamily: "Inter",
+      color: darkText,
+      fontWeight: "bold",
+    },
+    h5: {
+      fontSize: 16,
+      fontFamily: "Inter",
+      color: darkText,
+      fontWeight: "bold",
+    },
     body1: {},
     body2: {},
   },

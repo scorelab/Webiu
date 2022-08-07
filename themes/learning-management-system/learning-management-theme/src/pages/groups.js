@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../ui/layout"
-import SearchBar from "../component/group/searchBar"
+import GroupPage from "../component/group"
 
 const HomePage = () => {
   return (
     <Layout>
-      <SearchBar />
+      <GroupPage />
     </Layout>
   )
 }
