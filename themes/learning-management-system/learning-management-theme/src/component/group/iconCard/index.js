@@ -14,8 +14,9 @@ const IconCard = ({
   moduleCount,
   moduleText,
   onClickHandler,
+  isMember,
 }) => {
-  const classes = Styles()
+  const classes = Styles({ isMember })
   return (
     <Grid
       container

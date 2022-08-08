@@ -8,7 +8,7 @@ const Styles = makeStyles(theme => ({
     boxShadow: theme.shadows[5],
     borderRadius: 10,
     margin: "20px",
-    cursor: "pointer",
+    cursor: props => (props.isMember ? "pointer" : "not-allowed"),
   },
   image: {
     backgroundColor: theme.palette.secondary.main,

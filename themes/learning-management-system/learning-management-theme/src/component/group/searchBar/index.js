@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Grid from "@material-ui/core/Grid"
 import TextField from "@material-ui/core/TextField"
 import InputAdornment from "@material-ui/core/InputAdornment"
@@ -6,16 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import Styles from "./styles"
 
-const SearchBar = ({ handleSearch, placeHolder }) => {
+const SearchBar = ({ handleSearch, placeHolder, queryHandler, queryValue }) => {
   const classes = Styles()
-  const [value, setValue] = useState("")
   return (
     <Grid>
       <TextField
-        value={value}
-        onChange={e => {
-          setValue(e.target.value)
-        }}
+        value={queryValue}
+        onChange={queryHandler}
         classes={{ root: classes.textField }}
         placeholder={placeHolder}
         type="text"

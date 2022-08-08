@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Styles from "./styles"
 
-const GroupCategory = ({ iconName, title }) => {
+const GroupCategory = ({ iconName, title, onClickHandler }) => {
   const classes = Styles()
   return (
     <Grid
@@ -12,6 +12,7 @@ const GroupCategory = ({ iconName, title }) => {
       classes={{ root: classes.container }}
       justifyContent="space-around"
       alignItems="center"
+      onClick={onClickHandler}
     >
       <Grid item>
         <FontAwesomeIcon icon={iconName} size="1x" />
