@@ -58,6 +58,11 @@ const theme = createTheme({
       color: darkText,
       fontWeight: "bold",
     },
+    h6: {
+      fontSize: 20,
+      fontFamily: "Inter",
+      color: blueText,
+    },
     body1: {
       fontSize: 20,
       fontFamily: "Inter",
