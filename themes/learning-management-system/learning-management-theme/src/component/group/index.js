@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { navigate } from "gatsby"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import SearchBar from "./searchBar"
@@ -30,7 +31,6 @@ const GroupPage = () => {
         return true
       }
     })
-    console.log(isMember)
     return (
       <Grid item>
         <IconCard
@@ -42,7 +42,14 @@ const GroupPage = () => {
           memberText={item.memberText}
           moduleCount={item.moduleCount}
           moduleText={item.moduleText}
-          onClickHandler={isMember ? () => console.log("hi") : null}
+          onClickHandler={
+            isMember
+              ? () =>
+                  navigate(
+                    `${item.subject.toLowerCase()}${item.year.slice(2, 4)}`
+                  )
+              : null
+          }
           isMember={isMember}
         />
       </Grid>
