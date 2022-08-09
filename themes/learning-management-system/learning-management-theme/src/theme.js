@@ -60,7 +60,12 @@ const theme = createTheme({
       fontWeight: "bold",
     },
     body1: {},
-    body2: {},
+    body2: {
+      fontSize: 18,
+      fontFamily: "Inter",
+      color: citron,
+      fontWeight: "bold",
+    },
   },
   overrides: {},
 })
