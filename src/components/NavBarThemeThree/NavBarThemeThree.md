@@ -2,7 +2,7 @@
 
 Hope you have successfully set up the project in your local system and install all dependencies
 
-## About the NavBarThemeTwo Component
+## About the NavBarThemeThree Component
 
 This is a resuasble component for the to most navbar of a website. It is one of the most common things you will ever see in any website. This Component is highly reusable and customizable via props even the colors and text
 
