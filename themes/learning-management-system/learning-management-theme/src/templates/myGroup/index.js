@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "gatsby"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import ModuleHeader from "../../modules/header"
@@ -15,7 +16,7 @@ const MyGroupsWithModules = ({ pageContext }) => {
           moduleName={item.moduleName}
           imageUrl={item.image}
           onClickHandler={() => {
-            console.log("hello")
+            navigate(item.id)
           }}
         />
       </Grid>

@@ -1,4 +1,4 @@
-const myGroupsWithModules = [
+const moduleList = [
   {
     id: "1",
     subject: "Economics",
@@ -17,15 +17,15 @@ const myGroupsWithModules = [
             subTitles: [
               {
                 name: "stepper label 1",
-                dataUrl: "https://www.lipsum.com 1.1",
+                dataUrl: "https://www.lipsum.com",
               },
               {
                 name: "stepper label 2",
-                dataUrl: "https://www.lipsum.com 1.2",
+                dataUrl: "https://www.lipsum.com",
               },
               {
                 name: "stepper label 3",
-                dataUrl: "https://www.lipsum.com 1.3",
+                dataUrl: "https://www.lipsum.com",
               },
             ],
           },
@@ -33,16 +33,16 @@ const myGroupsWithModules = [
             name: "Sub topic 2",
             subTitles: [
               {
-                name: "stepper label 1-2",
-                dataUrl: "https://www.lipsum.com 2.1",
+                name: "stepper label 1",
+                dataUrl: "https://www.lipsum.com",
               },
               {
-                name: "stepper label 2-2",
-                dataUrl: "https://www.lipsum.com 2.2",
+                name: "stepper label 2",
+                dataUrl: "https://www.lipsum.com",
               },
               {
-                name: "stepper label 3-2",
-                dataUrl: "https://www.lipsum.com 2.3",
+                name: "stepper label 3",
+                dataUrl: "https://www.lipsum.com",
               },
             ],
           },
@@ -50,16 +50,16 @@ const myGroupsWithModules = [
             name: "Sub topic 3",
             subTitles: [
               {
-                name: "stepper label 1-3",
-                dataUrl: "https://www.lipsum.com 3.1",
+                name: "stepper label 1",
+                dataUrl: "https://www.lipsum.com",
               },
               {
-                name: "stepper label 2-3",
-                dataUrl: "https://www.lipsum.com 3.2",
+                name: "stepper label 2",
+                dataUrl: "https://www.lipsum.com",
               },
               {
-                name: "stepper label 3-3",
-                dataUrl: "https://www.lipsum.com 3.3",
+                name: "stepper label 3",
+                dataUrl: "https://www.lipsum.com",
               },
             ],
           },
@@ -99,4 +99,4 @@ const myGroupsWithModules = [
   },
 ]
 
-export default myGroupsWithModules
+export default moduleList

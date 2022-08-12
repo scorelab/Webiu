@@ -1,5 +1,6 @@
 const fs = require("fs")
 import myGroupsWithModules from "./assets/data/my-groups-with-module-list"
+import moduleList from "./assets/data/module-list"
 
 exports.onPreBootstrap = ({ reporter }, options) => {
   const contentPath = options.contentPath || `${__dirname}/assets/data/`
@@ -30,16 +31,19 @@ exports.createPages = async ({ graphql, actions }, options) => {
         modules: group.modules,
       },
     })
+    group.modules.forEach(module => {
+      createPage({
+        path: `${basePath}groups/${group.subject.toLowerCase()}${group.year.slice(
+          2,
+          4
+        )}/${module.id}`,
+        component: require.resolve("./src/templates/modules/index.js"),
+        context: {
+          id: module.id,
+          name: module.moduleName,
+          submodules: module.subModules,
+        },
+      })
+    })
   })
-
-  //   categories.forEach(category => {
-  //     createPage({
-  //       path: `${basePath}${category.fieldValue.toLowerCase()}`,
-  //       component: require.resolve("./src/templates/productList/index.js"),
-  //       context: {
-  //         name: category.fieldValue,
-  //         filterValues: category.distinct,
-  //       },
-  //     })
-  //   })
 }
