@@ -1,0 +1,96 @@
+@import '../../styles/variables.sass'
+
+.contributeBannerWrap
+    padding: 35px
+.bannerLeftCol
+    padding: 35px
+    @media #{$xs-and-less}
+        align-items: center
+        text-align: center
+        display: flex
+        height: 100%
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        text-align: left
+        margin-bottom: 30px
+    p
+        font-size: 18px
+        line-height: 25px
+        font-style: normal
+        font-weight: 400
+        color: #ABABAB
+    h1
+        color: white
+        font-weight: 700
+        padding-top: 15px
+        font-size: 36px
+        line-height: 58px
+    .colored-text
+        font-weight: 600
+        color: $primary
+    .buttons-div
+        display: flex
+        margin-top: 5px
+    .contirbuteBtn
+        margin: 10px 5px 10px 0
+        background-color: #14F195
+        color: black
+        font-size: 18px
+        padding: 0.5rem 1.5rem
+        text-align: center
+        border-radius: 7px
+    .contirbuteBtn:hover
+        color: black
+    .gitBtn
+        margin: 10px 0 10px 5px
+        background-color: transpartent
+        color: white
+        border: 1px solid white
+        font-size: 20px
+        padding: 0.5rem 1.5rem
+        text-align: center
+        border-radius: 7px
+    .gitBtn:hover
+        color: white
+    .gitIcon
+        margin-right: 10px
+        font-size: 25px
+    .externalIcon
+        margin-left: 10px
+        font-size: 20px
+
+.bannerRightCol
+    text-align: center
+    margin-top: 20px
+    height: 100%
+    vertical-align: middle
+    display: inline-block
+    .contributeBannerImage
+        height: 100%
+        vertical-align: middle
+        display: inline-block
+
+@media (min-width: 481px) and (max-width: 767px)
+    .buttons-div
+        flex-direction: column
+    .contirbuteBtn
+        padding: 0.5rem 0.5rem
+    .contributeBannerImage
+        width: 60%
+
+@media (min-width: 320px) and (max-width: 480px)
+    .buttons-div
+        flex-direction: column
+    .contirbuteBtn
+        padding: 0.5rem 0.5rem
+    .contributeBannerImage
+        width: 60%
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+    .buttons-div
+        flex-direction: column
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+    .buttons-div
+        flex-direction: column
