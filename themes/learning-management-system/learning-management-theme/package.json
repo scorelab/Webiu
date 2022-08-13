@@ -9,6 +9,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@coreui/react-chartjs": "^2.1.0",
     "@emotion/react": "^11.9.3",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
