@@ -1,105 +1,87 @@
-import React, { useState, useContext } from "react"
+import React from "react"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
-import TextField from "@material-ui/core/TextField"
-import Button from "@material-ui/core/Button"
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faAddressCard,
+  faBlenderPhone,
+  faPhone,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons"
 import Styles from "./styles"
-import { useMediaQuery } from "@material-ui/core"
 
 const ContactUs = () => {
   const classes = Styles()
-  const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
-  const [inputValues, setInputValues] = useState({
-    IndexNo: "",
-    FirstName: "",
-    LastName: "",
-    Email: "",
-    MobileNumber: "",
-    Address: "",
-    GuardianName: "",
-    GuardianMobileNumber: "",
-  })
-  const attributes = [
-    { name: "IndexNo", value: "Index No", type: "text" },
-    { name: "FirstName", value: "First Name", type: "text" },
-    { name: "LastName", value: "Last Name", type: "text" },
-    { name: "Email", value: "Email", type: "email" },
-    { name: "MobileNumber", value: "Mobile Number", type: "number" },
-    { name: "Address", value: "Address", type: "text" },
-    { name: "GuardianName", value: "Guardian Name", type: "text" },
-    {
-      name: "GuardianMobileNumber",
-      value: "Guardian Mobile Number",
-      type: "number",
-    },
-  ]
-  const inputs = attributes.map(attribute => {
+
+  const DetailCard = ({ children, iconName }) => {
     return (
       <Grid
-        item
         container
-        classes={{ root: classes.inputContainer }}
-        direction={matchesMD ? "column" : "row"}
-        justifyContent="space-between"
+        direction="row"
+        justifyContent="space-around"
         alignItems="center"
-        key={attribute.name}
+        classes={{ root: classes.wrapper }}
       >
         <Grid item>
-          <Typography>{attribute.value}</Typography>
+          <FontAwesomeIcon icon={iconName} size="2x" />
         </Grid>
-        <Grid item classes={{ root: classes.textFieldStyle }}>
-          <TextField
-            fullWidth
-            id="fullWidth"
-            type={attribute.type}
-            label={
-              <Typography color="#9e9e9e" variant="h7">
-                {attribute.value}
-              </Typography>
-            }
-            variant="filled"
-            size="small"
-            onChange={e => {
-              setInputValues({
-                ...inputValues,
-                [attribute.name]: e.target.value,
-              })
-            }}
-          />
-        </Grid>
+        <Grid item> {children}</Grid>
       </Grid>
     )
-  })
+  }
   return (
     <Grid container direction="column" classes={{ root: classes.container }}>
-      <Grid
-        item
-        container
-        justifyContent="center"
-        classes={{ root: classes.headerStyle }}
-      >
-        <FontAwesomeIcon icon={faUserCircle} size="5x" />
+      <Grid item>
+        <Typography variant="h4">Feel free to Contact Us!</Typography>
       </Grid>
-      {inputs}
-      <Grid item container justifyContent="center">
+      <Grid item classes={{ root: classes.space }}>
+        <Typography>
+          Please contact us using the information below. For additional
+          informations on UOM Higher Education Institute
+        </Typography>
+      </Grid>
+      <Grid item container direction="column" classes={{ root: classes.space }}>
         <Grid item>
-          <Button onClick={() => {}} classes={{ root: classes.cancelBtnStyle }}>
-            <Typography variant="h6">Cancel</Typography>
-          </Button>
+          <DetailCard iconName={faAddressCard}>
+            <Grid container direction="column">
+              <Grid item>
+                <Typography>No: 07/A,</Typography>
+              </Grid>
+              <Grid item>
+                <Typography> Galle Rd</Typography>
+              </Grid>
+              <Grid item>
+                <Typography>Galle</Typography>
+              </Grid>
+            </Grid>
+          </DetailCard>
+        </Grid>
+        <Grid item classes={{ root: classes.spaceWrapper }}>
+          <DetailCard iconName={faBlenderPhone}>
+            <Grid container direction="column">
+              <Grid item>
+                <Typography>091-5623123</Typography>
+              </Grid>
+            </Grid>
+          </DetailCard>
         </Grid>
         <Grid item>
-          <Button onClick={() => {}} classes={{ root: classes.saveBtnStyle }}>
-            <Typography variant="h6">Save</Typography>
-          </Button>
+          <DetailCard iconName={faPhone}>
+            <Grid container direction="column">
+              <Grid item>
+                <Typography>076-3459011</Typography>
+              </Grid>
+            </Grid>
+          </DetailCard>
         </Grid>
-      </Grid>
-      <Grid item container justifyContent="center">
         <Grid item>
-          <Button onClick={() => {}} classes={{ root: classes.logoutBtnStyle }}>
-            <Typography variant="h6">Log out</Typography>
-          </Button>
+          <DetailCard iconName={faEnvelope}>
+            <Grid container direction="column">
+              <Grid item>
+                <Typography>info@uom.io</Typography>
+              </Grid>
+            </Grid>
+          </DetailCard>
         </Grid>
       </Grid>
     </Grid>

@@ -9,39 +9,19 @@ const Styles = makeStyles(theme => ({
       padding: "20px 0px",
     },
     width: "80%",
-    padding: "25px 150px",
+    padding: "25px",
     margin: "20px 100px",
+    boxShadow: theme.shadows[5],
+    border: "1px solid #000",
   },
-  headerStyle: {
-    marginBottom: "20px",
+  space: {
+    marginTop: "20px",
   },
-  textFieldStyle: {
-    width: "70%",
+  wrapper: {
+    width: "40%",
   },
-  inputContainer: {
-    margin: "10px",
-  },
-  cancelBtnStyle: {
-    backgroundColor: theme.palette.common.grey,
-    marginTop: "30px",
-    padding: "10px 30px",
-    textTransform: "none",
-    "&:hover": { backgroundColor: theme.palette.common.grey },
-  },
-  saveBtnStyle: {
-    backgroundColor: theme.palette.primary.lightvariant,
-    marginTop: "30px",
-    marginLeft: "50px",
-    padding: "10px 30px",
-    textTransform: "none",
-    "&:hover": { backgroundColor: theme.palette.primary.lightvariant },
-  },
-  logoutBtnStyle: {
-    backgroundColor: theme.palette.common.tomato,
-    marginTop: "30px",
-    padding: "10px 300px",
-    textTransform: "none",
-    "&:hover": { backgroundColor: theme.palette.common.tomato },
+  spaceWrapper: {
+    marginTop: "-40px",
   },
 }))
 
