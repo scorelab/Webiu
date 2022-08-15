@@ -24,7 +24,7 @@ export const IndividualCard = ({
           {buttonText}
         </Link>
       </div>
-      <hr align="left" />
+      <hr className="divide" align="left" />
     </div>
   )
 }

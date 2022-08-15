@@ -1,0 +1,87 @@
+.news-wrapper
+    display: grid
+    gap: 20px
+    grid-template-columns: 2fr 1fr
+
+.main-feed-content
+    padding: 100px
+    .main-feed-genre
+        font-weight: 600
+        font-size: 1.5rem
+        color: #51AD28
+    .main-feed-date
+        font-weight: 600
+        font-size: 1.5rem
+        color: white
+    .main-feed-description
+        color: white
+        margin: 20px 0px
+        font-weight: 600
+        font-size: 1.875rem
+        line-height: 36px
+    .main-feed-data
+        font-weight: 600
+        font-size: 1.25rem
+        line-height: 1.5rem
+        margin-right: 20px
+        color: #51AD28
+
+.side-feed-content
+    margin: 20px
+    .side-feed-genre
+        font-style: normal
+        font-size: 1.25rem
+        line-height: 1.5rem
+        color: #51AD28
+        font-weight: 600
+    .side-feed-date
+        font-style: normal
+        font-size: 20px
+        line-height: 1.5rem
+        font-weight: 600
+    .side-feed-data
+        margin-right: 20px
+        font-style: normal
+        font-size: 1.25rem
+        line-height: 1.5rem
+        color: #51AD28
+        font-weight: 600
+
+.side-feed-description
+    margin: 20px
+    font-style: normal
+    font-weight: 600
+    font-size: 1.25rem
+    line-height: 1.5rem
+
+.feed-icon
+    display: inline-block
+    margin-right: 10px
+    color: #BABABA
+
+.image-side-feed
+    width: 100%
+
+@media (min-width: 481px) and (max-width: 767px)
+    .news-wrapper
+        grid-template-columns: 1fr
+    .main-feed-content
+        padding: 50px
+
+@media (min-width: 320px) and (max-width: 480px)
+    .news-wrapper
+        grid-template-columns: 1fr
+    .main-feed-content
+        padding: 50px
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+    .news-wrapper
+        grid-template-columns: 1fr
+    .main-feed-content
+        padding: 50px
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+    .news-wrapper
+        grid-template-columns: 1fr
+    .main-feed-content
+        padding: 50px
