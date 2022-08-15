@@ -7,6 +7,9 @@ const Styles = makeStyles(theme => ({
   },
   wrapper: {
     paddingLeft: "80px",
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "20px",
+    },
   },
   cardGroup: {
     marginTop: "20px",

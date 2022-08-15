@@ -40,6 +40,9 @@ const Styles = makeStyles(theme => ({
     backgroundColor: theme.palette.common.tomato,
     marginTop: "30px",
     padding: "10px 300px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10px 100px",
+    },
     textTransform: "none",
     "&:hover": { backgroundColor: theme.palette.common.tomato },
   },

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
+import { useMediaQuery } from "@material-ui/core"
 import { faUsers } from "@fortawesome/free-solid-svg-icons"
 import ReportCard from "./reportCard"
 import BarGraph from "./barGraph"
@@ -9,6 +10,7 @@ import myGroups from "../../../assets/data/my-group-list"
 
 const Report = () => {
   const classes = Styles()
+  const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
   const labels = [
     "January",
     "February",
@@ -39,7 +41,7 @@ const Report = () => {
     )
   })
   return (
-    <Grid container direction="row">
+    <Grid container direction={matchesMD ? "column" : "row"}>
       <Grid item>
         <Grid
           container

@@ -6,7 +6,7 @@ const Styles = makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       width: "80%",
       margin: "10px 35px",
-      padding: "20px 0px",
+      padding: "20px 10px",
     },
     width: "80%",
     padding: "25px",
@@ -19,9 +19,15 @@ const Styles = makeStyles(theme => ({
   },
   wrapper: {
     width: "40%",
+    [theme.breakpoints.down("sm")]: {
+      width: "80%",
+    },
   },
   spaceWrapper: {
     marginTop: "-40px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "0px",
+    },
   },
 }))
 

@@ -1,6 +1,5 @@
 const fs = require("fs")
 import myGroupsWithModules from "./assets/data/my-groups-with-module-list"
-import moduleList from "./assets/data/module-list"
 
 exports.onPreBootstrap = ({ reporter }, options) => {
   const contentPath = options.contentPath || `${__dirname}/assets/data/`

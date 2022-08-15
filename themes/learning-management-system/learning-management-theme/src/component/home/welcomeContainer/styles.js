@@ -9,6 +9,9 @@ const Styles = makeStyles(theme => ({
   container: {
     backgroundColor: "#F5F5F5",
     padding: "20px 200px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "20px 20px",
+    },
   },
   space: {
     marginBottom: "20px",
