@@ -8,11 +8,15 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons"
 import NavigationDrawer from "./navBar"
+import Styles from "./styles"
+import Typography from "@material-ui/core/Typography"
 
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false)
   const [resturentOptions, setResturentOptions] = useState(false)
   const [hotelOptions, setHotelOptions] = useState(false)
+
+  const classes = Styles({ open })
 
   const handleDrawerOpen = () => {
     setOpen(true)
@@ -61,18 +65,21 @@ const Layout = ({ children }) => {
     },
   ]
   return (
-    <NavigationDrawer
-      navigationOptions={navigationOptions}
-      open={open}
-      resturentOptions={resturentOptions}
-      hotelOptions={hotelOptions}
-      handleDrawerOpen={handleDrawerOpen}
-      handleDrawerClose={handleDrawerClose}
-      backIconHandler={backIconHandler}
-      brandName="Cloud Hotel"
-    >
-      {children}
-    </NavigationDrawer>
+    <>
+      <NavigationDrawer
+        navigationOptions={navigationOptions}
+        open={open}
+        resturentOptions={resturentOptions}
+        hotelOptions={hotelOptions}
+        handleDrawerOpen={handleDrawerOpen}
+        handleDrawerClose={handleDrawerClose}
+        backIconHandler={backIconHandler}
+        brandName="Cloud Hotel"
+      />
+
+      <div className={classes.container} />
+      <div className={classes.wrapper}>{children}</div>
+    </>
   )
 }
 
