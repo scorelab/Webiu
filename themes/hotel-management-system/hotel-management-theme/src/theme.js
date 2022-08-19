@@ -4,9 +4,9 @@ const violetBlue = "#3F51B5"
 const darkvariant = "#2b3a84"
 const lightText = "#ffffff"
 const darkText = "#000000"
-const lightVerdigris = "#5cc4b4"
 const greyText = "#9e9e9e"
 const cardOldLace = "#fbf3ea"
+const tomatoText = "#ff5f49"
 
 const theme = createTheme({
   palette: {
@@ -20,7 +20,7 @@ const theme = createTheme({
     },
     common: {
       grey: greyText,
-      oldlace: cardOldLace,
+      tomato: tomatoText,
     },
   },
   typography: {
@@ -32,15 +32,16 @@ const theme = createTheme({
       color: lightText,
     },
     h2: {
-      fontSize: 24,
+      fontSize: 28,
       fontFamily: "Inter",
-      color: lightText,
+      fontWeight: "bold",
+      color: violetBlue,
     },
     h3: {
       fontSize: 24,
       fontFamily: "Inter",
-      color: darkText,
       fontWeight: "bold",
+      color: darkText,
     },
     h4: {
       fontSize: 20,
@@ -51,6 +52,11 @@ const theme = createTheme({
       fontSize: 15,
       fontFamily: "Inter",
       color: lightText,
+    },
+    h6: {
+      fontSize: 15,
+      fontFamily: "Inter",
+      color: darkText,
     },
     body1: {
       fontSize: 20,
