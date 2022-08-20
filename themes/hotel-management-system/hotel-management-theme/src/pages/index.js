@@ -3,7 +3,6 @@ import Layout from "../ui/layout"
 import HomeContent from "../components/home"
 
 const HomePage = () => {
-  const classes = Styles()
   return (
     <Layout>
       <HomeContent />
