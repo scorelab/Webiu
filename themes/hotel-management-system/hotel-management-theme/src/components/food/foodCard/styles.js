@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const Styles = makeStyles(theme => ({
   container: {
-    border: `2px solid ${theme.palette.primary.dark}`,
+    border: `2px solid ${theme.palette.common.grey}`,
     borderRadius: 10,
     width: "200px",
   },

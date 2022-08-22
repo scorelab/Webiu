@@ -8,6 +8,7 @@ const FoodList = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     price: "10",
     availability: true,
+    type: "Soft drinks",
   },
   {
     id: "2",
@@ -18,6 +19,7 @@ const FoodList = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     price: "10",
     availability: true,
+    type: "Breakfirst",
   },
   {
     id: "3",
@@ -28,6 +30,7 @@ const FoodList = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     price: "10",
     availability: true,
+    type: "Soft drinks",
   },
   {
     id: "4",
@@ -38,6 +41,7 @@ const FoodList = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     price: "10",
     availability: true,
+    type: "Soft drinks",
   },
   {
     id: "5",
@@ -48,6 +52,7 @@ const FoodList = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     price: "10",
     availability: true,
+    type: "Soft drinks",
   },
   {
     id: "6",
@@ -58,6 +63,7 @@ const FoodList = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     price: "10",
     availability: true,
+    type: "Soft drinks",
   },
   {
     id: "7",
@@ -68,6 +74,7 @@ const FoodList = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     price: "10",
     availability: true,
+    type: "Breakfirst",
   },
   {
     id: "8",
@@ -78,6 +85,7 @@ const FoodList = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     price: "10",
     availability: true,
+    type: "Soft drinks",
   },
   {
     id: "9",
@@ -88,6 +96,7 @@ const FoodList = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     price: "10",
     availability: true,
+    type: "Breakfirst",
   },
 ]
 

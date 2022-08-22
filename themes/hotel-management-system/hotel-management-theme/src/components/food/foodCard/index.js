@@ -27,7 +27,7 @@ const FoodCard = ({ imgUrl, title, description, price, availability }) => {
         <Grid item>
           <Grid
             container
-            justifyContent="space-between"
+            justifyContent={availability !== null ? "space-between" : "center"}
             alignItems="center"
             classes={{ root: classes.space }}
           >
@@ -36,20 +36,22 @@ const FoodCard = ({ imgUrl, title, description, price, availability }) => {
                 ${price}
               </Typography>
             </Grid>
-            <Grid item>
-              <Button
-                startIcon={
-                  availability ? (
-                    <FontAwesomeIcon icon={faCheck} />
-                  ) : (
-                    <FontAwesomeIcon icon={faXmark} />
-                  )
-                }
-                classes={{ root: classes.btnStyle }}
-              >
-                {availability ? "Available" : "Unavailable"}
-              </Button>
-            </Grid>
+            {availability !== null && (
+              <Grid item>
+                <Button
+                  startIcon={
+                    availability ? (
+                      <FontAwesomeIcon icon={faCheck} />
+                    ) : (
+                      <FontAwesomeIcon icon={faXmark} />
+                    )
+                  }
+                  classes={{ root: classes.btnStyle }}
+                >
+                  {availability ? "Available" : "Unavailable"}
+                </Button>
+              </Grid>
+            )}
           </Grid>
         </Grid>
       </Grid>
