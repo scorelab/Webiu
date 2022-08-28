@@ -3,9 +3,10 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const Styles = makeStyles(theme => ({
   container: {
-    width: "50%",
+    width: "60%",
     border: "1px solid #000",
     height: "200px",
+    margin: "10px",
   },
   ratingText: {
     ...theme.typography.h2,

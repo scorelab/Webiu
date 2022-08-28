@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { navigate } from "gatsby"
 import Drawer from "@material-ui/core/Drawer"
 import Grid from "@material-ui/core/Grid"
 import Toolbar from "@material-ui/core/Toolbar"
@@ -11,7 +12,11 @@ import IconButton from "@material-ui/core/IconButton"
 import AppBar from "@material-ui/core/AppBar"
 import Typography from "@material-ui/core/Typography"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+import {
+  faBars,
+  faChevronLeft,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 import Styles from "./styles"
 
@@ -101,9 +106,21 @@ const NavigationDrawer = ({
               <FontAwesomeIcon icon={faBars} size="1x" inverse />
             </IconButton>
           )}
-          <Typography variant="h1" classes={{ root: classes.headerTextStyle }}>
-            {brandName}
-          </Typography>
+          <Grid container justifyContent="space-between" alignItems="center">
+            <Grid item>
+              <Typography
+                variant="h1"
+                classes={{ root: classes.headerTextStyle }}
+              >
+                {brandName}
+              </Typography>
+            </Grid>
+            <Grid item>
+              <IconButton onClick={() => navigate("/login")}>
+                <FontAwesomeIcon icon={faUserCircle} size="1x" inverse />
+              </IconButton>
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
       <Drawer variant="persistent" anchor="left" open={open}>
