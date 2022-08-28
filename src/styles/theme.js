@@ -9,6 +9,7 @@ const cardOldLace = "#fbf3ea"
 const iris = "#5A56CD"
 const blueText = "#3865B0"
 const tomatoText = "#ff5f49"
+const hotPink = "#EE64BD"
 
 const theme = createTheme({
   palette: {
@@ -25,6 +26,7 @@ const theme = createTheme({
       oldlace: cardOldLace,
       tomato: tomatoText,
       blue: blueText,
+      hotpink: hotPink,
     },
   },
   typography: {
