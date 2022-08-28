@@ -5,7 +5,7 @@ const darkvariant = "#2b3a84"
 const lightText = "#ffffff"
 const darkText = "#000000"
 const greyText = "#9e9e9e"
-const cardOldLace = "#fbf3ea"
+const hotPink = "#EE64BD"
 const tomatoText = "#ff5f49"
 
 const theme = createTheme({
@@ -21,6 +21,7 @@ const theme = createTheme({
     common: {
       grey: greyText,
       tomato: tomatoText,
+      hotpink: hotPink,
     },
   },
   typography: {

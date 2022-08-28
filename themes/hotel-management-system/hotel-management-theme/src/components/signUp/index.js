@@ -10,11 +10,13 @@ import Button from "@material-ui/core/Button"
 import Checkbox from "@material-ui/core/Checkbox"
 import Styles from "./styles"
 
-const SignIn = ({ imgUrl, signUpUrl, signInHandler }) => {
+const SignUp = ({ imgUrl, signInUrl, signUpHandler }) => {
   const classes = Styles()
   const [inputValues, setInputValues] = useState({
     userName: "",
+    email: "",
     password: "",
+    confirmPassword: "",
   })
   const [check, setCheck] = useState(false)
 
@@ -32,10 +34,10 @@ const SignIn = ({ imgUrl, signUpUrl, signInHandler }) => {
           justifyContent="center"
         >
           <Grid item>
-            <FontAwesomeIcon icon={faLock} size="3x" color="#3F51B5" />
+            <FontAwesomeIcon icon={faLock} size="3x" color="#EE64BD" />
           </Grid>
           <Grid item>
-            <Typography variant="h3">Sign In</Typography>
+            <Typography variant="h3">Sign Up</Typography>
           </Grid>
           <Grid item classes={{ root: classes.textFieldStyle }}>
             <TextField
@@ -63,6 +65,28 @@ const SignIn = ({ imgUrl, signUpUrl, signInHandler }) => {
             <TextField
               fullWidth
               id="fullWidth"
+              type="text"
+              label={
+                <Typography classes={{ root: classes.textStyle }}>
+                  Email
+                </Typography>
+              }
+              InputProps={{ style: { fontSize: 18 } }}
+              style={{ backgroundColor: "#CEDBE8" }}
+              variant="filled"
+              size="small"
+              onChange={e => {
+                setInputValues({
+                  ...inputValues,
+                  ["email"]: e.target.value,
+                })
+              }}
+            />
+          </Grid>
+          <Grid item classes={{ root: classes.textFieldStyle }}>
+            <TextField
+              fullWidth
+              id="fullWidth"
               type="password"
               label={
                 <Typography classes={{ root: classes.textStyle }}>
@@ -81,30 +105,52 @@ const SignIn = ({ imgUrl, signUpUrl, signInHandler }) => {
               }}
             />
           </Grid>
+          <Grid item classes={{ root: classes.textFieldStyle }}>
+            <TextField
+              fullWidth
+              id="fullWidth"
+              type="password"
+              label={
+                <Typography classes={{ root: classes.textStyle }}>
+                  Confirm Password
+                </Typography>
+              }
+              InputProps={{ style: { fontSize: 18 } }}
+              style={{ backgroundColor: "#CEDBE8" }}
+              variant="filled"
+              size="small"
+              onChange={e => {
+                setInputValues({
+                  ...inputValues,
+                  ["confirmPassword"]: e.target.value,
+                })
+              }}
+            />
+          </Grid>
           <Grid item classes={{ root: classes.widthStyle }}>
             <FormControlLabel
               control={
                 <Checkbox color="primary" onClick={() => setCheck(!check)} />
               }
-              label="Remember Me"
+              label="I agree to all terms and conditions"
             />
           </Grid>
           <Grid item classes={{ root: classes.widthStyle }}>
             <Button
               classes={{ root: classes.btnStyle }}
-              onClick={signInHandler}
+              onClick={signUpHandler}
             >
-              Sign In
+              Sign Up
             </Button>
           </Grid>
           <Grid item classes={{ root: classes.widthStyle }}>
             <Typography variant="h6">
-              Don't have an account?{" "}
+              Already have an account?{" "}
               <span
                 className={classes.signupTextStyle}
-                onClick={() => navigate(signUpUrl)}
+                onClick={() => navigate(signInUrl)}
               >
-                Sign Up here
+                Sign in Here
               </span>
             </Typography>
           </Grid>
@@ -114,4 +160,4 @@ const SignIn = ({ imgUrl, signUpUrl, signInHandler }) => {
   )
 }
 
-export default SignIn
+export default SignUp
