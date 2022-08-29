@@ -1,0 +1,23 @@
+{
+  "name": "inventory-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^4.21.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@material-ui/core": "^4.12.4",
+    "gatsby-plugin-fontawesome-css": "^1.2.0",
+    "gatsby-plugin-material-ui": "^4.1.0",
+    "particles-bg": "^2.5.5",
+    "react-awesome-reveal": "^4.0.1"
+  }
+}
