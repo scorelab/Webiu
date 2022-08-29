@@ -43,8 +43,6 @@ const Layout = ({ children }) => {
       other: [
         { id: "1", name: "Food & Beverages", route: "/foods" },
         { id: "2", name: "Special Offers", route: "/offers" },
-        { id: "3", name: "Reserve Table", route: "/table" },
-        { id: "4", name: "Reservation", route: "/reservation" },
       ],
     },
     {
@@ -52,10 +50,7 @@ const Layout = ({ children }) => {
       name: "Hotel",
       frontIcon: faHotel,
       backIcon: hotelOptions ? faChevronUp : faChevronDown,
-      other: [
-        { id: "1", name: "Rooms", route: "/rooms" },
-        { id: "2", name: "Book Now", route: "/booking" },
-      ],
+      other: [{ id: "1", name: "Rooms", route: "/rooms" }],
     },
     {
       id: "4",

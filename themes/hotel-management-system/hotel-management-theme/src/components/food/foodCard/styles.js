@@ -6,6 +6,7 @@ const Styles = makeStyles(theme => ({
     border: `2px solid ${theme.palette.common.grey}`,
     borderRadius: 10,
     width: "200px",
+    minHeight: "425px",
   },
   imgStyle: {
     height: "150px",
