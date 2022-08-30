@@ -1,7 +1,7 @@
 import { createTheme } from "@material-ui/core/styles"
 
 const violetBlue = "#3F51B5"
-const darkvariant = "#2b3a84"
+const darkGrey = "#24645C"
 const lightText = "#ffffff"
 const darkText = "#000000"
 const greyText = "#9e9e9e"
@@ -16,7 +16,7 @@ const theme = createTheme({
       dark: darkText,
     },
     secondary: {
-      main: darkvariant,
+      main: darkGrey,
     },
     common: {
       grey: greyText,
