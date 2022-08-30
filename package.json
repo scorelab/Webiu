@@ -27,12 +27,15 @@
     "gatsby-transformer-sharp": "^2.3.19",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
+    "particles-bg": "^2.5.5",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-awesome-reveal": "^4.0.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.12.0",
     "react-error-overlay": "^6.0.9",
     "react-helmet": "^5.2.1",
+    "react-simple-typewriter": "^3.0.1",
     "react-spring-3d-carousel": "^1.2.1"
   },
   "devDependencies": {
