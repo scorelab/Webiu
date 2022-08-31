@@ -1,17 +1,17 @@
 import { createTheme } from "@material-ui/core/styles"
 
-const violetBlue = "#3F51B5"
 const darkGrey = "#24645C"
+const green = "#3B885B"
 const lightText = "#ffffff"
 const darkText = "#000000"
 const greyText = "#9e9e9e"
-const hotPink = "#EE64BD"
+const hotPink = "#E34964"
 const tomatoText = "#ff5f49"
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: violetBlue,
+      main: green,
       light: lightText,
       dark: darkText,
     },
@@ -36,7 +36,6 @@ const theme = createTheme({
       fontSize: 28,
       fontFamily: "Inter",
       fontWeight: "bold",
-      color: violetBlue,
     },
     h3: {
       fontSize: 24,
