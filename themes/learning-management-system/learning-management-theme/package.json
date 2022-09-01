@@ -1,0 +1,26 @@
+{
+  "name": "learning-management-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^4.19.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@coreui/react-chartjs": "^2.1.0",
+    "@emotion/react": "^11.9.3",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "esm": "^3.2.25",
+    "gatsby-plugin-fontawesome-css": "^1.2.0",
+    "gatsby-plugin-material-ui": "^4.1.0",
+    "gatsby-source-filesystem": "^4.17.0",
+    "gatsby-transformer-yaml": "^4.17.0"
+  }
+}
