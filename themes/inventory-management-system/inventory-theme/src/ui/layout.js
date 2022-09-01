@@ -1,13 +1,25 @@
-import React from "react"
+import React, { useState } from "react"
 import MiniDrawer from "./miniDrawer"
 import { faFlask, faCartPlus, faClock } from "@fortawesome/free-solid-svg-icons"
 import Styles from "./styles"
 
 const Layout = ({ children }) => {
-  const classes = Styles()
+  const [open, setOpen] = useState(false)
+
+  const handleDrawerOpen = () => {
+    setOpen(true)
+  }
+
+  const handleDrawerClose = () => {
+    setOpen(false)
+  }
+  const classes = Styles({ open })
   return (
     <>
       <MiniDrawer
+        open={open}
+        handleDrawerOpen={handleDrawerOpen}
+        handleDrawerClose={handleDrawerClose}
         orgName="NetSuiteLabs"
         navList={[
           { id: "1", url: "/", name: "Laboratories", icon: faFlask },

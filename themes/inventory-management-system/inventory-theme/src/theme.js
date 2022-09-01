@@ -38,15 +38,15 @@ const theme = createTheme({
       fontWeight: "bold",
     },
     h3: {
-      fontSize: 24,
+      fontSize: 18,
       fontFamily: "Inter",
       fontWeight: "bold",
       color: darkText,
     },
     h4: {
-      fontSize: 20,
+      fontSize: 16,
       fontFamily: "Inter",
-      color: lightText,
+      color: darkText,
     },
     h5: {
       fontSize: 15,

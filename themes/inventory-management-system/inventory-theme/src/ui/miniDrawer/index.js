@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { styled, useTheme } from "@material-ui/core/styles"
 import Drawer from "@material-ui/core/Drawer"
 import AppBar from "@material-ui/core/AppBar"
@@ -55,21 +55,18 @@ const StyledDrawer = styled(Drawer, {
   }),
 }))
 
-const MiniDrawer = ({ orgName, navList }) => {
+const MiniDrawer = ({
+  orgName,
+  navList,
+  open,
+  handleDrawerOpen,
+  handleDrawerClose,
+}) => {
   const theme = useTheme()
-  const [open, setOpen] = useState(false)
 
   const DrawerHeader = ({ children }) => (
     <div className={classes.drawerHeader}>{children}</div>
   )
-
-  const handleDrawerOpen = () => {
-    setOpen(true)
-  }
-
-  const handleDrawerClose = () => {
-    setOpen(false)
-  }
 
   const activeIndex = () => {
     const filter = navList.filter(

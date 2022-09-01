@@ -10,7 +10,7 @@ const Styles = makeStyles(theme => ({
     justifyContent: "flex-end",
   },
   wrapper: {
-    marginLeft: props => (props.open ? "240px" : "60px"),
+    marginLeft: props => (props.open ? "250px" : "60px"),
     transition: props =>
       props.open &&
       theme.transitions.create("margin", {

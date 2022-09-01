@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../ui/layout"
-import Typography from "@material-ui/core/Typography"
+import Labs from "../components/labs"
 
 const HomePage = () => {
   return (
     <Layout>
-      <Typography color="#000">Hello World</Typography>
+      <Labs />
     </Layout>
   )
 }
