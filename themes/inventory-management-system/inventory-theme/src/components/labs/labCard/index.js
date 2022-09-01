@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 import Styles from "./styles"
 
-const LabCard = ({ imgUrl, labName, department }) => {
+const LabCard = ({ imgUrl, labName, department, btnHandler }) => {
   const classes = Styles()
   return (
     <Grid container direction="column" classes={{ root: classes.container }}>
@@ -29,7 +29,9 @@ const LabCard = ({ imgUrl, labName, department }) => {
           </Typography>
         </Grid>
         <Grid item classes={{ root: classes.space }}>
-          <Button classes={{ root: classes.btnStyle }}>View Categories</Button>
+          <Button classes={{ root: classes.btnStyle }} onClick={btnHandler}>
+            View Categories
+          </Button>
         </Grid>
       </Grid>
     </Grid>

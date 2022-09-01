@@ -35,6 +35,7 @@ const Styles = makeStyles(theme => {
     },
     listItemStyle: {
       minHeight: "60px",
+      cursor: "pointer",
     },
     listTextStyle: {
       color: theme.palette.common.hotpink,

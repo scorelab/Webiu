@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { navigate } from "gatsby"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import DropDown from "./dropDown"
@@ -14,6 +15,10 @@ const Labs = () => {
     setValue(e.target.value)
   }
 
+  const btnHandler = id => {
+    navigate(`labs/${id}`)
+  }
+
   const classes = Styles()
   const labs =
     value === ""
@@ -23,6 +28,7 @@ const Labs = () => {
               imgUrl={lab.image}
               labName={lab.name}
               department={lab.location}
+              btnHandler={() => btnHandler(lab.id)}
             />
           </Grid>
         ))
@@ -32,6 +38,7 @@ const Labs = () => {
               imgUrl={lab.image}
               labName={lab.name}
               department={lab.location}
+              btnHandler={() => btnHandler(lab.id)}
             />
           </Grid>
         ))

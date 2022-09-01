@@ -1,5 +1,6 @@
 import React from "react"
 import { styled, useTheme } from "@material-ui/core/styles"
+import { navigate } from "gatsby"
 import Drawer from "@material-ui/core/Drawer"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
@@ -69,10 +70,13 @@ const MiniDrawer = ({
   )
 
   const activeIndex = () => {
-    const filter = navList.filter(
-      category =>
-        category.url === "/" + window.location.pathname.split("/", 2)[1]
-    )
+    const filter = navList.filter(category => {
+      const base = window.location.pathname.split("/", 2)[1]
+      if (base === "labs") {
+        return category.url === "/"
+      }
+      return category.url === "/" + base
+    })
     const index = navList.indexOf(filter[0])
     return index
   }
@@ -110,6 +114,9 @@ const MiniDrawer = ({
               disablePadding
               classes={{ root: classes.listItemStyle }}
               selected={activeIndex() === index}
+              onClick={() => {
+                navigate(`${parm.url}`)
+              }}
             >
               <Grid container alignItems="center">
                 <Grid item>
