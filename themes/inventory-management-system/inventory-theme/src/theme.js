@@ -5,6 +5,7 @@ const green = "#3B885B"
 const lightText = "#ffffff"
 const darkText = "#000000"
 const greyText = "#9e9e9e"
+const lightGrey = "#F5F5F5"
 const hotPink = "#E34964"
 const tomatoText = "#ff5f49"
 
@@ -22,6 +23,7 @@ const theme = createTheme({
       grey: greyText,
       tomato: tomatoText,
       hotpink: hotPink,
+      lightgrey: lightGrey,
     },
   },
   typography: {

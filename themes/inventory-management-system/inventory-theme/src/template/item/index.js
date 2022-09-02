@@ -5,10 +5,8 @@ import Layout from "../../ui/layout"
 import BreadcrumbsWrapper from "../../ui/breadcrumbsWrapper"
 import ItemCard from "../../components/labs/itemCard"
 import ItemsList from "../../../assets/itemsList"
-import Styles from "./styles"
 
 const ItemPageTemplate = ({ pageContext }) => {
-  const classes = Styles()
   const navList = [
     { name: "Labs", url: "/" },
     { name: "Categories", url: `/labs/${pageContext.labId}` },
