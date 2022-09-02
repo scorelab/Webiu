@@ -6,6 +6,9 @@ const Styles = makeStyles(theme => ({
     textDecoration: "none",
     color: theme.palette.secondary.main,
   },
+  space: {
+    marginTop: "20px",
+  },
 }))
 
 export default Styles
