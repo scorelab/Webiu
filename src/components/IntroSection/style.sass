@@ -1,0 +1,77 @@
+@import '../../styles/variables.sass'
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Montserrat:100,200,300,400,500,600,700,800,900')
+
+.introWrapper
+    padding: 3rem
+    background: #EDFCFF
+    .intoLeftCol
+        .introMainImage
+            width: 70%
+    .introRightCol
+        text-align: left
+        .main-heading
+            color: black
+            text-align: left
+            font-style: normal
+            font-weight: 500
+            margin-bottom: 2rem
+            font-size: 2.5rem
+            line-height: 117.02%
+        .subText
+            text-align: left
+            font-style: normal
+            font-weight: 600
+            font-size: 1rem
+            overflow: hidden
+            line-height: 117.02%
+            text-transform: uppercase
+            color: #828181
+        .introDescription
+            font-weight: 400
+            color: #757575
+            font-family: 'Montserrat'
+            inline-size: 370px
+            margin-bottom: 2rem
+            overflow-wrap: break-word
+        .introBtn
+            background: #14F195
+            padding: 15px
+            color: black
+            border: none
+            font-family: 'Montserrat'
+            width: 120px
+        .introDivider
+            width: 80px
+            margin-left: 0
+            margin-bottom: 1.5rem
+            border-top: 3px solid #14F195
+
+    @media (min-width: 481px) and (max-width: 767px)
+        .main-heading
+            font-size: 2.5rem !important
+        .introDescription
+            inline-size: unset !important
+        .introDivider
+            display: none
+        .introMainImage
+            width: 100% !important
+
+    @media (min-width: 320px) and (max-width: 480px)
+        .main-heading
+            font-size: 1.5rem !important
+        .introDescription
+            inline-size: unset !important
+        .introMainImage
+            width: 100% !important
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+        .main-heading
+            font-size: 2.5rem !important
+        .introMainImage
+            width: 100% !important
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+        .main-heading
+            font-size: 2.5rem !important
+        .introMainImage
+            width: 100% !important
