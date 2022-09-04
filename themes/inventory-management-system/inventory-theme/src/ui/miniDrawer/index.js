@@ -13,7 +13,11 @@ import ListItem from "@material-ui/core/ListItem"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+import {
+  faBars,
+  faChevronLeft,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons"
 import Styles from "./styles"
 
 const drawerWidth = 240
@@ -95,9 +99,25 @@ const MiniDrawer = ({
           >
             <FontAwesomeIcon icon={faBars} />
           </IconButton>
-          <Typography variant="h1" classes={{ root: classes.headerTextStyle }}>
-            {orgName}
-          </Typography>
+          <Grid container justifyContent="space-between" alignItems="center">
+            <Grid item>
+              <Typography
+                variant="h1"
+                classes={{ root: classes.headerTextStyle }}
+              >
+                {orgName}
+              </Typography>
+            </Grid>
+            <Grid item>
+              <IconButton
+                onClick={() => {
+                  navigate("/profile")
+                }}
+              >
+                <FontAwesomeIcon icon={faUserCircle} size="1x" inverse />
+              </IconButton>
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
       <StyledDrawer variant="permanent" open={open}>
