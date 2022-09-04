@@ -69,6 +69,16 @@ const Profile = ({ profileData }) => {
           Change Password
         </Button>
       </Grid>
+      <Grid item classes={{ root: classes.rowStyle }}>
+        <Button
+          classes={{ root: classes.signOutBtnStyle }}
+          onClick={() => {
+            navigate("/login/")
+          }}
+        >
+          Sign out
+        </Button>
+      </Grid>
     </Grid>
   )
 }

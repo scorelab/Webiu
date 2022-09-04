@@ -25,6 +25,14 @@ const Styles = makeStyles(theme => ({
     width: "100%",
     marginTop: "20px",
   },
+  signOutBtnStyle: {
+    border: `2px solid ${theme.palette.common.tomato}`,
+    color: theme.palette.common.tomato,
+    textTransform: "none",
+    fontWeight: "bold",
+    width: "100%",
+    marginTop: "20px",
+  },
 }))
 
 export default Styles
