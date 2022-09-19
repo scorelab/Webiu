@@ -14,6 +14,7 @@ export const RequestCall = ({
   const handleEmail = e => setEmail(e.target.value)
 
   return (
+    <div className="requestCallWrap">
     <Container>
       <Row>
         <Col md={6} className="requestLeftCol">
@@ -41,6 +42,7 @@ export const RequestCall = ({
         </Col>
       </Row>
     </Container>
+    </div>
   )
 }
 
