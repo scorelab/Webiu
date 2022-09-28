@@ -1,0 +1,74 @@
+@import '../../styles/variables.sass'
+
+.midSectionWrapper
+    padding: 3rem
+    background: #EDFCFF
+    .midSectionRightCol
+        padding: 40px
+        .midSectionMainImage
+            width: 70%
+    .midSectionLeftCol
+        text-align: left
+        .main-heading
+            color: black
+            text-align: left
+            font-style: normal
+            font-weight: 500
+            margin-bottom: 2rem
+            font-size: 2.5rem
+            line-height: 117.02%
+        .subText
+            text-align: left
+            font-style: normal
+            font-weight: 600
+            font-size: 1rem
+            overflow: hidden
+            line-height: 117.02%
+            text-transform: uppercase
+            color: #828181
+        .midSectionDescription
+            font-weight: 400
+            color: #757575
+            font-family: 'Montserrat'
+            inline-size: 370px
+            margin-bottom: 2rem
+            overflow-wrap: break-word
+        .midSectionBtn
+            background: #14F195
+            padding: 15px
+            color: black
+            border: none
+            font-family: 'Montserrat'
+            width: 120px
+        .midSectionDivider
+            width: 80px
+            margin-left: 0
+            margin-bottom: 1.5rem
+            border-top: 3px solid #14F195
+
+    @media (min-width: 481px) and (max-width: 767px)
+        .main-heading
+            font-size: 2.5rem !important
+        .midSectionDescription
+            inline-size: unset !important
+        .midSectionDivider
+            display: none
+        .midSectionMainImage
+            width: 100% !important
+    @media (min-width: 320px) and (max-width: 480px)
+        .main-heading
+            font-size: 1.5rem !important
+        .midSectionDescription
+            inline-size: unset !important
+        .midSectionMainImage
+            width: 100% !important
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+        .main-heading
+            font-size: 2.5rem !important
+        .midSectionMainImage
+            width: 100%
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+        .main-heading
+            font-size: 2.5rem !important
+        .midSectionMainImage
+            width: 100%
