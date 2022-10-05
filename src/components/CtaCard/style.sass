@@ -1,0 +1,53 @@
+@import '../../styles/variables.sass'
+
+.ctaCardWrapper
+    width: 400px
+    height: 220px
+    background-color: #343434
+    text-align: left
+    position: absolute
+    display: block
+    border: 2px solid grey
+    border-radius: 5px
+    border-width: thin
+    box-sizing: border-box
+    padding: 20px 20px 20px 20px
+    margin: 100px 20px 40px 0px
+
+    .ctaCardImage
+        text-align: center
+        display: block
+        position: absolute
+        top: -100px
+        left: 25%
+        width: 50%
+
+    .ctaCardComp
+        position: absolute
+        bottom: 10px
+
+    p
+        color: white
+        text-align: left
+        font-weight: 400
+        font-size: 20px
+        margin-bottom: 15px
+
+    button
+        text-align: left
+        border-radius: 40px
+        border: none
+        width: 10rem
+        font-size: 20px
+        font-weight: 500
+        padding: 5px 20px 5px 30px
+        color: black
+        background-color: #14F195
+
+@media (min-width: 481px) and (max-width: 767px)
+    .ctaCardWrapper
+        width: 350px
+
+@media (min-width: 320px) and (max-width: 480px)
+    .ctaCardWrapper
+        width: 350px

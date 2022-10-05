@@ -1,0 +1,153 @@
+.TestimonailFaqWrapper
+    padding: 40px
+    background: #EDFCFF
+    .TestimonailFaqLeftCol
+        text-align: left
+        .mainHeading
+            color: black
+            text-align: left
+            font-style: normal
+            font-weight: 500
+            margin-bottom: 2rem
+            font-size: 2.5rem
+            line-height: 117.02%
+        .subText
+            text-align: left
+            font-style: normal
+            font-weight: 600
+            font-size: 1rem
+            overflow: hidden
+            line-height: 117.02%
+            text-transform: uppercase
+            color: #828181
+        .TestimonailFaqDescription
+            font-weight: 400
+            color: #757575
+            font-family: 'Montserrat'
+            inline-size: 370px
+            margin-bottom: 2rem
+        .TestimonailFaqDivider
+            width: 80px
+            margin-left: 0
+            margin-bottom: 1.5rem
+            border-top: 3px solid #14F195
+    .TestimonailFaqRightCol
+        text-align: left
+        .mainHeading
+            color: black
+            text-align: left
+            font-style: normal
+            font-weight: 500
+            margin-bottom: 2rem
+            font-size: 2.5rem
+            line-height: 117.02%
+        .subText
+            text-align: left
+            font-style: normal
+            font-weight: 600
+            font-size: 1rem
+            overflow: hidden
+            line-height: 117.02%
+            text-transform: uppercase
+            color: #828181
+        .TestimonailFaqDivider
+            width: 80px
+            margin-left: 0
+            margin-bottom: 1.5rem
+            border-top: 3px solid #14F195
+
+.image-left
+    margin: 1em 0
+    display: flex
+    vertical-align: middle
+    align-items: center
+.image-left img
+    width: 90px
+    margin-right: 1em
+    float: left
+.SubSectionHeading
+    text-align: left
+    color: black
+    font-family: "Montserrat"
+    font-weight: 500
+    font-size: 1.2rem
+    margin: 0
+.SubSectionText
+    text-align: left
+    color: black
+    font-size: 1.2rem
+    color: #828181
+    font-weight: 100
+    margin-top: .3rem
+    overflow: hidden
+
+.accordionFAQ
+    max-width: 600px
+    margin: 20px auto
+    display: grid
+    grid-gap: 15px
+.accordionFAQ__block-title
+    font-weight: bold
+    font-size: 14px
+    text-transform: uppercase
+.accordionFAQ__item
+    display: block
+    padding: 15px
+    cursor: pointer
+    border: 1px solid #666
+    overflow: hidden
+    transition: all 150ms ease
+.accordionFAQ__title
+    font-size: 20px
+    line-height: 1.5
+    color: #666
+    transition: all 150ms ease
+    position: relative
+    padding-right: 30px
+    &::after
+        transform: rotate(90deg)
+.accordionFAQ__title::after, .accordionFAQ__title::before
+    content: ""
+    width: 16px
+    height: 2px
+    background-color: #666
+    position: absolute
+    right: 0
+    top: 8px
+    transition: all 150ms ease
+.accordionFAQ__content
+    transform: translateY(50%)
+    font-size: 16px
+    line-height: 1.5
+    max-height: 0
+    opacity: 0
+    transition: all 150ms ease
+.accordionFAQ__item [type=checkbox],
+.accordionFAQ__item [type=radio]
+    display: none
+.accordionFAQ__item [type=radio]:checked + .accordionFAQ__title,
+.accordionFAQ__item [type=checkbox]:checked + .accordionFAQ__title
+    margin-bottom: 10px
+    font-size: 20px
+.accordionFAQ__item [type=radio]:checked + .accordionFAQ__title::after,
+.accordionFAQ__item [type=checkbox]:checked + .accordionFAQ__title::after
+    transform: rotate(45deg)
+.accordionFAQ__item [type=radio]:checked + .accordionFAQ__title::before,
+.accordionFAQ__item [type=checkbox]:checked + .accordionFAQ__title::before
+    transform: rotate(-45deg)
+.accordionFAQ__item [type=radio]:checked + .accordionFAQ__title + .accordionFAQ__content,
+.accordionFAQ__item [type=checkbox]:checked + .accordionFAQ__title + .accordionFAQ__content
+    transform: translateY(0)
+    max-height: none
+    opacity: 1
+
+@media (min-width: 481px) and (max-width: 767px)
+    .TestimonailFaqDescription
+        inline-size: unset !important
+
+@media (min-width: 320px) and (max-width: 480px)
+    .TestimonailFaqDescription
+        inline-size: unset !important
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+    .TestimonailFaqDescription
+        inline-size: unset !important
