@@ -152,7 +152,7 @@ export const FooterThemeFive = ({
   )
 }
 
-footerThemeFive.propTypes = {
+FooterThemeFive.propTypes = {
   headingTwo: PropTypes.string,
   headingThree: PropTypes.string,
   headingOne: PropTypes.string,

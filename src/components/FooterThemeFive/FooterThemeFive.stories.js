@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css"
 
 export default {
   title: "Theme 5/FooterThemeFive",
-  component:   FooterThemeFive,
+  component: FooterThemeFive,
   argTypes: {
     headingTwo: { control: "text" },
     headingThree: { control: "text" },
@@ -52,5 +52,5 @@ footerthemefive.args = {
   },
   facebookProfile: "SCoRe.Lab.Org",
   width: "200px",
-  height: "200px",
+  height: "150px",
 }
