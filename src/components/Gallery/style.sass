@@ -1,0 +1,55 @@
+@import '../../styles/variables.sass'
+
+.galleryHeadingsDiv
+  padding: 20px
+  .gallerySubText
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 700
+    text-align: center
+    font-size: 20px
+    line-height: 39px
+    text-transform: uppercase
+    color: #51AD28
+    @media #{$sm-and-less}
+      font-weight: 500
+  .galleryMainHeading
+    font-family: 'Montserrat'
+    font-style: normal
+    text-align: center
+    font-weight: 700
+    font-size: 45px
+    text-transform: uppercase
+    color: #808080
+    @media #{$sm-and-less}
+      font-size: 30px
+      font-weight: 500
+
+.gallery 
+  column-count: 3
+  -webkit-column-count: 3
+  -moz-column-count: 3
+  padding: 12px
+  .pics
+    transition: all 350ms ease
+    -webkit-transition: all 350ms ease
+    margin-bottom: 12px
+  @media (max-width: 992px)
+    column-count: 2
+    -webkit-column-count: 2
+    -moz-column-count: 2
+  @media #{$sm-and-less}
+    column-count: 1
+    -webkit-column-count: 1
+    -moz-column-count: 1
+
+.emptyMessage
+  font-family: 'Montserrat'
+  font-style: normal
+  text-align: center
+  font-size: 25px
+  color: #B2B6BB
+  
+    
+
+
