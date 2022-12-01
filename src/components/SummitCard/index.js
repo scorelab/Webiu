@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types"
 import  "./style.sass"
 
-import { Card , Container } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 export const SummitCard = ({title , subText , cardData , emptyMessage}) => {
     return(
