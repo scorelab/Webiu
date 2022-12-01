@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap')
+
+.SummitCardHeadingWrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-transform: uppercase
+    font-family: inter
+    .SummitCardTitle
+        color: #54AD28
+        font-size: 2rem
+        font-weight: 500
+        margin: 20px
+        @media (max-width: 576px)
+            font-size: 1.5rem
+    .SummitCardSubText
+        color: #6D6D6D
+        font-family: inter
+        font-size: 3rem
+        font-weight: 700
+        margin-bottom: 80px
+        @media (max-width: 576px)
+            font-size: 2.25rem
+
+.cardItem
+    font-family: inter
+    display: grid
+    margin: auto
+    grid-template-columns: repeat(4,1fr)
+    max-width: 1600px
+    @media( max-width: 1300px)
+        grid-template-columns: repeat(3,1fr)
+    @media( max-width: 896px)
+        grid-template-columns: repeat(2,1fr)
+    @media (max-width: 576px)
+        grid-template-columns: repeat(1,1fr)
+
+    .card
+        border: 1px solid #14F195
+        border-radius: 16px
+        height: 430px
+        max-width: 344px
+        width: inherit
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 10px
+        .cardImageDisplay
+            height: 217px
+            display: flex
+            justify-content: center
+            align-items: center
+            .imageWrapper
+                height: 155px
+                width: 155px
+                background: linear-gradient(130.58deg, #14F195 15.22%, rgba(97, 232, 232, 0.609375) 85.92%, rgba(217, 217, 217, 0) 85.93%)
+                border-radius: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+        .cardItemTitle
+            font-weight: 600
+            margin-bottom: 2rem
+            @media (max-width: 576px)
+                font-size: 1.75rem
+                margin-bottom: 1rem
+        .cardItemDescription
+            font-weight: 500
+            font-size: 1.5rem
+            color: #5D5E8D
+            line-height: 1.815rem
+            padding: 1rem
+            @media (max-width: 576px)
+                font-size: 1.5rem
