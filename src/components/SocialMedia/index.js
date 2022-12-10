@@ -11,7 +11,7 @@ export const SocialMedia = ({facebookProfile, twitterProfile, header, width, hei
                              ${facebookProfile}%2F&tabs=timeline&width=340&height=500&small_header=false&
                              adapt_container_width=true&hide_cover=false&show_facepile=true&appId`;
 
-  const twitterEmbedLink = `https://twitter.com/${twitterProfile}?ref_src=twsrc%5Etfw`;
+  const twitterEmbedLink = `https://twitter.com/SCoReLab_Org?t=wNnfMwF2AGN5o7JJo7DhhQ&s=08`;
 
   return (
     <div className="embed-component">
