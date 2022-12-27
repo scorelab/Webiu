@@ -1,0 +1,143 @@
+@import '../../styles/variables.sass'
+
+.sponsors-container
+  background-color: #1E4F7C
+  width: 100%
+  padding: 30px 0px
+  height: fit-content
+
+.sponsorsHeadingsDiv
+  padding: 10px
+  .sponsorsSubText
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 700
+    text-align: center
+    font-size: 20px
+    line-height: 20px
+    text-transform: uppercase
+    color: #51AD28
+    @media #{$sm-and-less}
+      font-weight: 500
+  .sponsorsMainHeading
+    font-family: 'Montserrat'
+    font-style: normal
+    text-align: center
+    font-weight: 700
+    font-size: 45px
+    text-transform: uppercase
+    color: #FFF
+    @media #{$sm-and-less}
+      font-size: 30px
+      font-weight: 500
+
+.sponsorsList
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-evenly
+  align-items: center
+  width: 100%
+  color: #FFFFFF
+  width: 75%
+  margin: 0 auto
+  @media #{$sm-and-less}
+    width: 100%
+
+.sponsorContainer
+  height: 125px
+  padding: 15px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  @media #{$sm-and-less}
+    height: 100px
+
+.sponsorImg 
+  height: 100px
+  @media #{$sm-and-less}
+    height: 75px
+
+.messagesList
+  display: flex
+  flex-wrap: wrap
+  width: 90%
+  margin: 0 auto
+  margin-top: 30px
+  gap: 30px
+  align-items: center
+  justify-content: flex-start
+
+.messageContainer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: rgba(217, 217, 217, 0.12)
+  color: #FFFFFF
+  border-radius: 30px
+  padding: 30px
+  width: 48%
+  @media (max-width: 992px)
+    width: 100%
+
+.messageTitle
+  width: 100%
+  color: #FFFFFF
+  @media #{$sm-and-less}
+   font-size: 18px
+
+.speakerContainer
+  display: flex
+  justify-content: center
+  width: 100%
+  padding: 15px 0
+  text-align: center
+
+.imageContainer
+  width: 25%
+  margin: 5px
+  display: flex
+  justify-content: center
+  align-items: center
+  @media (max-width: 992px)
+    width: 20%
+
+.speakerImage
+  width: 100px
+  height: 100px
+  border-radius: 50%
+  @media (max-width: 992px)
+    width: 75px
+    height: 75px
+
+.speakerData
+  width: 75%
+  color: #B7B7B7
+  font-weight: 500
+  display: flex
+  flex-direction: column
+  justify-content: center
+  line-height: 1.75rem
+  overflow: hidden
+  text-overflow: ellipsis
+  margin: 10px
+  @media (max-width: 992px)
+    font-size: 16px 
+    width: 80%
+
+.speakerName
+  text-align: left
+  color: #FFFFFF
+  font-weight: 600
+
+.speakerPosition
+  text-align: left
+  color: #51AD28
+           
+.emptyMessage
+  font-family: 'Montserrat'
+  font-style: normal
+  text-align: center
+  font-size: 25px
+  color: #B2B6BB
