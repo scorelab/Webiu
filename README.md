@@ -12,7 +12,102 @@ Website built with Webiu: https://www.scorelab.org/
 
 The project is based on ReactJs, JavaScript and GatsbyJs. You need to make sure that you have compatible versions of node/yarn, npm installed. SASS as the stylesheet is used in this project.
 
-## Initial Setup
+### Local Development Setup
+
+You will need to have Gatsby CLI installed into your system
+Go to the offical Gatsby documentation and proceed further to set up the Gatsby CLI https://www.gatsbyjs.com/docs/tutorial/
+
+#### Project Dependencies
+
+This project relies on the dependencies as well. 
+
+Name | Version |
+---  | --- | 
+node | `14.17.4` |
+npm  | `6.14.14` |
+Gatsby CLI | `4.0.0` | 
+
+You might require nvm (Node Version Manager) if you are dealing with multiple versions of Nodejs.
+
+#### Installing Dependencies in **Ubuntu/Debian**
+
+```
+# Install nvm
+sudo apt install curl
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
+source ~/.bashrc
+
+# Install specific node version. This will also install npm version 6.14.14
+nvm install 14.17.4 
+
+# To use node in the current shell session
+nvm use 14.17.4
+
+#Install Gatsby CLI
+npm install -g gatsby-cli@4.0.0
+```
+
+#### Installing Dependencies in **Windows**
+
+* Remove any existing versions of node which you might have installed. 
+
+* Head over to [nvm-windows](https://github.com/coreybutler/nvm-windows/releases) and download the latest **nvm-setup.exe** file.
+
+* Install **nvm-setup.exe** file and confirm the installation by running `nvm -v` in Command Prompt.
+
+* Now open Powershell or Command Prompt with administrator permissions, and run the following commands: 
+
+```
+# Install specific node version. This will also install npm version 6.14.14
+nvm install 14.17.4 
+
+# To use the node version which you have installed
+nvm use 14.17.4
+
+#Install Gatsby CLI
+npm install -g gatsby-cli@4.0.0
+```
+
+#### Installing Dependencies in **MacOS**
+
+* Remove any existing versions of node which you might have installed. 
+
+* You will need Homebrew on your MacOS. After that follow the steps given below: 
+
+```
+# Install nvm
+brew update
+brew install nvm
+mkdir ~/.nvm
+
+echo "export NVM_DIR=~/.nvm\nsource \$(brew --prefix nvm)/nvm.sh" >> .zshrc
+source ~/.zshrc
+
+# Install specific node version. This will also install npm version 6.14.14
+nvm install 14.17.4 
+
+# To use the node version which you have installed
+nvm use 14.17.4
+
+#Install Gatsby CLI
+npm install -g gatsby-cli@4.0.0
+```
+
+After installing dependencies, check their versions by using these commands
+
+```
+# Node version: 14.17.4
+node -v
+
+# npm version: 6.14.14
+npm -v
+
+# Gatsby CLI version: 4.0.0
+gatsby --version
+```
+
+## Project Setup
 
 Fork the repository as your own copy
 `https://github.com/ <Your Username> /Webiu.git`
@@ -20,12 +115,7 @@ Fork the repository as your own copy
 Clone the repository in your local system
 `git clone https://github.com/ <Your Username> /Webiu.git`
 
-## Local Development Setup
-
-You will need to have Gatsby CLI installed into your system
-Go to the offical Gatsby documentation and proceed further to set up the Gatsby CLI https://www.gatsbyjs.com/docs/tutorial/
-
-#### Cd into the project
+#### cd into the project
 
 `cd Webiu`
 
