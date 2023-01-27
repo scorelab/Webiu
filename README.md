@@ -123,6 +123,30 @@ Clone the repository in your local system
 
 `npm install`
 
+#### Add `variables.sass` file 
+
+* In `src/styles/` folder create a new file named `variables.sass`.
+
+Add the following contents to it and save the file:
+
+```
+$text-color: #242526;
+$primary: #54AD28;
+$light-secondary: #E6ECEE;
+$secondary: #24598B;
+$dark-grey: #666666;
+$grey: #808080;
+$light-grey: #D3D3D3;
+$very-light-grey: #C9C9C9;
+$red: #F24423;
+$very-dark-grey: #63676A;
+$xs-and-less: (min-width: 576px);
+$tiny-and-less: (min-width: 768px);
+$md-and-less: (min-width: 992px);
+$sm: (min-width: 576px);
+$sm-and-less: (max-width: 576px)
+```
+
 #### Errors if any?
 
 Got Stuck? Don't forget to give a look to the troubleshooting guides https://www.gatsbyjs.com/docs/how-to/local-development/troubleshooting-common-errors/
