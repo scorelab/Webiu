@@ -20,7 +20,7 @@
 
 #### **Do you have questions about the source code?**
 
-- Ask any question about how to use Webiu in the [Glitter](https://gitter.im/scorelab/Webiu).
+- Ask any question about how to use Webiu in the [Gitter](https://gitter.im/scorelab/Webiu).
 
 </br>
 
