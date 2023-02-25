@@ -76,9 +76,12 @@ const Complain = () => {
                   })
                 }}
               />
-              <br />
-              <br />
+
+            <br />
+            <br />
+
             </Grid>
+
           </Grid>
         </Grid>
       <Grid item>
@@ -111,7 +114,7 @@ const Complain = () => {
           </Grid>
         </Grid>
       </Grid>
-    </Grid>
+     </Grid>
       <Grid item>
         <Button classes={{ root: classes.btnStyle }} onClick={btnHandler}>
           <Typography variant="h3">Submit</Typography>
