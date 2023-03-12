@@ -1,0 +1,231 @@
+@import '../../styles/variables.sass'
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap')
+
+.midSectionWrapper
+    background: #1E4F7C
+    min-height: 100vh
+    max-width: 100vw
+    padding-top: 25px
+    padding-left: 60px
+    .midMainSection
+        min-height: 70vh
+        max-width: 100vw
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .mainLeftContainer
+
+            .mainText
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 500
+                font-size: 20px
+                line-height: 154.88%
+                display: flex
+                align-items: center
+                letter-spacing: -0.005em
+                color: #51AD28
+
+            .mainHead
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 700
+                font-size: 55px
+                line-height: 122.38%
+                letter-spacing: -0.005em
+                color: #FFFFFF
+            .mainPara
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 500
+                font-size: 22px
+                line-height: 132.38%
+                letter-spacing: -0.005em
+                color: #FFFFFF
+            .mainButton
+                background: linear-gradient(90deg, #14F195 0%, #14F195 28.96%, rgba(19, 222, 222, 0.612462) 99.99%, #14F195 100%)
+                border-radius: 42px
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 600
+                font-size: 24px
+                line-height: 34px
+                letter-spacing: -0.02em
+                text-transform: uppercase
+                color: #FFFFFF
+                width: 260px
+                height: 60px
+
+        .mainRightContainer
+            display: flex
+            justify-content: center
+            align-items: center
+
+    .midSecondSec
+        max-width: 100vw
+        margin-top: 20px
+        .midSecHead
+            max-width: 410px
+            .conferenceP
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 400
+                font-size: 20px
+                line-height: 132.38%
+                letter-spacing: -0.005em
+                color: #51AD28
+            .conferenceHead
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 600
+                font-size: 26px
+                line-height: 131.38%
+                display: flex
+                align-items: center
+                letter-spacing: -0.005em
+                color: #FFFFFF
+        .midSecCountdown
+            max-width: 100vw
+            .countDownContainer
+                display: flex
+                max-width: 50vw
+                flex-direction: row
+                gap: 45px
+                margin-left: 160px
+                .countDownDiv
+                    width: 160px
+                    height: 145px
+                    border: 1px solid #FFFFFF
+                    padding-bottom: 5px
+                    padding-left: 15px
+
+                    .countDown
+                        font-size: 86px
+                        font-weight: 700
+                        color: white
+                        display: block
+                        max-height: 110px
+                    .duration
+                        font-size: 20px
+                        color: white
+                        margin-left: 15px
+                        margin-bottom: 0px
+@media (min-width:768px) and (max-width:1024px)
+    .midSectionWrapper
+        .midMainSection
+            .mainLeftContainer
+
+                .mainButton
+                    margin-left: 200px
+                    margin-top: 20px
+                    margin-bottom: 20px
+        .midSecondSec
+
+            .midSecHead
+                min-width: 100vw
+            .midSecCountdown
+                max-width: 60vw
+                margin-left: 0px
+                .countDownContainer
+                    margin-left: 0px
+                    .countDownDiv
+                        height: 100px
+                        widows: 100px
+                        .countDown
+                            font-size: 45px
+                            padding-left: 5px
+                            padding-right: 15px
+                        .duration
+                            font-size: 12px
+                            padding-right: 15px
+@media  (max-width:768px)
+    .midSectionWrapper
+        .midMainSection
+            max-width: 100vw
+            padding: 30px
+            .mainLeftContainer
+                max-width: 100vw
+                .mainHead
+                    font-size: 24px
+                .mainPara
+                    font-size: 18px
+                .mainButton
+                    margin-left: 50px
+                    margin-top: 20px
+                    margin-bottom: 20px
+        .midSecondSec
+            max-width: 100vw
+            position: relative
+            right: 50px
+            .midSecHead
+                min-width: 30vw
+                margin-left: 0
+                .conferenceHead
+                    font-size: 24px
+                    margin-bottom: 15px
+
+            .midSecCountdown
+                margin-left: 0px
+                .countDownContainer
+                    margin-left: 0px
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    gap: 10px
+                    .countDownDiv
+                        height: 100px
+                        width: 130px
+                        margin-bottom: 20px
+                        margin-left: 10px
+                        
+                        .countDown
+                            font-size: 45px
+                            padding-left: 10px
+                        .duration
+                            font-size: 15px
+                            padding-right: 15px
+@media (min-width:320px) and (max-width:360px)
+    .midSectionWrapper
+        padding-left: 100px
+        .midMainSection
+            max-width: 100vw
+            padding: 30px
+            .mainLeftContainer
+                max-width: 100vw
+                .mainHead
+                    font-size: 24px
+                .mainPara
+                    font-size: 18px
+                .mainButton
+                    margin-left: 30px
+                    margin-top: 20px
+                    margin-bottom: 20px
+                .img
+                    margin-right: 20px
+        .midSecondSec
+            max-width: 100vw
+            position: relative
+            right: 50px
+            .midSecHead
+                min-width: 30vw
+                margin-left: 0
+                .conferenceHead
+                    font-size: 24px
+                    margin-bottom: 15px
+
+            .midSecCountdown
+                .countDownContainer
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+                    gap: 10px
+                    .countDownDiv
+                        height: 90px
+                        width: 90px
+                        margin-bottom: 10px
+                        
+                        .countDown
+                            font-size: 35px
+                            padding-left: 5px
+                        .duration
+                            font-size: 10px
+                            padding-right: 25px
