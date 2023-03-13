@@ -67,6 +67,7 @@ const AnimatedLogin = ({
             </Grid>
             <Grid item classes={{ root: classes.widthStyle }}>
               <TextField
+                type="password"
                 variant="outlined"
                 margin="normal"
                 required
