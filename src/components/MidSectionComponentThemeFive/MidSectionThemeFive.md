@@ -10,7 +10,7 @@ and the second section provides a title and description. This Component is highl
 ## How to use the component
 
 Import the component to `pages/index.js`
-`import {MidSectionThemeThree} from "../components/MidSectionThemeThree";`
+`import {MidSectionThemeFive} from "../components/MidSectionComponentThemeFive";`
 
 ## How to handle props to the component
 
