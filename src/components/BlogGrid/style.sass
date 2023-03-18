@@ -1,0 +1,201 @@
+@import '../../styles/variables.sass'
+.blog-grid
+    background: linear-gradient(123.81deg, rgba(61, 175, 115, 0) -3.35%, #51AD28 -3.35%, rgba(48, 173, 66, 0.991046) -3.35%, rgba(51, 174, 86, 0.83) 26.52%, rgba(55, 175, 117, 0.67) 46.09%, rgba(52, 176, 60, 0.934264) 100.45%, rgba(108, 174, 190, 0.615823) 100.61%, rgba(217, 217, 217, 0) 100.93%, rgba(57, 175, 134, 0.946006) 100.93%),url("https://i.ibb.co/fCsvRLK/blog-section-image.png")
+    object-fit: cover
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    background-attachment: fixed
+    width: 100vw
+    min-height: 100vh
+    .container
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+.headingText
+    color: #fff
+    font-style: 'Montserrat'
+    font-size: 64px
+    font-style: bold
+    font-weight: 700
+    line-height: 78px
+    padding-top: 20px
+.Heading
+    width: 544px
+    height: 101px
+.row
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    .cards-col
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        padding-top: 30px
+    .blog-cards
+        height: 504px
+        width: 422px
+        background: #fff
+        flex-grow: 1
+        flex-basis: 0
+        border: none
+        display: flex
+        flex-direction: column
+        border-radius: 35px
+        .card-body
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            .card-circle
+                position: absolute
+                bottom: 0
+                top: 92%
+                left: 50%
+                transform: translateX(-50%)
+                width: 88px
+                height: 85px
+                border-radius: 50%
+                background-color: #51AD28
+                display: flex
+                justify-content: center
+                align-items: center
+                .card-arrow
+                    position: absolute
+                    top: 10px
+                    color: #fff
+                    font-size: 40px
+        .card-heading-text
+            font-size: 30px
+            width: 422px
+            font-family: 'Montserrat'
+            color: #6F6C6C
+            font-style: semibold
+            line-height: 37px
+            justify-content: center
+            align-items: center
+            text-align: center
+            padding-top: 10px
+        .card-description-text
+            font-size: 24px
+            font-family: 'Montserrat'
+            color: #717171
+            font-style: regular
+            line-height: 29px
+            width: 310px
+            height: 114px
+            margin: auto
+            justify-content: center
+            align-items: center
+            text-align: center
+            margin-top: 30px
+
+@media only screen and (max-width: 480px)
+    .blog-grid
+        background: linear-gradient(123.81deg, rgba(61, 175, 115, 0) -3.35%, #51AD28 -3.35%, rgba(48, 173, 66, 0.991046) -3.35%, rgba(51, 174, 86, 0.83) 26.52%, rgba(55, 175, 117, 0.67) 46.09%, rgba(52, 176, 60, 0.934264) 100.45%, rgba(108, 174, 190, 0.615823) 100.61%, rgba(217, 217, 217, 0) 100.93%, rgba(57, 175, 134, 0.946006) 100.93%),url("https://i.ibb.co/fCsvRLK/blog-section-image.png")
+        object-fit: cover
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        background-attachment: fixed
+        width: 100%
+        min-height: 100vh
+        padding-top: 730px
+        .container
+            display: flex
+            flex-direction: column
+            fklex-wrap: wrap
+            justify-content: center
+            align-items: center
+            justify-content: space-between
+            .headingText
+                color: #fff
+                font-style: 'Montserrat'
+                font-size: 40px
+                font-style: bold
+                font-weight: 700
+                text-align: center
+            .Heading
+                padding-top: 150px
+    .row
+        display: flex
+        flex-direction: column
+        align-items: center
+        flex-wrap: wrap
+        padding-top: 150px
+        gap: 80px
+        .cards-col
+            display: flex
+            flex-direction: column
+            align-items: center
+            flex-wrap: wrap
+            justify-content: space-around
+            .card-body
+                height: 550px
+        .blog-cards
+            height: 450px
+            width: 370px
+            .card-heading-text
+                font-size: 30px
+            .card-description-text
+                font-size: 23px
+                width: 320px
+                height: 400px
+                text-align: center
+
+@media only screen and (min-width: 490px) and (max-width: 920px)
+    .blog-grid
+        background: linear-gradient(123.81deg, rgba(61, 175, 115, 0) -3.35%, #51AD28 -3.35%, rgba(48, 173, 66, 0.991046) -3.35%, rgba(51, 174, 86, 0.83) 26.52%, rgba(55, 175, 117, 0.67) 46.09%, rgba(52, 176, 60, 0.934264) 100.45%, rgba(108, 174, 190, 0.615823) 100.61%, rgba(217, 217, 217, 0) 100.93%, rgba(57, 175, 134, 0.946006) 100.93%),url("https://i.ibb.co/fCsvRLK/blog-section-image.png")
+        object-fit: cover
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        background-attachment: fixed
+        width: 100vh
+        min-height: 100vh
+        padding-top: 800px
+        .container
+            display: flex
+            flex-direction: column
+            fklex-wrap: wrap
+            justify-content: center
+            align-items: center
+            justify-content: space-between
+            .headingText
+                color: #fff
+                font-style: 'Montserrat'
+                font-size: 75px
+                font-style: bold
+                font-weight: 700
+                text-align: center
+            .Heading
+                padding-top: 150px
+                width: 700px
+                height: 51px
+    .row
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        padding-top: 150px
+        gap: 80px
+        .cards-col
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            justify-content: space-around
+            .blog-cards
+                height: 550px
+                width: 500px
+            .card-body
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+            .card-heading-text
+                font-size: 40px
+            .card-description-text
+                font-size: 30px
+                width: 420px
+                height: 300px
+                text-align: center
