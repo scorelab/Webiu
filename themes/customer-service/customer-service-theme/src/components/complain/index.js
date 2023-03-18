@@ -23,8 +23,9 @@ const Complain = () => {
       <Grid
         item
         container
+        alignItems="center"
         direction="row"
-        justifyContent="space-between"
+        justifyContent="center"
         classes={{ root: classes.wrapper }}
       >
         <Grid item>
@@ -75,20 +76,25 @@ const Complain = () => {
                   })
                 }}
               />
+
+            <br />
+            <br />
+
             </Grid>
+
           </Grid>
         </Grid>
-      </Grid>
       <Grid item>
         <Grid
           container
           direction="column"
           classes={{ root: classes.bottomWrapper }}
-        >
+          >
           <Grid item>
             <Typography variant="h4">
               Username related to the complaint(optional)
             </Typography>
+            
           </Grid>
           <Grid item>
             <TextField
@@ -104,10 +110,11 @@ const Complain = () => {
                   ["name"]: e.target.value,
                 })
               }}
-            />
+              />
           </Grid>
         </Grid>
       </Grid>
+     </Grid>
       <Grid item>
         <Button classes={{ root: classes.btnStyle }} onClick={btnHandler}>
           <Typography variant="h3">Submit</Typography>
