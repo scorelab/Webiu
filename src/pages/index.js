@@ -1,6 +1,6 @@
 import React from "react"
 
-const ExamplePage = ({ headingText, data }) => {
+const ExamplePage = () => {
   return (
     <div
       style={{

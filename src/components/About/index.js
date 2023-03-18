@@ -1,18 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./style.sass"
-import { Container, Row, Col } from 'react-bootstrap'
+import {Container, Row, Col} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
-export const About = ({ header, mainText, subText, buttonText, buttonLink, image, backgroundColor }) => {
+export const About = ({header, mainText, subText, buttonText, buttonLink, image, backgroundColor}) => {
   return (
     <div className="about-component">
-      {header ? <div className="header-component">
+    {header ? <div className="header-component">
         <h2><FontAwesomeIcon className="icon" icon={faInfoCircle} /> {header}</h2>
-      </div> : null}
-      <div className="about-us" style={{ backgroundColor: backgroundColor }}>
-        <Container>
+    </div> : null}
+    <div className="about-us" style={{backgroundColor: backgroundColor}}>
+      <Container>
           <Row>
             <Col md={6} className="left-col">
               <div className="about-content-section">
@@ -22,16 +22,16 @@ export const About = ({ header, mainText, subText, buttonText, buttonLink, image
                 </h1> : null}
                 <p>{subText}</p>
                 {buttonText ? <a href={buttonLink} className="button">
-                  {buttonText}
+                    {buttonText}
                 </a> : null}
               </div>
             </Col>
             <Col md={6} className="right-col">
-              <img className="about-image" alt="About" src={image} />
+              <img className= "about-image" alt="About" src={image} />
             </Col>
           </Row>
-        </Container>
-      </div>
+      </Container>
+    </div>
     </div>
   )
 }
