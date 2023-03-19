@@ -66,7 +66,7 @@ const JobForm = () => {
     { key: "Plumbing", value: "Plumbing" },
   ]
   return (
-    <Grid container direction="column" classes={{ root: classes.container }}>
+    <Grid container direction="row" classes={{ root: classes.container }}>
       <Grid item>
         <Typography variant="h5" classes={{ root: classes.headerStyle }}>
           Create Job Posting
@@ -109,8 +109,8 @@ const JobForm = () => {
             onChangeHandler={handleCategoryChange}
             dataList={categoryList}
           />
-          <Grid container direction="row" alignItems="flex-end">
-            <Grid item classes={{ root: classes.space }}>
+          <Grid container direction="column" alignItems="flex">
+            <Grid item classes={{ root: classes.wrapper }}>
               <StyledTextField
                 title="Price Range"
                 placeholder="Min value"
