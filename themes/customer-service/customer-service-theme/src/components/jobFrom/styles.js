@@ -4,14 +4,16 @@ import { makeStyles } from "@material-ui/core/styles"
 const Styles = makeStyles(theme => ({
   container: {
     width: "80%",
-    height: "900px",
+    height: "calc(120vh - 40px)",
     position: "relative",
-    top:"50px",
+    top: "55px",
+    right: "50px",
     background: "linear-gradient(#8165EA 70%,#FFFFFF)",
     boxShadow: theme.shadows[5],
     borderRadius: 10,
     justifyContent: "center",
-    // alignItems: "center",
+    margin: "auto",
+    alignItems: "center",
     [theme.breakpoints.up("md")]: {
       margin: "30px 125px",
       padding: "20px 100px",
@@ -23,30 +25,30 @@ const Styles = makeStyles(theme => ({
     },
   },
   headerStyle: {
-    // marginTop: "10px",
+    marginTop: "1px",
     textAlign: "center",
     alignItems: "center",
-    paddingTop: "10px",
-    paddingBottom: "20px",
+    paddingTop: "2px",
+    paddingBottom: "10px",
     
   },
   wrapper: {
-    // paddingLeft: "50px",
+    paddingTop: "5px",
   },
   space: {
-    // marginRight: "100px",
     paddingLeft: "72px"
   },
   btnStyle: {
     borderRadius: 10,
     marginLeft: "25%",
+    position: "relative",
+    top:"2px",
     backgroundColor: theme.palette.primary.light,
     textTransform: "none",
     "&:hover": { backgroundColor: theme.palette.primary.light },
   },
   bottomWrapper: {
-    // marginTop: "50px",
-    // marginBottom: "100px",
+  
     
   },
   
