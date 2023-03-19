@@ -10,7 +10,7 @@ import Styles from "./styles"
 const FoodCard = ({ imgUrl, title, description, price, availability }) => {
   const classes = Styles({ availability })
   return (
-    <Grid container direction="column" classes={{ root: classes.container }}>
+    <Grid container direction="column" classes={{ root: classes.container }} >
       <Grid item>
         <img src={imgUrl} className={classes.imgStyle} />
       </Grid>

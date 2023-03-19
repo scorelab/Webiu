@@ -1,7 +1,10 @@
 import React from "react"
+import OffersTemplate from "../../themes/hotel-management-system/hotel-management-theme/src/components/offers"
+
 
 const ExamplePage = () => {
-  return (
+  return (<>
+    <OffersTemplate/>
     <div
       style={{
         position: "absolute",
@@ -15,6 +18,7 @@ const ExamplePage = () => {
         Start editing the 'pages/index.js' file to import and show component
       </h3>
     </div>
+    </>
   )
 }
 

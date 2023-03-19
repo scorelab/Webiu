@@ -5,12 +5,12 @@ const Styles = makeStyles(theme => ({
   container: {
     border: `2px solid ${theme.palette.common.grey}`,
     borderRadius: 10,
-    width: "200px",
+    width: "100%",
     minHeight: "425px",
   },
   imgStyle: {
     height: "150px",
-    width: "196px",
+    width: "100%",
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
   },
