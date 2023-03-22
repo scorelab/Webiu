@@ -8,8 +8,9 @@ This is a resuasble component for dispalying rooms details such as image, name, 
 
 ## How to use the component
 
-Import the component to `pages/index.js`
-`import BookingCard from "../components/BookingCard";`
+Import the component to `pages/index.js` to successfully render and use the component
+* To import component: `import BookingCard from "../components/BookingCard";` and
+* To import icons: `import {faBuilding,faUser,faDollar,faBed} from "@fortawesome/free-solid-svg-icons"`
 
 ## How to handle props to the component
 
