@@ -9,6 +9,17 @@ import Styles from "./styles"
 import { useMediaQuery } from "@material-ui/core"
 
 const UserDetail = () => {
+  
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   const classes = Styles()
   const matchesMD = useMediaQuery(theme => theme.breakpoints.down("sm"))
   const [inputValues, setInputValues] = useState({
@@ -97,7 +108,13 @@ const UserDetail = () => {
       </Grid>
       <Grid item container justifyContent="center">
         <Grid item>
-          <Button onClick={() => {}} classes={{ root: classes.logoutBtnStyle }}>
+          <Button onClick={() => {}} classes={{ root: classes.logoutBtnStyle }}
+           style={{
+            backgroundColor: isHovering ? 'red' : '',
+          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          >
             <Typography variant="h6">Log out</Typography>
           </Button>
         </Grid>
