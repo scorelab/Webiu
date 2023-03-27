@@ -1,10 +1,6 @@
 import React from "react"
-import Report from "../../themes/learning-management-system/learning-management-theme/src/component/report"
-import UserDetail from "../../themes/learning-management-system/learning-management-theme/src/component/userDetail"
-
 const ExamplePage = () => {
   return (<>
-    <UserDetail/>
     <div
       style={{
         position: "absolute",

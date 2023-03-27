@@ -42,7 +42,7 @@ const Styles = makeStyles(theme => ({
     borderRadius: 10,
     backgroundColor: theme.palette.primary.light,
     textTransform: "none",
-    "&:hover": { backgroundColor: theme.palette.primary.light },
+    "&:hover": { backgroundColor: theme.palette.primary.main },
   },
   "@global": {
     ".MuiInput-underline:before, .MuiInput-underline:hover:not(.Mui-disabled):before": {
