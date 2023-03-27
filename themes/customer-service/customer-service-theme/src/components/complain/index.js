@@ -16,16 +16,24 @@ const Complain = () => {
     setInputDetails({ issue: "", message: "", name: "" })
   }
   return (
-    <Grid container direction="column" classes={{ root: classes.container }}>
-      <Grid item>
+    <Grid container direction="column" classes={{ root: classes.container }}
+   
+    >
+      <Grid item  style={{
+      margin:"auto"
+    }}>
         <Typography variant="h4">Submit a complaint</Typography>
       </Grid>
+
       <Grid
         item
         container
         direction="row"
         justifyContent="space-between"
         classes={{ root: classes.wrapper }}
+        style={{
+          margin:"auto"
+        }}
       >
         <Grid item>
           <Grid
@@ -33,11 +41,19 @@ const Complain = () => {
             direction="column"
             alignItems="center"
             classes={{ root: classes.space }}
-          >
-            <Grid item>
-              <Typography variant="h4">What is about?</Typography>
+            style={{
+              margin:"auto"
+            }}>
+            <Grid item  style={{
+      margin:"auto"
+    }}>
+              <Typography variant="h4"  style={{
+      margin:"auto"
+    }}>What is about?</Typography>
             </Grid>
-            <Grid item>
+            <Grid item  style={{
+      margin:"auto"
+    }}>
               <TextField
                 value={inputDetails.issue}
                 placeholder="Eg: payment issue"
@@ -90,7 +106,7 @@ const Complain = () => {
               Username related to the complaint(optional)
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid item >
             <TextField
               value={inputDetails.name}
               placeholder="Eg: Type name here"
@@ -108,8 +124,12 @@ const Complain = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
-        <Button classes={{ root: classes.btnStyle }} onClick={btnHandler}>
+      <Grid item  style={{
+      margin:"auto"
+    }}>
+        <Button classes={{ root: classes.btnStyle }} onClick={btnHandler}  style={{
+      margin:"auto"
+    }}>
           <Typography variant="h3">Submit</Typography>
         </Button>
       </Grid>
