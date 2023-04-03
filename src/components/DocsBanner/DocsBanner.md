@@ -14,7 +14,7 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<DocsBanner header="Frequently Asked Questions" bgColor="color"
+<DocsBanner mainText="sample-heading-text" subText="sample-subtext-para"  header="Frequently Asked Questions" bgColor="color"
      titleColor="color" toggleColor="color"
      data={[{title: "sample-question", content: "sample-answer"}]} />
 ```

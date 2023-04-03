@@ -27,7 +27,7 @@ Import the component to `pages/index.js`
     "October",
     "November",
     "December",
-  ]} title="Marks" data={[40, 20, 12, 39, 10, 40, 39, 80, 40, 10, 91, 12, 15, 11]} labelsName: "months" color: "#f87979" />
+  ]} title="Marks" data={[40, 20, 12, 39, 10, 40, 39, 80, 40, 10, 91, 12, 15, 11]} labelsName="months" color= "#f87979" />
 ```
 
 `labels` prop is the labels of x axis of the bar chart

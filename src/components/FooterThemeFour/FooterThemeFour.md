@@ -9,7 +9,7 @@ This is a reusable component for the footer of a website. This Component is high
 ## How to use the component
 
 Import the component to `pages/index.js`
-`import {FooterThemeFour} from "../components/FooterFour";`
+`import {FooterThemeFour} from "../components/FooterThemeFour";`
 
 ## How to handle props to the component
 
@@ -19,8 +19,8 @@ Import the component to `pages/index.js`
     titleTwo = "sample-headingTwo"
     aboutText = "sample-about-text"
     newsletterText = "sample-newsletter-text"
-    usefullListData =  {[linkName: "link_name", LinkUrl :"link_Url"],[linkName: "link_name", LinkUrl :"link_Url"]}
-    socialLinks = {{facebook: "your_link", gitter: "your_link", twitter: "your_link", github: "your_link" linkedin:"your_link", medium:"your_link"}}
+    usefullListData =  {[{linkName: "link_name", LinkUrl :"link_Url"},{linkName: "link_name", LinkUrl :"link_Url"}]}
+    socialLinks = {{facebook: "your_link", gitter: "your_link", twitter: "your_link", github: "your_link", linkedin:"your_link", medium:"your_link"}}
     copywriteText = "sample-subscribe-text"
 />
 ```

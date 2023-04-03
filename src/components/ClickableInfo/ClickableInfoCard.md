@@ -10,7 +10,7 @@ This is a resuasble component for a generalized card which can be clickable. Thi
 ## How to use the component
 
 Import the component to `pages/index.js`
-`import {ClickableInfoCard} from "../components/ClickableInfoCard";`
+`import {ClickableInfoCard} from "../components/ClickableInfo";`
 
 ## How to handle props to the component
 

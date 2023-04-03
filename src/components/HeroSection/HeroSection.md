@@ -14,7 +14,7 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<HeroSection mainText="sample-heading-text" subText="sample-subtext-para" buttonText="button" buttonLink="/" image="sample-url />
+<HeroSection mainText="sample-heading-text" subText="sample-subtext-para" buttonText="button" buttonLink="/" image="sample-url" />
 ```
 
 `mainText` prop is the heading that you want to display

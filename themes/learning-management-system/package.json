@@ -1,7 +1,13 @@
 {
   "private": true,
-  "workspaces": ["learning-management-theme", "site"],
+  "workspaces": [
+    "learning-management-theme",
+    "site"
+  ],
   "scripts": {
     "develop": "yarn workspace site develop"
+  },
+  "dependencies": {
+    "learning-management-theme": "file:learning-management-theme"
   }
 }

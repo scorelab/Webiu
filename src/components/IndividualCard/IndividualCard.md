@@ -14,7 +14,7 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<IndividualCard image="sample-image" iconImage="sample-icon" title="sample title="sample-title" description="sample-description" buttonText="sample-button-text" buttonLink="sample-button-link" />
+<IndividualCard image="sample-image" iconImage="sample-icon" title="sample-title" description="sample-description" buttonText="sample-button-text" buttonLink="sample-button-link" />
 ```
 
 `image` prop is used to display the main image of the card
