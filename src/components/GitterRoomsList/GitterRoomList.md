@@ -6,7 +6,7 @@ This is a resuasble component for getting the list of all Gitter Rooms of an org
 
 ## How to use the component
 Import the component to `pages/index.js`
-`import {GiiterRoomList} from "../components/GitterRoomList";`
+`import {GitterRoomsList} from "../components/GitterRoomsList";`
 
 ## How to handle props to the component
 ```

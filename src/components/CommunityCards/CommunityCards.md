@@ -9,7 +9,7 @@ This is a resuasble component for displaying community cards. This Component is 
 ## How to use the component
 
 Import the component to `pages/index.js`
-`import {ComponentCards} from "../components/ComponentCards";`
+`import {ComponentCards} from "../components/CommunityCards";`
 
 ## How to handle props to the component
 

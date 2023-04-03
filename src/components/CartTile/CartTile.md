@@ -9,12 +9,12 @@ This is a resuasble component for displaying the items in the cart. This Compone
 ## How to use the component
 
 Import the component to `pages/index.js`
-`import {Card} from "../components/CartTile";`
+`import {CartTile} from "../components/CartTile";`
 
 ## How to handle props to the component
 
 ```
-<CartTile image="url of product" name="name of product" price="price of product" qty="Number of items per product" subtractionHandler={function for subtration icon} additionHandler={function for subtration icon} removeHandler={function for delete items}/>
+<CartTile image="url of product" name="name of product" price="price of product" qty="Number of items per product" subtractionHandler={function for subtration icon} additionHandler={function for addition icon} removeHandler={function for delete items}/>
 ```
 
 `image` prop is the url of product

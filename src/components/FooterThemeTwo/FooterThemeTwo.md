@@ -20,10 +20,10 @@ Import the component to `pages/index.js`
     titleThree = "sample-headingThree"
     aboutText = "sample-about-text"
     newsletterText = "sample-newsletter-text"
-    linksListData =  {[linkName: "link_name", LinkUrl :"link_Url"],[linkName: "link_name", LinkUrl :"link_Url"]}
-    contactListData = {[Detail:"sample-address", link: "sample-address-link"],[Detail:"sample-phone-number", link: "sample-phone-link"]}
-    servicesListData = {[serviceName : "sample service name", link: "sample-service-url"],[serviceName : "sample service name", link: "sample-service-url"]}
-    socialLinks = {{facebook: "your_link", gitter: "your_link", twitter: "your_link", github: "your_link" linkedin:"your_link", medium:"your_link"}}
+    linksListData =  {[{linkName: "link_name", LinkUrl :"link_Url"},{linkName: "link_name", LinkUrl :"link_Url"}]}
+    contactListData = {[{ detail: "sample-detail", link: "#"},{detail: "sample-detail",link: "#"}]}
+    servicesListData = {[{serviceName : "sample service name", link: "sample-service-url"},{serviceName : "sample service name", link: "sample-service-url"}]}
+    socialLinks = {{facebook: "your_link", gitter: "your_link", twitter: "your_link", github: "your_link", linkedin:"your_link", medium:"your_link"}}
 />
 ```
 

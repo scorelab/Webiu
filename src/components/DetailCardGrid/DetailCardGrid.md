@@ -14,7 +14,7 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<ServicesCardGrid data=[{titleOne="sample-title" , descriptionOne="sample-description}, gridHeading="sample-heading"] />
+<DetailCardGrid data={[{titleOne:"sample-title" , descriptionOne:"sample-description"}]} gridHeading="sample-heading" />
 ```
 `gridHeading` prop is use to add the heading for the cards grid
 `data` prop is use to add the data for the cards 

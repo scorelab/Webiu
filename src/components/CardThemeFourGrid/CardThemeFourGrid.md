@@ -15,7 +15,7 @@ Import the component to `pages/index.js`
 
 ```
 <CardThemeFourGrid image="sample-image-path"
-      dataUpperGrid={[{image: "sample", description: "sample", title="sample-title"}]} dataLowerGrid={[{image: "sample", description: "sample", title="sample-title"}]} />
+      dataUpperGrid={[{image: "sample", description: "sample", title:"sample-title"}]} dataLowerGrid={[{image: "sample", description: "sample", title:"sample-title"}]} />
 ```
 
 `image` props is the backgournd image of the section

@@ -14,7 +14,7 @@ Import the component to `pages/index.js`
 ## How to handle props to the component
 
 ```
-<InfoSection mainText="sample-heading-text" subText="sample-subtext-para"  infoListData={text="sample-text" image="sample-image" description = "sample-descrption"/>
+<InfoSection mainText="sample-heading-text" subText="sample-subtext-para"  infoListData={[{text:"sample-text" , image:"sample-image", description: "sample-descrption"}]}/>
 ```
 
 `mainText` prop is the heading that you want to display

@@ -17,8 +17,8 @@ Import the component to `pages/index.js`
 <DynamicBanner  mainText ="sample-mainText"
   subText = "sample-subText"
   image = "sample-image"
-  description: ="sample-desc"
-  countUpListData = {duration="sample-numneric-value" end="sample-end-value" text="sample-text"}
+  description ="sample-desc"
+  countUpListData = {{duration:"sample-numneric-value" ,end:"sample-end-value" ,text:"sample-text"}
 }/>
 ```
 

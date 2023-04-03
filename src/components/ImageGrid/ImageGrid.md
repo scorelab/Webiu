@@ -15,7 +15,7 @@ Import the component to `pages/index.js`
 
 ```
 <ImageGrid size={4} images={[{imageUrl: "image_url", imageText: "image_text"}]} header="sample-header" row={false}
-           categories={false} categoryData={[{text: "text", color: "#e52165", route: "/", image: "sample-path"}}]} />
+           categories={false} categoryData={[{text: "text", color: "#e52165", route: "/", image: "sample-path"}]} />
 ```
 
 `size` prop is used to decide how many images should render per row e.g size = 3 means 4 images per row

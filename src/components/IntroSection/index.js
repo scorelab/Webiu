@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./style.sass"
 import { Container, Row, Col } from "react-bootstrap"
 
-export const IntroComponent = ({
+export const IntroSection = ({
   mainText,
   subText,
   image,
@@ -33,7 +33,7 @@ export const IntroComponent = ({
   )
 }
 
-IntroComponent.propTypes = {
+IntroSection.propTypes = {
   mainText: PropTypes.string,
   description: PropTypes.string,
   subText: PropTypes.string,

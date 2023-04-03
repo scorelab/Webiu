@@ -20,11 +20,11 @@ Import the component to `pages/index.js`
     titleThree = "sample-headingThree"
     mainHeading = "sample-mainHeading"
     newsletterText = "sample-newsletter-text"
-    linksListData =  {[linkName: "link_name", LinkUrl :"link_Url"],[linkName: "link_name", LinkUrl :"link_Url"]}
-    secondListData =  {[linkName: "link_name", LinkUrl :"link_Url"],[linkName: "link_name", LinkUrl :"link_Url"]}
-    thirdListData =  {[linkName: "link_name", LinkUrl :"link_Url"],[linkName: "link_name", LinkUrl :"link_Url"]}
-    fourthListData =  {[linkName: "link_name", LinkUrl :"link_Url"],[linkName: "link_name", LinkUrl :"link_Url"]}
-    socialLinks = {{facebook: "your_link", gitter: "your_link", twitter: "your_link", github: "your_link" linkedin:"your_link", medium:"your_link"}}
+    linksListData =  {[{linkName: "link_name", LinkUrl :"link_Url"},{linkName: "link_name", LinkUrl :"link_Url"}]}
+    secondListData =  {[{linkName: "link_name", LinkUrl :"link_Url"},{linkName: "link_name", LinkUrl :"link_Url"}]}
+    thirdListData =  {[{linkName: "link_name", LinkUrl :"link_Url"},{linkName: "link_name", LinkUrl :"link_Url"}]}
+    fourthListData =  {[{linkName: "link_name", LinkUrl :"link_Url"},{linkName: "link_name", LinkUrl :"link_Url"}]}
+    socialLinks = {{facebook: "your_link", gitter: "your_link", twitter: "your_link", github: "your_link", linkedin:"your_link", medium:"your_link"}}
 />
 ```
 

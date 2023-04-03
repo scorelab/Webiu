@@ -19,12 +19,12 @@ Import the component to `pages/index.js`
     headingTwo = "sample-headingTwo"
     headingThree = "sample-headingThree"
     aboutText = "sample-aboutText"
-    linksListData =  {[linkName: "link_name", LinkUrl :"link_Url"],[linkName: "link_name", LinkUrl :"link_Url"]}
-    contactListData =  {[ detail: "sample-detail", link: "#"],[detail: "sample-detail",link: "#"]}
-    socialLinks = {{facebook: "your_link", gitter: "your_link", twitter: "your_link", github: "your_link" linkedin:"your_link", medium:"your_link"}}
-    facebookProfile: "facebookaddress",
-    height: "sample-height",
-    width: "sample-width",
+    linksListData =  {[{linkName: "link_name", LinkUrl :"link_Url"},{linkName: "link_name", LinkUrl :"link_Url"}]}
+    contactListData =  {[{ detail: "sample-detail", link: "#"},{detail: "sample-detail",link: "#"}]}
+    socialLinks = {{facebook: "your_link", gitter: "your_link", twitter: "your_link", github: "your_link", linkedin:"your_link", medium:"your_link"}}
+    facebookProfile= "facebookaddress"
+    height= "sample-height"
+    width= "sample-width"
 />
 ```
 
