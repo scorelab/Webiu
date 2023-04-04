@@ -3,12 +3,15 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const Styles = makeStyles(theme => ({
   container: {
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("sm")]: 
+    {
       width: "80%",
       margin: "10px 35px",
       padding: "20px 0px",
     },
     width: "80%",
+    height:"100%",
+    paddingTop:"400px",
     padding: "25px 150px",
     margin: "20px 100px",
   },
@@ -16,7 +19,7 @@ const Styles = makeStyles(theme => ({
     marginBottom: "20px",
   },
   textFieldStyle: {
-    width: "70%",
+    width: "100%",
   },
   inputContainer: {
     margin: "10px",
