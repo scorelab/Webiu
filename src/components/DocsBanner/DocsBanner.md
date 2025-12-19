@@ -13,11 +13,14 @@ Import the component to `pages/index.js`
 
 ## How to handle props to the component
 
-```
-<DocsBanner header="Frequently Asked Questions" bgColor="color"
-     titleColor="color" toggleColor="color"
-     data={[{title: "sample-question", content: "sample-answer"}]} />
-```
+```jsx
+<DocsBanner
+  mainText="Frequently Asked Questions"
+  subText="Find answers to the most commonly asked questions here."
+  buttonText="View Docs"
+  buttonLink="/docs"
+/>
+
 
 `mainText` prop is the main title or heading for the banner
 `subText` prop is the subtext or side text for the banner

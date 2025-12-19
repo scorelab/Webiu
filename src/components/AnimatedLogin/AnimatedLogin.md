@@ -11,16 +11,17 @@ This is a reusable component for the Login page with animated background and typ
 Import the component to `pages/index.js`
 `import AnimatedLogin from "../components/AnimatedLogin";`
 
+
 ## How to handle props to the component
 
-```
-<Login
+```jsx
+<AnimatedLogin
     name="SCoRe Labs"
     typeWriteWords={["Effective", "Simple", "Elegant"]}
     typeWriterHeader="SCoRe Lab is"
     submitHandler={() => {}}
 />
-```
+
 
 `name` props is the name of organization
 `typeWriteWords` prop is the word list for typewriter
