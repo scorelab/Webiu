@@ -13,14 +13,26 @@ Import the component to `pages/index.js`
 
 ## How to handle props to the component
 
-```
-<DynamicBanner  mainText ="sample-mainText"
-  subText = "sample-subText"
-  image = "sample-image"
-  description: ="sample-desc"
-  countUpListData = {duration="sample-numneric-value" end="sample-end-value" text="sample-text"}
-}/>
-```
+```jsx
+<DynamicBanner
+  mainText="sample-mainText"
+  subText="sample-subText"
+  description="sample-description"
+  image="sample-image"
+  countUpListData={[
+    {
+      duration: 2,
+      end: 120,
+      text: "Users",
+    },
+    {
+      duration: 3,
+      end: 75,
+      text: "Projects",
+    },
+  ]}
+/>
+
 
 `mainText` prop is the main title or heading for the banner
 `subText` prop is the subtext or side text for the banner

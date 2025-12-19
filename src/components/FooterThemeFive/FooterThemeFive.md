@@ -13,20 +13,31 @@ Import the component to `pages/index.js`
 
 ## How to handle props to the component
 
-```
+```jsx
 <FooterThemeFive
-    headingOne = "sample-headingOne"
-    headingTwo = "sample-headingTwo"
-    headingThree = "sample-headingThree"
-    aboutText = "sample-aboutText"
-    linksListData =  {[linkName: "link_name", LinkUrl :"link_Url"],[linkName: "link_name", LinkUrl :"link_Url"]}
-    contactListData =  {[ detail: "sample-detail", link: "#"],[detail: "sample-detail",link: "#"]}
-    socialLinks = {{facebook: "your_link", gitter: "your_link", twitter: "your_link", github: "your_link" linkedin:"your_link", medium:"your_link"}}
-    facebookProfile: "facebookaddress",
-    height: "sample-height",
-    width: "sample-width",
+  headingOne="sample-headingOne"
+  headingTwo="sample-headingTwo"
+  headingThree="sample-headingThree"
+  aboutText="sample-aboutText"
+  linksListData={[
+    { linkName: "Link One", linkUrl: "/link-one" },
+    { linkName: "Link Two", linkUrl: "/link-two" },
+  ]}
+  contactListData={[
+    { detail: "sample-detail", link: "#" },
+    { detail: "sample-detail-2", link: "#" },
+  ]}
+  socialLinks={{
+    facebook: "your-facebook-link",
+    twitter: "your-twitter-link",
+    github: "your-github-link",
+    linkedin: "your-linkedin-link",
+  }}
+  facebookProfile="facebookaddress"
+  width="340"
+  height="500"
 />
-```
+
 
 `headingOne` this prop is use to add the heading of the first section
 `headingTwo` this prop is use to add the heading of the second section

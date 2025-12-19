@@ -13,8 +13,13 @@ Import the component to `pages/index.js`
 
 ## How to handle props to the component
 
-```
-<BreadcrumbsWrapper elementList=[{ name: "Labs", url: "/" }, { name: "Categories" }] />
-```
+```jsx
+<BreadcrumbsWrapper
+  elementList={[
+    { name: "Labs", url: "/" },
+    { name: "Categories" }
+  ]}
+/>
+
 
 `elementList` prop is the list of navigation options. items in the list following this signature

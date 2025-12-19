@@ -11,10 +11,19 @@ This is a resuasble component that contain three services cards arrange in a par
 Import the component to `pages/index.js`
 `import {DetailCardGrid} from "../components/DetailCardGrid";`
 
+
 ## How to handle props to the component
 
-```
-<ServicesCardGrid data=[{titleOne="sample-title" , descriptionOne="sample-description}, gridHeading="sample-heading"] />
-```
+```jsx
+<DetailCardGrid
+  gridHeading="sample-heading"
+  data={[
+    {
+      titleOne: "sample-title",
+      descriptionOne: "sample-description",
+    },
+  ]}
+/>
+
 `gridHeading` prop is use to add the heading for the cards grid
 `data` prop is use to add the data for the cards 

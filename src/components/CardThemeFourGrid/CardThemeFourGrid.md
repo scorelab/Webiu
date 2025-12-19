@@ -11,12 +11,28 @@ This is a resuasble component for the card and services built from scratch in a 
 Import the component to `pages/index.js`
 `import {CardThemeFourGrid} from "../components/CardThemeFourGrid";`
 
+
 ## How to handle props to the component
 
-```
-<CardThemeFourGrid image="sample-image-path"
-      dataUpperGrid={[{image: "sample", description: "sample", title="sample-title"}]} dataLowerGrid={[{image: "sample", description: "sample", title="sample-title"}]} />
-```
+```jsx
+<CardThemeFourGrid
+  image="sample-image-path"
+  dataUpperGrid={[
+    {
+      image: "sample",
+      title: "sample-title",
+      description: "sample",
+    },
+  ]}
+  dataLowerGrid={[
+    {
+      image: "sample",
+      title: "sample-title",
+      description: "sample",
+    },
+  ]}
+/>
+
 
 `image` props is the backgournd image of the section
 `dataUpperGrid` prop is the data of the upper gird

@@ -11,11 +11,16 @@ This is a resuasble component for the feature and services built from scratch. I
 Import the component to `pages/index.js`
 `import {FeatureCard} from "../components/FeatureCard";`
 
+
 ## How to handle props to the component
 
-```
-<FeatureCard image="sample-image" title="sample title="sample-title" description="sample-description" />
-```
+```jsx
+<FeatureCard
+  image="sample-image"
+  title="sample-title"
+  description="sample-description"
+/>
+
 
 `image` prop is used to display the main image of the card
 `title` prop is used to add the title to the card/feature

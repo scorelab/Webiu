@@ -13,14 +13,21 @@ Import the component to `pages/index.js`
 
 ## How to handle props to the component
 
-```
-<CartTile image="url of product" name="name of product" price="price of product" qty="Number of items per product" subtractionHandler={function for subtration icon} additionHandler={function for subtration icon} removeHandler={function for delete items}/>
-```
+```jsx
+<CartTile
+  image="url-of-product"
+  name="name-of-product"
+  price="price-of-product"
+  qty="number-of-items"
+  subtractionHandler={() => {}}
+  additionHandler={() => {}}
+  removeHandler={() => {}}
+/>
 
-`image` prop is the url of product
-`name` prop is the name of product
-`price` prop is the price of product
-`qty` prop is the Number of items per product
-`subtractionHandler` prop is the function for subtration icon
-`additionHandler` prop is the function for subtration icon
-`removeHandler` prop is the function for delete items
+image prop is the URL of the product
+name prop is the name of the product
+price prop is the price of the product
+qty prop is the number of items per product
+subtractionHandler prop is the function triggered on minus icon click
+additionHandler prop is the function triggered on plus icon click
+removeHandler prop is the function triggered on delete icon click

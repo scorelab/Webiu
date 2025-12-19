@@ -13,9 +13,14 @@ Import the component to `pages/index.js`
 
 ## How to handle props to the component
 
-```
-<DetailCard  title="sample title="sample-title" description="sample-description" />
-```
+## How to handle props to the component
+
+```jsx
+<DetailCard
+  title="sample-title"
+  description="sample-description"
+/>
+
 
 
 `title` prop is used to add the title to the card/feature
