@@ -46,6 +46,20 @@ run `npm develop` or `gatsby develop`
 Your site must be visible at
 `http://localhost:8000`
 
+
+## After Running the Project
+
+After starting the development server, the application loads a default
+homepage that renders an `ExamplePage` component.
+
+This page intentionally displays a placeholder message asking developers
+to edit `pages/index.js`. This behavior serves as a starting point and
+confirms that the setup was successful.
+
+New contributors can replace this placeholder with their own components
+or layouts as they begin building with Webiu.
+
+
 ## About The NPM Package
 
 The webiu components now have a seperate dedicated npm-package which increases its reach to the developers. It has all the components exported and can be easily plugged into your next project. It is highly recommended to install and use the package:
